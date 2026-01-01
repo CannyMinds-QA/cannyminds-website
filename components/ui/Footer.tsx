@@ -12,6 +12,9 @@ export default function Footer() {
     { name: "CannyHR", href: "/solutions/hr-management" },
     { name: "CannyScan", href: "/solutions/scanning-solution" },
     { name: "CannyTrack", href: "/solutions/tracking-system" },
+    { name: "CannyRMS", href: "/solutions/rms" },
+    { name: "Canny eBMR", href: "/solutions/ebmr" },
+    { name: "AI Solutions", href: "/solutions/ai-solutions" },
   ];
 
   const services = [

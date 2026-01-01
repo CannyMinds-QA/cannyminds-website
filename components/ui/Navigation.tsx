@@ -18,16 +18,33 @@ import {
   Scanner,
   Inventory,
   VerifiedUser,
-  Settings
+  Settings,
+  Visibility,
+  Science,
+  Psychology,
+  Receipt,
+  Gavel,
+  Business,
+  HealthAndSafety,
+  Construction,
+  CloudUpload,
+  AutoGraph,
+  BusinessCenter,
+  ShoppingCart
 } from "@mui/icons-material";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [bpmDropdownOpen, setBpmDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [useCasesDropdownOpen, setUseCasesDropdownOpen] = useState(false);
   const [mobileIndustryOpen, setMobileIndustryOpen] = useState(false);
   const [mobileBusinessNeedOpen, setMobileBusinessNeedOpen] = useState(false);
-  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [mobileBpmOpen, setMobileBpmOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileUseCasesOpen, setMobileUseCasesOpen] = useState(false);
   const { scrollY } = useScroll();
 
   const backgroundColor = useTransform(
@@ -45,13 +62,21 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Click outside to close dropdowns
   useEffect(() => {
-    return () => {
-      if (closeTimeout) {
-        clearTimeout(closeTimeout);
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.nav-dropdown-container')) {
+        setSolutionsDropdownOpen(false);
+        setBpmDropdownOpen(false);
+        setServicesDropdownOpen(false);
+        setUseCasesDropdownOpen(false);
       }
     };
-  }, [closeTimeout]);
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
 
   const industries = [
     { name: "Healthcare & Pharmaceuticals", href: "/industries/healthcare", description: "HIPAA-compliant digital solutions" },
@@ -85,7 +110,25 @@ export default function Navigation() {
       name: "Productivity & Workforce Monitoring",
       href: "/solutions/tracking-system",
       description: "Track employee activity & productivity",
-      icon: People
+      icon: Visibility
+    },
+    {
+      name: "Retail Management System",
+      href: "/solutions/rms",
+      description: "Complete retail & inventory solution",
+      icon: Inventory
+    },
+    {
+      name: "Electronic Batch Manufacturing",
+      href: "/solutions/ebmr",
+      description: "FDA compliant eBMR for pharma",
+      icon: Science
+    },
+    {
+      name: "AI & Intelligent Automation",
+      href: "/solutions/ai-solutions",
+      description: "ML, automation & process optimization",
+      icon: Psychology
     },
     {
       name: "Compliance Management",
@@ -93,19 +136,84 @@ export default function Navigation() {
       description: "ISO & FDA certified solutions",
       icon: VerifiedUser
     },
+  ];
+
+  const bpmSolutions = [
     {
-      name: "Business Process Automation",
-      href: "/services",
-      description: "Streamline workflows & operations",
+      name: "Invoice Management",
+      href: "/bpm/invoice-management",
+      description: "Automate invoice processing & approvals",
+      icon: Receipt
+    },
+    {
+      name: "Legal & Contract Management",
+      href: "/bpm/legal-management",
+      description: "Manage contracts, agreements & compliance",
+      icon: Gavel
+    },
+    {
+      name: "Procurement & Purchase Orders",
+      href: "/bpm/procurement",
+      description: "Streamline purchasing workflows",
+      icon: Business
+    },
+    {
+      name: "Safety & Compliance Workflows",
+      href: "/bpm/safety-compliance",
+      description: "Manage safety protocols & audits",
+      icon: HealthAndSafety
+    },
+    {
+      name: "Project & Task Management",
+      href: "/bpm/project-management",
+      description: "Track projects & automate tasks",
+      icon: Construction
+    },
+    {
+      name: "Custom Workflow Automation",
+      href: "/bpm/custom-workflows",
+      description: "Build tailored business processes",
       icon: Settings
     },
+  ];
+
+  const serviceItems = [
+    {
+      name: "Document Digitalization Service",
+      href: "/solutions/scanning-solution",
+      description: "Professional document scanning & digitization",
+      icon: Scanner
+    },
+    {
+      name: "Digital Transformation",
+      href: "/services",
+      description: "End-to-end business digitization solutions",
+      icon: CloudUpload
+    },
+    {
+      name: "Process Automation",
+      href: "/services",
+      description: "Streamline workflows with smart automation",
+      icon: AutoGraph
+    }
+  ];
+
+  const useCaseIndustries = [
+    { name: "Healthcare & Pharmaceuticals", href: "/use-cases#healthcare", icon: LocalHospital },
+    { name: "Manufacturing & Engineering", href: "/use-cases#manufacturing", icon: Factory },
+    { name: "Banking, Finance & Insurance", href: "/use-cases#banking-finance", icon: AccountBalance },
+    { name: "Education", href: "/use-cases#education", icon: School },
+    { name: "Retail & E-commerce", href: "/use-cases#retail", icon: ShoppingCart },
+    { name: "Legal", href: "/use-cases#legal", icon: Gavel },
   ];
 
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Solutions", href: "/#solutions", hasDropdown: true },
-    { name: "Services", href: "/services" },
+    { name: "Solutions", href: "/#solutions", hasDropdown: true, dropdownType: "solutions" },
+    { name: "BPM", href: "/bpm", hasDropdown: true, dropdownType: "bpm" },
+    { name: "Services", href: "/services", hasDropdown: true, dropdownType: "services" },
+    { name: "Use Cases", href: "/use-cases", hasDropdown: true, dropdownType: "useCases" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -113,9 +221,8 @@ export default function Navigation() {
   return (
     <motion.nav
       style={{ backgroundColor }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "shadow-lg backdrop-blur-md bg-white/95" : "bg-white/80 backdrop-blur-sm"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "shadow-lg backdrop-blur-md bg-white/95" : "bg-white/80 backdrop-blur-sm"
+        }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -144,38 +251,47 @@ export default function Navigation() {
               link.hasDropdown ? (
                 <div
                   key={link.name}
-                  className="relative"
-                  onMouseEnter={() => {
-                    if (closeTimeout) {
-                      clearTimeout(closeTimeout);
-                      setCloseTimeout(null);
-                    }
-                    setSolutionsDropdownOpen(true);
-                  }}
-                  onMouseLeave={() => {
-                    const timeout = setTimeout(() => {
-                      setSolutionsDropdownOpen(false);
-                    }, 300);
-                    setCloseTimeout(timeout);
-                  }}
+                  className="relative nav-dropdown-container"
                 >
-                  <motion.a
-                    href={link.href}
+                  <motion.button
+                    onClick={() => {
+                      if (link.dropdownType === "solutions") {
+                        setSolutionsDropdownOpen(!solutionsDropdownOpen);
+                        setBpmDropdownOpen(false);
+                        setServicesDropdownOpen(false);
+                        setUseCasesDropdownOpen(false);
+                      } else if (link.dropdownType === "bpm") {
+                        setBpmDropdownOpen(!bpmDropdownOpen);
+                        setSolutionsDropdownOpen(false);
+                        setServicesDropdownOpen(false);
+                        setUseCasesDropdownOpen(false);
+                      } else if (link.dropdownType === "services") {
+                        setServicesDropdownOpen(!servicesDropdownOpen);
+                        setSolutionsDropdownOpen(false);
+                        setBpmDropdownOpen(false);
+                        setUseCasesDropdownOpen(false);
+                      } else if (link.dropdownType === "useCases") {
+                        setUseCasesDropdownOpen(!useCasesDropdownOpen);
+                        setSolutionsDropdownOpen(false);
+                        setBpmDropdownOpen(false);
+                        setServicesDropdownOpen(false);
+                      }
+                    }}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-sm xl:text-base text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center gap-1 whitespace-nowrap"
+                    className="text-sm xl:text-base text-gray-700 hover:text-primary font-medium transition-colors relative group flex items-center gap-1 whitespace-nowrap bg-transparent border-0 cursor-pointer"
                   >
                     {link.name}
                     <KeyboardArrowDown
                       sx={{ fontSize: 20 }}
-                      className={`transition-transform ${solutionsDropdownOpen ? 'rotate-180' : ''}`}
+                      className={`transition-transform ${(link.dropdownType === "solutions" && solutionsDropdownOpen) || (link.dropdownType === "bpm" && bpmDropdownOpen) || (link.dropdownType === "services" && servicesDropdownOpen) || (link.dropdownType === "useCases" && useCasesDropdownOpen) ? 'rotate-180' : ''}`}
                     />
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-                  </motion.a>
+                  </motion.button>
 
-                  {/* Mega Menu Dropdown */}
-                  {solutionsDropdownOpen && (
+                  {/* Solutions Mega Menu Dropdown */}
+                  {link.dropdownType === "solutions" && solutionsDropdownOpen && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -186,90 +302,186 @@ export default function Navigation() {
                         maxHeight: 'calc(100vh - 80px)',
                         overflowY: 'auto'
                       }}
-                      onMouseEnter={() => {
-                        if (closeTimeout) {
-                          clearTimeout(closeTimeout);
-                          setCloseTimeout(null);
-                        }
-                      }}
-                      onMouseLeave={() => {
-                        const timeout = setTimeout(() => {
-                          setSolutionsDropdownOpen(false);
-                        }, 300);
-                        setCloseTimeout(timeout);
-                      }}
                     >
                       <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
-                        <div className="grid grid-cols-2 gap-8">
-                        {/* By Industry Column */}
-                        <div>
-                          <div className="flex items-center gap-2 mb-3 px-3">
-                            <Factory sx={{ fontSize: 20, color: '#3170b5' }} />
-                            <h3 className="text-xs font-bold text-primary uppercase tracking-wider">
-                              By Industry
-                            </h3>
-                          </div>
-                          <div className="space-y-1">
-                            {industries.map((industry) => (
-                              <Link
-                                key={industry.name}
-                                href={industry.href}
-                                className="block px-3 py-2 rounded-lg hover:bg-primary/5 transition-colors group"
-                              >
-                                <div className="font-semibold text-gray-800 text-sm group-hover:text-primary transition-colors">
-                                  {industry.name}
-                                </div>
-                                <div className="text-xs text-gray-500 mt-0.5">
-                                  {industry.description}
-                                </div>
-                              </Link>
-                            ))}
-                            <Link
-                              href="/#solutions"
-                              className="block px-3 py-2 mt-2 text-primary font-semibold text-sm hover:bg-primary/5 rounded-lg transition-colors"
-                            >
-                              View All Industries →
-                            </Link>
-                          </div>
+                        <div className="flex items-center gap-2 mb-6">
+                          <AccountBalanceWallet sx={{ fontSize: 24, color: '#3170b5' }} />
+                          <h3 className="text-lg font-bold text-primary">
+                            Solutions by Business Need
+                          </h3>
                         </div>
-
-                        {/* By Business Need Column */}
-                        <div>
-                          <div className="flex items-center gap-2 mb-3 px-3">
-                            <AccountBalanceWallet sx={{ fontSize: 20, color: '#1e3a8a' }} />
-                            <h3 className="text-xs font-bold text-secondary uppercase tracking-wider">
-                              By Business Need
-                            </h3>
-                          </div>
-                          <div className="space-y-1">
-                            {businessNeeds.map((need) => {
-                              const IconComponent = need.icon;
-                              return (
-                                <Link
-                                  key={need.name}
-                                  href={need.href}
-                                  className="block px-3 py-2 rounded-lg hover:bg-secondary/5 transition-colors group"
-                                >
-                                  <div className="flex items-start gap-2">
-                                    <IconComponent sx={{ fontSize: 20, color: '#3170b5' }} className="mt-0.5" />
-                                    <div className="flex-1">
-                                      <div className="font-semibold text-gray-800 text-sm group-hover:text-secondary transition-colors">
-                                        {need.name}
-                                      </div>
-                                      <div className="text-xs text-gray-500 mt-0.5">
-                                        {need.description}
-                                      </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl">
+                          {businessNeeds.map((need) => {
+                            const IconComponent = need.icon;
+                            return (
+                              <Link
+                                key={need.name}
+                                href={need.href}
+                                className="block px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors group border border-gray-100"
+                              >
+                                <div className="flex items-start gap-3">
+                                  <IconComponent sx={{ fontSize: 24, color: '#3170b5' }} className="mt-0.5" />
+                                  <div className="flex-1">
+                                    <div className="font-semibold text-gray-800 text-sm group-hover:text-primary transition-colors">
+                                      {need.name}
+                                    </div>
+                                    <div className="text-xs text-gray-500 mt-0.5">
+                                      {need.description}
                                     </div>
                                   </div>
-                                </Link>
-                              );
-                            })}
-                          </div>
-                        </div>
+                                </div>
+                              </Link>
+                            );
+                          })}
                         </div>
                       </div>
                     </motion.div>
                   )}
+
+                  {/* BPM Dropdown */}
+                  {link.dropdownType === "bpm" && bpmDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="fixed left-0 right-0 bg-white shadow-2xl border-t border-gray-200 p-8 z-[100]"
+                      style={{
+                        top: '80px',
+                        maxHeight: 'calc(100vh - 80px)',
+                        overflowY: 'auto'
+                      }}
+                    >
+                      <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
+                        <div className="flex items-center gap-2 mb-6">
+                          <Settings sx={{ fontSize: 24, color: '#3170b5' }} />
+                          <h3 className="text-lg font-bold text-primary">
+                            Business Process Management Solutions
+                          </h3>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl">
+                          {bpmSolutions.map((solution) => {
+                            const IconComponent = solution.icon;
+                            return (
+                              <Link
+                                key={solution.name}
+                                href={solution.href}
+                                className="block px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors group border border-gray-100"
+                              >
+                                <div className="flex items-start gap-3">
+                                  <IconComponent sx={{ fontSize: 24, color: '#3170b5' }} className="mt-0.5" />
+                                  <div className="flex-1">
+                                    <div className="font-semibold text-gray-800 text-sm group-hover:text-primary transition-colors">
+                                      {solution.name}
+                                    </div>
+                                    <div className="text-xs text-gray-500 mt-0.5">
+                                      {solution.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* Services Dropdown */}
+                  {link.dropdownType === "services" && servicesDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="fixed left-0 right-0 bg-white shadow-2xl border-t border-gray-200 p-8 z-[100]"
+                      style={{
+                        top: '80px',
+                        maxHeight: 'calc(100vh - 80px)',
+                        overflowY: 'auto'
+                      }}
+                    >
+                      <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
+                        <div className="flex items-center gap-2 mb-6">
+                          <Settings sx={{ fontSize: 24, color: '#3170b5' }} />
+                          <h3 className="text-lg font-bold text-primary">
+                            Professional Services
+                          </h3>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl">
+                          {serviceItems.map((service) => {
+                            const IconComponent = service.icon;
+                            return (
+                              <Link
+                                key={service.name}
+                                href={service.href}
+                                className="block px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors group border border-gray-100"
+                              >
+                                <div className="flex items-start gap-3">
+                                  <IconComponent sx={{ fontSize: 24, color: '#3170b5' }} className="mt-0.5" />
+                                  <div className="flex-1">
+                                    <div className="font-semibold text-gray-800 text-sm group-hover:text-primary transition-colors">
+                                      {service.name}
+                                    </div>
+                                    <div className="text-xs text-gray-500 mt-0.5">
+                                      {service.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* Use Cases Dropdown */}
+                  {link.dropdownType === "useCases" && useCasesDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="fixed left-0 right-0 bg-white shadow-2xl border-t border-gray-200 p-8 z-[100]"
+                      style={{
+                        top: '80px',
+                        maxHeight: 'calc(100vh - 80px)',
+                        overflowY: 'auto'
+                      }}
+                    >
+                      <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
+                        <div className="flex items-center gap-2 mb-6">
+                          <Factory sx={{ fontSize: 24, color: '#3170b5' }} />
+                          <h3 className="text-lg font-bold text-primary">
+                            Industry Use Cases
+                          </h3>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl">
+                          {industries.map((industry) => (
+                            <Link
+                              key={industry.name}
+                              href={industry.href}
+                              className="block px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors group border border-gray-100"
+                            >
+                              <div className="font-semibold text-gray-800 text-sm group-hover:text-primary transition-colors">
+                                {industry.name}
+                              </div>
+                              <div className="text-xs text-gray-500 mt-0.5">
+                                {industry.description}
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="mt-6 border-t border-gray-100 pt-4">
+                          <Link
+                            href="/use-cases"
+                            className="text-primary font-semibold text-sm hover:underline flex items-center gap-1"
+                          >
+                            View All Use Cases <KeyboardArrowRight fontSize="small" />
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+
                 </div>
               ) : (
                 <motion.a
@@ -336,57 +548,48 @@ export default function Navigation() {
                 link.hasDropdown ? (
                   <div key={link.name} className="border-b border-gray-100 pb-2">
                     <button
-                      onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
+                      onClick={() => {
+                        if (link.dropdownType === "solutions") {
+                          setSolutionsDropdownOpen(!solutionsDropdownOpen);
+                          setMobileBpmOpen(false);
+                        } else if (link.dropdownType === "bpm") {
+                          setMobileBpmOpen(!mobileBpmOpen);
+                          setSolutionsDropdownOpen(false);
+                          setMobileServicesOpen(false);
+                        } else if (link.dropdownType === "services") {
+                          setMobileServicesOpen(!mobileServicesOpen);
+                          setSolutionsDropdownOpen(false);
+                          setMobileBpmOpen(false);
+                          setMobileUseCasesOpen(false);
+                        } else if (link.dropdownType === "useCases") {
+                          setMobileUseCasesOpen(!mobileUseCasesOpen);
+                          setSolutionsDropdownOpen(false);
+                          setMobileBpmOpen(false);
+                          setMobileServicesOpen(false);
+                        }
+                      }}
                       className="text-gray-700 hover:text-primary hover:bg-gray-50 font-medium py-3 px-4 transition-colors flex items-center justify-between w-full rounded-lg"
                     >
                       <span>{link.name}</span>
                       <KeyboardArrowDown
                         sx={{ fontSize: 20 }}
-                        className={`transition-transform ${solutionsDropdownOpen ? 'rotate-180' : ''}`}
+                        className={`transition-transform ${(link.dropdownType === "solutions" && solutionsDropdownOpen) ||
+                          (link.dropdownType === "bpm" && mobileBpmOpen) ||
+                          (link.dropdownType === "services" && mobileServicesOpen) ||
+                          (link.dropdownType === "useCases" && mobileUseCasesOpen)
+                          ? 'rotate-180'
+                          : ''
+                          }`}
                       />
                     </button>
 
-                    {solutionsDropdownOpen && (
+                    {/* Solutions Dropdown - Mobile */}
+                    {link.dropdownType === "solutions" && solutionsDropdownOpen && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         className="ml-4 mt-2 flex flex-col gap-2"
                       >
-                        {/* By Industry - Mobile */}
-                        <div className="bg-gray-50 rounded-lg p-2">
-                          <button
-                            onClick={() => setMobileIndustryOpen(!mobileIndustryOpen)}
-                            className="flex items-center justify-between w-full text-sm font-semibold text-primary py-2 px-2"
-                          >
-                            <span className="flex items-center gap-2">
-                              <Factory sx={{ fontSize: 18 }} />
-                              By Industry
-                            </span>
-                            <KeyboardArrowDown
-                              sx={{ fontSize: 18 }}
-                              className={`transition-transform ${mobileIndustryOpen ? 'rotate-180' : ''}`}
-                            />
-                          </button>
-                          {mobileIndustryOpen && (
-                            <div className="mt-1 space-y-1">
-                              {industries.map((industry) => (
-                                <Link
-                                  key={industry.name}
-                                  href={industry.href}
-                                  onClick={() => {
-                                    setIsMobileMenuOpen(false);
-                                    setSolutionsDropdownOpen(false);
-                                    setMobileIndustryOpen(false);
-                                  }}
-                                  className="block text-gray-600 hover:text-primary hover:bg-white text-xs py-2 px-3 transition-colors rounded-md"
-                                >
-                                  {industry.name}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-
                         {/* By Business Need - Mobile */}
                         <div className="bg-gray-50 rounded-lg p-2">
                           <button
@@ -395,7 +598,7 @@ export default function Navigation() {
                           >
                             <span className="flex items-center gap-2">
                               <AccountBalanceWallet sx={{ fontSize: 18 }} />
-                              By Business Need
+                              Business Solutions
                             </span>
                             <KeyboardArrowDown
                               sx={{ fontSize: 18 }}
@@ -429,25 +632,157 @@ export default function Navigation() {
                         </div>
                       </motion.div>
                     )}
+
+                    {/* BPM Dropdown - Mobile */}
+                    {link.dropdownType === "bpm" && mobileBpmOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        className="ml-4 mt-2 flex flex-col gap-2"
+                      >
+                        <div className="bg-gray-50 rounded-lg p-2">
+                          <div className="mt-1 space-y-1">
+                            {bpmSolutions.map((solution) => {
+                              const IconComponent = solution.icon;
+                              return (
+                                <Link
+                                  key={solution.name}
+                                  href={solution.href}
+                                  onClick={() => {
+                                    setIsMobileMenuOpen(false);
+                                    setMobileBpmOpen(false);
+                                  }}
+                                  className="block text-gray-600 hover:text-primary hover:bg-white text-xs py-2 px-3 transition-colors rounded-md"
+                                >
+                                  <div className="flex items-start gap-2">
+                                    <IconComponent sx={{ fontSize: 16 }} className="mt-0.5" />
+                                    <div>
+                                      <div className="font-semibold">{solution.name}</div>
+                                      <div className="text-[10px] text-gray-500 mt-0.5">
+                                        {solution.description}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {/* Services Dropdown - Mobile */}
+                    {link.dropdownType === "services" && mobileServicesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        className="ml-4 mt-2 flex flex-col gap-2"
+                      >
+                        <div className="bg-gray-50 rounded-lg p-2">
+                          <div className="mt-1 space-y-1">
+                            {serviceItems.map((service) => {
+                              const IconComponent = service.icon;
+                              return (
+                                <Link
+                                  key={service.name}
+                                  href={service.href}
+                                  onClick={() => {
+                                    setIsMobileMenuOpen(false);
+                                    setMobileServicesOpen(false);
+                                  }}
+                                  className="block text-gray-600 hover:text-primary hover:bg-white text-xs py-2 px-3 transition-colors rounded-md"
+                                >
+                                  <div className="flex items-start gap-2">
+                                    <IconComponent sx={{ fontSize: 16 }} className="mt-0.5" />
+                                    <div>
+                                      <div className="font-semibold">{service.name}</div>
+                                      <div className="text-[10px] text-gray-500 mt-0.5">
+                                        {service.description}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {/* Use Cases Dropdown - Mobile */}
+                    {link.dropdownType === "useCases" && mobileUseCasesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        className="ml-4 mt-2 flex flex-col gap-2"
+                      >
+                        {/* By Industry - Mobile */}
+                        <div className="bg-gray-50 rounded-lg p-2">
+                          <button
+                            onClick={() => setMobileIndustryOpen(!mobileIndustryOpen)}
+                            className="flex items-center justify-between w-full text-sm font-semibold text-primary py-2 px-2"
+                          >
+                            <span className="flex items-center gap-2">
+                              <Factory sx={{ fontSize: 18 }} />
+                              By Industry
+                            </span>
+                            <KeyboardArrowDown
+                              sx={{ fontSize: 18 }}
+                              className={`transition-transform ${mobileIndustryOpen ? 'rotate-180' : ''}`}
+                            />
+                          </button>
+                          {mobileIndustryOpen && (
+                            <div className="mt-1 space-y-1">
+                              {industries.map((industry) => (
+                                <Link
+                                  key={industry.name}
+                                  href={industry.href}
+                                  onClick={() => {
+                                    setIsMobileMenuOpen(false);
+                                    setMobileUseCasesOpen(false);
+                                    setMobileIndustryOpen(false);
+                                  }}
+                                  className="block text-gray-600 hover:text-primary hover:bg-white text-xs py-2 px-3 transition-colors rounded-md"
+                                >
+                                  {industry.name}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                        <div className="bg-gray-50 rounded-lg p-2 mt-2">
+                          <Link
+                            href="/use-cases"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setMobileUseCasesOpen(false);
+                            }}
+                            className="block text-primary font-semibold text-xs py-2 px-3 hover:bg-white transition-colors rounded-md"
+                          >
+                            View All Use Cases →
+                          </Link>
+                        </div>
+                      </motion.div>
+                    )}
                   </div>
                 ) : (
-                  <a
+                  <Link
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="text-gray-700 hover:text-primary hover:bg-gray-50 font-medium py-3 px-4 transition-colors rounded-lg"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 )
               ))}
-              <a
+              <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-4 px-6 py-3 bg-primary text-white font-semibold rounded-lg text-center shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

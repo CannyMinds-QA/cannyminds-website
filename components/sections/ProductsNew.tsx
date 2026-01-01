@@ -7,6 +7,9 @@ import {
   People as PeopleIcon,
   Scanner as ScanIcon,
   Visibility as TrackIcon,
+  Inventory as InventoryIcon,
+  Science as ScienceIcon,
+  Psychology as AiIcon,
   ArrowForward as ArrowIcon,
   CheckCircle as CheckIcon,
 } from "@mui/icons-material";
@@ -52,6 +55,36 @@ const products = [
     link: "/solutions/tracking-system",
     features: ["Real-time Analytics", "Consent-based", "Offline Support"],
   },
+  {
+    name: "CannyRMS",
+    title: "Retail Management System",
+    description: "Complete retail solution for inventory, POS, multi-location operations, warehouse management, and real-time analytics.",
+    icon: InventoryIcon,
+    color: "from-purple-500 to-purple-700",
+    bgColor: "bg-purple-50",
+    link: "/solutions/rms",
+    features: ["Inventory Management", "Multi-location POS", "Real-time Analytics"],
+  },
+  {
+    name: "Canny eBMR",
+    title: "Electronic Batch Manufacturing Record",
+    description: "FDA 21 CFR Part 11 compliant eBMR system for pharmaceutical manufacturing with audit trails and e-signatures.",
+    icon: ScienceIcon,
+    color: "from-cyan-500 to-blue-500",
+    bgColor: "bg-cyan-50",
+    link: "/solutions/ebmr",
+    features: ["FDA Compliant", "E-Signatures", "Audit Trails"],
+  },
+  {
+    name: "AI Solutions",
+    title: "AI & Intelligent Automation",
+    description: "Transform business with AI-powered automation, machine learning, and intelligent process optimization solutions.",
+    icon: AiIcon,
+    color: "from-indigo-500 to-purple-500",
+    bgColor: "bg-indigo-50",
+    link: "/solutions/ai-solutions",
+    features: ["ML & AI", "Process Automation", "Predictive Analytics"],
+  },
 ];
 
 export default function ProductsNew() {
@@ -76,7 +109,7 @@ export default function ProductsNew() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {products.map((product, index) => {
             const IconComponent = product.icon;
             return (

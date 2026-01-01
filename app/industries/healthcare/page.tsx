@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
-import Navigation from "@/components/ui/Navigation";
-import Footer from "@/components/ui/Footer";
-import Link from "next/link";
+import IndustryPageLayout, {
+  IndustryChallenge,
+  IndustrySolution,
+  IndustryBenefit,
+  IndustryUseCase,
+  WhyChooseUsItem
+} from "@/components/templates/IndustryPageLayout";
 import {
   LocalHospital,
   Security,
@@ -9,7 +13,10 @@ import {
   VerifiedUser,
   Description,
   People,
-  ArrowForward,
+  Scanner,
+  Visibility,
+  CheckCircle,
+  Medication
 } from "@mui/icons-material";
 
 export const metadata: Metadata = {
@@ -20,149 +27,170 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Healthcare & Pharmaceuticals IT Solutions",
+  "description": "HIPAA-compliant digital solutions for healthcare providers."
+};
+
 export default function HealthcareIndustryPage() {
-  const solutions = [
+  const challenges: IndustryChallenge[] = [
+    {
+      title: "[Write Challenge Title]",
+      description: "[Write 30-50 words describing HIPAA compliance, data privacy, audit requirements]",
+      icon: VerifiedUser,
+    },
+    {
+      title: "[Write Challenge Title]",
+      description: "[Write 30-50 words describing patient record management, interoperability challenges]",
+      icon: Description,
+    },
+    {
+      title: "[Write Challenge Title]",
+      description: "[Write 30-50 words describing supply chain or pharmacy inventory challenges]",
+      icon: Medication,
+    },
+    {
+      title: "[Write Challenge Title]",
+      description: "[Write 30-50 words describing workforce management, shift scheduling, credentialing]",
+      icon: People,
+    },
+  ];
+
+  const solutions: IndustrySolution[] = [
     {
       title: "CannyECM for Healthcare",
-      description: "HIPAA-compliant document management for patient records, medical reports, and compliance documentation.",
+      description: "[Write 50-80 words: How CannyECM helps hospitals manage patient records, medical reports, HIPAA forms, insurance claims, etc.]",
       icon: Description,
       link: "/solutions/document-management",
     },
     {
       title: "CannyHR for Hospitals",
-      description: "Manage healthcare staff, scheduling, payroll, and credentials with specialized HR automation.",
+      description: "[Write 50-80 words: How CannyHR manages medical staff credentialing, shift scheduling, payroll, compliance training, etc.]",
       icon: People,
       link: "/solutions/hr-management",
     },
+    {
+      title: "CannyScan for Medical Records",
+      description: "[Write 50-80 words: How CannyScan digitizes legacy patient files, x-rays, paper charts, administrative documents, etc.]",
+      icon: Scanner,
+      link: "/solutions/scanning-solution",
+    },
+    {
+      title: "CannyTrack for Patient Care",
+      description: "[Write 50-80 words: How CannyTrack monitors patient flow, equipment usage, staff allocation, etc.]",
+      icon: Visibility,
+      link: "/solutions/tracking-system",
+    },
   ];
 
-  const benefits = [
+  const benefits: IndustryBenefit[] = [
     {
       title: "HIPAA Compliance",
-      description: "Built-in security controls and audit trails to meet healthcare regulations",
+      description: "[Write 30-50 words about built-in security controls, audit trails, regulatory compliance]",
       icon: VerifiedUser,
     },
     {
-      title: "Patient Data Security",
-      description: "End-to-end encryption and role-based access controls",
+      title: "Data Security",
+      description: "[Write 30-50 words about end-to-end encryption, role-based access controls, PHI protection]",
       icon: Security,
     },
     {
-      title: "Cloud & On-Premise",
-      description: "Flexible deployment options to meet your infrastructure needs",
+      title: "Operational Efficiency",
+      description: "[Write 30-50 words about reducing wait times, automating admissions, faster claim processing]",
+      icon: CheckCircle,
+    },
+    {
+      title: "Cost Reduction",
+      description: "[Write 30-50 words about reducing paper costs, storage needs, administrative overhead]",
       icon: CloudDone,
+    },
+    {
+      title: "Patient Experience",
+      description: "[Write 30-50 words about faster service, accurate records, better care coordination]",
+      icon: LocalHospital,
+    },
+    {
+      title: "Pharmacy Management",
+      description: "[Write 30-50 words about inventory tracking, prescription management, supply chain visibility]",
+      icon: Medication,
     },
   ];
 
+  const useCases: IndustryUseCase[] = [
+    {
+      title: "[Use Case 1 Title: e.g., 'Regional Hospital Digitizes 1M+ Patient Records']",
+      company: "[Write company type: e.g., 'Multi-specialty hospital with 300 beds']",
+      challenge: "[Write 40-60 words describing the specific challenge this hospital faced]",
+      solution: "[Write 60-80 words explaining which CannyMinds products were used and how they solved the problem]",
+      results: [
+        "[Quantifiable result #1: e.g., '100% HIPAA compliance achieved']",
+        "[Quantifiable result #2: e.g., 'Reduced record retrieval time from 30 mins to 30 seconds']",
+        "[Quantifiable result #3: e.g., 'Saved $120,000 in storage space annually']"
+      ]
+    },
+    {
+      title: "[Use Case 2 Title]",
+      company: "[Write company type]",
+      challenge: "[Write 40-60 words]",
+      solution: "[Write 60-80 words]",
+      results: [
+        "[Result 1]",
+        "[Result 2]",
+        "[Result 3]"
+      ]
+    }
+  ];
+
+  const whyChooseUs: WhyChooseUsItem[] = [
+    {
+      title: "Healthcare Expertise",
+      description: "[Write about experience in healthcare IT, understanding of clinical workflows]"
+    },
+    {
+      title: "HIPAA Certified",
+      description: "[Write about security certifications, compliance guarantees]"
+    },
+    {
+      title: "Interoperability",
+      description: "[Write about HL7/FHIR standards support, integration with EMR/EHR systems]"
+    },
+    {
+      title: "24/7 Support",
+      description: "[Write about critical support for medical facilities]"
+    },
+    {
+      title: "Scalable Solutions",
+      description: "[Write about solutions for small clinics to large hospital networks]"
+    }
+  ];
+
   return (
-    <>
-      <Navigation />
-      <main className="min-h-screen">
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <LocalHospital className="text-primary" sx={{ fontSize: 48 }} />
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Healthcare & Pharmaceuticals IT Solutions
-              </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                HIPAA-compliant digital solutions designed specifically for hospitals, clinics,
-                pharmaceutical companies, and healthcare providers. Secure patient data, streamline
-                workflows, and ensure regulatory compliance.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Link href="/contact">
-                  <button className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2">
-                    Request Demo
-                    <ArrowForward fontSize="small" />
-                  </button>
-                </Link>
-                <Link href="/#solutions">
-                  <button className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-primary transition-colors">
-                    View Solutions
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+    <IndustryPageLayout
+      title="[Write Main Heading: Healthcare & Pharmaceuticals IT Solutions]"
+      subtitle="[Write sub-heading: HIPAA-compliant digital solutions designed specifically for hospitals, clinics, and pharmaceutical companies to secure patient data and streamline workflows.]"
+      heroIcon={LocalHospital}
+      heroColorClass="text-cyan-600"
+      heroBgClass="bg-gradient-to-br from-cyan-50 to-white"
 
-        {/* Benefits Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Why Healthcare Organizations Choose CannyMinds
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Purpose-built solutions for the unique challenges of healthcare IT
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {benefits.map((benefit) => {
-                const IconComponent = benefit.icon;
-                return (
-                  <div key={benefit.title} className="bg-gray-50 rounded-lg p-6 text-center border border-gray-200">
-                    <IconComponent className="text-primary mx-auto mb-4" sx={{ fontSize: 48 }} />
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+      overviewTitle="[Write H2: Digital Transformation in Healthcare]"
+      overviewContent={
+        <>
+          <p>[Write Paragraph 1: Discuss challenges in modern healthcare, data explosion, regulatory pressure, need for interoperability and patient-centric care]</p>
+          <p>[Write Paragraph 2: Explain how CannyMinds empowers healthcare providers with secure, compliant, and efficient digital tools]</p>
+        </>
+      }
 
-        {/* Solutions Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Our Healthcare Solutions
-              </h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {solutions.map((solution) => {
-                const IconComponent = solution.icon;
-                return (
-                  <Link key={solution.title} href={solution.link}>
-                    <div className="bg-white rounded-lg p-8 border border-gray-200 hover:border-primary transition-colors h-full">
-                      <IconComponent className="text-primary mb-4" sx={{ fontSize: 40 }} />
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{solution.title}</h3>
-                      <p className="text-gray-600 mb-4">{solution.description}</p>
-                      <span className="text-primary font-semibold inline-flex items-center gap-2">
-                        Learn More <ArrowForward fontSize="small" />
-                      </span>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+      challenges={challenges}
+      solutions={solutions}
+      benefits={benefits}
+      useCases={useCases}
+      whyChooseUs={whyChooseUs}
+      whyChooseUsTitle="[Write H2: Why Healthcare Leaders Trust CannyMinds]"
 
-        {/* CTA Section */}
-        <section className="py-20 bg-primary text-white">
-          <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Ready to Transform Your Healthcare IT?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Schedule a consultation with our healthcare IT specialists to discuss your specific needs.
-            </p>
-            <Link href="/contact">
-              <button className="px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center gap-2">
-                Contact Us Today
-                <ArrowForward fontSize="small" />
-              </button>
-            </Link>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+      ctaBgClass="bg-cyan-600"
+      jsonLd={jsonLd}
+    />
   );
 }
