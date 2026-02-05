@@ -62,25 +62,25 @@ export default function GovernmentIndustryPage() {
       title: "CannyECM for Government",
       description: "[Write 50-80 words: How CannyECM helps banks/Government Agencies manage loan documents, policies, contracts, KYC/AML documentation, SOX compliance, audit trails, etc.]",
       icon: Description,
-      link: "/solutions/document-management",
+      link: "/solutions/product/document-management",
     },
     {
       title: "CannyHR for Public Sector",
       description: "[Write 50-80 words: How CannyHR manages employee compliance, certifications, payroll for financial staff, background checks, regulatory training, etc.]",
       icon: People,
-      link: "/solutions/hr-management",
+      link: "/solutions/product/hr-management",
     },
     {
       title: "CannyScan for Archives",
       description: "[Write 50-80 words: How CannyScan digitizes legacy financial records, loan applications, insurance policies, contracts, regulatory documentation, etc.]",
       icon: Scanner,
-      link: "/solutions/scanning-solution",
+      link: "/solutions/product/scanning-solution",
     },
     {
       title: "CannyTrack for Operations",
       description: "[Write 50-80 words: How CannyTrack monitors compliance activities, tracks client interactions, manages remote financial advisors, etc.]",
       icon: Visibility,
-      link: "/solutions/tracking-system",
+      link: "/solutions/product/tracking-system",
     },
   ];
 

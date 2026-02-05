@@ -73,22 +73,20 @@ export default function CannyRMSPage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="relative w-full min-h-[80vh] flex items-center bg-gradient-to-br from-primary/5 via-white to-primary/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 lg:py-24">
+        <section className="relative w-full flex min-h-[60vh] items-center bg-gradient-to-br from-primary/5 via-white to-primary/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-16">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-              <div>
-
-
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-6 leading-tight">
+              <div className="space-y-8">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary leading-tight">
                   CannyRMS: One Missing File Can Lead to <span className="text-red-600">Critical Audit Findings</span> – Secure Your Records.
                 </h1>
 
-                <p className="text-sm sm:text-base text-gray-700 mb-8 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                   CannyRMS provides <strong>precise barcode tracking and validated audit trails</strong>, protecting banks, pharma, and legal firms from
                   <strong> compliance gaps</strong>. Ensure readiness for <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">FDA</a>, <a href="https://m.rbi.org.in/scripts/BS_ViewMasCirculardetails.aspx?id=9862" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">RBI</a>, and GDPR inspections.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/contact"
                     className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2 text-sm"
@@ -105,7 +103,7 @@ export default function CannyRMSPage() {
                   </a>
                 </div>
 
-                <div className="flex items-center gap-6 text-sm text-gray-600 flex-wrap mb-8">
+                <div className="flex items-center gap-6 text-sm text-gray-600 flex-wrap">
                   <span className="flex items-center gap-2 font-medium"><CheckCircle sx={{ fontSize: 16, color: '#dc2626' }} /> Prevent Penalties</span>
                   <span className="flex items-center gap-2 font-medium"><CheckCircle sx={{ fontSize: 16, color: '#25d366' }} /> Audit Readiness</span>
                   <span className="flex items-center gap-2 font-medium"><CheckCircle sx={{ fontSize: 16, color: '#2563eb' }} /> Rapid Retrieval</span>
@@ -639,7 +637,7 @@ export default function CannyRMSPage() {
                   phase: "1",
                   title: "System Setup",
                   description: "Configure users, locations, categories, and generate barcodes. One-time setup that forms the foundation for all operations.",
-                  features: ["3-level barcode hierarchy (Carton → File → Document)", "User roles & granular permissions", "Warehouse/rack/shelf location setup", "Dynamic Barcode Range with overlap detection", "Barcode label printing (batch support)", "Custom categories & metadata fields"],
+                  features: ["3-level barcode hierarchy", "User roles & granular permissions", "Warehouse/rack/shelf location setup", "Dynamic Barcode Range with overlap detection", "Barcode label printing (batch support)", "Custom categories & metadata fields"],
                   example: "A pharmaceutical company creates user groups (QA Approvers, Warehouse Staff), configures Building A with 50 racks, allocates barcode ranges for cartons (C001-C999), files (F0001-F9999), and documents (D00001-D99999).",
                   color: "blue",
                   image: "/images/rms/cannyrms-dashboard.png",
@@ -716,54 +714,56 @@ export default function CannyRMSPage() {
                   caption: "Refiling & Overdue Tracking"
                 },
               ].map((step, idx) => (
-                <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-8 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group">
-                  <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
-                    <div className={`w-16 h-16 text-${step.color}-600 rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                      {step.phase}
-                    </div>
-                    <div className="flex-1">
+                <div key={idx} className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-primary/50 hover:shadow-xl transition-all duration-300 group">
+                  <div className="flex flex-col gap-6">
+                    {/* Title and Description always at the top */}
+                    <div>
                       <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                         <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
-                        <div className={`hidden md:block h-1 flex-1 mx-6 bg-gradient-to-r from-${step.color}-100 to-transparent rounded-full`}></div>
+                        <div className={`hidden md:block h-px flex-1 mx-6 bg-gradient-to-r from-${step.color}-200 to-transparent rounded-full`}></div>
                       </div>
+                      <p className="text-gray-700 text-lg mb-8 leading-relaxed max-w-4xl">{step.description}</p>
+                    </div>
 
-                      <p className="text-gray-700 text-lg mb-6 leading-relaxed">{step.description}</p>
-
-                      {/* Step Image (if available) */}
+                    <div className="grid lg:grid-cols-[1.85fr_1fr] gap-10 items-start">
+                      {/* Left Side: Product Image */}
                       {step.image && (
-                        <div className="mb-6 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                        <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-50 flex items-center justify-center">
                           <img
                             src={step.image}
-                            alt={`CannyRMS ${step.title} - ${step.description.substring(0, 60)}...`}
-                            className="w-full h-auto object-cover pointer-events-none select-none"
+                            alt={`CannyRMS ${step.title}`}
+                            className="w-full h-auto object-cover transform transition-transform duration-500 pointer-events-none select-none"
                             loading="lazy"
                             onContextMenu={(e) => e.preventDefault()}
                           />
                           {step.caption && (
-                            <div className="bg-gray-50 border-t border-gray-200 p-2 text-center text-xs font-semibold text-gray-500 uppercase tracking-widest">
+                            <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg text-xs font-bold text-gray-700 shadow-lg border border-gray-100">
                               {step.caption}
                             </div>
                           )}
                         </div>
                       )}
 
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-gray-50 rounded-xl p-5">
-                          <h4 className="font-bold text-gray-900 text-sm mb-3 uppercase tracking-wider">Features</h4>
-                          <ul className="space-y-2">
+                      {/* Right Side: Features & Real-World Application */}
+                      <div className="space-y-8">
+                        <div>
+                          <h4 className="font-bold text-gray-900 text-sm mb-4 uppercase tracking-widest border-b border-gray-100 pb-2 inline-block">Key Modules</h4>
+                          <ul className="grid sm:grid-cols-1 gap-3">
                             {step.features.map((feature, fIdx) => (
-                              <li key={fIdx} className="flex items-start gap-2 text-sm text-gray-600">
-                                <CheckCircle sx={{ fontSize: 16, color: '#3b82f6' }} className="mt-0.5 shrink-0" />
-                                <span>{feature}</span>
+                              <li key={fIdx} className="flex items-start gap-3 text-sm text-gray-600 bg-gray-50/50 p-2 rounded-lg">
+                                <CheckCircle sx={{ fontSize: 18, color: '#3b82f6' }} className="mt-0.5 shrink-0" />
+                                <span className="font-medium text-gray-700">{feature}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
-                        <div className={`bg-${step.color}-50 p-5 rounded-xl border border-${step.color}-100`}>
-                          <h4 className={`font-bold text-${step.color}-800 text-sm mb-2 flex items-center gap-2`}>
-                            <Lightbulb sx={{ fontSize: 16 }} /> Real-World Application:
+
+                        <div className={`bg-${step.color}-50 p-6 rounded-2xl border border-${step.color}-100 relative overflow-hidden`}>
+                          <div className={`absolute top-0 right-0 w-32 h-32 bg-${step.color}-100/30 rounded-full -translate-y-1/2 translate-x-1/2`}></div>
+                          <h4 className={`font-bold text-${step.color}-800 text-sm mb-3 flex items-center gap-2 relative z-10`}>
+                            <Lightbulb sx={{ fontSize: 18 }} /> Real-World Use Case:
                           </h4>
-                          <p className="text-sm text-gray-800 italic leading-relaxed">"{step.example}"</p>
+                          <p className={`text-sm text-${step.color}-900 italic leading-relaxed relative z-10 font-medium`}>{step.example}</p>
                         </div>
                       </div>
                     </div>
@@ -1115,7 +1115,7 @@ export default function CannyRMSPage() {
                   <ArrowForward className="text-primary transform rotate-90 group-open:rotate-[-90deg] transition-transform" sx={{ fontSize: 20 }} />
                 </summary>
                 <div className="px-6 pb-6 text-gray-600">
-                  Yes. CannyRMS integrates seamlessly with <Link href="/solutions/document-management" className="text-primary underline hover:text-primary/80">CannyECM</Link> (document management), <Link href="/solutions/scanning-solution" className="text-primary underline hover:text-primary/80">CannyScan</Link> (digitization), and third-party ERP systems via REST APIs.
+                  Yes. CannyRMS integrates seamlessly with <Link href="/solutions/product/document-management" className="text-primary underline hover:text-primary/80">CannyECM</Link> (document management), <Link href="/solutions/product/scanning-solution" className="text-primary underline hover:text-primary/80">CannyScan</Link> (digitization), and third-party ERP systems via REST APIs.
                 </div>
               </details>
 
@@ -1169,7 +1169,7 @@ export default function CannyRMSPage() {
                 <p className="text-gray-600 text-sm mb-4">
                   Comprehensive digital document management with workflow automation, OCR, and FDA 21 CFR Part 11 compliance.
                 </p>
-                <Link href="/solutions/document-management" className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                <Link href="/solutions/product/document-management" className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
                   Learn about CannyECM <ArrowForward sx={{ fontSize: 16 }} />
                 </Link>
               </div>
@@ -1188,7 +1188,7 @@ export default function CannyRMSPage() {
                 <p className="text-gray-600 text-sm mb-4">
                   High-speed document scanning with OCR, batch processing, and direct integration with CannyRMS and CannyECM.
                 </p>
-                <Link href="/solutions/scanning-solution" className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                <Link href="/solutions/product/scanning-solution" className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
                   Explore CannyScan <ArrowForward sx={{ fontSize: 16 }} />
                 </Link>
               </div>
@@ -1207,7 +1207,7 @@ export default function CannyRMSPage() {
                 <p className="text-gray-600 text-sm mb-4">
                   Real-time tracking of documents with barcode scanning, chain of custody management, and automated alerts.
                 </p>
-                <Link href="/solutions/tracking-system" className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                <Link href="/solutions/product/tracking-system" className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
                   Discover CannyTrack <ArrowForward sx={{ fontSize: 16 }} />
                 </Link>
               </div>

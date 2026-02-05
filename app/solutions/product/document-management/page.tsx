@@ -1243,7 +1243,7 @@ export default function CannyECMProductPage() {
                   title: "HR Management System",
                   description: "Comprehensive HR solution for employee management, payroll, attendance, and performance tracking.",
                   features: ["Employee Records", "Payroll Automation", "Leave Management", "Performance Reviews"],
-                  link: "/solutions/hr-management",
+                  link: "/solutions/product/hr-management",
                   color: "from-green-50 to-white border-green-200"
                 },
                 {
@@ -1251,7 +1251,7 @@ export default function CannyECMProductPage() {
                   title: "Enterprise Scanning Solution",
                   description: "High-speed document scanning with OCR, batch processing, and direct integration with CannyECM.",
                   features: ["Batch Scanning", "Auto-Classification", "Quality Enhancement", "Direct Upload to CannyECM"],
-                  link: "/solutions/scanning-solution",
+                  link: "/solutions/product/scanning-solution",
                   color: "from-purple-50 to-white border-purple-200"
                 },
                 {
@@ -1259,7 +1259,7 @@ export default function CannyECMProductPage() {
                   title: "Document Tracking System",
                   description: "Real-time tracking of physical and digital documents with barcode/QR integration and chain of custody.",
                   features: ["Barcode Tracking", "Chain of Custody", "Location Monitoring", "Audit Compliance"],
-                  link: "/solutions/tracking-system",
+                  link: "/solutions/product/tracking-system",
                   color: "from-orange-50 to-white border-orange-200"
                 },
               ].map((product, idx) => (

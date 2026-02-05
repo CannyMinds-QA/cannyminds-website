@@ -123,36 +123,6 @@ export default function FAQ() {
           ))}
         </div>
 
-        {/* CTA below FAQ */}
-        <RevealOnScroll delay={0.5}>
-          <div className="mt-12 sm:mt-16 text-center bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl sm:rounded-2xl p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-secondary mb-3 sm:mb-4 px-4">
-              Still Have Questions?
-            </h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6 max-w-2xl mx-auto px-4">
-              Our team of experts is ready to help you find the perfect IT solution
-              for your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 sm:px-8 py-2.5 sm:py-3 bg-primary text-white font-semibold rounded-lg shadow-lg shadow-primary/30 transition-all duration-300 text-sm sm:text-base"
-              >
-                Contact Us
-              </motion.a>
-              <motion.a
-                href="tel:+91-9361801926"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-primary font-semibold rounded-lg border-2 border-primary transition-all duration-300 shadow-lg text-sm sm:text-base"
-              >
-                Call: +91-9361801926
-              </motion.a>
-            </div>
-          </div>
-        </RevealOnScroll>
       </div>
     </section>
   );

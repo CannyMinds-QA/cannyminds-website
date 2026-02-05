@@ -472,6 +472,23 @@ export default function Navigation() {
                                 By Service
                                 <KeyboardArrowRight sx={{ fontSize: 18 }} />
                               </button>
+
+                              {/* Divider */}
+                              <div className="border-t border-gray-200 my-3"></div>
+
+                              {/* All Products Link - Styled differently */}
+                              <Link
+                                href="/solutions"
+                                onClick={() => setSolutionsDropdownOpen(false)}
+                                className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-all flex items-center justify-between ${activeMenuTab === 'solutions'
+                                  ? 'bg-primary text-white'
+                                  : 'text-gray-700 hover:bg-gray-100'
+                                  }`}
+                              >
+                                <span className="flex items-center gap-2">
+                                  All Products
+                                </span>
+                              </Link>
                             </div>
                           </div>
 

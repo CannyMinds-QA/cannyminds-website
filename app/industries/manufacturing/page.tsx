@@ -54,25 +54,25 @@ export default function ManufacturingIndustryPage() {
       title: "CannyECM for Manufacturing",
       description: "[Write 50-80 words: How CannyECM helps manufacturing companies manage quality documents, blueprints, CAD files, SOPs, ISO documentation, version control, etc.]",
       icon: Description,
-      link: "/solutions/document-management",
+      link: "/solutions/product/document-management",
     },
     {
       title: "CannyHR for Manufacturing",
       description: "[Write 50-80 words: How CannyHR manages shift scheduling, safety training records, employee certifications, payroll for production staff, etc.]",
       icon: People,
-      link: "/solutions/hr-management",
+      link: "/solutions/product/hr-management",
     },
     {
       title: "CannyScan for Manufacturing",
       description: "[Write 50-80 words: How CannyScan digitizes legacy blueprints, quality records, maintenance logs, compliance documentation, etc.]",
       icon: Scanner,
-      link: "/solutions/scanning-solution",
+      link: "/solutions/product/scanning-solution",
     },
     {
       title: "CannyTrack for Manufacturing",
       description: "[Write 50-80 words: How CannyTrack monitors production floor productivity, tracks project timelines, manages remote teams, etc.]",
       icon: Visibility,
-      link: "/solutions/tracking-system",
+      link: "/solutions/product/tracking-system",
     },
   ];
 

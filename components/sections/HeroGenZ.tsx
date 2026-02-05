@@ -65,27 +65,28 @@ export default function HeroGenZ() {
 
           {/* Main Content - Tagline */}
           {/* Main Content - Tagline */}
-          <div className="text-center mb-16 relative z-10">
+          <div className="text-center mb-12 relative z-10">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight mb-6"
             >
               <span className="sr-only">CannyMinds Technology Solutions - </span>
-              Innovate <span className="text-primary mx-2">•</span> Digitalize <span className="text-primary mx-2">•</span> Transform
+              Transform Your Business with
+              <br />
+              <span className="text-primary">Enterprise AI & Automation</span>
             </motion.h1>
-          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
-          >
-            Comprehensive document management, HR automation, and business process solutions.
-            Serving 500+ organizations worldwide since 2003.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+            >
+              Powering 500+ organizations globally with ISO-certified, FDA-compliant software solutions since 2003.
+            </motion.p>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,14 +95,14 @@ export default function HeroGenZ() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <Link href="/contact">
-              <button className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center justify-center gap-2 shadow-lg shadow-primary/25">
-                Request Demo
+              <button className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-all inline-flex items-center justify-center gap-2 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30">
+                Get Started
                 <ArrowIcon fontSize="small" />
               </button>
             </Link>
             <Link href="/#solutions">
-              <button className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-primary hover:text-primary transition-colors">
-                View Solutions
+              <button className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-primary hover:text-primary hover:shadow-md transition-all">
+                Explore Solutions
               </button>
             </Link>
           </motion.div>
@@ -115,15 +116,19 @@ export default function HeroGenZ() {
           >
             <div className="flex items-center gap-2">
               <CheckIcon className="text-green-600" fontSize="small" />
-              <span>ISO 9001:2015 Certified</span>
+              <span className="font-medium">ISO 9001:2015</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckIcon className="text-green-600" fontSize="small" />
-              <span>FDA 21 CFR Part 11 Compliant</span>
+              <span className="font-medium">FDA Compliant</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckIcon className="text-green-600" fontSize="small" />
-              <span>20+ Years Experience</span>
+              <span className="font-medium">20+ Years</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckIcon className="text-green-600" fontSize="small" />
+              <span className="font-medium">24/7 Support</span>
             </div>
           </motion.div>
         </div>

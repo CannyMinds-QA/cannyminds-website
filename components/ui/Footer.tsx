@@ -8,13 +8,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const products = [
-    { name: "CannyECM", href: "/solutions/document-management" },
-    { name: "CannyHR", href: "/solutions/hr-management" },
-    { name: "CannyScan", href: "/solutions/scanning-solution" },
-    { name: "CannyTrack", href: "/solutions/tracking-system" },
-    { name: "CannyRMS", href: "/solutions/rms" },
-    { name: "Canny eBMR", href: "/solutions/ebmr" },
-    { name: "AI Solutions", href: "/solutions/ai-solutions" },
+    { name: "CannyECM", href: "/solutions/product/document-management" },
+    { name: "CannyHR", href: "/solutions/product/hr-management" },
+    { name: "CannyScan", href: "/solutions/product/scanning-solution" },
+    { name: "CannyTrack", href: "/solutions/product/tracking-system" },
+    { name: "CannyRMS", href: "/solutions/product/rms" },
+    { name: "Canny eBMR", href: "/solutions/product/ebmr" },
+    { name: "AI Solutions", href: "/solutions/product/ai-solutions" },
   ];
 
   const services = [

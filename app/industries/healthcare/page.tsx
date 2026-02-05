@@ -63,25 +63,25 @@ export default function HealthcareIndustryPage() {
       title: "CannyECM for Healthcare",
       description: "[Write 50-80 words: How CannyECM helps hospitals manage patient records, medical reports, HIPAA forms, insurance claims, etc.]",
       icon: Description,
-      link: "/solutions/document-management",
+      link: "/solutions/product/document-management",
     },
     {
       title: "CannyHR for Hospitals",
       description: "[Write 50-80 words: How CannyHR manages medical staff credentialing, shift scheduling, payroll, compliance training, etc.]",
       icon: People,
-      link: "/solutions/hr-management",
+      link: "/solutions/product/hr-management",
     },
     {
       title: "CannyScan for Medical Records",
       description: "[Write 50-80 words: How CannyScan digitizes legacy patient files, x-rays, paper charts, administrative documents, etc.]",
       icon: Scanner,
-      link: "/solutions/scanning-solution",
+      link: "/solutions/product/scanning-solution",
     },
     {
       title: "CannyTrack for Patient Care",
       description: "[Write 50-80 words: How CannyTrack monitors patient flow, equipment usage, staff allocation, etc.]",
       icon: Visibility,
-      link: "/solutions/tracking-system",
+      link: "/solutions/product/tracking-system",
     },
   ];
 

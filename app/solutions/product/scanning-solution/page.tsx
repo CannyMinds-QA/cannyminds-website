@@ -714,7 +714,7 @@ export default function CannyScanProductPage() {
 
                 <div className="mt-8">
                   <Link
-                    href="/solutions/document-management"
+                    href="/solutions/product/document-management"
                     className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 font-semibold"
                   >
                     Learn More About CannyECM
@@ -801,7 +801,7 @@ export default function CannyScanProductPage() {
                   title: "Enterprise Content Management",
                   description: "FDA 21 CFR Part 11 compliant ECM for SOPs, STPs, COAs, change control, and QMS integration.",
                   features: ["Document Control", "Approval Workflows", "QMS Integration", "Audit Trails"],
-                  link: "/solutions/document-management",
+                  link: "/solutions/product/document-management",
                   color: "from-blue-50 to-white border-blue-200"
                 },
                 {
@@ -809,7 +809,7 @@ export default function CannyScanProductPage() {
                   title: "Physical Records Management",
                   description: "Web-based system to digitize, control, and optimize physical file and storage management.",
                   features: ["Rack Optimization", "Retrieval Tracking", "Audit Compliance", "Billing Support"],
-                  link: "/solutions/rms",
+                  link: "/solutions/product/rms",
                   color: "from-orange-50 to-white border-orange-200"
                 },
                 {
@@ -817,7 +817,7 @@ export default function CannyScanProductPage() {
                   title: "HR Management System",
                   description: "Comprehensive HR solution for employee management, payroll, and attendance tracking.",
                   features: ["Employee Records", "Payroll Automation", "Leave Management", "Performance Reviews"],
-                  link: "/solutions/hr-management",
+                  link: "/solutions/product/hr-management",
                   color: "from-green-50 to-white border-green-200"
                 },
               ].map((product, idx) => (

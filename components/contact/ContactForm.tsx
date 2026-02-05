@@ -99,7 +99,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
-            placeholder="John Doe"
+            placeholder=" Your name"
           />
         </div>
 

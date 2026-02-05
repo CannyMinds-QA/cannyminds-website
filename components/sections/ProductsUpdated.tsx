@@ -21,7 +21,7 @@ const products = [
       "Enterprise document management software enabling professional organization and instant retrieval through secure web browsers.",
     features: ["Cloud Storage", "Quick Search", "Version Control", "Secure Access"],
     color: "from-blue-500 to-cyan-500",
-    link: "/solutions/document-management",
+    link: "/solutions/product/document-management",
   },
   {
     name: "CannyHR",
@@ -30,7 +30,7 @@ const products = [
       "Complete HR and payroll management solution aligned with industry regulations and organizational policies.",
     features: ["Payroll Management", "Leave Tracking", "Performance Reviews", "Compliance"],
     color: "from-purple-500 to-pink-500",
-    link: "/solutions/hr-management",
+    link: "/solutions/product/hr-management",
   },
   {
     name: "CannyScan",
@@ -39,7 +39,7 @@ const products = [
       "Professional document scanning and digitization services providing instant and secure access to information.",
     features: ["High-Speed Scanning", "OCR Technology", "Digital Archive", "Cloud Integration"],
     color: "from-green-500 to-emerald-500",
-    link: "/solutions/scanning-solution",
+    link: "/solutions/product/scanning-solution",
   },
   {
     name: "CannyTrack",
@@ -48,7 +48,7 @@ const products = [
       "Workforce productivity monitoring and analytics platform for modern workplaces.",
     features: ["Activity Monitoring", "Productivity Analytics", "Data Security", "Real-time Reports"],
     color: "from-orange-500 to-red-500",
-    link: "/solutions/tracking-system",
+    link: "/solutions/product/tracking-system",
   },
 ];
 

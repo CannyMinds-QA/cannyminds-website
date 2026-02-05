@@ -15,6 +15,7 @@ import {
   Instagram as InstagramIcon,
   ArrowForward as ArrowIcon,
 } from '@mui/icons-material';
+import GlobalOfficesNew from '@/components/sections/GlobalOfficesNew';
 
 export const metadata: Metadata = {
   title: 'Contact CannyMinds | Get in Touch Today',
@@ -48,43 +49,6 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const offices = [
-    {
-      country: "India (Headquarters)",
-      company: "CannyMinds Technology Solutions Private Limited",
-      city: "Chennai",
-      address: "No 88 Ram Nagar 6th St\nVelachery, Chennai-600042\nTamil Nadu, India",
-      phone: "+91 93618 01926",
-      phone2: "044-35100366",
-      email: "info@cannymindstech.com",
-      hours: "Mon-Sat: 9:00 AM - 6:00 PM IST",
-      color: "blue",
-    },
-    {
-      country: "United States",
-      company: "CannyMinds Technology Solutions LLC",
-      city: "McKinney, TX",
-      address: "8751 Collin McKinney Pkwy\nSuite 1102 #525\nMcKinney, TX 75070\nUnited States",
-      phone: "+1 (214) 727-0422",
-      phone2: "+1 (214) 272-0230",
-      email: "sv@cannymindstech.com",
-      email2: "info@cannymindstech.com",
-      hours: "Mon-Fri: 9:00 AM - 5:00 PM CST",
-      color: "green",
-    },
-    {
-      country: "Nigeria",
-      company: "USP Soft Solutions Nigeria Limited",
-      city: "Lagos",
-      address: "No:16, Adeola Adeleye Street\nOff Coker Road, Illupeju\nLagos, Nigeria",
-      phone: "+234 708 632 3687",
-      phone2: "+234 701 052 2747",
-      email: "info@uspsoftsolutions.com",
-      hours: "Mon-Fri: 9:00 AM - 5:00 PM WAT",
-      color: "purple",
-    },
-  ];
-
   return (
     <>
       <Navigation />
@@ -237,63 +201,8 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Office Locations */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center">
-              Our Global Offices
-            </h2>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {offices.map((office, idx) => (
-                <div key={idx} className={`bg-white border-2 border-${office.color}-200 rounded-xl p-6 hover:border-${office.color}-600 transition-all`}>
-                  <div className={`w-12 h-12 bg-${office.color}-100 rounded-lg flex items-center justify-center mb-4`}>
-                    <LocationIcon sx={{ fontSize: 24 }} className={`text-${office.color}-600`} />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-secondary mb-1">{office.country}</h3>
-                  <p className="text-xs font-semibold text-gray-500 mb-3">{office.company}</p>
-
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <p className="font-semibold text-gray-700 mb-1">Address:</p>
-                      <p className="text-gray-600 whitespace-pre-line leading-relaxed">{office.address}</p>
-                    </div>
-
-                    <div>
-                      <p className="font-semibold text-gray-700 mb-1">Phone:</p>
-                      <a href={`tel:${office.phone.replace(/\s/g, '')}`} className="text-primary hover:underline block">
-                        {office.phone}
-                      </a>
-                      {office.phone2 && (
-                        <a href={`tel:${office.phone2.replace(/\s/g, '')}`} className="text-primary hover:underline block">
-                          {office.phone2}
-                        </a>
-                      )}
-                    </div>
-
-                    <div>
-                      <p className="font-semibold text-gray-700 mb-1">Email:</p>
-                      <a href={`mailto:${office.email}`} className="text-primary hover:underline break-all block">
-                        {office.email}
-                      </a>
-                      {office.email2 && (
-                        <a href={`mailto:${office.email2}`} className="text-primary hover:underline break-all block">
-                          {office.email2}
-                        </a>
-                      )}
-                    </div>
-
-                    <div>
-                      <p className="font-semibold text-gray-700 mb-1">Hours:</p>
-                      <p className="text-gray-600">{office.hours}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Office Locations & Partners */}
+        <GlobalOfficesNew />
 
         {/* CTA Section */}
         <section className="py-20">
