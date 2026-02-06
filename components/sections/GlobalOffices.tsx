@@ -11,7 +11,6 @@ const offices = [
     address: "No 88 Ram Nagar 6th St, Velachery, Chennai-600042",
     phone: ["044-35100366", "+91-9361801926"],
     email: "info@cannymindstech.com",
-    isHeadquarters: true,
   },
   {
     country: "United States",
@@ -88,11 +87,6 @@ export default function GlobalOffices() {
                     : "border-gray-100"
                 }`}
               >
-                {office.isHeadquarters && (
-                  <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full mb-3">
-                    HEADQUARTERS
-                  </div>
-                )}
                 <div className="text-5xl mb-3">{office.flag}</div>
                 <h3 className="text-xl font-bold text-secondary mb-2">
                   {office.country}

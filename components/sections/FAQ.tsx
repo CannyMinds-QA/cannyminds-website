@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import RevealOnScroll from "../ui/RevealOnScroll";
 
 const faqs = [
   {
@@ -18,7 +17,7 @@ const faqs = [
   {
     question: "Where is CannyMinds located?",
     answer:
-      "CannyMinds has global offices in India (Chennai - Headquarters), USA (McKinney, Texas), Nigeria (Lagos), and UAE (Dubai), serving clients across 50+ countries with 24/7 support.",
+      "CannyMinds has global offices in India (Chennai), USA (McKinney, Texas), Nigeria (Lagos), and UAE (Dubai), serving clients across 50+ countries with 24/7 support.",
   },
   {
     question: "What is CannyECM document management software?",
@@ -48,24 +47,37 @@ const faqs = [
 ];
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100, damping: 15 }
+    scale: 1,
+    transition: { type: "spring" as const, stiffness: 100, damping: 15 }
   },
-} as const;
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
+      staggerChildren: 0.08,
+      delayChildren: 0.15
     }
   }
 } as const;
+
+const headerVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut" as const
+    }
+  }
+};
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -77,19 +89,41 @@ export default function FAQ() {
   return (
     <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-        <RevealOnScroll>
-          <div className="text-center mb-12 sm:mb-16">
-            <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">
-              FAQ
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mt-3 sm:mt-4 mb-4 sm:mb-6 px-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Find answers to common questions about our IT solutions and services
-            </p>
-          </div>
-        </RevealOnScroll>
+        <motion.div
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mb-12 sm:mb-16"
+        >
+          <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider inline-block"
+          >
+            FAQ
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mt-3 sm:mt-4 mb-4 sm:mb-6 px-4"
+          >
+            Frequently Asked Questions
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4"
+          >
+            Find answers to common questions about our IT solutions and services
+          </motion.p>
+        </motion.div>
 
         <motion.div
           variants={containerVariants}
@@ -102,15 +136,19 @@ export default function FAQ() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="mb-3 sm:mb-4 bg-white rounded-lg sm:rounded-xl shadow-md border border-gray-100 overflow-hidden"
-              initial={false}
+              whileHover={{
+                scale: 1.01,
+                boxShadow: "0 8px 30px rgba(0,0,0,0.08)",
+                transition: { duration: 0.2 }
+              }}
+              className="mb-3 sm:mb-4 bg-white rounded-lg sm:rounded-xl shadow-md border border-gray-100 hover:border-primary/30 overflow-hidden transition-colors"
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left p-4 sm:p-6 flex items-center justify-between transition-colors hover:bg-gray-50"
                 aria-expanded={openIndex === index}
               >
-                <span className="text-sm sm:text-base md:text-lg font-semibold text-secondary pr-4 sm:pr-8">
+                <span className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 pr-4 sm:pr-8">
                   {faq.question}
                 </span>
                 <motion.div

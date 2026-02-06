@@ -39,7 +39,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-secondary to-primary text-white">
+    <footer className="bg-gradient-to-br from-gray-900 to-primary text-white">
       <div className="container mx-auto px-6 lg:px-12 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}

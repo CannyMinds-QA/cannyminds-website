@@ -469,7 +469,7 @@ export const enhancedJsonLd = {
           name: "Where is CannyMinds located?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "CannyMinds has global offices in India (Chennai - Headquarters), USA (McKinney, Texas), and Nigeria (Lagos), serving clients worldwide with 24/7 support.",
+            text: "CannyMinds has global offices in India (Chennai), USA (McKinney, Texas), and Nigeria (Lagos), serving clients worldwide with 24/7 support.",
           },
         },
         {

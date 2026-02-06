@@ -2,18 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  ArrowForward as ArrowIcon,
-  CheckCircle as CheckIcon,
-} from "@mui/icons-material";
-
+import { ArrowForward as ArrowIcon } from "@mui/icons-material";
 import dynamic from "next/dynamic";
+import { TextAnimate } from "@/registry/magicui/text-animate";
 
 const Hyperspeed = dynamic(() => import("@/components/ui/Hyperspeed/Hyperspeed"), {
   ssr: false,
 });
-
-
 
 export default function HeroGenZ() {
   return (
@@ -61,27 +56,27 @@ export default function HeroGenZ() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-
-
-          {/* Main Content - Tagline */}
           {/* Main Content - Tagline */}
           <div className="text-center mb-12 relative z-10">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight mb-6"
-            >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight mb-6">
               <span className="sr-only">CannyMinds Technology Solutions - </span>
-              Transform Your Business with
+              <div className="inline-block">
+                <TextAnimate animation="slideLeft" by="character">
+                  Transform Your Business with
+                </TextAnimate>
+              </div>
               <br />
-              <span className="text-primary">Enterprise AI & Automation</span>
-            </motion.h1>
+              <span className="text-primary inline-block">
+                <TextAnimate animation="slideLeft" by="character" startDelay={0.8}>
+                  Enterprise AI & Automation
+                </TextAnimate>
+              </span>
+            </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
               className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
             >
               Powering 500+ organizations globally with ISO-certified, FDA-compliant software solutions since 2003.
@@ -91,7 +86,7 @@ export default function HeroGenZ() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 1.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <Link href="/contact">
@@ -106,59 +101,7 @@ export default function HeroGenZ() {
               </button>
             </Link>
           </motion.div>
-
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600"
-          >
-            <div className="flex items-center gap-2">
-              <CheckIcon className="text-green-600" fontSize="small" />
-              <span className="font-medium">ISO 9001:2015</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckIcon className="text-green-600" fontSize="small" />
-              <span className="font-medium">FDA Compliant</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckIcon className="text-green-600" fontSize="small" />
-              <span className="font-medium">20+ Years</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckIcon className="text-green-600" fontSize="small" />
-              <span className="font-medium">24/7 Support</span>
-            </div>
-          </motion.div>
         </div>
-
-        {/* Stats Section */}
-        {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-          >
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900 mb-2">500+</div>
-              <div className="text-sm text-gray-600">Active Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900 mb-2">20+</div>
-              <div className="text-sm text-gray-600">Years in Business</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900 mb-2">99.9%</div>
-              <div className="text-sm text-gray-600">System Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900 mb-2">24/7</div>
-              <div className="text-sm text-gray-600">Support Available</div>
-            </div>
-          </motion.div> */}
-
-
       </div>
     </section>
   );

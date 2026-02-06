@@ -14,7 +14,6 @@ const offices = [
     address: "No 88 Ram Nagar 6th St, Velachery, Chennai-600042",
     phone: ["044-35100366", "+91-9361801926"],
     email: "info@cannymindstech.com",
-    isHeadquarters: true,
     color: "from-orange-500 to-green-500",
   },
   {
@@ -95,12 +94,6 @@ export default function GlobalOfficesUpdated() {
                     : "border-gray-100"
                 }`}
               >
-                {office.isHeadquarters && (
-                  <div className="inline-block px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full mb-2 sm:mb-3 self-start">
-                    HEADQUARTERS
-                  </div>
-                )}
-
                 <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-br ${office.color} flex items-center justify-center mb-3 sm:mb-4 opacity-90`}>
                   <PublicIcon sx={{ fontSize: { xs: 28, sm: 32 }, color: 'white' }} />
                 </div>

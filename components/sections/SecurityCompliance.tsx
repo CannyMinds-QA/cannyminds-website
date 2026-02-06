@@ -89,7 +89,7 @@ const securityFeatures = [
 
 export default function SecurityCompliance() {
   return (
-    <section className="py-16 bg-gradient-to-br from-secondary via-secondary to-primary">
+    <section className="py-16 bg-gradient-to-br from-gray-900 via-gray-900 to-primary">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <motion.div

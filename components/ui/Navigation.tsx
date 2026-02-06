@@ -25,6 +25,12 @@ import {
   Construction,
   BusinessCenter,
   ShoppingCart,
+  Psychology,
+  AutoAwesome,
+  Biotech,
+  Campaign,
+  Checkroom,
+  Home as HomeIcon,
 } from "@mui/icons-material";
 
 export default function Navigation() {
@@ -33,10 +39,12 @@ export default function Navigation() {
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [bpmDropdownOpen, setBpmDropdownOpen] = useState(false);
   const [useCasesDropdownOpen, setUseCasesDropdownOpen] = useState(false);
+  const [aiDropdownOpen, setAiDropdownOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [mobileIndustryOpen, setMobileIndustryOpen] = useState(false);
   const [mobileBpmOpen, setMobileBpmOpen] = useState(false);
   const [mobileUseCasesOpen, setMobileUseCasesOpen] = useState(false);
+  const [mobileAiOpen, setMobileAiOpen] = useState(false);
   const [mobileDepartmentOpen, setMobileDepartmentOpen] = useState(false);
   const [mobileServiceCategoryOpen, setMobileServiceCategoryOpen] = useState(false);
 
@@ -74,12 +82,27 @@ export default function Navigation() {
         setSolutionsDropdownOpen(false);
         setBpmDropdownOpen(false);
         setUseCasesDropdownOpen(false);
+        setAiDropdownOpen(false);
       }
     };
 
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
+
+  // AI Solutions Industries
+  const aiIndustries = [
+    { name: "Healthcare", slug: "healthcare", icon: LocalHospital, description: "Clinical AI & patient care automation" },
+    { name: "Pharmaceutical", slug: "pharmaceutical", icon: Biotech, description: "Drug discovery & batch record AI" },
+    { name: "Insurance", slug: "insurance", icon: VerifiedUser, description: "Claims processing & fraud detection" },
+    { name: "NBFC & Finance", slug: "nbfc", icon: AccountBalance, description: "Loan processing & credit scoring AI" },
+    { name: "Manufacturing", slug: "manufacturing", icon: Factory, description: "Predictive maintenance & quality AI" },
+    { name: "Textile", slug: "textile", icon: Checkroom, description: "Design AI & defect detection" },
+    { name: "E-Commerce", slug: "ecommerce", icon: ShoppingCart, description: "Personalization & pricing AI" },
+    { name: "Real Estate", slug: "real-estate", icon: HomeIcon, description: "Property valuation & document AI" },
+    { name: "Marketing", slug: "marketing", icon: Campaign, description: "Content generation & analytics AI" },
+    { name: "Professional Services", slug: "professional-services", icon: Gavel, description: "Legal, HR & accounting AI" },
+  ];
 
   const industryData: Record<string, { name: string; href: string; icon: typeof AccountBalance; subTopics: { name: string; href: string }[] }> = {
     'financial-services': {
@@ -353,6 +376,7 @@ export default function Navigation() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Solutions", href: "/#solutions", hasDropdown: true, dropdownType: "solutions" },
+    { name: "AI Solutions", href: "/ai-solutions", hasDropdown: true, dropdownType: "ai" },
     { name: "BPM", href: "/bpm", hasDropdown: true, dropdownType: "bpm" },
     { name: "Use Cases", href: "/use-cases", hasDropdown: true, dropdownType: "useCases" },
     { name: "About", href: "/about" },
@@ -399,14 +423,22 @@ export default function Navigation() {
                         setSolutionsDropdownOpen(!solutionsDropdownOpen);
                         setBpmDropdownOpen(false);
                         setUseCasesDropdownOpen(false);
+                        setAiDropdownOpen(false);
                       } else if (link.dropdownType === "bpm") {
                         setBpmDropdownOpen(!bpmDropdownOpen);
                         setSolutionsDropdownOpen(false);
                         setUseCasesDropdownOpen(false);
+                        setAiDropdownOpen(false);
                       } else if (link.dropdownType === "useCases") {
                         setUseCasesDropdownOpen(!useCasesDropdownOpen);
                         setSolutionsDropdownOpen(false);
                         setBpmDropdownOpen(false);
+                        setAiDropdownOpen(false);
+                      } else if (link.dropdownType === "ai") {
+                        setAiDropdownOpen(!aiDropdownOpen);
+                        setSolutionsDropdownOpen(false);
+                        setBpmDropdownOpen(false);
+                        setUseCasesDropdownOpen(false);
                       }
                     }}
                     initial={{ opacity: 0, y: -10 }}
@@ -417,7 +449,7 @@ export default function Navigation() {
                     {link.name}
                     <KeyboardArrowDown
                       sx={{ fontSize: 20 }}
-                      className={`transition-transform ${(link.dropdownType === "solutions" && solutionsDropdownOpen) || (link.dropdownType === "bpm" && bpmDropdownOpen) || (link.dropdownType === "useCases" && useCasesDropdownOpen) ? 'rotate-180' : ''}`}
+                      className={`transition-transform ${(link.dropdownType === "solutions" && solutionsDropdownOpen) || (link.dropdownType === "bpm" && bpmDropdownOpen) || (link.dropdownType === "useCases" && useCasesDropdownOpen) || (link.dropdownType === "ai" && aiDropdownOpen) ? 'rotate-180' : ''}`}
                     />
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
                   </motion.button>
@@ -742,6 +774,66 @@ export default function Navigation() {
                     </motion.div>
                   )}
 
+                  {/* AI Solutions Dropdown */}
+                  {link.dropdownType === "ai" && aiDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      className="fixed left-0 right-0 bg-white shadow-2xl border-t border-gray-200 p-8 z-[100]"
+                      style={{
+                        top: '80px',
+                        maxHeight: 'calc(100vh - 80px)',
+                        overflowY: 'auto'
+                      }}
+                    >
+                      <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
+                        <div className="flex items-center justify-between mb-6">
+                          <div className="flex items-center gap-2">
+                            <Psychology sx={{ fontSize: 24, color: '#3170b5' }} />
+                            <h3 className="text-lg font-bold text-primary">
+                              AI Solutions by Industry
+                            </h3>
+                          </div>
+                          <Link
+                            href="/ai-solutions"
+                            onClick={() => setAiDropdownOpen(false)}
+                            className="text-sm text-primary font-medium hover:underline flex items-center gap-1"
+                          >
+                            View All AI Solutions
+                            <KeyboardArrowRight sx={{ fontSize: 18 }} />
+                          </Link>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-7xl">
+                          {aiIndustries.map((industry) => {
+                            const IconComponent = industry.icon;
+                            return (
+                              <Link
+                                key={industry.slug}
+                                href={`/ai-solutions/${industry.slug}`}
+                                onClick={() => setAiDropdownOpen(false)}
+                                className="block px-4 py-3 rounded-lg hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 transition-all group border border-gray-100 hover:border-primary/30 hover:shadow-md"
+                              >
+                                <div className="flex flex-col">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <IconComponent sx={{ fontSize: 20 }} className="text-primary" />
+                                    <div className="font-semibold text-gray-800 text-sm group-hover:text-primary transition-colors">
+                                      {industry.name}
+                                    </div>
+                                  </div>
+                                  <div className="text-xs text-gray-500 ml-7">
+                                    {industry.description}
+                                  </div>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+
                 </div>
               ) : (
                 <motion.a
@@ -814,14 +906,22 @@ export default function Navigation() {
                           setMobileSolutionsOpen(!mobileSolutionsOpen);
                           setMobileBpmOpen(false);
                           setMobileUseCasesOpen(false);
+                          setMobileAiOpen(false);
                         } else if (link.dropdownType === "bpm") {
                           setMobileBpmOpen(!mobileBpmOpen);
                           setMobileSolutionsOpen(false);
                           setMobileUseCasesOpen(false);
+                          setMobileAiOpen(false);
                         } else if (link.dropdownType === "useCases") {
                           setMobileUseCasesOpen(!mobileUseCasesOpen);
                           setMobileSolutionsOpen(false);
                           setMobileBpmOpen(false);
+                          setMobileAiOpen(false);
+                        } else if (link.dropdownType === "ai") {
+                          setMobileAiOpen(!mobileAiOpen);
+                          setMobileSolutionsOpen(false);
+                          setMobileBpmOpen(false);
+                          setMobileUseCasesOpen(false);
                         }
                       }}
                       className="text-gray-700 hover:text-primary hover:bg-gray-50 font-medium py-3 px-4 transition-colors flex items-center justify-between w-full rounded-lg"
@@ -831,7 +931,8 @@ export default function Navigation() {
                         sx={{ fontSize: 20 }}
                         className={`transition-transform duration-200 ${(link.dropdownType === "solutions" && mobileSolutionsOpen) ||
                           (link.dropdownType === "bpm" && mobileBpmOpen) ||
-                          (link.dropdownType === "useCases" && mobileUseCasesOpen)
+                          (link.dropdownType === "useCases" && mobileUseCasesOpen) ||
+                          (link.dropdownType === "ai" && mobileAiOpen)
                           ? 'rotate-180'
                           : ''
                           }`}
@@ -1104,6 +1205,59 @@ export default function Navigation() {
                               );
                             })}
                           </div>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {/* AI Solutions Dropdown - Mobile */}
+                    {link.dropdownType === "ai" && mobileAiOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="ml-4 mt-2 flex flex-col gap-2"
+                      >
+                        <div className="bg-gray-50 rounded-lg p-2">
+                          <div className="flex items-center gap-2 text-sm font-semibold text-primary py-2 px-2 mb-1">
+                            <Psychology sx={{ fontSize: 18 }} />
+                            AI Solutions by Industry
+                          </div>
+                          <div className="mt-1 space-y-1">
+                            {aiIndustries.map((industry) => {
+                              const IconComponent = industry.icon;
+                              return (
+                                <Link
+                                  key={industry.slug}
+                                  href={`/ai-solutions/${industry.slug}`}
+                                  onClick={() => {
+                                    setIsMobileMenuOpen(false);
+                                    setMobileAiOpen(false);
+                                  }}
+                                  className="block text-gray-600 hover:text-primary hover:bg-white text-xs py-2 px-3 transition-colors rounded-md"
+                                >
+                                  <div className="flex items-start gap-2">
+                                    <IconComponent sx={{ fontSize: 16 }} className="mt-0.5" />
+                                    <div>
+                                      <div className="font-semibold">{industry.name}</div>
+                                      <div className="text-[10px] text-gray-500 mt-0.5">
+                                        {industry.description}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                          <Link
+                            href="/ai-solutions"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setMobileAiOpen(false);
+                            }}
+                            className="block text-primary font-semibold text-xs py-2 px-3 mt-2 border-t border-gray-200"
+                          >
+                            View All AI Solutions →
+                          </Link>
                         </div>
                       </motion.div>
                     )}

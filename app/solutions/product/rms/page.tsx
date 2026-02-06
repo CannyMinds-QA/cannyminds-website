@@ -78,12 +78,12 @@ export default function CannyRMSPage() {
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
               <div className="space-y-8">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary leading-tight">
-                  CannyRMS: One Missing File Can Lead to <span className="text-red-600">Critical Audit Findings</span> – Secure Your Records.
+                  CannyRMS: How One Missing File May Result in a <span className="text-red-600">Critical Audit Finding</span>. Secure your Records!
                 </h1>
 
                 <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                  CannyRMS provides <strong>precise barcode tracking and validated audit trails</strong>, protecting banks, pharma, and legal firms from
-                  <strong> compliance gaps</strong>. Ensure readiness for <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">FDA</a>, <a href="https://m.rbi.org.in/scripts/BS_ViewMasCirculardetails.aspx?id=9862" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">RBI</a>, and GDPR inspections.
+                  With CannyRMS, you have <strong>accurate tracking and auditing</strong>, ensuring your bank, pharma, or law firm is not caught out on
+                  <strong> compliance</strong>. Prepare your firm for <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">FDA</a>, <a href="https://m.rbi.org.in/scripts/BS_ViewMasCirculardetails.aspx?id=9862" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">RBI</a>, and GDPR audits.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -239,7 +239,7 @@ export default function CannyRMSPage() {
                 {
                   title: "Banking Audit Gaps",
                   subtitle: "RBI Compliance Risk",
-                  description: "If a crucial KYC document is misplaced during an inspection, it creates an immediate audit finding. This leads to operational scrutiny and mandatory remediation plans.",
+                  description: "A misplaced KYC document during an inspection isn't just an error—it's an immediate audit finding. Say hello to operational scrutiny and mandatory remediation plans.",
                   icon: AccountBalance,
                   color: "red",
                   stat: "Audit Finding"
@@ -247,7 +247,7 @@ export default function CannyRMSPage() {
                 {
                   title: "Pharma Observations",
                   subtitle: "Production Delays",
-                  description: "FDA auditors typically request specific batch records. Delays in production of these physical logs can result in Form 483 observations and paused batch releases.",
+                  description: "FDA auditors don't wait. If you can't produce specific batch records instantly, you're looking at Form 483 observations and paused batch releases.",
                   icon: LocalPharmacy,
                   color: "orange",
                   stat: "FDA Observation"
@@ -255,7 +255,7 @@ export default function CannyRMSPage() {
                 {
                   title: "Legal Chain of Custody",
                   subtitle: "Evidence Admissibility",
-                  description: "Loss of physical evidence files during transfer breaks the chain of custody. This risks the admissibility of evidence in court proceedings and client trust.",
+                  description: "Lose the physical evidence file, break the chain of custody. It's that simple. And it risks evidence admissibility and your client's trust.",
                   icon: Gavel,
                   color: "purple",
                   stat: "Custody Gap"
@@ -263,7 +263,7 @@ export default function CannyRMSPage() {
                 {
                   title: "Public Accountability",
                   subtitle: "Audit Scrutiny",
-                  description: "Government agencies utilizing offsite storage without tracking face challenges during CAG audits. Missing files lead to findings regarding asset management.",
+                  description: "CAG audits are unforgiving. If you're using offsite storage without tracking, missing files will lead to immediate findings on asset management.",
                   icon: AccountBalanceWallet,
                   color: "blue",
                   stat: "Audit Exception"
@@ -271,7 +271,7 @@ export default function CannyRMSPage() {
                 {
                   title: "Asset Documentation",
                   subtitle: "Financial Liability",
-                  description: "Loss of original property deeds affects loan portfolio security. Banks must address this through compensation protocols and legal reconstruction of collateral documents.",
+                  description: "Lose the original property deed, lose the loan security. Banks then have to scramble with expensive compensation and legal reconstruction.",
                   icon: Description,
                   color: "teal",
                   stat: "Asset Risk"
@@ -279,7 +279,7 @@ export default function CannyRMSPage() {
                 {
                   title: "Data Privacy Gaps",
                   subtitle: "Compliance Violations",
-                  description: "Physical files containing personal data must have access logs. Unlogged access can be flagged as a control gap under data protection regulations like GDPR.",
+                  description: "Physical files with personal data need access logs. Period. Unlogged access is a straight-up control gap under GDPR.",
                   icon: Security,
                   color: "indigo",
                   stat: "Control Gap"
@@ -331,15 +331,15 @@ export default function CannyRMSPage() {
                   <ul className="space-y-4 mb-8">
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#dc2626' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Prevent Backdating:</strong> Immutable audit logs prevent BMR tampering.</span>
+                      <span><strong>Prevent Backdating:</strong> Stop worrying about BMR tampering—immutable logs make it impossible.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#dc2626' }} className="mt-0.5 shrink-0" />
-                      <span><strong>FDA 21 CFR Part 11:</strong> Electronic signatures for every move.</span>
+                      <span><strong>FDA 21 CFR Part 11:</strong> Fully compliant electronic signatures for every single move.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#dc2626' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Batch Tracking:</strong> Link physical logs to batch numbers instantly.</span>
+                      <span><strong>Batch Tracking:</strong> Instantly link physical logs to batch numbers.</span>
                     </li>
                   </ul>
                   <div className="text-red-900 text-xs font-semibold bg-red-50 p-4 rounded-xl border border-red-100 flex gap-3 items-center">
@@ -360,15 +360,15 @@ export default function CannyRMSPage() {
                   <ul className="space-y-4 mb-8">
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#9333ea' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Chain of Custody:</strong> Prove exactly who held evidence and when.</span>
+                      <span><strong>Chain of Custody:</strong> Prove exactly who held the evidence, and when they held it.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#9333ea' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Retention Compliance:</strong> Auto-destroy files when legal holds expire.</span>
+                      <span><strong>Retention Compliance:</strong> Auto-destroy files the moment legal holds expire.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#9333ea' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Legacy File Indexing:</strong> Find old paper records for e-discovery.</span>
+                      <span><strong>Legacy File Indexing:</strong> Dig up old paper records for e-discovery in seconds.</span>
                     </li>
                   </ul>
                   <div className="text-purple-900 text-xs font-semibold bg-purple-50 p-4 rounded-xl border border-purple-100 flex gap-3 items-center">
@@ -389,15 +389,15 @@ export default function CannyRMSPage() {
                   <ul className="space-y-4 mb-8">
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#3b82f6' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Loan File Integrity:</strong> Ensure original production during RBI audits.</span>
+                      <span><strong>Loan File Integrity:</strong> Produce original docs on demand during RBI audits.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#3b82f6' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Privacy Compliance:</strong> Mask customer data in access logs (GDPR/DPDP).</span>
+                      <span><strong>Privacy Compliance:</strong> Mask customer data in logs (GDPR/DPDP ready).</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#3b82f6' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Social Compliance:</strong> Track marketing material disclosures.</span>
+                      <span><strong>Social Compliance:</strong> Keep track of your marketing material disclosures.</span>
                     </li>
                   </ul>
                   <div className="text-blue-900 text-xs font-semibold bg-blue-50 p-4 rounded-xl border border-blue-100 flex gap-3 items-center">
@@ -418,15 +418,15 @@ export default function CannyRMSPage() {
                   <ul className="space-y-4 mb-8">
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#ea580c' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Shipping Records:</strong> Track Bills of Lading, Packing Lists, and Customs declarations.</span>
+                      <span><strong>Shipping Records:</strong> Track Bills of Lading, Packing Lists, and Customs docs.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#ea580c' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Quality Certificates:</strong> Link test reports and COAs to shipment batches.</span>
+                      <span><strong>Quality Certificates:</strong> Link test reports to shipment batches. No mix-ups.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#ea580c' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Vendor Records:</strong> Maintain supplier agreements and compliance docs.</span>
+                      <span><strong>Vendor Records:</strong> Organize supplier agreements and compliance docs in one place.</span>
                     </li>
                   </ul>
                   <div className="text-orange-900 text-xs font-semibold bg-orange-50 p-4 rounded-xl border border-orange-100 flex gap-3 items-center">
@@ -447,15 +447,15 @@ export default function CannyRMSPage() {
                   <ul className="space-y-4 mb-8">
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#0d9488' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Client Segregation:</strong> Isolated storage and access for each client.</span>
+                      <span><strong>Client Segregation:</strong> Keep every client's storage and access completely isolated.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#0d9488' }} className="mt-0.5 shrink-0" />
-                      <span><strong>SLA Tracking:</strong> Monitor retrieval times and service commitments.</span>
+                      <span><strong>SLA Tracking:</strong> Stay on top of retrieval times and service promises.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#0d9488' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Billing Integration:</strong> Track storage, retrievals, and digitization for invoicing.</span>
+                      <span><strong>Billing Integration:</strong> Auto-track storage and retrievals for painless invoicing.</span>
                     </li>
                   </ul>
                   <div className="text-teal-900 text-xs font-semibold bg-teal-50 p-4 rounded-xl border border-teal-100 flex gap-3 items-center">
@@ -476,15 +476,15 @@ export default function CannyRMSPage() {
                   <ul className="space-y-4 mb-8">
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#374151' }} className="mt-0.5 shrink-0" />
-                      <span><strong>CAG Audit Readiness:</strong> Produce records on demand for government audits.</span>
+                      <span><strong>CAG Audit Readiness:</strong> Produce records for government audits on demand.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#374151' }} className="mt-0.5 shrink-0" />
-                      <span><strong>RTI Compliance:</strong> Quickly locate files for Right to Information requests.</span>
+                      <span><strong>RTI Compliance:</strong> Locate files for RTI requests faster than ever.</span>
                     </li>
                     <li className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle sx={{ fontSize: 20, color: '#374151' }} className="mt-0.5 shrink-0" />
-                      <span><strong>Long-Term Archival:</strong> Manage retention schedules for permanent records.</span>
+                      <span><strong>Long-Term Archival:</strong> Handle retention schedules for permanent records.</span>
                     </li>
                   </ul>
                   <div className="text-gray-900 text-xs font-semibold bg-gray-100 p-4 rounded-xl border border-gray-200 flex gap-3 items-center">
@@ -636,7 +636,7 @@ export default function CannyRMSPage() {
                 {
                   phase: "1",
                   title: "System Setup",
-                  description: "Configure users, locations, categories, and generate barcodes. One-time setup that forms the foundation for all operations.",
+                  description: "Set it and forget it. Configure your users, locations, and barcodes once, and you're ready to roll. It's the foundation for everything else.",
                   features: ["3-level barcode hierarchy", "User roles & granular permissions", "Warehouse/rack/shelf location setup", "Dynamic Barcode Range with overlap detection", "Barcode label printing (batch support)", "Custom categories & metadata fields"],
                   example: "A pharmaceutical company creates user groups (QA Approvers, Warehouse Staff), configures Building A with 50 racks, allocates barcode ranges for cartons (C001-C999), files (F0001-F9999), and documents (D00001-D99999).",
                   color: "blue",
@@ -646,7 +646,7 @@ export default function CannyRMSPage() {
                 {
                   phase: "2",
                   title: "Inward Upload",
-                  description: "Bulk upload records via Excel templates with automatic validation, duplicate checking, and capacity tracking.",
+                  description: "Got 50,000 records? Don't type them in. Just drag-and-drop your Excel sheet, and we'll flag the duplicates for you automatically.",
                   features: ["Template-based bulk upload", "Automatic validation", "Capacity tracking", "Unique barcode assignment", "Dynamic Reference"],
                   example: "A bank uploads 50,000 loan files via Excel. CannyRMS validates data, checks for duplicates, and assigns each record to a location.",
                   color: "green",
@@ -656,7 +656,7 @@ export default function CannyRMSPage() {
                 {
                   phase: "3",
                   title: "Quick Search",
-                  description: "Find any record in seconds. Search by document number, file number, barcode, Dynamic Reference, or location. View complete history.",
+                  description: "Find it. Fast. Search by document number, barcode, or location and get the full movement history in seconds.",
                   features: ["Multi-criteria search", "Real-time status (IN/OUT)", "Complete movement history with geolocation", "Location verification", "Dynamic Reference lookup"],
                   example: "An auditor searches by loan number (Dynamic Reference) and instantly sees: Location (Building B, Rack 23), Status (IN storage), and full access history with IP addresses and timestamps.",
                   color: "purple",
@@ -666,7 +666,7 @@ export default function CannyRMSPage() {
                 {
                   phase: "4",
                   title: "Retrieval Request",
-                  description: "Users raise formal requests for physical document access with business justification, delegate assignment, and return timeline.",
+                  description: "Need a file? Raise a formal request with a justification. The system handles the delegate assignment and return timeline for you.",
                   features: ["Structured request forms", "Original vs copy selection", "Delegate assignment option", "Return date specification", "Extension requests with approval", "Email notification triggers"],
                   example: "Legal team requests original contracts for court: Category 'Legal', Access Type 'Original', Duration '30 days', Delegate 'Paralegal John', Reason 'Court Case #789'. System sends email to manager for approval.",
                   color: "orange",
@@ -676,7 +676,7 @@ export default function CannyRMSPage() {
                 {
                   phase: "5",
                   title: "Manager Approval",
-                  description: "All requests require manager approval. Approvers see full context including delegate info and can approve with comments or reject with reasons.",
+                  description: "No loose ends. All requests hit the manager's inbox for approval, complete with full context and delegate info.",
                   features: ["Complete request visibility", "Approve/reject with comments", "Bulk approval processing", "Instant email notifications", "Mobile-friendly approval"],
                   example: "Department head receives email alert for pending request. Reviews justification, sees delegate assignment, and approves with note 'Approved for billing reconciliation'. Requester receives approval notification instantly.",
                   color: "red",
@@ -686,7 +686,7 @@ export default function CannyRMSPage() {
                 {
                   phase: "6",
                   title: "Verification",
-                  description: "Warehouse staff verify document availability and condition before physical release. Action logged with geolocation.",
+                  description: "Before handing anything over, warehouse staff verify condition and availability. Every check is logged with geolocation.",
                   features: ["Final document check", "Condition verification", "Availability confirmation", "Issue flagging with photos", "Geolocation & IP logging"],
                   example: "Staff confirms document is in stated location (Building A, Rack 23, Shelf 2), notes 'No damage', captures photo if needed, and marks as verified. System logs staff ID, IP address, and location.",
                   color: "teal",
@@ -696,7 +696,7 @@ export default function CannyRMSPage() {
                 {
                   phase: "7",
                   title: "Handover",
-                  description: "Physical release with pick lists, barcode scanning, delegate support, and signature capture. Return date monitoring begins.",
+                  description: "Release files securely with pick lists and digital signatures. The moment it leaves, the return-date clock starts ticking.",
                   features: ["Pick list generation", "Barcode verification", "Delegate handover (collect on behalf)", "Digital signature capture", "Return date tracking", "Geolocation logging"],
                   example: "Manager requests file but assigns assistant as delegate. Warehouse prints pick list, scans barcode, captures assistant's signature, and logs both requester and actual recipient for chain of custody.",
                   color: "indigo",
@@ -706,7 +706,7 @@ export default function CannyRMSPage() {
                 {
                   phase: "8",
                   title: "Refiling",
-                  description: "Returned documents are verified, scanned back into the system, and placed in original locations. Overdue tracking with automated alerts.",
+                  description: "Scanned back in, verified, and back to its rack. If a file is overdue, we'll send automated alerts until it's returned.",
                   features: ["Return verification with barcode scan", "Condition check & damage reporting", "Overdue alerts & email reminders", "Original location guidance", "Status update to IN", "Geolocation & IP logging"],
                   example: "User returns contract 2 days before due date. Staff scans barcode, checks condition, confirms return in system. System logs IP address, updates status to IN, and sends confirmation email. Overdue files trigger automatic reminders.",
                   color: "cyan",
