@@ -193,13 +193,13 @@ export default function AISolutionsPage() {
       <Navigation />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center bg-white overflow-hidden">
+        <section className="relative min-h-[95vh] flex items-center bg-white overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 w-full h-full">
             <Antigravity
-              count={300}
+              count={500}
               magnetRadius={100}
-              ringRadius={20}
+              ringRadius={15}
               waveSpeed={0.4}
               waveAmplitude={1}
               particleSize={0.5}
@@ -213,6 +213,7 @@ export default function AISolutionsPage() {
               particleShape="sphere"
               fieldStrength={20}
               areaFactor={2}
+              opacity={1}
             />
           </div>
 

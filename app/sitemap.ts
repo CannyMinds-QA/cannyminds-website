@@ -47,7 +47,12 @@ function getAllPages(dir: string, baseDir: string = dir): string[] {
         } else if (file === 'page.tsx' || file === 'page.ts' || file === 'page.jsx' || file === 'page.js') {
           // Found a page file - convert to route
           const relativePath = filePath.replace(baseDir, '').replace(/\\/g, '/').replace(/\/page\.(tsx|ts|jsx|js)$/, '')
-          pages.push(relativePath || '/')
+          const route = relativePath || '/'
+
+          // Skip dynamic routes (containing brackets) as we want only static routes or specifically handled ones
+          if (!route.includes('[') && !route.includes(']')) {
+            pages.push(route)
+          }
         }
       } catch (err) {
         // Skip files that can't be accessed

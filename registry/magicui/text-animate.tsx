@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, MotionProps, Variants } from "framer-motion";
-import { ElementType } from "react";
+import { ElementType, Fragment } from "react";
 
 type AnimationType = "fadeIn" | "slideLeft" | "slideRight" | "blurIn" | "scaleUp" | "slideUp";
 
@@ -139,13 +139,15 @@ export function TextAnimate({
                 {...props}
             >
                 {segments.map((segment, i) => (
-                    <motion.span
-                        key={i}
-                        variants={itemVariants}
-                        className={cn("inline-block", segmentClassName, by === "word" && "mr-1")}
-                    >
-                        {segment === " " ? "\u00A0" : segment}
-                    </motion.span>
+                    <Fragment key={i}>
+                        <motion.span
+                            variants={itemVariants}
+                            className={cn("inline-block", segmentClassName)}
+                        >
+                            {segment === " " ? "\u00A0" : segment}
+                        </motion.span>
+                        {by === "word" && i < segments.length - 1 && " "}
+                    </Fragment>
                 ))}
             </motion.div>
         </AnimatePresence>

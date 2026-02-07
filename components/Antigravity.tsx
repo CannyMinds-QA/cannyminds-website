@@ -23,6 +23,7 @@ interface AntigravityProps {
   fieldStrength?: number;
   eventSource?: React.RefObject<HTMLElement> | undefined;
   areaFactor?: number;
+  opacity?: number;
 }
 
 const AntigravityInner: React.FC<AntigravityProps> = ({
@@ -41,7 +42,8 @@ const AntigravityInner: React.FC<AntigravityProps> = ({
   pulseSpeed = 3,
   particleShape = 'capsule',
   fieldStrength = 10,
-  areaFactor = 1
+  areaFactor = 1,
+  opacity = 1
 }) => {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const { viewport } = useThree();

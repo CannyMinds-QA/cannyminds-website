@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import {
     Assignment,
     Warning,
@@ -25,17 +25,21 @@ import {
 
 export const pharmaContent = {
     hero: {
-        title: "GenAI for Pharmaceutical Manufacturing",
+        title: "Gen AI for Pharmaceutical Manufacturing",
         subtitle: "Compliance, Quality, Efficiency, and Cost Optimization",
-        description: "Transform your pharmaceutical operations with FDA-compliant Generative AI. From eBMR to Regulatory Audits, we ensure integrity, speed, and precision.",
+        description: (
+            <>
+                Transform your pharmaceutical operations with <Link href="/solutions/product/ebmr" className="text-blue-600 hover:underline">FDA-compliant Generative AI</Link>. From <Link href="/solutions/product/ebmr" className="text-blue-600 hover:underline">eBMR</Link> to Regulatory Audits, we ensure integrity, speed, and precision.
+            </>
+        ),
     },
     useCases: [
         {
             id: "ebmr",
-            title: "GenAI-Enabled Electronic Batch Manufacturing Records (eBMR)",
+            title: "Gen AI-Enabled Electronic Batch Manufacturing Records (eBMR)",
             icon: Assignment,
             problem: "Pharmaceutical plants often rely on paper-based BMRs or fragmented systems, leading to manual errors, slow review cycles, data integrity risks (ALCOA+), and high audit preparation effort.",
-            solution: "GenAI-powered eBMR digitizes and automates the entire lifecycle. It provides contextual validation against MBRs, real-time error detection, and automated review-by-exception.",
+            solution: "Gen AI-powered eBMR digitizes and automates the entire lifecycle. It provides contextual validation against MBRs, real-time error detection, and automated review-by-exception.",
             capabilities: [
                 "AI-based digitization of paper BMRs & logbooks",
                 "Real-time deviation detection during execution",
@@ -50,15 +54,15 @@ export const pharmaContent = {
         },
         {
             id: "capa",
-            title: "GenAI-Enabled Deviation & CAPA Management",
+            title: "Gen AI-Enabled Deviation & CAPA Management",
             icon: Warning,
             problem: "Manual, reactive deviation management leads to delayed investigations, inconsistent root cause analysis, and poor cross-linking of quality events, increasing regulatory risk.",
-            solution: "GenAI automates deviation intake, summarizes investigations using historical data, and recommends CAPAs aligned with regulatory expectations.",
+            solution: "Gen AI automates deviation intake, summarizes investigations using historical data, and recommends CAPAs aligned with regulatory expectations.",
             capabilities: [
                 "AI-assisted deviation classification",
                 "Automated investigation summarization",
                 "Root cause pattern analysis",
-                "GenAI-recommended CAPAs",
+                "Gen AI-recommended CAPAs",
                 "Effectiveness tracking with risk alerts"
             ],
             benefits: {
@@ -86,10 +90,10 @@ export const pharmaContent = {
         },
         {
             id: "predictive-maintenance",
-            title: "GenAI-Enabled Predictive Maintenance",
+            title: "Gen AI-Enabled Predictive Maintenance",
             icon: Build,
             problem: "Reactive maintenance causes unplanned downtime and batch rejections. Validated equipment failures directly impact product quality and compliance.",
-            solution: "GenAI predicts failures using sensor data (vibration, heat) and historical logs, enabling proactive maintenance without disrupting validated processes.",
+            solution: "Gen AI predicts failures using sensor data (vibration, heat) and historical logs, enabling proactive maintenance without disrupting validated processes.",
             capabilities: [
                 "Real-time health monitoring (IoT sensors)",
                 "AI-driven failure prediction",
@@ -104,10 +108,10 @@ export const pharmaContent = {
         },
         {
             id: "process-optimization",
-            title: "GenAI-Enabled Process Optimization",
+            title: "Gen AI-Enabled Process Optimization",
             icon: TrendingUp,
             problem: "Complex processes (API, sterile) suffer from yield variability and parameter drift. Manual analysis is too slow to prevent batch failures.",
-            solution: "GenAI analyzes CPPs and CQAs to recommend optimal parameters within validated ranges, ensuring consistent yield and quality.",
+            solution: "Gen AI analyzes CPPs and CQAs to recommend optimal parameters within validated ranges, ensuring consistent yield and quality.",
             capabilities: [
                 "Multi-parameter analysis (CPPs & CQAs)",
                 "Optimization within validated ranges",
@@ -122,7 +126,7 @@ export const pharmaContent = {
         },
         {
             id: "regulatory-assistant",
-            title: "GenAI-Enabled Regulatory & Audit Assistant",
+            title: "Gen AI-Enabled Regulatory & Audit Assistant",
             icon: Gavel,
             problem: "Audit preparation is stressful and manual. Delays in retrieving documents during FDA/EMA inspections can lead to 483s and warning letters.",
             solution: "A virtual assistant that compiles, validates, and presents audit-ready documentation (SOPs, BMRs, Deviations) instantly.",
@@ -140,7 +144,7 @@ export const pharmaContent = {
         },
         {
             id: "sop-assistant",
-            title: "GenAI-Enabled SOP & Knowledge Assistant",
+            title: "Gen AI-Enabled SOP & Knowledge Assistant",
             icon: LibraryBooks,
             problem: "Thousands of static SOPs make knowledge access difficult. Operators may use outdated procedures, leading to deviations.",
             solution: "A secure, conversational interface for checking approved SOPs. Answers are role-based, version-controlled, and linked to the source.",
@@ -158,10 +162,10 @@ export const pharmaContent = {
         },
         {
             id: "cleaning-validation",
-            title: "GenAI-Enabled Cleaning Validation Optimization",
+            title: "Gen AI-Enabled Cleaning Validation Optimization",
             icon: CleaningServices,
             problem: "Cleaning validation is conservative and data-heavy, leading to excessive downtime, water use, and over-designed cleaning cycles.",
-            solution: "GenAI uses historical lab results (swab/rinse) to recommend optimized cleaning cycles that meet MACO/PDE limits without waste.",
+            solution: "Gen AI uses historical lab results (swab/rinse) to recommend optimized cleaning cycles that meet MACO/PDE limits without waste.",
             capabilities: [
                 "Analysis of historical swab/rinse/TOC data",
                 "AI-driven cycle optimization",
@@ -176,10 +180,10 @@ export const pharmaContent = {
         },
         {
             id: "supply-chain",
-            title: "GenAI-Enabled Supply Chain & Inventory",
+            title: "Gen AI-Enabled Supply Chain & Inventory",
             icon: Inventory,
             problem: "Static forecasting leads to material shortages or expiry write-offs. Supply risks for APIs and excipients are often invisible until too late.",
-            solution: "GenAI predicts demand using market signals and production plans, optimizing inventory levels while ensuring GMP material traceability.",
+            solution: "Gen AI predicts demand using market signals and production plans, optimizing inventory levels while ensuring GMP material traceability.",
             capabilities: [
                 "AI-driven demand forecasting",
                 "Expiry-aware inventory planning",
@@ -194,7 +198,7 @@ export const pharmaContent = {
         },
         {
             id: "training",
-            title: "GenAI-Enabled Training & GMP Compliance",
+            title: "Gen AI-Enabled Training & GMP Compliance",
             icon: School,
             problem: "Generic training doesn't stick. Manual tracking of training status across shifts creates compliance gaps and audit risks.",
             solution: "Personalized, role-based micro-learning generated from SOPs. Automated compliance tracking ensures everyone is audit-ready.",
@@ -235,21 +239,21 @@ export const pharmaContent = {
     ],
     caseStudies: [
         {
-            title: "GenAI-Enabled eBMR Review",
+            title: "Gen AI-Enabled eBMR Review",
             scenario: "Multi-site dosage manufacturer faced slow batch release due to manual review.",
-            solution: "GenAI highlighted exceptions; QA performed final approval (Human-in-the-Loop).",
+            solution: "Gen AI highlighted exceptions; QA performed final approval (Human-in-the-Loop).",
             outcome: "55% reduction in review time, positive FDA feedback on data integrity."
         },
         {
             title: "Deviation & CAPA Intelligence",
             scenario: "Recurring deviations across equipment were not easily correlated manually.",
-            solution: "GenAI analyzed history to find trends and probable causes.",
+            solution: "Gen AI analyzed history to find trends and probable causes.",
             outcome: "Faster investigations, reduced repeat deviations, improved CAPA effectiveness."
         },
         {
             title: "Audit Readiness & FDA Support",
             scenario: "FDA inspection required rapid access to years of evidence.",
-            solution: "CannyECM dashboards compiled data instantly; GenAI retrieved documents.",
+            solution: "CannyECM dashboards compiled data instantly; Gen AI retrieved documents.",
             outcome: "Zero data integrity observations, reduced inspection stress."
         }
     ]
