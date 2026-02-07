@@ -165,13 +165,14 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
-            Service Interested In
+            Service Interested In *
           </label>
           <select
             id="service"
             name="service"
             value={formData.service}
             onChange={handleChange}
+            required
             className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
           >
             <option value="">Select a service...</option>

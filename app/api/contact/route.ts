@@ -1,13 +1,7 @@
-// Using Resend for faster, more reliable email delivery
-import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
-// Nodemailer code (commented out - uncomment if you want to switch back to SMTP)
-// import nodemailer from 'nodemailer';
-
-// const resend = new Resend(process.env.RESEND_API_KEY);
-
-// Simple in-memory rate limiting (for production, use Redis or similar)
+// Simple in-memory rate limiting
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour
 const MAX_REQUESTS = 5; // Max 5 submissions per hour per IP
@@ -31,162 +25,177 @@ function checkRateLimit(ip: string): boolean {
 
 export async function POST(request: Request) {
   try {
-    // Get client IP for rate limiting
+    console.log('--- Contact Form API Called ---');
+
+    // 1. Rate Limiting
     const forwarded = request.headers.get('x-forwarded-for');
     const ip = forwarded ? forwarded.split(',')[0] : 'unknown';
 
-    // Rate limiting check
     if (!checkRateLimit(ip)) {
+      console.warn(`Rate limit hit for IP: ${ip}`);
       return NextResponse.json(
         { error: 'Too many requests. Please try again later.' },
         { status: 429 }
       );
     }
 
-    // Parse request body
-    const body = await request.json();
+    // 2. Parse Body
+    let body;
+    try {
+      body = await request.json();
+    } catch (e) {
+      console.error('JSON Parse Error:', e);
+      return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
+    }
+
     const { name, email, phone, company, service, message } = body;
 
-    // Server-side validation
-    if (!name || !email || !message) {
+    // 3. Validation
+    if (!name || !email || !message || !service) {
+      console.warn('Missing required fields:', { name: !!name, email: !!email, message: !!message, service: !!service });
       return NextResponse.json(
-        { error: 'Name, email, and message are required fields.' },
+        { error: 'Name, email, service, and message are required.' },
         { status: 400 }
       );
     }
 
-    /*
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'Please provide a valid email address.' },
-        { status: 400 }
-      );
-    }
+    // 4. SMTP Configuration Check
+    const smtpConfig = {
+      host: process.env.SMTP_HOST,
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+      to: process.env.COMPANY_EMAIL,
+    };
 
-    // Validate message length
-    if (message.length < 10) {
-      return NextResponse.json(
-        { error: 'Message must be at least 10 characters long.' },
-        { status: 400 }
-      );
-    }
+    // Masked logging for verification
+    const mask = (str: string | undefined) => {
+      if (!str) return 'MISSING';
+      if (str.length <= 4) return '****';
+      return `${str[0]}***${str[str.length - 1]} (${str.length} chars)`;
+    };
 
-    if (message.length > 5000) {
-      return NextResponse.json(
-        { error: 'Message is too long. Please keep it under 5000 characters.' },
-        { status: 400 }
-      );
-    }
-
-    // Check if Resend API key is configured
-    if (!process.env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY is not configured');
-      return NextResponse.json(
-        { error: 'Email service is not configured. Please contact support.' },
-        { status: 500 }
-      );
-    }
-
-    if (!process.env.COMPANY_EMAIL) {
-      console.error('COMPANY_EMAIL is not configured');
-      return NextResponse.json(
-        { error: 'Recipient email is not configured. Please contact support.' },
-        { status: 500 }
-      );
-    }
-
-    // Send email via Resend (faster & better deliverability)
-    const { data, error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || 'CannyMinds <onboarding@resend.dev>',
-      to: [process.env.COMPANY_EMAIL],
-      replyTo: email,
-      subject: `New Contact Form Submission from ${name}`,
-      html: `...html content...`,
+    console.log('Environment Debug:', {
+      host: smtpConfig.host,
+      port: smtpConfig.port,
+      user: mask(smtpConfig.user),
+      pass: mask(smtpConfig.pass),
+      to: smtpConfig.to
     });
 
-    if (error) {
-      console.error('Resend error:', error);
+    if (!smtpConfig.host || !smtpConfig.user || !smtpConfig.pass || !smtpConfig.to) {
+      console.error('Mising SMTP Environment Variables:', {
+        host: !!smtpConfig.host,
+        user: !!smtpConfig.user,
+        pass: !!smtpConfig.pass,
+        to: !!smtpConfig.to
+      });
       return NextResponse.json(
-        { error: 'Failed to send email. Please try again or contact us directly.' },
+        { error: 'Server SMTP configuration is incomplete.' },
         { status: 500 }
       );
     }
-    */
 
-    // MOCK RESPONSE FOR DEPLOYMENT
-    console.log("Contact form submitted (MOCKED):", body);
+    // 5. Create Transporter
+    const transporter = nodemailer.createTransport({
+      host: smtpConfig.host,
+      port: 465, // Try 465 SSL
+      secure: true, // true for 465
+      auth: {
+        user: smtpConfig.user,
+        pass: smtpConfig.pass,
+      },
+      tls: {
+        rejectUnauthorized: false
+      },
+      debug: true, // Enable debug logging
+      logger: true // Enable internal logger
+    });
 
+    // 6. Send Email
+    console.log(`Attempting to send email to ${smtpConfig.to} from ${smtpConfig.user}...`);
+
+    const info = await transporter.sendMail({
+      from: `"${process.env.EMAIL_FROM_NAME || 'CannyMinds Website'}" <${smtpConfig.user}>`,
+      to: smtpConfig.to,
+      replyTo: email,
+      subject: `Contact Inquiry: ${name} (${service})`,
+      text: `
+        New Contact Form Submission
+        ---------------------------
+        Name: ${name}
+        Email: ${email}
+        Phone: ${phone || 'N/A'}
+        Company: ${company || 'N/A'}
+        Service: ${service}
+        Message: ${message}
+      `,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px;">
+          <h2 style="color: #1e3a8a; border-bottom: 2px solid #3b82f6; padding-bottom: 10px;">New Contact Inquiry</h2>
+          
+          <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <tr>
+              <td style="padding: 10px 0; color: #64748b; font-weight: bold; width: 140px;">NAME:</td>
+              <td style="padding: 10px 0; color: #1e293b;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; color: #64748b; font-weight: bold;">EMAIL:</td>
+              <td style="padding: 10px 0;"><a href="mailto:${email}" style="color: #3b82f6; text-decoration: none;">${email}</a></td>
+            </tr>
+            ${phone ? `
+            <tr>
+              <td style="padding: 10px 0; color: #64748b; font-weight: bold;">PHONE:</td>
+              <td style="padding: 10px 0;"><a href="tel:${phone.replace(/\D/g, '')}" style="color: #3b82f6; text-decoration: none;">${phone}</a></td>
+            </tr>
+            ` : ''}
+            ${company ? `
+            <tr>
+              <td style="padding: 10px 0; color: #64748b; font-weight: bold;">ORGANIZATION:</td>
+              <td style="padding: 10px 0; vertical-align: middle;">
+                ${company} 
+                <a href="https://www.google.com/search?q=${encodeURIComponent(company)}" target="_blank" style="margin-left: 10px; font-size: 11px; color: #64748b; text-decoration: none; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; border: 1px solid #e2e8f0;">🔍 Search</a>
+              </td>
+            </tr>
+            ` : ''}
+            <tr>
+              <td style="padding: 10px 0; color: #64748b; font-weight: bold;">SERVICE:</td>
+              <td style="padding: 10px 0; color: #1e293b;">${service}</td>
+            </tr>
+          </table>
+
+          <div style="margin-top: 30px; padding: 20px; background: #f8fafc; border-radius: 6px; border-left: 4px solid #3b82f6;">
+            <p style="margin: 0; font-weight: bold; color: #1e3a8a; margin-bottom: 10px;">Message:</p>
+            <p style="margin: 0; color: #334155; line-height: 1.6; white-space: pre-wrap;">${message}</p>
+          </div>
+
+          <div style="margin-top: 30px; font-size: 12px; color: #94a3b8; text-align: center; border-top: 1px solid #f1f5f9; padding-top: 20px;">
+            Sent via CannyMinds Website Submisson Utility
+          </div>
+        </div>
+      `
+    });
+
+    console.log('✅ Email Send Response:', {
+      messageId: info.messageId,
+      accepted: info.accepted,
+      rejected: info.rejected,
+      response: info.response,
+      envelope: info.envelope
+    });
+
+    console.log('✅ Email sent successfully');
+    return NextResponse.json({ success: true, message: 'Message sent!' }, { status: 200 });
+
+  } catch (error: any) {
+    console.error('API Route Error:', error);
     return NextResponse.json(
       {
-        success: true,
-        message: 'Your message has been received! (Demo Mode)',
-        emailId: 'mock-id'
+        error: 'Internal Server Error',
+        details: error.message,
+        code: error.code
       },
-      { status: 200 }
-    );
-
-  } catch (error) {
-    console.error('Contact form error:', error);
-    return NextResponse.json(
-      { error: 'An unexpected error occurred. Please try again later.' },
       { status: 500 }
     );
   }
 }
-
-/* 
- * ====================================================================================
- * NODEMAILER CODE (Commented out - slower delivery, often goes to spam)
- * Uncomment below and comment out Resend code if you want to use SMTP instead
- * ====================================================================================
-
-// Check if SMTP is configured
-if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-  console.error('SMTP configuration is incomplete');
-  return NextResponse.json(
-    { error: 'Email service is not configured. Please contact support.' },
-    { status: 500 }
-  );
-}
-
-// Create SMTP transporter
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_SECURE === 'true',
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
-
-// Send email
-await transporter.sendMail({
-  from: `"${process.env.EMAIL_FROM_NAME || 'CannyMinds Website'}" <${process.env.SMTP_USER}>`,
-  to: process.env.COMPANY_EMAIL,
-  replyTo: email,
-  subject: `New Contact Form Submission from ${name}`,
-  text: `[Plain text version]`,
-  html: `[Same HTML template as above]`
-});
-
-// SMTP-specific error handling
-if (error instanceof Error) {
-  if (error.message.includes('EAUTH') || error.message.includes('authentication')) {
-    return NextResponse.json(
-      { error: 'Email authentication failed. Please contact support.' },
-      { status: 500 }
-    );
-  }
-  if (error.message.includes('ECONNECTION') || error.message.includes('ETIMEDOUT')) {
-    return NextResponse.json(
-      { error: 'Unable to connect to email server. Please try again later.' },
-      { status: 500 }
-    );
-  }
-}
-
-*/
-
