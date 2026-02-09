@@ -30,7 +30,7 @@ const products = [
         bg: "bg-blue-50",
         borderColor: "hover:border-blue-500",
         link: "/solutions/product/document-management",
-        features: ["80%+ OCR Accuracy", "Workflow Automation", "Cloud & On-Premise", "Version Control", "Secure Sharing"],
+        features: ["99%+ OCR Accuracy", "Workflow Automation", "Cloud & On-Premise", "Version Control", "Secure Sharing"],
         stats: { value: "50K+", label: "Docs Managed" },
     },
     {
@@ -290,7 +290,7 @@ export default function AllProductsShowcase() {
                         <div className="relative z-10 max-w-2xl mx-auto">
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to modernize your operations?</h2>
                             <p className="text-blue-100 text-lg mb-8">
-                                Join 500+ organizations that efficiently manage their business with CannyMinds.
+                                Join 50+ organizations that efficiently manage their business with CannyMinds.
                             </p>
                             <Link href="/contact">
                                 <button className="px-8 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-lg">

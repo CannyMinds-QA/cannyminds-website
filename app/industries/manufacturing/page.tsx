@@ -348,7 +348,7 @@ export default function ManufacturingIndustryPage() {
                     <CheckCircle className="text-orange-600 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-gray-900">Proven Track Record:</strong>
-                      <span className="text-gray-600"> [Write about 500+ clients, 20+ years, success metrics]</span>
+                      <span className="text-gray-600"> [Write about 50+ clients, 20+ years, success metrics]</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">

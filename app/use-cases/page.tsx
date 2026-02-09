@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import Navigation from "@/components/ui/Navigation";
 import Footer from "@/components/ui/Footer";
@@ -9,7 +10,10 @@ import {
     School,
     ShoppingCart,
     Gavel,
-    ArrowForward
+    ArrowForward,
+    Science,
+    VerifiedUser,
+    Construction
 } from "@mui/icons-material";
 
 export const metadata: Metadata = {
@@ -20,9 +24,13 @@ export const metadata: Metadata = {
 const useCases = [
     {
         industry: "Healthcare",
+        href: "/use-cases/healthcare",
         icon: LocalHospital,
         color: "text-red-500",
         bg: "bg-red-50",
+        borderColor: "border-red-100",
+        highlightColor: "bg-red-500",
+        lightHighlight: "bg-red-50/50",
         description: "Digital transformation for modern patient care.",
         problems: [
             "Inefficient manual patient record management",
@@ -36,10 +44,35 @@ const useCases = [
         ]
     },
     {
-        industry: "Manufacturing",
+        industry: "Pharmaceutical",
+        href: "/use-cases/pharmaceutical",
+        icon: Science,
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+        borderColor: "border-purple-100",
+        highlightColor: "bg-purple-600",
+        lightHighlight: "bg-purple-50/50",
+        description: "Streamlining drug manufacturing and compliance.",
+        problems: [
+            "Complex batch record documentation",
+            "Strict regulatory compliance (FDA/21 CFR)",
+            "Slow quality control approvals"
+        ],
+        solutions: [
+            "Digital Batch Manufacturing Records (eBMR)",
+            "Automated quality management workflows",
+            "Real-time compliance monitoring"
+        ]
+    },
+    {
+        industry: "Manufacturing & Engineering",
+        href: "/use-cases/manufacturing-engineering",
         icon: Factory,
         color: "text-orange-500",
         bg: "bg-orange-50",
+        borderColor: "border-orange-100",
+        highlightColor: "bg-orange-500",
+        lightHighlight: "bg-orange-50/50",
         description: "Optimizing production and supply chain workflows.",
         problems: [
             "Paper-based batch records causing delays",
@@ -53,10 +86,56 @@ const useCases = [
         ]
     },
     {
+        industry: "FMCG Manufacturing",
+        href: "/use-cases/fmcg",
+        icon: ShoppingCart,
+        color: "text-green-600",
+        bg: "bg-green-50",
+        borderColor: "border-green-100",
+        highlightColor: "bg-green-600",
+        lightHighlight: "bg-green-50/50",
+        description: "High-speed production documentation and quality control.",
+        problems: [
+            "Manual production logs slow down lines",
+            "Inconsistent quality documentation",
+            "Recall management challenges"
+        ],
+        solutions: [
+            "Digitized production logs & checklists",
+            "Automated quality deviation workflows",
+            "End-to-end batch traceability"
+        ]
+    },
+    {
+        industry: "Bottling Manufacturing",
+        href: "/use-cases/bottling",
+        icon: Factory,
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+        borderColor: "border-cyan-100",
+        highlightColor: "bg-cyan-600",
+        lightHighlight: "bg-cyan-50/50",
+        description: "Ensuring traceability and compliance in bottling lines.",
+        problems: [
+            "Fragmented batch documentation",
+            "Manual lab & sanitation records",
+            "Audit readiness gaps"
+        ],
+        solutions: [
+            "Integrated batch record management",
+            "Digital lab and sanitation logs",
+            "Automated audit trail generation"
+        ]
+    },
+    {
         industry: "Banking & Finance",
+        href: "/use-cases/bfsi",
         icon: AccountBalance,
         color: "text-blue-500",
         bg: "bg-blue-50",
+        borderColor: "border-blue-100",
+        highlightColor: "bg-blue-500",
+        lightHighlight: "bg-blue-50/50",
         description: "Secure, automated financial operations.",
         problems: [
             "Slow manual loan processing times",
@@ -70,44 +149,14 @@ const useCases = [
         ]
     },
     {
-        industry: "Education",
-        icon: School,
-        color: "text-yellow-500",
-        bg: "bg-yellow-50",
-        description: "Empowering institutions with digital learning tools.",
-        problems: [
-            "Disorganized student records & admissions",
-            "Ineffective virtual classroom tools",
-            "Manual fee collection and tracking"
-        ],
-        solutions: [
-            "Comprehensive Student Information System",
-            "Integrated LMS for hybrid learning",
-            "Automated fee management & payment gateway"
-        ]
-    },
-    {
-        industry: "Retail",
-        icon: ShoppingCart,
-        color: "text-green-500",
-        bg: "bg-green-50",
-        description: "Unifying in-store and online customer experiences.",
-        problems: [
-            "Inventory mismatch between online & store",
-            "Poor customer retention & loyalty tracking",
-            "Slow checkout processes"
-        ],
-        solutions: [
-            "Record management system",
-            "AI-powered loyalty & personalization engine",
-            "Mobile POS for faster checkout"
-        ]
-    },
-    {
-        industry: "Legal",
+        industry: "Legal Firms",
+        href: "/use-cases/legal",
         icon: Gavel,
-        color: "text-purple-500",
-        bg: "bg-purple-50",
+        color: "text-indigo-600",
+        bg: "bg-indigo-50",
+        borderColor: "border-indigo-100",
+        highlightColor: "bg-indigo-600",
+        lightHighlight: "bg-indigo-50/50",
         description: "Streamlining legal workflows and case management.",
         problems: [
             "Overwhelming volume of legal documents",
@@ -118,6 +167,27 @@ const useCases = [
             "AI-powered Document Management System",
             "Automated case management & calendaring",
             "Encrypted client portal for secure sharing"
+        ]
+    },
+    {
+        industry: "Audit Firms",
+        href: "/use-cases/audit-firms",
+        icon: VerifiedUser,
+        color: "text-slate-600",
+        bg: "bg-slate-50",
+        borderColor: "border-slate-100",
+        highlightColor: "bg-slate-600",
+        lightHighlight: "bg-slate-50/50",
+        description: "Enhancing audit quality and evidence management.",
+        problems: [
+            "Dispersed audit working papers",
+            "Manual review & sign-off bottlenecks",
+            "Difficulty in tracking audit evidence"
+        ],
+        solutions: [
+            "Centralized audit documentation platform",
+            "Workflow-driven review & approval",
+            "Secure evidence linking & retention"
         ]
     }
 ];
@@ -169,7 +239,7 @@ export default function UseCasesPage() {
                                             </div>
                                             <h2 className="text-2xl font-bold text-secondary mb-3">{useCase.industry}</h2>
                                             <p className="text-gray-600 mb-6">{useCase.description}</p>
-                                            <Link href="/contact" className="text-primary font-semibold flex items-center gap-2 hover:gap-3 transition-all mt-auto group">
+                                            <Link href={useCase.href} className="text-primary font-semibold flex items-center gap-2 hover:gap-3 transition-all mt-auto group">
                                                 Solve This For Me <ArrowForward fontSize="small" className="group-hover:text-primary" />
                                             </Link>
                                         </div>
@@ -179,9 +249,9 @@ export default function UseCasesPage() {
                                             {/* Divider for desktop */}
                                             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-100 -translate-x-1/2"></div>
 
-                                            <div className="bg-red-50/50 rounded-xl p-6 border border-red-100">
-                                                <h3 className="text-lg font-bold text-red-600 mb-4 flex items-center gap-2">
-                                                    <span className="w-2 h-2 rounded-full bg-red-600"></span>
+                                            <div className={`rounded-xl p-6 border ${useCase.borderColor} ${useCase.lightHighlight}`}>
+                                                <h3 className={`text-lg font-bold ${useCase.color} mb-4 flex items-center gap-2`}>
+                                                    <span className={`w-2 h-2 rounded-full ${useCase.highlightColor}`}></span>
                                                     The Challenge
                                                 </h3>
                                                 <ul className="space-y-3">

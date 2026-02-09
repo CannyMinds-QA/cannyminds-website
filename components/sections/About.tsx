@@ -9,7 +9,7 @@ const eatPillars = [
     icon: "🎯",
     description:
       "Over 20 years of hands-on experience delivering enterprise solutions across diverse industries and global markets.",
-    metrics: ["500+ Projects", "15+ Industries", "4 Continents"],
+    metrics: ["50+ Projects", "15+ Industries", "4 Continents"],
   },
   {
     title: "Expertise",

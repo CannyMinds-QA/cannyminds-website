@@ -19,7 +19,7 @@ export default function FinalCTA() {
                             Ready to Accelerate Your Digital Transformation?
                         </h2>
                         <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            Don't let manual processes hold you back. Join 500+ successful organizations that trust CannyMinds for enterprise AI and automation.
+                            Don't let manual processes hold you back. Join 50+ successful organizations that trust CannyMinds for enterprise AI and automation.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

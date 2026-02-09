@@ -452,7 +452,7 @@ export default function AISolutionsPage() {
                 className="grid grid-cols-2 gap-4"
               >
                 {[
-                  { value: "500+", label: "AI Projects Delivered" },
+                  { value: "50+", label: "AI Projects Delivered" },
                   { value: "99%", label: "Accuracy Rate" },
                   { value: "40%", label: "Average Cost Reduction" },
                   { value: "24/7", label: "AI Support" },

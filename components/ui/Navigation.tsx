@@ -120,15 +120,15 @@ export default function Navigation() {
     },
     'healthcare': {
       name: "Healthcare",
-      href: "/industries/healthcare",
+      href: "/use-cases/healthcare",
       icon: LocalHospital,
       subTopics: [
-        { name: "Overview", href: "/industries/healthcare" },
-        { name: "Patient Records", href: "/industries/healthcare/patient-records" },
-        { name: "Medical Archives", href: "/industries/healthcare/medical-archives" },
-        { name: "Imaging & Digitization", href: "/industries/healthcare/digitization" },
-        { name: "Compliance", href: "/industries/healthcare/compliance" },
-        { name: "Workforce Management", href: "/industries/healthcare/workforce" },
+        { name: "Overview", href: "/use-cases/healthcare" },
+        { name: "Patient Records", href: "/use-cases/healthcare/patient-records" },
+        { name: "Medical Archives", href: "/use-cases/healthcare/medical-archives" },
+        { name: "Imaging & Digitization", href: "/use-cases/healthcare/digitization" },
+        { name: "Compliance", href: "/use-cases/healthcare/compliance" },
+        { name: "Workforce Management", href: "/use-cases/healthcare/workforce" },
       ]
     },
     'pharmaceutical': {
@@ -324,52 +324,33 @@ export default function Navigation() {
     },
   };
 
-  const bpmSolutions = [
-    {
-      name: "Invoice Management",
-      href: "/bpm/invoice-management",
-      description: "Automate invoice processing & approvals",
-      icon: Receipt
-    },
-    {
-      name: "Legal & Contract Management",
-      href: "/bpm/legal-management",
-      description: "Manage contracts, agreements & compliance",
-      icon: Gavel
-    },
-    {
-      name: "Procurement & Purchase Orders",
-      href: "/bpm/procurement",
-      description: "Streamline purchasing workflows",
-      icon: Business
-    },
-    {
-      name: "Safety & Compliance Workflows",
-      href: "/bpm/safety-compliance",
-      description: "Manage safety protocols & audits",
-      icon: HealthAndSafety
-    },
-    {
-      name: "Project & Task Management",
-      href: "/bpm/project-management",
-      description: "Track projects & automate tasks",
-      icon: Construction
-    },
-    {
-      name: "Custom Workflow Automation",
-      href: "/bpm/custom-workflows",
-      description: "Build tailored business processes",
-      icon: Settings
-    },
+  const bpmCategories = [
+    { name: "Document Lifecycle & Control Processes", href: "/bpm#document-lifecycle", icon: Description },
+    { name: "Quality Management Processes", href: "/bpm#quality-management", icon: VerifiedUser },
+    { name: "Audit & Compliance Processes", href: "/bpm#audit-compliance", icon: VerifiedUser },
+    { name: "Production & Operations Processes", href: "/bpm#production-operations", icon: Factory },
+    { name: "Engineering & Change Management", href: "/bpm#engineering-change", icon: Construction },
+    { name: "Validation & Qualification Processes", href: "/bpm#validation-qualification", icon: VerifiedUser },
+    { name: "Healthcare & Clinical Processes", href: "/bpm#healthcare-clinical", icon: LocalHospital },
+    { name: "Legal & Contract Management", href: "/bpm#legal-contract", icon: Gavel },
+    { name: "Finance & BFSI Processes", href: "/bpm#finance-bfsi", icon: AccountBalance },
+    { name: "Procurement & Vendor Management", href: "/bpm#procurement-vendor", icon: Business },
+    { name: "HR & Administration Processes", href: "/bpm#hr-administration", icon: People },
+    { name: "IT & Information Security Processes", href: "/bpm#it-security", icon: Settings },
+    { name: "Risk Management & Governance", href: "/bpm#risk-governance", icon: HealthAndSafety },
+    { name: "Customer Service & Support", href: "/bpm#customer-service", icon: People },
+    { name: "Records Retention & Legal Hold", href: "/bpm#records-retention", icon: Description },
   ];
 
   const useCaseIndustries = [
-    { name: "Healthcare & Pharmaceuticals", href: "/use-cases#healthcare", icon: LocalHospital },
-    { name: "Manufacturing & Engineering", href: "/use-cases#manufacturing", icon: Factory },
-    { name: "Banking, Finance & Insurance", href: "/use-cases#banking-finance", icon: AccountBalance },
-    { name: "Education", href: "/use-cases#education", icon: School },
-    { name: "Retail & E-commerce", href: "/use-cases#retail", icon: ShoppingCart },
-    { name: "Legal", href: "/use-cases#legal", icon: Gavel },
+    { name: "Healthcare Industry", href: "/use-cases/healthcare", icon: LocalHospital },
+    { name: "Pharmaceutical Manufacturing", href: "/use-cases/pharmaceutical", icon: Science },
+    { name: "Manufacturing & Engineering", href: "/use-cases/manufacturing-engineering", icon: Factory },
+    { name: "FMCG Manufacturing", href: "/use-cases/fmcg", icon: Factory },
+    { name: "Bottling Manufacturing", href: "/use-cases/bottling", icon: Factory },
+    { name: "Banking, Finance & Insurance", href: "/use-cases/bfsi", icon: AccountBalance },
+    { name: "Legal Firms", href: "/use-cases/legal", icon: Gavel },
+    { name: "Audit Firms", href: "/use-cases/audit-firms", icon: VerifiedUser },
   ];
 
 
@@ -694,33 +675,36 @@ export default function Navigation() {
                       }}
                     >
                       <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
-                        <div className="flex items-center gap-2 mb-6">
-                          <Settings sx={{ fontSize: 24, color: '#3170b5' }} />
-                          <h3 className="text-lg font-bold text-primary">
-                            Business Process Management Solutions
-                          </h3>
+                        <div className="flex items-center justify-between mb-6">
+                          <div className="flex items-center gap-2">
+                            <Settings sx={{ fontSize: 24, color: '#3170b5' }} />
+                            <h3 className="text-lg font-bold text-primary">
+                              CannyECM BPM Workflows
+                            </h3>
+                          </div>
+                          <Link
+                            href="/bpm"
+                            onClick={() => setBpmDropdownOpen(false)}
+                            className="text-sm text-primary font-medium hover:underline flex items-center gap-1"
+                          >
+                            View All BPM Solutions
+                            <KeyboardArrowRight sx={{ fontSize: 18 }} />
+                          </Link>
                         </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl">
-                          {bpmSolutions.map((solution) => {
-                            const IconComponent = solution.icon;
+                        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-3 max-w-7xl">
+                          {bpmCategories.map((category) => {
+                            const IconComponent = category.icon;
                             return (
                               <Link
-                                key={solution.name}
-                                href={solution.href}
+                                key={category.name}
+                                href={category.href}
                                 onClick={() => setBpmDropdownOpen(false)}
-                                className="block px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors group border border-gray-100"
+                                className="flex items-start gap-2 p-3 rounded-lg hover:bg-primary/5 transition-colors group border border-gray-100 hover:border-primary/30"
                               >
-                                <div className="flex items-start gap-3">
-                                  <IconComponent sx={{ fontSize: 24, color: '#3170b5' }} className="mt-0.5" />
-                                  <div className="flex-1">
-                                    <div className="font-semibold text-gray-800 text-sm group-hover:text-primary transition-colors">
-                                      {solution.name}
-                                    </div>
-                                    <div className="text-xs text-gray-500 mt-0.5">
-                                      {solution.description}
-                                    </div>
-                                  </div>
-                                </div>
+                                <IconComponent sx={{ fontSize: 18 }} className="text-primary mt-0.5 flex-shrink-0" />
+                                <span className="text-sm text-gray-700 group-hover:text-primary transition-colors leading-tight">
+                                  {category.name}
+                                </span>
                               </Link>
                             );
                           })}
@@ -1138,35 +1122,42 @@ export default function Navigation() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="ml-4 mt-2 flex flex-col gap-2"
+                        className="ml-4 mt-2 flex flex-col gap-1"
                       >
                         <div className="bg-gray-50 rounded-lg p-2">
-                          <div className="mt-1 space-y-1">
-                            {bpmSolutions.map((solution) => {
-                              const IconComponent = solution.icon;
+                          <div className="flex items-center gap-2 text-sm font-semibold text-primary py-2 px-2 mb-1">
+                            <Settings sx={{ fontSize: 18 }} />
+                            CannyECM BPM Workflows
+                          </div>
+                          <div className="space-y-1">
+                            {bpmCategories.map((category) => {
+                              const IconComponent = category.icon;
                               return (
                                 <Link
-                                  key={solution.name}
-                                  href={solution.href}
+                                  key={category.name}
+                                  href={category.href}
                                   onClick={() => {
                                     setIsMobileMenuOpen(false);
                                     setMobileBpmOpen(false);
                                   }}
-                                  className="block text-gray-600 hover:text-primary hover:bg-white text-xs py-2 px-3 transition-colors rounded-md"
+                                  className="flex items-center gap-2 text-gray-600 hover:text-primary hover:bg-white text-xs py-2 px-3 transition-colors rounded-md"
                                 >
-                                  <div className="flex items-start gap-2">
-                                    <IconComponent sx={{ fontSize: 16 }} className="mt-0.5" />
-                                    <div>
-                                      <div className="font-semibold">{solution.name}</div>
-                                      <div className="text-[10px] text-gray-500 mt-0.5">
-                                        {solution.description}
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <IconComponent sx={{ fontSize: 14 }} />
+                                  {category.name}
                                 </Link>
                               );
                             })}
                           </div>
+                          <Link
+                            href="/bpm"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setMobileBpmOpen(false);
+                            }}
+                            className="block text-primary font-semibold text-xs py-2 px-3 mt-2 border-t border-gray-200"
+                          >
+                            View All BPM Solutions →
+                          </Link>
                         </div>
                       </motion.div>
                     )}

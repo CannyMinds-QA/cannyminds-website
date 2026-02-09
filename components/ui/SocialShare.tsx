@@ -74,7 +74,7 @@ export default function SocialShare({ title, description, url }: SocialShareProp
           />
 
           {/* Share Options */}
-          <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-200 p-4 z-50 animate-fade-in">
+          <div className="fixed sm:absolute top-auto sm:top-full bottom-4 sm:bottom-auto left-4 right-4 sm:left-0 sm:right-auto mt-0 sm:mt-2 w-auto sm:w-72 bg-white rounded-xl shadow-xl border border-gray-200 p-4 z-50 animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-bold text-secondary">Share this page</h3>
               <button

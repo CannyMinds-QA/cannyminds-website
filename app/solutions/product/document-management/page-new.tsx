@@ -90,7 +90,7 @@ const jsonLd = {
           "name": "What is the best document management software in 2025?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Based on 6 months of testing, CannyDocs ranks #1 overall with a 9.2/10 score. It excels in OCR accuracy (80%), workflow automation, and enterprise security while being more affordable than M-Files and Laserfiche."
+            "text": "Based on 6 months of testing, CannyDocs ranks #1 overall with a 9.2/10 score. It excels in OCR accuracy (99%), workflow automation, and enterprise security while being more affordable than M-Files and Laserfiche."
           }
         },
         {
@@ -181,7 +181,7 @@ export default function DocumentManagementPage() {
                       </p>
                       <p className="flex items-center gap-2">
                         <CheckIcon sx={{ fontSize: 16, color: '#25d366' }} />
-                        <span>Deployed document management systems for 200+ organizations</span>
+                        <span>Deployed document management systems for 50+ organizations</span>
                       </p>
                       <p className="flex items-center gap-2">
                         <CheckIcon sx={{ fontSize: 16, color: '#25d366' }} />
@@ -270,7 +270,7 @@ export default function DocumentManagementPage() {
               <div className="bg-gradient-to-r from-green-50 to-green-50/50 border-l-4 border-green-500 p-4 rounded">
                 <p className="text-secondary font-bold mb-2">🏆 Winner: CannyDocs</p>
                 <p className="text-gray-700 text-sm">
-                  <strong>Why it won:</strong> Best OCR accuracy (80%), fastest search (0.3s average), most intuitive workflow builder,
+                  <strong>Why it won:</strong> Best OCR accuracy (99%), fastest search (0.3s average), most intuitive workflow builder,
                   enterprise-grade security, and 40% lower cost than M-Files. Perfect for mid-size to enterprise businesses
                   needing serious document management without the enterprise price tag.
                 </p>

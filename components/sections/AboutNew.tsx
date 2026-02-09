@@ -74,7 +74,7 @@ const certCardVariants = {
 
 const stats = [
   { value: "20+", label: "Years of Excellence", icon: GrowthIcon, color: "text-blue-600" },
-  { value: "500+", label: "Happy Clients", icon: TeamIcon, color: "text-green-600" },
+  { value: "50+", label: "Happy Clients", icon: TeamIcon, color: "text-green-600" },
   { value: "4", label: "Global Offices", icon: GlobalIcon, color: "text-purple-600" },
   { value: "24/7", label: "Expert Support", icon: SupportIcon, color: "text-orange-600" },
 ];

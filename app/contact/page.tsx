@@ -212,7 +212,7 @@ export default function ContactPage() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join 10+ organizations worldwide that trust CannyMinds for their digital transformation journey.
+                Join 50+ organizations worldwide that trust CannyMinds for their digital transformation journey.
                 Let's discuss how we can help you achieve your business goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

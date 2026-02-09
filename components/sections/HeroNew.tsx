@@ -86,7 +86,7 @@ export default function HeroNew() {
               </div>
               <div className="flex items-center gap-2">
                 <TrendingIcon className="text-blue-600" sx={{ fontSize: 20 }} />
-                <span className="text-gray-700 font-medium">500+ Clients</span>
+                <span className="text-gray-700 font-medium">50+ Clients</span>
               </div>
               <div className="flex items-center gap-2">
                 <SecurityIcon className="text-purple-600" sx={{ fontSize: 20 }} />

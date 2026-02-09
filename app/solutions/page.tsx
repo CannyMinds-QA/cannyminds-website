@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: 'All Solutions | Enterprise Software Products by CannyMinds',
-        description: 'Explore all enterprise software solutions from CannyMinds. ISO-certified, FDA-compliant systems trusted by 500+ organizations globally.',
+        description: 'Explore all enterprise software solutions from CannyMinds. ISO-certified, FDA-compliant systems trusted by 50+ organizations globally.',
         url: 'https://www.cannymindstech.com/solutions',
         type: 'website',
     },

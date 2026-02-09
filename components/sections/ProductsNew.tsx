@@ -74,7 +74,7 @@ const products = [
     description: "Enterprise-grade ECM with OCR, workflow automation, and cloud/on-premise deployment.",
     icon: DocIcon,
     link: "/solutions/product/document-management",
-    features: ["80% OCR Accuracy", "Workflow Automation", "Cloud & On-Premise"],
+    features: ["99% OCR Accuracy", "Workflow Automation", "Cloud & On-Premise"],
   },
   {
     name: "CannyHR",
@@ -130,7 +130,7 @@ export default function ProductsNew() {
               transition={{ duration: 0.5, delay: 0.25 }}
               className="text-lg text-gray-600"
             >
-              Comprehensive enterprise software trusted by 500+ companies worldwide
+              Comprehensive enterprise software trusted by 50+ companies worldwide
             </motion.p>
           </motion.div>
         </div>

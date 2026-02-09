@@ -149,7 +149,7 @@ export default function GovernmentIndustryPage() {
     },
     {
       title: "Proven Track Record",
-      description: "[Write about 500+ clients, 20+ years, success metrics]"
+      description: "[Write about 50+ clients, 20+ years, success metrics]"
     },
     {
       title: "ISO Certified Solutions",

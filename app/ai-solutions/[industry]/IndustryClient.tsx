@@ -304,7 +304,7 @@ const industryData: Record<string, {
       { value: "80%", label: "Faster Batch Review" },
       { value: "99.5%", label: "Inspection Accuracy" },
       { value: "50%", label: "Less Downtime" },
-      { value: "30+", label: "Pharma Clients" }
+      { value: "50+", label: "Pharma Clients" }
     ],
     whyChooseUs: [
       "FDA 21 CFR Part 11 compliant by design",
@@ -423,7 +423,7 @@ const industryData: Record<string, {
       { value: "70%", label: "Faster Claims" },
       { value: "95%", label: "Fraud Detection" },
       { value: "$5M+", label: "Annual Savings" },
-      { value: "40+", label: "Insurance Clients" }
+      { value: "50+", label: "Insurance Clients" }
     ],
     whyChooseUs: [
       "Pre-built models for P&C, Life, and Health insurance",
@@ -538,7 +538,7 @@ const industryData: Record<string, {
       { value: "80%", label: "Faster Processing" },
       { value: "25%", label: "Lower NPAs" },
       { value: "90%", label: "KYC Automation" },
-      { value: "35+", label: "NBFC Clients" }
+      { value: "50+", label: "NBFC Clients" }
     ],
     whyChooseUs: [
       "Purpose-built for Indian NBFC regulatory environment",
@@ -772,7 +772,7 @@ const industryData: Record<string, {
       { value: "40%", label: "Faster Design" },
       { value: "99%", label: "Defect Detection" },
       { value: "25%", label: "Lower Inventory" },
-      { value: "20+", label: "Textile Clients" }
+      { value: "50+", label: "Textile Clients" }
     ],
     whyChooseUs: [
       "Deep expertise in textile and apparel industry",
@@ -887,7 +887,7 @@ const industryData: Record<string, {
       { value: "35%", label: "Higher AOV" },
       { value: "70%", label: "Query Automation" },
       { value: "25%", label: "Better Conversion" },
-      { value: "45+", label: "E-Commerce Clients" }
+      { value: "50+", label: "E-Commerce Clients" }
     ],
     whyChooseUs: [
       "Pre-built integrations with Shopify, Magento, and major platforms",
@@ -1002,7 +1002,7 @@ const industryData: Record<string, {
       { value: "95%", label: "Valuation Accuracy" },
       { value: "80%", label: "Faster Processing" },
       { value: "3x", label: "Lead Conversion" },
-      { value: "25+", label: "Real Estate Clients" }
+      { value: "50+", label: "Real Estate Clients" }
     ],
     whyChooseUs: [
       "Deep real estate domain expertise in India and international markets",
@@ -1232,7 +1232,7 @@ const industryData: Record<string, {
       { value: "80%", label: "Faster Review" },
       { value: "90%", label: "Automation Rate" },
       { value: "50%", label: "Cost Savings" },
-      { value: "40+", label: "Professional Clients" }
+      { value: "50+", label: "Professional Clients" }
     ],
     whyChooseUs: [
       "Deep expertise in legal, HR, and accounting processes",
@@ -1713,7 +1713,7 @@ export default function IndustryClient({ industrySlug }: { industrySlug: string 
                     <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
                       <Group className="text-purple-600 flex-shrink-0" sx={{ fontSize: 24 }} />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm">500+ AI Implementations</p>
+                        <p className="font-semibold text-gray-900 text-sm">50+ AI Implementations</p>
                         <p className="text-xs text-gray-600">Across diverse industries worldwide</p>
                       </div>
                     </div>

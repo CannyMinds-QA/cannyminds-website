@@ -24,7 +24,7 @@ import {
 // SEO Metadata
 export const metadata: Metadata = {
   title: "CannyECM - Enterprise DMS | Document Management 2025",
-  description: "Enterprise DMS with 80% OCR accuracy, workflow automation, cloud/on-premise. Organize 50,000+ documents. 30-day free trial available.",
+  description: "Enterprise DMS with 99% OCR accuracy, workflow automation, cloud/on-premise. Organize 50,000+ documents. 30-day free trial available.",
   keywords: [
     "CannyECM",
     "document management software",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Christopher" }],
   openGraph: {
     title: "CannyECM - Enterprise DMS | Document Management 2025",
-    description: "Enterprise DMS with 80% OCR accuracy, workflow automation, cloud/on-premise. Organize 50,000+ documents. 30-day free trial available.",
+    description: "Enterprise DMS with 99% OCR accuracy, workflow automation, cloud/on-premise. Organize 50,000+ documents. 30-day free trial available.",
     type: "article",
     url: "https://www.cannymindstech.com/solutions/document-management",
     authors: ["Christopher"],
@@ -194,7 +194,7 @@ export default function CannyECMProductPage() {
                 </h1>
 
                 <p className="text-sm sm:text-base text-gray-700 mb-6 leading-relaxed">
-                  Enterprise-grade document management system with <strong>80% OCR accuracy</strong>, intelligent workflow automation,
+                  Enterprise-grade document management system with <strong>99% OCR accuracy</strong>, intelligent workflow automation,
                   and military-grade security. Go paperless and organize <strong>50,000+ documents</strong> effortlessly with cloud,
                   on-premise, or hybrid deployment.
                 </p>
@@ -226,7 +226,7 @@ export default function CannyECMProductPage() {
                 <div className="flex items-center gap-3">
                   <SocialShare
                     title="CannyECM - Enterprise Document Management Software"
-                    description="Transform your document management with CannyECM. 80% OCR accuracy, workflow automation, and enterprise security."
+                    description="Transform your document management with CannyECM. 99% OCR accuracy, workflow automation, and enterprise security."
                   />
                   <span className="text-xs text-gray-500">Share this product</span>
                 </div>
@@ -249,9 +249,9 @@ export default function CannyECMProductPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center text-white">
               {[
-                { number: "10+", label: "Happy Clients" },
+                { number: "50+", label: "Happy Clients" },
                 { number: "100K+", label: "Documents Managed" },
-                { number: "80%", label: "OCR Accuracy" },
+                { number: "99%", label: "OCR Accuracy" },
                 { number: "99.9%", label: "Uptime Guarantee" },
               ].map((stat, idx) => (
                 <div key={idx}>
@@ -347,7 +347,7 @@ export default function CannyECMProductPage() {
                 </div>
                 <h3 className="text-xl font-bold text-secondary mb-4">Advanced OCR & Full-Text Search</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Built-in Elasticsearch and OCR engine with <strong>80% accuracy</strong> enables instant full-text search across
+                  Built-in Elasticsearch and OCR engine with <strong>99% accuracy</strong> enables instant full-text search across
                   document names, metadata, and content even within scanned images.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -838,7 +838,7 @@ export default function CannyECMProductPage() {
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gray-200">
                     <span className="text-gray-700 font-medium">OCR Accuracy</span>
-                    <span className="text-primary font-bold">Up to 80%</span>
+                    <span className="text-primary font-bold">Up to 99%</span>
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gray-200">
                     <span className="text-gray-700 font-medium">Concurrent Users</span>
@@ -1184,7 +1184,7 @@ export default function CannyECMProductPage() {
                 },
                 {
                   q: "How does CannyECM OCR work?",
-                  a: "CannyECM uses advanced OCR powered by Elasticsearch to convert scanned documents into searchable text with up to 80% accuracy, enabling full-text search across all document content."
+                  a: "CannyECM uses advanced OCR powered by Elasticsearch to convert scanned documents into searchable text with up to 99% accuracy, enabling full-text search across all document content."
                 },
                 {
                   q: "Is CannyECM secure?",
