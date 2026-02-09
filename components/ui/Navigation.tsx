@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import {
   KeyboardArrowDown,
   KeyboardArrowRight,
@@ -34,7 +35,8 @@ import {
 } from "@mui/icons-material";
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  /* REMOVED: const [isScrolled, setIsScrolled] = useState(false); */
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [bpmDropdownOpen, setBpmDropdownOpen] = useState(false);
@@ -57,25 +59,30 @@ export default function Navigation() {
   const [hoveredIndustry, setHoveredIndustry] = useState<string | null>('financial-services');
   const [hoveredDepartment, setHoveredDepartment] = useState<string | null>('human-resources');
   const [hoveredService, setHoveredService] = useState<string | null>('document-management');
+
   const { scrollY } = useScroll();
 
   const backgroundColor = useTransform(
     scrollY,
-    [0, 100],
-    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.95)"]
+    [0, 50],
+    ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.95)"]
   );
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+  const backdropFilter = useTransform(
+    scrollY,
+    [0, 50],
+    ["blur(8px)", "blur(16px)"]
+  );
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const boxShadow = useTransform(
+    scrollY,
+    [0, 50],
+    ["0px 0px 0px rgba(0,0,0,0)", "0px 4px 6px -1px rgba(0, 0, 0, 0.1)"]
+  );
 
-  // Click outside to close dropdowns
+  /* REMOVED: scroll listener effect. Using framer-motion values directly */
   useEffect(() => {
+    // Keep click outside listener
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       if (!target.closest('.nav-dropdown-container')) {
@@ -104,7 +111,13 @@ export default function Navigation() {
     { name: "Professional Services", slug: "professional-services", icon: Gavel, description: "Legal, HR & accounting AI" },
   ];
 
-  const industryData: Record<string, { name: string; href: string; icon: typeof AccountBalance; subTopics: { name: string; href: string }[] }> = {
+  const industryData: Record<string, {
+    name: string;
+    href: string;
+    icon: typeof AccountBalance;
+    subTopics: { name: string; href: string }[];
+    groups?: { title: string; items: { name: string; href: string }[] }[];
+  }> = {
     'financial-services': {
       name: "Financial Services",
       href: "/industries/financial-services",
@@ -133,14 +146,13 @@ export default function Navigation() {
     },
     'pharmaceutical': {
       name: "Pharmaceutical",
-      href: "/industries/pharmaceutical",
+      href: "/solutions/pharmaceutical",
       icon: Science,
       subTopics: [
-        { name: "Overview", href: "/industries/pharmaceutical" },
-        { name: "Batch Records", href: "/industries/pharmaceutical/batch-records" },
-        { name: "Quality Management", href: "/industries/pharmaceutical/quality" },
-        { name: "Regulatory Compliance", href: "/industries/pharmaceutical/compliance" },
-        { name: "R&D Documentation", href: "/industries/pharmaceutical/rd-documentation" },
+        { name: "Overview", href: "/solutions/pharmaceutical" },
+        { name: "Batch Record Automation", href: "/solutions/pharmaceutical/batch-record-automation" },
+        { name: "Quality Inspection & CAPA", href: "/solutions/pharmaceutical/quality-inspection-capa" },
+        { name: "Regulatory Compliance", href: "/solutions/pharmaceutical/regulatory-compliance" },
       ]
     },
     'manufacturing': {
@@ -366,8 +378,12 @@ export default function Navigation() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? "shadow-lg lg:backdrop-blur-md lg:bg-white/95" : "lg:bg-white/80 lg:backdrop-blur-sm"
-        }`}
+      style={{
+        backgroundColor,
+        boxShadow,
+        backdropFilter
+      }}
+      className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -592,17 +608,41 @@ export default function Navigation() {
                                 <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">
                                   {industryData[hoveredIndustry].name}
                                 </h4>
-                                <div className="grid grid-cols-2 gap-2">
-                                  {industryData[hoveredIndustry].subTopics.map((topic) => (
-                                    <Link
-                                      key={topic.name}
-                                      href={topic.href}
-                                      onClick={() => setSolutionsDropdownOpen(false)}
-                                      className="px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-200"
-                                    >
-                                      {topic.name}
-                                    </Link>
-                                  ))}
+                                <div className={`grid gap-x-8 gap-y-6 ${hoveredIndustry === 'pharmaceutical' ? 'grid-cols-1' : 'grid-cols-2'}`}>
+                                  {industryData[hoveredIndustry].groups ? (
+                                    industryData[hoveredIndustry].groups.map((group) => (
+                                      <div key={group.title} className="space-y-3">
+                                        <h5 className="text-[10px] font-bold text-primary/60 uppercase tracking-widest pl-3">
+                                          {group.title}
+                                        </h5>
+                                        <div className="space-y-1">
+                                          {group.items.map((item) => (
+                                            <Link
+                                              key={item.name}
+                                              href={item.href}
+                                              onClick={() => setSolutionsDropdownOpen(false)}
+                                              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all duration-200 w-fit ${pathname === item.href ? 'text-primary bg-primary/5 font-medium' : 'text-gray-600 hover:text-primary hover:bg-white hover:shadow-sm'}`}
+                                            >
+                                              {pathname === item.href && <KeyboardArrowRight sx={{ fontSize: 16 }} className="text-primary" />}
+                                              {item.name}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      </div>
+                                    ))
+                                  ) : (
+                                    industryData[hoveredIndustry].subTopics.map((topic) => (
+                                      <Link
+                                        key={topic.name}
+                                        href={topic.href}
+                                        onClick={() => setSolutionsDropdownOpen(false)}
+                                        className={`px-3 py-2.5 rounded-lg text-sm transition-all duration-200 flex items-center gap-2 w-fit ${pathname === topic.href ? 'text-primary bg-primary/5 font-medium' : 'text-gray-600 hover:text-primary hover:bg-white hover:shadow-sm'}`}
+                                      >
+                                        {pathname === topic.href && <KeyboardArrowRight sx={{ fontSize: 16 }} className="text-primary" />}
+                                        {topic.name}
+                                      </Link>
+                                    ))
+                                  )}
                                 </div>
                               </motion.div>
                             )}
@@ -622,8 +662,9 @@ export default function Navigation() {
                                       key={topic.name}
                                       href={topic.href}
                                       onClick={() => setSolutionsDropdownOpen(false)}
-                                      className="px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-200"
+                                      className={`px-3 py-2.5 rounded-lg text-sm transition-all duration-200 flex items-center gap-2 w-fit ${pathname === topic.href ? 'text-primary bg-primary/5 font-medium' : 'text-gray-600 hover:text-primary hover:bg-white hover:shadow-sm'}`}
                                     >
+                                      {pathname === topic.href && <KeyboardArrowRight sx={{ fontSize: 16 }} className="text-primary" />}
                                       {topic.name}
                                     </Link>
                                   ))}
@@ -646,7 +687,7 @@ export default function Navigation() {
                                       key={topic.name}
                                       href={topic.href}
                                       onClick={() => setSolutionsDropdownOpen(false)}
-                                      className="px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-200"
+                                      className={`px-3 py-2.5 rounded-lg text-sm transition-all duration-200 ${pathname === topic.href ? 'text-primary bg-primary/5 font-medium' : 'text-gray-600 hover:text-primary hover:bg-white hover:shadow-sm'}`}
                                     >
                                       {topic.name}
                                     </Link>
@@ -699,10 +740,11 @@ export default function Navigation() {
                                 key={category.name}
                                 href={category.href}
                                 onClick={() => setBpmDropdownOpen(false)}
-                                className="flex items-start gap-2 p-3 rounded-lg hover:bg-primary/5 transition-colors group border border-gray-100 hover:border-primary/30"
+                                className={`flex items-center gap-2 p-3 rounded-lg transition-colors group border w-fit ${pathname === category.href ? 'bg-primary/5 border-primary/30' : 'border-gray-100 hover:bg-primary/5 hover:border-primary/30'}`}
                               >
-                                <IconComponent sx={{ fontSize: 18 }} className="text-primary mt-0.5 flex-shrink-0" />
-                                <span className="text-sm text-gray-700 group-hover:text-primary transition-colors leading-tight">
+                                {pathname === category.href && <KeyboardArrowRight sx={{ fontSize: 16 }} className="text-primary" />}
+                                <IconComponent sx={{ fontSize: 18 }} className={`flex-shrink-0 ${pathname === category.href ? 'text-primary' : 'text-primary'}`} />
+                                <span className={`text-sm transition-colors leading-tight ${pathname === category.href ? 'text-primary font-medium' : 'text-gray-700 group-hover:text-primary'}`}>
                                   {category.name}
                                 </span>
                               </Link>
@@ -742,13 +784,12 @@ export default function Navigation() {
                                 key={industry.name}
                                 href={industry.href}
                                 onClick={() => setUseCasesDropdownOpen(false)}
-                                className="block px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors group border border-gray-100"
+                                className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-colors group border w-fit ${pathname === industry.href ? 'bg-primary/5 border-primary/30' : 'border-gray-100 hover:bg-primary/5'}`}
                               >
-                                <div className="flex items-center gap-2">
-                                  <IconComponent sx={{ fontSize: 20, color: '#3170b5' }} />
-                                  <div className="font-semibold text-gray-800 text-sm group-hover:text-primary transition-colors">
-                                    {industry.name}
-                                  </div>
+                                {pathname === industry.href && <KeyboardArrowRight sx={{ fontSize: 18 }} className="text-primary" />}
+                                <IconComponent sx={{ fontSize: 20, color: '#3170b5' }} />
+                                <div className={`font-semibold text-sm transition-colors ${pathname === industry.href ? 'text-primary' : 'text-gray-800 group-hover:text-primary'}`}>
+                                  {industry.name}
                                 </div>
                               </Link>
                             );
@@ -797,12 +838,13 @@ export default function Navigation() {
                                 key={industry.slug}
                                 href={`/ai-solutions/${industry.slug}`}
                                 onClick={() => setAiDropdownOpen(false)}
-                                className="block px-4 py-3 rounded-lg hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 transition-all group border border-gray-100 hover:border-primary/30 hover:shadow-md"
+                                className={`flex items-start gap-2 px-4 py-3 rounded-lg transition-all group border w-fit ${pathname === `/ai-solutions/${industry.slug}` ? 'bg-gradient-to-br from-primary/5 to-primary/10 border-primary/30 shadow-md' : 'border-gray-100 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:border-primary/30 hover:shadow-md'}`}
                               >
+                                {pathname === `/ai-solutions/${industry.slug}` && <KeyboardArrowRight sx={{ fontSize: 18 }} className="text-primary mt-1 flex-shrink-0" />}
                                 <div className="flex flex-col">
                                   <div className="flex items-center gap-2 mb-1">
-                                    <IconComponent sx={{ fontSize: 20 }} className="text-primary" />
-                                    <div className="font-semibold text-gray-800 text-sm group-hover:text-primary transition-colors">
+                                    <IconComponent sx={{ fontSize: 20 }} className={`${pathname === `/ai-solutions/${industry.slug}` ? 'text-primary' : 'text-primary'}`} />
+                                    <div className={`font-semibold text-sm transition-colors ${pathname === `/ai-solutions/${industry.slug}` ? 'text-primary' : 'text-gray-800 group-hover:text-primary'}`}>
                                       {industry.name}
                                     </div>
                                   </div>
@@ -820,17 +862,21 @@ export default function Navigation() {
 
                 </div>
               ) : (
-                <motion.a
+                <Link
                   key={link.name}
                   href={link.href}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-sm xl:text-base text-gray-700 hover:text-primary font-medium transition-colors relative group whitespace-nowrap"
+                  className={`text-sm xl:text-base font-medium transition-colors relative group whitespace-nowrap ${pathname === link.href ? 'text-primary' : 'text-gray-700 hover:text-primary'}`}
                 >
-                  {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-                </motion.a>
+                  <motion.span
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="block"
+                  >
+                    {link.name}
+                  </motion.span>
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                </Link>
               )
             ))}
           </div>

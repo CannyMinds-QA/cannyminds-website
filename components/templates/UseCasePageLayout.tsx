@@ -45,6 +45,8 @@ interface UseCasePageLayoutProps {
     industry: string;
     heroImage?: string;
     heroColor?: string;
+    publishedDate?: string;
+    modifiedDate?: string;
 
     industryContextTitle?: string;
     industryContextContent: ReactNode;
@@ -75,6 +77,8 @@ export default function UseCasePageLayout({
     subtitle,
     industry,
     heroColor = "bg-blue-50",
+    publishedDate,
+    modifiedDate,
     industryContextTitle = "Industry Context",
     industryContextContent,
     challengesTitle = "Key Business Challenges",
@@ -162,9 +166,27 @@ export default function UseCasePageLayout({
                                 {title}
                             </h1>
 
-                            <div className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl">
+                            <div className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed max-w-3xl">
                                 {subtitle}
                             </div>
+
+                            {(publishedDate || modifiedDate) && (
+                                <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-8 border-l-4 border-primary pl-4">
+                                    {publishedDate && (
+                                        <div className="flex items-center gap-2">
+                                            <span className="font-semibold">Published:</span>
+                                            <time dateTime={publishedDate}>{new Date(publishedDate).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                                        </div>
+                                    )}
+                                    {publishedDate && modifiedDate && <span className="hidden sm:inline text-gray-300">|</span>}
+                                    {modifiedDate && (
+                                        <div className="flex items-center gap-2">
+                                            <span className="font-semibold">Last Updated:</span>
+                                            <time dateTime={modifiedDate}>{new Date(modifiedDate).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
 
                             <div className="flex flex-wrap items-center gap-4">
                                 <Link
