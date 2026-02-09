@@ -11,21 +11,30 @@ import {
     Security,
     Home,
     ChevronRight,
+    Description,
+    Verified,
+    ChangeCircle,
+    Business,
+    Build,
+    LocalShipping,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { baseUrl } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Manufacturing Solutions | Shop Floor Automation",
-    description: "Transform manufacturing operations with AI-powered shop floor automation, real-time monitoring, and intelligent process control for paperless production.",
+    title: "Manufacturing Solutions | Digital Transformation for Industry 4.0 | CannyMinds",
+    description: "Comprehensive manufacturing solutions including shop floor automation, document control, quality management, engineering change management, and equipment maintenance.",
     keywords: [
         "manufacturing automation",
         "shop floor automation",
-        "production recording system",
+        "manufacturing document control",
+        "quality management system",
+        "engineering change management",
+        "equipment maintenance software",
+        "vendor management",
+        "FMCG digital transformation",
         "paperless manufacturing",
-        "manufacturing workflow automation",
-        "production line digitization",
-        "manufacturing AI solutions",
+        "Industry 4.0 solutions",
         "smart manufacturing",
     ],
     alternates: {
@@ -66,7 +75,42 @@ export default function ManufacturingOverviewPage() {
             description: "Transform manufacturing operations with AI-powered shop floor automation, real-time monitoring, and intelligent process control.",
             href: "/solutions/manufacturing/shop-floor-automation",
             icon: Settings,
-            color: "orange",
+        },
+        {
+            title: "Document Control & SOPs",
+            description: "Centralized engineering drawing management, SOP control, and work instruction automation with version control.",
+            href: "/solutions/manufacturing/document-control",
+            icon: Description,
+        },
+        {
+            title: "Quality Management",
+            description: "Digitized QA/QC records with automated CAPA workflows, NCR tracking, and complete audit trails.",
+            href: "/solutions/manufacturing/quality-management",
+            icon: Verified,
+        },
+        {
+            title: "Engineering Change Management",
+            description: "Controlled ECN/ECR workflows with impact analysis, automated approvals, and complete change history.",
+            href: "/solutions/manufacturing/engineering-change-management",
+            icon: ChangeCircle,
+        },
+        {
+            title: "Vendor & Procurement",
+            description: "Centralized vendor document repository with contract lifecycle management and approval workflows.",
+            href: "/solutions/manufacturing/vendor-procurement",
+            icon: Business,
+        },
+        {
+            title: "Equipment Maintenance",
+            description: "Digital equipment manuals, service logs, and asset documentation with maintenance workflows.",
+            href: "/solutions/manufacturing/equipment-maintenance",
+            icon: Build,
+        },
+        {
+            title: "FMCG Digital Transformation",
+            description: "End-to-end digital transformation solutions for fast-moving consumer goods manufacturing.",
+            href: "/solutions/manufacturing/fmcg-digital-transformation",
+            icon: LocalShipping,
         },
     ];
 

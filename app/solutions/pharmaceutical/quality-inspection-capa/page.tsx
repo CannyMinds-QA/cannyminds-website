@@ -17,6 +17,7 @@ import {
     Assessment,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
 
 export const metadata: Metadata = {
     title: "Quality Inspection & CAPA Management",
@@ -188,8 +189,6 @@ export default function QualityInspectionCapaPage() {
                                 Transform quality management with AI-powered visual inspection, intelligent deviation analysis, and automated CAPA processes. Achieve 99.5% defect detection accuracy while reducing recurring deviations by 50%.
                             </div>
 
-
-
                             <div className="flex flex-wrap gap-4">
                                 <Link
                                     href="/contact"
@@ -222,6 +221,11 @@ export default function QualityInspectionCapaPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Book Download Sidebar - Fixed on right side */}
+                <div className="hidden xl:block fixed right-4 top-32 w-52 z-40">
+                    <BookDownloadCard />
+                </div>
 
                 {/* Challenges Section */}
                 <section className="py-16 px-6 lg:px-12 bg-gray-50">
@@ -603,7 +607,6 @@ export default function QualityInspectionCapaPage() {
                     </div>
                 </section>
             </main>
-
             <Footer />
         </>
     );

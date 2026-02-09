@@ -17,6 +17,7 @@ import {
     VerifiedUser,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
 
 export const metadata: Metadata = {
     title: "Batch Record Automation & eBMR",
@@ -171,8 +172,6 @@ export default function BatchRecordAutomationPage() {
                                 Transform paper-intensive batch record review into intelligent, automated processes. Our GenAI-enabled eBMR solution reduces manual review effort by 45-65% while ensuring FDA 21 CFR Part 11 compliance and accelerating batch release from days to hours.
                             </div>
 
-
-
                             <div className="flex flex-wrap gap-4">
                                 <Link
                                     href="/contact"
@@ -205,6 +204,11 @@ export default function BatchRecordAutomationPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Book Download Sidebar - Fixed on right side */}
+                <div className="hidden xl:block fixed right-4 top-32 w-52 z-40">
+                    <BookDownloadCard />
+                </div>
 
                 {/* Challenges Section */}
                 <section className="py-16 px-6 lg:px-12 bg-gray-50">
@@ -483,7 +487,6 @@ export default function BatchRecordAutomationPage() {
                     </div>
                 </section>
             </main>
-
             <Footer />
         </>
     );

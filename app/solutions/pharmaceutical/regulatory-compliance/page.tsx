@@ -19,6 +19,7 @@ import {
     Lightbulb,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
 
 export const metadata: Metadata = {
     title: "Regulatory Compliance & Document Control",
@@ -233,8 +234,6 @@ export default function RegulatoryCompliancePage() {
                                 Streamline compliance with AI-driven document control, SOP management, and regulatory submission support. Ensure audit readiness and reduce compliance risks with full traceability and 21 CFR Part 11 compliant workflows.
                             </div>
 
-
-
                             <div className="flex flex-wrap gap-4">
                                 <Link
                                     href="/contact"
@@ -267,6 +266,11 @@ export default function RegulatoryCompliancePage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Book Download Sidebar - Fixed on right side */}
+                <div className="hidden xl:block fixed right-4 top-32 w-52 z-40">
+                    <BookDownloadCard />
+                </div>
 
                 {/* Challenges Section */}
                 <section className="py-16 px-6 lg:px-12 bg-gray-50">
@@ -687,7 +691,6 @@ export default function RegulatoryCompliancePage() {
                     </div>
                 </section>
             </main>
-
             <Footer />
         </>
     );

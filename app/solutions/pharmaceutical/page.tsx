@@ -15,6 +15,7 @@ import {
     FolderSpecial,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
 
 export const metadata: Metadata = {
     title: "Pharmaceutical Manufacturing Solutions",
@@ -232,9 +233,14 @@ export default function PharmaceuticalOverviewPage() {
                     </div>
                 </section>
 
+                {/* Book Download Sidebar - Fixed on right side */}
+                <div className="hidden xl:block fixed right-4 top-32 w-52 z-40">
+                    <BookDownloadCard />
+                </div>
+
                 {/* Industry Context */}
                 <section className="py-16 px-6 lg:px-12">
-                    <div className="container mx-auto max-w-4xl">
+                    <div className="container mx-auto max-w-5xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
                             Industry Context
                         </h2>
@@ -464,7 +470,6 @@ export default function PharmaceuticalOverviewPage() {
                     </div>
                 </section>
             </main>
-
             <Footer />
         </>
     );
