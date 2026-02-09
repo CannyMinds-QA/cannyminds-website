@@ -3,6 +3,7 @@
 import Navigation from "@/components/ui/Navigation";
 import Footer from "@/components/ui/Footer";
 import SocialShare from "@/components/ui/SocialShare";
+import FAQ from "@/components/sections/FAQ";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -123,7 +124,7 @@ export default function CannyRMSPage() {
                   <SocialShare
                     title="CannyRMS - Enterprise Physical Records Management System"
                     description="Prevent compliance fines with CannyRMS. Enterprise physical records management with barcode tracking & audit trails."
-                    url="https://www.cannymindstech.com/solutions/rms"
+                    url="https://cannyminds-website.vercel.app/solutions/rms"
                   />
                   <span className="text-xs text-gray-500">Share this solution</span>
                 </div>

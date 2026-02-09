@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Healthcare Use Cases | CannyMinds",
   description: "Explore how CannyMinds transforms healthcare operations with secure ECM, workflow automation, and compliance solutions for hospitals and clinics.",
   alternates: {
-    canonical: "https://www.cannymindstech.com/use-cases/healthcare",
+    canonical: "https://cannyminds-website.vercel.app/use-cases/healthcare",
   },
   keywords: "healthcare use cases, hospital document management, clinical workflow automation, hipaa compliance solutions, electronic patient records, healthcare it solutions",
   openGraph: {
@@ -40,7 +40,7 @@ const jsonLd = {
     "name": "CannyMinds Technology Solutions",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.cannymindstech.com/logo.png"
+      "url": "https://cannyminds-website.vercel.app/logo.png"
     }
   }
 };

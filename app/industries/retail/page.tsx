@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Retail & E-commerce IT Solutions | CannyMinds",
   description: "PCI DSS-compliant digital solutions for retail and e-commerce. Secure document management, multi-location operations, audit trails, and financial workflow automation.",
   alternates: {
-    canonical: "https://www.cannymindstech.com/industries/retail",
+    canonical: "https://cannyminds-website.vercel.app/industries/retail",
   },
 };
 

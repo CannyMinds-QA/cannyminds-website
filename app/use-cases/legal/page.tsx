@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Legal Firms Use Cases | CannyMinds",
     description: "Explore how CannyMinds ECM secures case management, document control, and compliance for law firms and legal departments.",
     alternates: {
-        canonical: "https://www.cannymindstech.com/use-cases/legal",
+        canonical: "https://cannyminds-website.vercel.app/use-cases/legal",
     },
     keywords: "legal case management software, law firm document management, secure evidence handling, legal workflow automation, court filing software",
     openGraph: {
@@ -41,7 +41,7 @@ const jsonLd = {
         "name": "CannyMinds Technology Solutions",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cannymindstech.com/logo.png"
+            "url": "https://cannyminds-website.vercel.app/logo.png"
         }
     }
 };

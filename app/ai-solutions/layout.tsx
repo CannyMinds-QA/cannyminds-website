@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: "Industry-specific Generative AI solutions that automate processes, extract insights, and drive measurable ROI.",
   },
   alternates: {
-    canonical: "https://www.cannymindstech.com/ai-solutions",
+    canonical: "https://cannyminds-website.vercel.app/ai-solutions",
   },
 };
 

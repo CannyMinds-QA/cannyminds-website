@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "CannyHR - HR & Payroll Management | HRMS Solution 2025",
     description: "Complete HRMS with payroll, time tracking, leave management, and performance reviews. 350+ biometric integrations. Mobile app included.",
     type: "article",
-    url: "https://www.cannymindstech.com/solutions/hr-management",
+    url: "https://cannyminds-website.vercel.app/solutions/hr-management",
     authors: ["Christopher"],
     images: [
       {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.cannymindstech.com/solutions/hr-management",
+    canonical: "https://cannyminds-website.vercel.app/solutions/hr-management",
   },
   robots: { index: true, follow: true },
 };
@@ -68,13 +68,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cannymindstech.com/"
+          "item": "https://cannyminds-website.vercel.app/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Products",
-          "item": "https://cannymindstech.com/#products"
+          "item": "https://cannyminds-website.vercel.app/#products"
         },
         {
           "@type": "ListItem",
@@ -87,27 +87,27 @@ const jsonLd = {
       "@type": "Article",
       "headline": "CannyHR - Complete HR & Payroll Management Software",
       "description": "Comprehensive guide to CannyHR HR and payroll management platform with attendance tracking, leave management, performance reviews, and mobile access.",
-      "image": "https://cannymindstech.com/images/cannyhr-dashboard.jpg",
+      "image": "https://cannyminds-website.vercel.app/images/cannyhr-dashboard.jpg",
       "author": {
         "@type": "Person",
         "name": "Christopher",
         "jobTitle": "Head of Technical Department & Investor",
-        "url": "https://cannymindstech.com/about"
+        "url": "https://cannyminds-website.vercel.app/about"
       },
       "publisher": {
         "@type": "Organization",
         "name": "CannyMinds Technology Solutions",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://cannymindstech.com/logo.png"
+          "url": "https://cannyminds-website.vercel.app/logo.png"
         },
-        "url": "https://cannymindstech.com"
+        "url": "https://cannyminds-website.vercel.app"
       },
       "datePublished": "2025-01-15",
       "dateModified": new Date().toISOString(),
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://cannymindstech.com/solutions/hr-management"
+        "@id": "https://cannyminds-website.vercel.app/solutions/hr-management"
       }
     },
     {

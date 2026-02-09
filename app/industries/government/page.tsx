@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Government & Public Sector IT Solutions | CannyMinds",
   description: "FOIA-compliant digital solutions for government agencies. Secure document management, public records management, audit trails, and workflow automation.",
   alternates: {
-    canonical: "https://www.cannymindstech.com/industries/government",
+    canonical: "https://cannyminds-website.vercel.app/industries/government",
   },
 };
 

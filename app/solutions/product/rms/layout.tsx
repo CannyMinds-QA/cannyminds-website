@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         title: "CannyRMS - Physical Records Management | Barcode Tracking 2025",
         description: "Enterprise RMS with 8-step workflow, barcode scanning, approval system. Manage 100,000+ physical records. 30-day free trial.",
         type: "article",
-        url: "https://www.cannymindstech.com/solutions/rms",
+        url: "https://cannyminds-website.vercel.app/solutions/rms",
         siteName: "CannyMinds Technology Solutions",
         images: [
             {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         images: ["/images/rms/cannyrms-dashboard.png"],
     },
     alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/rms",
+        canonical: "https://cannyminds-website.vercel.app/solutions/rms",
     },
     robots: {
         index: true,
@@ -69,13 +69,13 @@ const jsonLd = {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://www.cannymindstech.com/"
+                    "item": "https://cannyminds-website.vercel.app/"
                 },
                 {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Solutions",
-                    "item": "https://www.cannymindstech.com/#solutions"
+                    "item": "https://cannyminds-website.vercel.app/#solutions"
                 },
                 {
                     "@type": "ListItem",
@@ -88,26 +88,26 @@ const jsonLd = {
             "@type": "Article",
             "headline": "CannyRMS - Enterprise Physical Records Management System",
             "description": "Comprehensive guide to CannyRMS physical records management system with barcode tracking, approval workflows, and complete audit trails.",
-            "image": "https://www.cannymindstech.com/images/rms/cannyrms-dashboard.png",
+            "image": "https://cannyminds-website.vercel.app/images/rms/cannyrms-dashboard.png",
             "author": {
                 "@type": "Organization",
                 "name": "CannyMinds Technology Solutions",
-                "url": "https://www.cannymindstech.com"
+                "url": "https://cannyminds-website.vercel.app"
             },
             "publisher": {
                 "@type": "Organization",
                 "name": "CannyMinds Technology Solutions",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://cannymindstech.com/logo.png"
+                    "url": "https://cannyminds-website.vercel.app/logo.png"
                 },
-                "url": "https://cannymindstech.com"
+                "url": "https://cannyminds-website.vercel.app"
             },
             "datePublished": "2025-01-15",
             "dateModified": "2025-02-04",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://cannymindstech.com/solutions/rms"
+                "@id": "https://cannyminds-website.vercel.app/solutions/rms"
             }
         },
         {

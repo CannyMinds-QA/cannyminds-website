@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Bottling Manufacturing Use Cases | CannyMinds",
     description: "See how CannyMinds ECM ensures traceability, quality compliance, and audit readiness for bottling manufacturing companies.",
     alternates: {
-        canonical: "https://www.cannymindstech.com/use-cases/bottling",
+        canonical: "https://cannyminds-website.vercel.app/use-cases/bottling",
     },
     keywords: "bottling manufacturing documentation, batch record management software, fssai compliance software, bottling quality control, beverage manufacturing traceability",
     openGraph: {
@@ -41,7 +41,7 @@ const jsonLd = {
         "name": "CannyMinds Technology Solutions",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cannymindstech.com/logo.png"
+            "url": "https://cannyminds-website.vercel.app/logo.png"
         }
     }
 };

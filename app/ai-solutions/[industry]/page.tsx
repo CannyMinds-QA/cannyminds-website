@@ -35,12 +35,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title,
         description: `Discover how CannyMinds uses Generative AI to transform ${toTitleCase(industry)} operations. Automate workflows, enhance decision-making, and drive efficiency with our enterprise AI solutions.`,
         alternates: {
-            canonical: `https://www.cannymindstech.com/ai-solutions/${industry}`,
+            canonical: `https://cannyminds-website.vercel.app/ai-solutions/${industry}`,
         },
         openGraph: {
             title,
             description: `Discover how CannyMinds uses Generative AI to transform ${toTitleCase(industry)} operations.`,
-            url: `https://www.cannymindstech.com/ai-solutions/${industry}`,
+            url: `https://cannyminds-website.vercel.app/ai-solutions/${industry}`,
             type: 'website',
         }
     };

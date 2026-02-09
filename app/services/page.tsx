@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IT Consulting Services | CannyMinds Technology",
     description: "Expert IT consulting: digital transformation, AI automation, custom software development, and business process services. Transform your business today.",
-    url: "https://www.cannymindstech.com/services",
+    url: "https://cannyminds-website.vercel.app/services",
     type: "website",
     images: [
       {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.cannymindstech.com/services",
+    canonical: "https://cannyminds-website.vercel.app/services",
   },
 };
 

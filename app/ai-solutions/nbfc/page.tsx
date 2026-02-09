@@ -5,12 +5,12 @@ export const metadata: Metadata = {
     title: 'AI for NBFCs & Fintech | Credit Scoring & Risk Management',
     description: 'Enhance credit assessment, automate loan processing, and ensure compliance for Non-Banking Financial Companies.',
     alternates: {
-        canonical: 'https://www.cannymindstech.com/ai-solutions/nbfc',
+        canonical: 'https://cannyminds-website.vercel.app/ai-solutions/nbfc',
     },
     openGraph: {
         title: 'AI for NBFCs & Fintech | Credit Scoring & Risk Management',
         description: 'See how CannyMinds AI improves credit scoring accuracy and risk management for NBFCs and Fintechs.',
-        url: 'https://www.cannymindstech.com/ai-solutions/nbfc',
+        url: 'https://cannyminds-website.vercel.app/ai-solutions/nbfc',
     },
 }
 

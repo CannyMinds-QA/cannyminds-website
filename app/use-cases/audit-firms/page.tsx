@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Audit Firms Use Cases | CannyMinds",
     description: "Learn how CannyMinds ECM transforms audit documentation for firms, ensuring compliance, evidence control, and streamlined workflows.",
     alternates: {
-        canonical: "https://www.cannymindstech.com/use-cases/audit-firms",
+        canonical: "https://cannyminds-website.vercel.app/use-cases/audit-firms",
     },
     keywords: "audit documentation software, audit evidence management, compliance traceability, audit workflow automation, icai audit standards software",
     openGraph: {
@@ -41,7 +41,7 @@ const jsonLd = {
         "name": "CannyMinds Technology Solutions",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cannymindstech.com/logo.png"
+            "url": "https://cannyminds-website.vercel.app/logo.png"
         }
     }
 };

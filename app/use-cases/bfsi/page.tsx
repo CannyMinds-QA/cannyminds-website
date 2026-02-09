@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "BFSI Use Cases | CannyMinds",
     description: "Explore how CannyMinds ECM secures document management and automates workflows for Banking, Finance, and Insurance sectors.",
     alternates: {
-        canonical: "https://www.cannymindstech.com/use-cases/bfsi",
+        canonical: "https://cannyminds-website.vercel.app/use-cases/bfsi",
     },
     keywords: "bfsi document management, banking workflow automation, insurance claim processing software, kyc document management, financial audit compliance",
     openGraph: {
@@ -41,7 +41,7 @@ const jsonLd = {
         "name": "CannyMinds Technology Solutions",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://www.cannymindstech.com/logo.png"
+            "url": "https://cannyminds-website.vercel.app/logo.png"
         }
     }
 };

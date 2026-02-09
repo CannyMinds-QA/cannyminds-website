@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "CannyECM - Enterprise DMS | Document Management 2025",
     description: "Enterprise DMS with 99% OCR accuracy, workflow automation, cloud/on-premise. Organize 50,000+ documents. 30-day free trial available.",
     type: "article",
-    url: "https://www.cannymindstech.com/solutions/document-management",
+    url: "https://cannyminds-website.vercel.app/solutions/document-management",
     authors: ["Christopher"],
     images: [
       {
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.cannymindstech.com/solutions/document-management",
+    canonical: "https://cannyminds-website.vercel.app/solutions/document-management",
   },
   robots: { index: true, follow: true },
 };
@@ -71,13 +71,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cannymindstech.com/"
+          "item": "https://cannyminds-website.vercel.app/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Products",
-          "item": "https://cannymindstech.com/#products"
+          "item": "https://cannyminds-website.vercel.app/#products"
         },
         {
           "@type": "ListItem",
@@ -90,27 +90,27 @@ const jsonLd = {
       "@type": "Article",
       "headline": "CannyECM - Enterprise Document Management Software",
       "description": "Comprehensive guide to CannyECM enterprise document management system with OCR, workflow automation, and cloud/on-premise deployment options.",
-      "image": "https://cannymindstech.com/images/CannyECM-dashboard.jpg",
+      "image": "https://cannyminds-website.vercel.app/images/CannyECM-dashboard.jpg",
       "author": {
         "@type": "Person",
         "name": "Christopher",
         "jobTitle": "Head of Technical Department & Investor",
-        "url": "https://cannymindstech.com/about"
+        "url": "https://cannyminds-website.vercel.app/about"
       },
       "publisher": {
         "@type": "Organization",
         "name": "CannyMinds Technology Solutions",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://cannymindstech.com/logo.png"
+          "url": "https://cannyminds-website.vercel.app/logo.png"
         },
-        "url": "https://cannymindstech.com"
+        "url": "https://cannyminds-website.vercel.app"
       },
       "datePublished": "2025-01-15",
       "dateModified": new Date().toISOString(),
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://cannymindstech.com/solutions/document-management"
+        "@id": "https://cannyminds-website.vercel.app/solutions/document-management"
       }
     },
     {

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Banking, Finance & Insurance IT Solutions | CannyMinds",
   description: "SOX-compliant digital solutions for banking, finance, and insurance. Secure document management, KYC/AML compliance, audit trails, and financial workflow automation.",
   alternates: {
-    canonical: "https://www.cannymindstech.com/industries/banking-finance",
+    canonical: "https://cannyminds-website.vercel.app/industries/banking-finance",
   },
 };
 

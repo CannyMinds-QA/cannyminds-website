@@ -78,7 +78,7 @@ const jsonLd = {
         "name": "CannyMinds Technology Solutions",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://cannymindstech.com/logo.png"
+          "url": "https://cannyminds-website.vercel.app/logo.png"
         }
       }
     },

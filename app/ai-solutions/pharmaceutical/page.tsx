@@ -16,13 +16,13 @@ export const metadata: Metadata = {
         "CannyMinds Pharma Solutions",
     ],
     alternates: {
-        canonical: "https://www.cannymindstech.com/ai-solutions/pharmaceutical",
+        canonical: "https://cannyminds-website.vercel.app/ai-solutions/pharmaceutical",
     },
     openGraph: {
         title: "Gen AI for Pharmaceutical Manufacturing & Quality | CannyMinds",
         description:
             "Accelerate compliance, quality, and time-to-market with FDA-compliant Generative AI. Automate eBMR, CAPA, and predictive maintenance.",
-        url: "https://www.cannymindstech.com/ai-solutions/pharmaceutical",
+        url: "https://cannyminds-website.vercel.app/ai-solutions/pharmaceutical",
         type: "website",
         images: [
             {

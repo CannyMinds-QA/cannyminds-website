@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Manufacturing & Engineering IT Solutions | CannyMinds",
   description: "ISO-compliant digital solutions for manufacturing and engineering companies. Quality management, blueprint control, production automation, and workforce management.",
   alternates: {
-    canonical: "https://www.cannymindstech.com/industries/manufacturing",
+    canonical: "https://cannyminds-website.vercel.app/industries/manufacturing",
   },
 };
 

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "CannyTrack - Employee Productivity Monitoring Software",
     description: "Workforce productivity monitoring with activity tracking, screenshots, and data loss prevention. Consent-based, real-time analytics with offline support.",
     type: "article",
-    url: "https://www.cannymindstech.com/solutions/tracking-system",
+    url: "https://cannyminds-website.vercel.app/solutions/tracking-system",
     authors: ["Christopher"],
     images: [
       {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.cannymindstech.com/solutions/tracking-system",
+    canonical: "https://cannyminds-website.vercel.app/solutions/tracking-system",
   },
   robots: { index: true, follow: true },
 };
@@ -68,13 +68,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cannymindstech.com/"
+          "item": "https://cannyminds-website.vercel.app/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Products",
-          "item": "https://cannymindstech.com/#products"
+          "item": "https://cannyminds-website.vercel.app/#products"
         },
         {
           "@type": "ListItem",
@@ -87,27 +87,27 @@ const jsonLd = {
       "@type": "Article",
       "headline": "CannyTrack - Employee Productivity Monitoring & Tracking Software",
       "description": "Comprehensive guide to CannyTrack productivity monitoring platform with activity tracking, screenshot capture, and data loss prevention.",
-      "image": "https://cannymindstech.com/images/cannytrack-dashboard.jpg",
+      "image": "https://cannyminds-website.vercel.app/images/cannytrack-dashboard.jpg",
       "author": {
         "@type": "Person",
         "name": "Christopher",
         "jobTitle": "Head of Technical Department & Investor",
-        "url": "https://cannymindstech.com/about"
+        "url": "https://cannyminds-website.vercel.app/about"
       },
       "publisher": {
         "@type": "Organization",
         "name": "CannyMinds Technology Solutions",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://cannymindstech.com/logo.png"
+          "url": "https://cannyminds-website.vercel.app/logo.png"
         },
-        "url": "https://cannymindstech.com"
+        "url": "https://cannyminds-website.vercel.app"
       },
       "datePublished": "2025-01-15",
       "dateModified": new Date().toISOString(),
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://cannymindstech.com/solutions/tracking-system"
+        "@id": "https://cannyminds-website.vercel.app/solutions/tracking-system"
       }
     },
     {

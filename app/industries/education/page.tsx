@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Education & Training IT Solutions | CannyMinds",
   description: "FERPA-compliant digital solutions for banking, finance, and insurance. Secure document management, student records management, audit trails, and financial workflow automation.",
   alternates: {
-    canonical: "https://www.cannymindstech.com/industries/education",
+    canonical: "https://cannyminds-website.vercel.app/industries/education",
   },
 };
 
