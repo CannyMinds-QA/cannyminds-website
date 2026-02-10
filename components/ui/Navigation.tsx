@@ -51,7 +51,7 @@ export default function Navigation() {
   const [expandedMobileIndustry, setExpandedMobileIndustry] = useState<string | null>(null);
 
   const [activeMenuTab, setActiveMenuTab] = useState<'industry' | 'solutions'>('industry');
-  const [hoveredIndustry, setHoveredIndustry] = useState<string | null>('healthcare');
+  const [hoveredIndustry, setHoveredIndustry] = useState<string | null>('manufacturing');
   const [hoveredBpmCategory, setHoveredBpmCategory] = useState<string | null>('Document Lifecycle & Control Processes');
 
   const { scrollY } = useScroll();
@@ -112,30 +112,6 @@ export default function Navigation() {
     subTopics: { name: string; href: string }[];
     groups?: { title: string; items: { name: string; href: string }[] }[];
   }> = {
-    'healthcare': {
-      name: "Healthcare",
-      href: "/use-cases/healthcare",
-      icon: LocalHospital,
-      subTopics: [
-        { name: "Overview", href: "/use-cases/healthcare" },
-        { name: "Patient Records", href: "/use-cases/healthcare/patient-records" },
-        { name: "Medical Archives", href: "/use-cases/healthcare/medical-archives" },
-        { name: "Imaging & Digitization", href: "/use-cases/healthcare/digitization" },
-        { name: "Compliance", href: "/use-cases/healthcare/compliance" },
-        { name: "Workforce Management", href: "/use-cases/healthcare/workforce" },
-      ]
-    },
-    'pharmaceutical': {
-      name: "Pharmaceutical",
-      href: "/solutions/pharmaceutical",
-      icon: Science,
-      subTopics: [
-        { name: "Overview", href: "/solutions/pharmaceutical" },
-        { name: "Batch Record Automation", href: "/solutions/pharmaceutical/batch-record-automation" },
-        { name: "Quality Inspection & CAPA", href: "/solutions/pharmaceutical/quality-inspection-capa" },
-        { name: "Regulatory Compliance", href: "/solutions/pharmaceutical/regulatory-compliance" },
-      ]
-    },
     'manufacturing': {
       name: "Manufacturing",
       href: "/solutions/manufacturing",
@@ -149,6 +125,29 @@ export default function Navigation() {
         { name: "Vendor & Procurement", href: "/solutions/manufacturing/vendor-procurement" },
         { name: "Equipment Maintenance", href: "/solutions/manufacturing/equipment-maintenance" },
         { name: "FMCG Digital Transformation", href: "/solutions/manufacturing/fmcg-digital-transformation" },
+      ]
+    },
+    'pharmaceutical': {
+      name: "Pharmaceutical",
+      href: "/solutions/pharmaceutical",
+      icon: Science,
+      subTopics: [
+        { name: "Overview", href: "/solutions/pharmaceutical" },
+        { name: "Batch Record Automation", href: "/solutions/pharmaceutical/batch-record-automation" },
+        { name: "Quality Inspection & CAPA", href: "/solutions/pharmaceutical/quality-inspection-capa" },
+        { name: "Regulatory Compliance", href: "/solutions/pharmaceutical/regulatory-compliance" },
+      ]
+    },
+    'healthcare': {
+      name: "Healthcare",
+      href: "/solutions/healthcare",
+      icon: LocalHospital,
+      subTopics: [
+        { name: "Overview", href: "/solutions/healthcare" },
+        { name: "Patient Records & EHR", href: "/solutions/healthcare/patient-records" },
+        { name: "Clinical Workflow Automation", href: "/solutions/healthcare/clinical-workflows" },
+        { name: "Compliance & Audit", href: "/solutions/healthcare/compliance-audit" },
+        { name: "Document Digitization", href: "/solutions/healthcare/document-digitization" },
       ]
     },
   };
@@ -384,7 +383,7 @@ export default function Navigation() {
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
                   </motion.button>
 
-                  {/* Solutions Mega Menu Dropdown - 3 Column Layout */}
+                  {/* Solutions Mega Menu Dropdown */}
                   {link.dropdownType === "solutions" && solutionsDropdownOpen && (
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
@@ -399,7 +398,7 @@ export default function Navigation() {
                       }}
                     >
                       <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
-                        <div className="grid grid-cols-12 min-h-[400px]">
+                        <div className="grid grid-cols-12 min-h-[300px]">
                           {/* Column 1: Browse By */}
                           <div className="col-span-2 bg-gray-50 p-6 border-r border-gray-200">
                             <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Browse By</h4>
@@ -414,62 +413,47 @@ export default function Navigation() {
                                 By Industry
                                 <KeyboardArrowRight sx={{ fontSize: 18 }} />
                               </button>
-
-
-                              {/* Divider */}
                               <div className="border-t border-gray-200 my-3"></div>
-
-                              {/* All Products Link - Styled differently */}
                               <Link
                                 href="/solutions"
                                 onClick={() => setSolutionsDropdownOpen(false)}
-                                className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-all flex items-center justify-between ${activeMenuTab === 'solutions'
-                                  ? 'bg-primary text-white'
-                                  : 'text-gray-700 hover:bg-gray-100'
-                                  }`}
+                                className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center gap-2"
                               >
-                                <span className="flex items-center gap-2">
-                                  All Products
-                                </span>
+                                All Products
                               </Link>
                             </div>
                           </div>
 
-                          {/* Column 2: Industry/Department/Service List */}
-                          <div className="col-span-4 p-6 border-r border-gray-200">
-                            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">
-                              Select Industry
-                            </h4>
+                          {/* Column 2: Industry List */}
+                          <div className="col-span-3 p-6 border-r border-gray-200">
+                            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Select Industry</h4>
                             <div className="space-y-1">
-                              {activeMenuTab === 'industry' && (
-                                Object.entries(industryData).map(([key, industry]) => {
-                                  const IconComponent = industry.icon;
-                                  return (
-                                    <button
-                                      key={key}
-                                      onMouseEnter={() => setHoveredIndustry(key)}
-                                      onClick={() => setHoveredIndustry(key)}
-                                      className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all flex items-center justify-between group ${hoveredIndustry === key
-                                        ? 'bg-primary/10 text-primary'
-                                        : 'text-gray-700 hover:bg-gray-50'
-                                        }`}
-                                    >
-                                      <span className="flex items-center gap-2">
-                                        <IconComponent sx={{ fontSize: 18 }} className={hoveredIndustry === key ? 'text-primary' : 'text-gray-400'} />
-                                        {industry.name}
-                                      </span>
-                                      <KeyboardArrowRight sx={{ fontSize: 18 }} className={hoveredIndustry === key ? 'text-primary' : 'text-gray-300'} />
-                                    </button>
-                                  );
-                                })
-                              )}
-
+                              {Object.entries(industryData).map(([key, industry]) => {
+                                const IconComponent = industry.icon;
+                                return (
+                                  <button
+                                    key={key}
+                                    onMouseEnter={() => setHoveredIndustry(key)}
+                                    onClick={() => setHoveredIndustry(key)}
+                                    className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all flex items-center justify-between group ${hoveredIndustry === key
+                                      ? 'bg-primary/10 text-primary'
+                                      : 'text-gray-700 hover:bg-gray-50'
+                                      }`}
+                                  >
+                                    <span className="flex items-center gap-2">
+                                      <IconComponent sx={{ fontSize: 18 }} className={hoveredIndustry === key ? 'text-primary' : 'text-gray-400'} />
+                                      {industry.name}
+                                    </span>
+                                    <KeyboardArrowRight sx={{ fontSize: 18 }} className={hoveredIndustry === key ? 'text-primary' : 'text-gray-300'} />
+                                  </button>
+                                );
+                              })}
                             </div>
                           </div>
 
                           {/* Column 3: Sub-Topics */}
-                          <div className="col-span-6 p-6 bg-gray-50/50 relative pointer-events-auto">
-                            {activeMenuTab === 'industry' && hoveredIndustry && industryData[hoveredIndustry] && (
+                          <div className="col-span-7 p-6 bg-gray-50/50">
+                            {hoveredIndustry && industryData[hoveredIndustry] && (
                               <motion.div
                                 initial={{ opacity: 0, x: 10 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -479,46 +463,20 @@ export default function Navigation() {
                                 <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">
                                   {industryData[hoveredIndustry].name}
                                 </h4>
-                                <div className={`grid gap-x-8 gap-y-6 ${hoveredIndustry === 'pharmaceutical' ? 'grid-cols-1' : 'grid-cols-2'}`}>
-                                  {industryData[hoveredIndustry].groups ? (
-                                    industryData[hoveredIndustry].groups.map((group) => (
-                                      <div key={group.title} className="space-y-3">
-                                        <h5 className="text-[10px] font-bold text-primary/60 uppercase tracking-widest pl-3">
-                                          {group.title}
-                                        </h5>
-                                        <div className="space-y-1">
-                                          {group.items.map((item) => (
-                                            <Link
-                                              key={item.name}
-                                              href={item.href}
-                                              onClick={() => setSolutionsDropdownOpen(false)}
-                                              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all duration-200 w-fit ${pathname === item.href ? 'text-primary bg-primary/5 font-medium' : 'text-gray-600 hover:text-primary hover:bg-white hover:shadow-sm'}`}
-                                            >
-                                              {pathname === item.href && <KeyboardArrowRight sx={{ fontSize: 16 }} className="text-primary" />}
-                                              {item.name}
-                                            </Link>
-                                          ))}
-                                        </div>
-                                      </div>
-                                    ))
-                                  ) : (
-                                    industryData[hoveredIndustry].subTopics.map((topic) => (
-                                      <Link
-                                        key={topic.name}
-                                        href={topic.href}
-                                        onClick={() => setSolutionsDropdownOpen(false)}
-                                        className={`px-3 py-2.5 rounded-lg text-sm transition-all duration-200 flex items-center gap-2 w-fit ${pathname === topic.href ? 'text-primary bg-primary/5 font-medium' : 'text-gray-600 hover:text-primary hover:bg-white hover:shadow-sm'}`}
-                                      >
-                                        {pathname === topic.href && <KeyboardArrowRight sx={{ fontSize: 16 }} className="text-primary" />}
-                                        {topic.name}
-                                      </Link>
-                                    ))
-                                  )}
+                                <div className="space-y-1">
+                                  {industryData[hoveredIndustry].subTopics.map((topic) => (
+                                    <Link
+                                      key={topic.name}
+                                      href={topic.href}
+                                      onClick={() => setSolutionsDropdownOpen(false)}
+                                      className={`block px-3 py-2 rounded-lg text-sm transition-all ${pathname === topic.href ? 'text-primary bg-primary/5 font-medium' : 'text-gray-600 hover:text-primary hover:bg-white'}`}
+                                    >
+                                      {topic.name}
+                                    </Link>
+                                  ))}
                                 </div>
                               </motion.div>
                             )}
-
-
                           </div>
                         </div>
                       </div>
