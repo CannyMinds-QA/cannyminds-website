@@ -51,64 +51,62 @@ const globalOffices = [
 // Partners organized by region
 const partnersByRegion = [
   {
-    region: "Asia Pacific",
-    partners: [
-      {
-        name: "CloudWorks Pro",
-        type: "Infrastructure Partner",
-        country: "Singapore",
-        services: "Cloud Migration & Platform Services",
-        flag: "��",
-      },
-      {
-        name: "ProcessFlow Automation",
-        type: "Integration Partner",
-        country: "Australia",
-        services: "Workflow Automation & RPA",
-        flag: "��",
-      },
-    ],
-  },
-  {
-    region: "Europe",
-    partners: [
-      {
-        name: "DataForge Analytics",
-        type: "Strategic Partner",
-        country: "United Kingdom",
-        services: "Data Analytics & Business Intelligence",
-        flag: "🇬🇧",
-      },
-      {
-        name: "AI Innovations Ltd",
-        type: "AI/ML Partner",
-        country: "Germany",
-        services: "Artificial Intelligence & Machine Learning",
-        flag: "🇩🇪",
-      },
-    ],
-  },
-  {
-    region: "Middle East",
-    partners: [
-      {
-        name: "TechVision Solutions",
-        type: "Technology Partner",
-        country: "UAE",
-        services: "Cloud Infrastructure & DevOps",
-        flag: "🇦🇪",
-      },
-    ],
-  },
-  {
     region: "North America",
     partners: [
       {
-        name: "SecureNet Systems",
-        type: "Security Partner",
-        country: "Canada",
-        services: "Cybersecurity & Compliance",
-        flag: "🇨🇦",
+        name: "CannyMinds USA",
+        country: "United States",
+        address: "8751 Collin McKinney Pkwy, Suite 1102 #525, McKinney, TX 75070, United States",
+        email: "info@cannymindstech.com",
+        whatsapp: "+91 9361801926 / +91 9361801928",
+      },
+    ],
+  },
+  {
+    region: "Africa",
+    partners: [
+      {
+        name: "CannyMinds Nigeria",
+        country: "Nigeria",
+        address: "No:16, Adeola Adeleye Street, Off Coker Road, illupeju, Lagos, Nigeria",
+        email: "info@cannymindstech.com",
+        whatsapp: "+91 9361801926 / +91 9361801928",
+      },
+      {
+        name: "Eco Bank (Kenya)",
+        country: "Kenya",
+        address: "Eco Bank, 4th Floor, Opp 680 Hotel, CBD, Nairobi, Kenya",
+        email: "info@cannymindstech.com",
+        whatsapp: "+91 9361801926 / +91 9361801928",
+      },
+      {
+        name: "CannyMinds Botswana",
+        country: "Botswana",
+        address: "Plot 20614, Gaborone (P.O. Box 405694), Botswana",
+        email: "info@cannymindstech.com",
+        whatsapp: "+91 9361801926 / +91 9361801928",
+      },
+      {
+        name: "CannyMinds DRC",
+        country: "DRC Congo",
+        address: "Av.No.1538, De l’avenue Mondjiba, No-1527, C/Nagaliema, Boulevard, Kinshasa – DRC",
+      },
+      {
+        name: "CannyMinds Zambia",
+        country: "Zambia",
+        address: "12553 Zambezi Road, Roma, Lusaka, Zambia",
+        email: "info@cannymindstech.com",
+        whatsapp: "+91 9361801926 / +91 9361801928",
+      },
+      {
+        name: "CannyMinds Uganda",
+        country: "Uganda",
+        address: "IPO Box No. 5454, 1st floor, Above Ruby Supermarket, Old Port Bell Road, Luzira Kampala-Uganda",
+      },
+      {
+        name: "Sky City Mall (Tanzania)",
+        country: "Tanzania",
+        address: "Sky City Mall, 5th Floor, University Road, Dar es Salaam, Tanzania",
       },
     ],
   },
@@ -152,7 +150,7 @@ export default function GlobalOfficesNew() {
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h4 className="text-xl font-bold text-gray-900 mb-1">
-                        {office.flag} {office.country}
+                        {office.country}
                       </h4>
                       <div className="text-primary font-medium text-sm">{office.city}</div>
                     </div>
@@ -269,22 +267,46 @@ export default function GlobalOfficesNew() {
                         <BusinessIcon className="text-green-600 flex-shrink-0" sx={{ fontSize: 24 }} />
                         <div>
                           <h4 className="text-lg font-bold text-gray-900 mb-1">{partner.name}</h4>
-                          <span className="text-xs font-semibold text-green-700 bg-green-100 px-2 py-1 rounded">
-                            {partner.type}
-                          </span>
                         </div>
                       </div>
 
-                      <div className="space-y-2 mt-4">
-                        <div className="flex items-center gap-2 text-sm">
+                      <div className="space-y-3 mt-4 pt-4 border-t border-gray-100">
+                        {/* Country */}
+                        <div className="flex items-center gap-2 text-sm mb-1">
                           <GlobeIcon className="text-gray-400" sx={{ fontSize: 16 }} />
-                          <span className="text-gray-600">
-                            {partner.flag} {partner.country}
+                          <span className="text-gray-600 font-medium">
+                            {partner.country}
                           </span>
                         </div>
-                        <div className="text-sm text-gray-600 leading-relaxed">
-                          <span className="font-medium text-gray-700">Expertise:</span> {partner.services}
+
+                        {/* Address */}
+                        <div className="flex gap-2">
+                          <LocationIcon className="text-green-600 flex-shrink-0 mt-0.5" sx={{ fontSize: 16 }} />
+                          <div className="text-xs text-gray-600 leading-relaxed">
+                            {partner.address}
+                          </div>
                         </div>
+
+                        {/* Email */}
+                        {partner.email && (
+                          <div className="flex items-center gap-2">
+                            <EmailIcon className="text-green-600 flex-shrink-0" sx={{ fontSize: 16 }} />
+                            <a
+                              href={`mailto:${partner.email}`}
+                              className="text-xs text-gray-600 hover:text-green-700 transition-colors"
+                            >
+                              {partner.email}
+                            </a>
+                          </div>
+                        )}
+
+                        {/* WhatsApp */}
+                        {partner.whatsapp && (
+                          <div className="flex items-center gap-2">
+                            <PhoneIcon className="text-green-600 flex-shrink-0" sx={{ fontSize: 16 }} />
+                            <span className="text-xs text-gray-600">{partner.whatsapp}</span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </motion.div>

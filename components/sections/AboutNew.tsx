@@ -79,6 +79,17 @@ const stats = [
   { value: "24/7", label: "Expert Support", icon: SupportIcon, color: "text-orange-600" },
 ];
 
+const awards = [
+  {
+    name: "10 Most Promising DMS Solution Providers 2021 Award",
+    image: "/images/awards/Promising-DMS-award.png"
+  },
+  {
+    name: "Indian Achievers Award 2020 for Emerging Company Award",
+    image: "/images/awards/Emerging-company-award-2020.png"
+  }
+];
+
 const certifications = [
   {
     name: "ISO 9001:2015",
@@ -179,6 +190,55 @@ export default function AboutNew() {
                 </motion.div>
               );
             })}
+          </motion.div>
+
+          {/* Awards & Recognition */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-16"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-8"
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Awards & Recognition</h3>
+            </motion.div>
+            <motion.div
+              variants={certContainerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-30px" }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto"
+            >
+              {awards.map((award) => (
+                <motion.div
+                  key={award.name}
+                  variants={certCardVariants}
+                  whileHover={{
+                    scale: 1.05,
+                    y: -5,
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.2 },
+                  }}
+                  className="bg-white border border-gray-200 hover:border-primary rounded-lg p-6 text-center cursor-pointer transition-colors flex flex-col items-center justify-center"
+                >
+                  <div className="relative w-full h-64 mb-4 flex items-center justify-center">
+                    <Image
+                      src={award.image}
+                      alt={award.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-sm font-bold text-gray-900">{award.name}</div>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
 
           {/* Certifications */}

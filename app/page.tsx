@@ -4,6 +4,7 @@ import ProductsNew from "@/components/sections/ProductsNew";
 import AISolutionsPreview from "@/components/sections/AISolutionsPreview";
 import AboutNew from "@/components/sections/AboutNew";
 import SecurityCompliance from "@/components/sections/SecurityCompliance";
+import Testimonials from "@/components/sections/Testimonials";
 import SupportHighlights from "@/components/sections/SupportHighlights";
 import ResourcesPreview from "@/components/sections/ResourcesPreview";
 import FAQ from "@/components/sections/FAQ";
@@ -28,6 +29,9 @@ export default function Home() {
       </section>
       <section id="security">
         <SecurityCompliance />
+      </section>
+      <section id="testimonials">
+        <Testimonials />
       </section>
       <section id="support">
         <SupportHighlights />

@@ -57,7 +57,7 @@ export default function AboutPage() {
       name: "Udayakumar Murugan",
       title: "Digital Transformation Specialist",
       bio: "Udayakumar leads CannyMinds' digital transformation initiatives, helping businesses modernize their operations through innovative technology solutions. With extensive experience in enterprise architecture and cloud migration, he ensures clients achieve measurable ROI from their digital investments.",
-      image: "/team/udayakumar-murugan.jpg",
+      image: "/images/about/Udayakumar-Murugan-Director.png",
       placeholder: "UM",
       color: "blue",
     },
@@ -65,7 +65,7 @@ export default function AboutPage() {
       name: "Christopher Arulandu",
       title: "Chief Technology Officer",
       bio: "As CTO, Christopher oversees all technical innovation and product development at CannyMinds Technology Solutions. He leads the engineering teams responsible for CannyECM, CannyHR, CannyScan, and CannyTrack, ensuring world-class quality and cutting-edge features.",
-      image: "/team/christopher-arulandu.jpg",
+      image: "/images/about/Christopher-Director.png",
       placeholder: "CA",
       color: "green",
     },
@@ -73,7 +73,7 @@ export default function AboutPage() {
       name: "Mahesh Kumar",
       title: "Vice President Operations",
       bio: "Mahesh ensures operational excellence across all CannyMinds offices and client projects. He manages service delivery, client success, and operational scalability, maintaining the highest standards of quality and customer satisfaction.",
-      image: "/team/mahesh-kumar.jpg",
+      image: "/images/about/Maheshkumar-Director.png",
       placeholder: "MK",
       color: "purple",
     },
@@ -81,7 +81,7 @@ export default function AboutPage() {
       name: "Parthiban K",
       title: "Vice President at CannyMinds Technology Solutions",
       bio: "Parthiban drives business growth and strategic partnerships for CannyMinds. He leads client acquisition, market expansion, and relationship management, positioning CannyMinds as a trusted technology partner across global markets.",
-      image: "/team/parthiban-k.jpg",
+      image: "/images/about/Parthiban-Director.png",
       placeholder: "PK",
       color: "orange",
     },
@@ -89,7 +89,7 @@ export default function AboutPage() {
       name: "Bhaskaran Gopalakrishnan",
       title: "Director - Strategy & Business Development",
       bio: "Bhaskaran shapes CannyMinds' long-term strategy and business development initiatives. He identifies new market opportunities, guides product roadmaps, and ensures the company stays ahead of industry trends in digital transformation and AI automation.",
-      image: "/team/bhaskaran-gopalakrishnan.jpg",
+      image: "/images/about/Bhaskaran-Gopalakrishnan-Director.png",
       placeholder: "BG",
       color: "red",
     },
@@ -261,8 +261,17 @@ export default function AboutPage() {
             {leaders.map((leader, idx) => (
               <div key={idx} className={`bg-gradient-to-br from-${leader.color}-50 to-white border-2 border-${leader.color}-200 rounded-xl p-6 sm:p-8 hover:border-${leader.color}-600 transition-all`}>
                 {/* Profile Image Placeholder */}
-                <div className={`w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-${leader.color}-400 to-${leader.color}-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl sm:text-4xl font-bold shadow-lg`}>
-                  {leader.placeholder}
+                <div className={`w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-${leader.color}-400 to-${leader.color}-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl sm:text-4xl font-bold shadow-lg overflow-hidden relative border-4 border-white`}>
+                  {leader.image ? (
+                    <Image
+                      src={leader.image}
+                      alt={leader.name}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    leader.placeholder
+                  )}
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-bold text-secondary mb-2 text-center">
@@ -276,6 +285,41 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Awards & Recognition */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-12 text-center">
+            Awards & Recognition
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-primary transition-all flex flex-col items-center text-center">
+              <div className="relative w-full h-64 mb-6">
+                <Image
+                  src="/images/awards/Promising-DMS-award.png"
+                  alt="Promising DMS Award"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-secondary">Promising DMS Award</h3>
+            </div>
+
+            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-primary transition-all flex flex-col items-center text-center">
+              <div className="relative w-full h-64 mb-6">
+                <Image
+                  src="/images/awards/Emerging-company-award-2020.png"
+                  alt="Indian Achievers Award 2020"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-secondary">Indian Achievers Award 2020 for Emerging Company Award</h3>
+            </div>
           </div>
         </div>
       </section>
