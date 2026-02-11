@@ -223,5 +223,30 @@ export const redirects: NextConfig['redirects'] = async () => {
             destination: '/ai-solutions',
             permanent: true,
         },
+        {
+            source: '/use-cases/healthcare',
+            destination: '/solutions/healthcare',
+            permanent: true,
+        },
+        {
+            source: '/use-cases/bottling',
+            destination: '/solutions/manufacturing/bottling',
+            permanent: true,
+        },
+        {
+            source: '/use-cases/legal',
+            destination: '/solutions/professional-services/legal',
+            permanent: true,
+        },
+        {
+            source: '/use-cases/audit-firms',
+            destination: '/solutions/professional-services/audit-firms',
+            permanent: true,
+        },
+        {
+            source: '/use-cases/bfsi',
+            destination: '/solutions/finance',
+            permanent: true,
+        },
     ];
 };

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import {
   Psychology,
   AutoAwesome,
@@ -103,28 +104,41 @@ const capabilities = [
 ];
 
 export default function AISolutionsPreview() {
+  const [particles, setParticles] = useState<{ id: number; left: string; top: string; duration: number; delay: number }[]>([]);
+
+  useEffect(() => {
+    const newParticles = Array.from({ length: 15 }).map((_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      duration: 2 + Math.random() * 2,
+      delay: Math.random() * 2,
+    }));
+    setParticles(newParticles);
+  }, []);
+
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-primary to-blue-900 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
         {/* Floating particles */}
-        {[...Array(15)].map((_, i) => (
+        {particles.map((particle) => (
           <motion.div
-            key={i}
+            key={particle.id}
             className="absolute w-1 h-1 bg-white/30 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: particle.left,
+              top: particle.top,
             }}
             animate={{
               y: [0, -20, 0],
               opacity: [0.3, 0.8, 0.3],
             }}
             transition={{
-              duration: 2 + Math.random() * 2,
+              duration: particle.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: particle.delay,
             }}
           />
         ))}

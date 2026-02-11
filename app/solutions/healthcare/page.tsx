@@ -470,13 +470,13 @@ export default function HealthcareOverviewPage() {
                                 Manufacturing →
                             </Link>
                             <Link
-                                href="/use-cases/bfsi"
+                                href="/solutions/finance"
                                 className="px-6 py-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors font-medium text-sm"
                             >
                                 Banking & Finance →
                             </Link>
                             <Link
-                                href="/use-cases/legal"
+                                href="/solutions/professional-services/legal"
                                 className="px-6 py-3 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors font-medium text-sm"
                             >
                                 Legal →

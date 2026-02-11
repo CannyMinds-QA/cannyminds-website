@@ -40,13 +40,12 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [bpmDropdownOpen, setBpmDropdownOpen] = useState(false);
-  const [useCasesDropdownOpen, setUseCasesDropdownOpen] = useState(false);
   const [aiDropdownOpen, setAiDropdownOpen] = useState(false);
+
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
-  const [mobileIndustryOpen, setMobileIndustryOpen] = useState(false);
   const [mobileBpmOpen, setMobileBpmOpen] = useState(false);
-  const [mobileUseCasesOpen, setMobileUseCasesOpen] = useState(false);
   const [mobileAiOpen, setMobileAiOpen] = useState(false);
+  const [mobileIndustryOpen, setMobileIndustryOpen] = useState(false);
   // State for tracking expanded items in mobile menu (3rd level)
   const [expandedMobileIndustry, setExpandedMobileIndustry] = useState<string | null>(null);
 
@@ -82,7 +81,6 @@ export default function Navigation() {
       if (!target.closest('.nav-dropdown-container')) {
         setSolutionsDropdownOpen(false);
         setBpmDropdownOpen(false);
-        setUseCasesDropdownOpen(false);
         setAiDropdownOpen(false);
       }
     };
@@ -125,8 +123,10 @@ export default function Navigation() {
         { name: "Vendor & Procurement", href: "/solutions/manufacturing/vendor-procurement" },
         { name: "Equipment Maintenance", href: "/solutions/manufacturing/equipment-maintenance" },
         { name: "FMCG Digital Transformation", href: "/solutions/manufacturing/fmcg-digital-transformation" },
+        { name: "Bottling Manufacturing", href: "/solutions/manufacturing/bottling" },
       ]
     },
+
     'pharmaceutical': {
       name: "Pharmaceutical",
       href: "/solutions/pharmaceutical",
@@ -148,6 +148,27 @@ export default function Navigation() {
         { name: "Clinical Workflow Automation", href: "/solutions/healthcare/clinical-workflows" },
         { name: "Compliance & Audit", href: "/solutions/healthcare/compliance-audit" },
         { name: "Document Digitization", href: "/solutions/healthcare/document-digitization" },
+      ]
+    },
+    'professional-services': {
+      name: "Professional Services",
+      href: "/solutions/professional-services",
+      icon: Gavel,
+      subTopics: [
+        { name: "Overview", href: "/solutions/professional-services" },
+        { name: "Legal Firms", href: "/solutions/professional-services/legal" },
+        { name: "Audit Firms", href: "/solutions/professional-services/audit-firms" },
+      ]
+    },
+    'finance': {
+      name: "Finance Industries",
+      href: "/solutions/finance",
+      icon: AccountBalance,
+      subTopics: [
+        { name: "Overview", href: "/solutions/finance" },
+        { name: "Banking Technology", href: "/solutions/finance/banking-technology" },
+        { name: "Insurance Technology", href: "/solutions/finance/insurance-technology" },
+        { name: "Governance & Compliance", href: "/solutions/finance/governance-compliance" },
       ]
     },
   };
@@ -286,16 +307,7 @@ export default function Navigation() {
     ]
   };
 
-  const useCaseIndustries = [
-    { name: "Healthcare Industry", href: "/use-cases/healthcare", icon: LocalHospital },
-    { name: "Pharmaceutical Manufacturing", href: "/use-cases/pharmaceutical", icon: Science },
-    { name: "Manufacturing & Engineering", href: "/solutions/manufacturing", icon: Factory },
-    { name: "FMCG Manufacturing", href: "/solutions/manufacturing/fmcg-digital-transformation", icon: Factory },
-    { name: "Bottling Manufacturing", href: "/use-cases/bottling", icon: Factory },
-    { name: "Banking, Finance & Insurance", href: "/use-cases/bfsi", icon: AccountBalance },
-    { name: "Legal Firms", href: "/use-cases/legal", icon: Gavel },
-    { name: "Audit Firms", href: "/use-cases/audit-firms", icon: VerifiedUser },
-  ];
+
 
 
   const navLinks = [
@@ -303,7 +315,6 @@ export default function Navigation() {
     { name: "Solutions", href: "/#solutions", hasDropdown: true, dropdownType: "solutions" },
     { name: "AI Solutions", href: "/ai-solutions", hasDropdown: true, dropdownType: "ai" },
     { name: "BPM", href: "/bpm", hasDropdown: true, dropdownType: "bpm" },
-    { name: "Use Cases", href: "/use-cases", hasDropdown: true, dropdownType: "useCases" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -351,23 +362,16 @@ export default function Navigation() {
                       if (link.dropdownType === "solutions") {
                         setSolutionsDropdownOpen(!solutionsDropdownOpen);
                         setBpmDropdownOpen(false);
-                        setUseCasesDropdownOpen(false);
                         setAiDropdownOpen(false);
                       } else if (link.dropdownType === "bpm") {
                         setBpmDropdownOpen(!bpmDropdownOpen);
                         setSolutionsDropdownOpen(false);
-                        setUseCasesDropdownOpen(false);
                         setAiDropdownOpen(false);
-                      } else if (link.dropdownType === "useCases") {
-                        setUseCasesDropdownOpen(!useCasesDropdownOpen);
-                        setSolutionsDropdownOpen(false);
-                        setBpmDropdownOpen(false);
-                        setAiDropdownOpen(false);
+
                       } else if (link.dropdownType === "ai") {
                         setAiDropdownOpen(!aiDropdownOpen);
                         setSolutionsDropdownOpen(false);
                         setBpmDropdownOpen(false);
-                        setUseCasesDropdownOpen(false);
                       }
                     }}
                     initial={{ opacity: 0, y: -10 }}
@@ -378,7 +382,7 @@ export default function Navigation() {
                     {link.name}
                     <KeyboardArrowDown
                       sx={{ fontSize: 20 }}
-                      className={`transition-transform ${(link.dropdownType === "solutions" && solutionsDropdownOpen) || (link.dropdownType === "bpm" && bpmDropdownOpen) || (link.dropdownType === "useCases" && useCasesDropdownOpen) || (link.dropdownType === "ai" && aiDropdownOpen) ? 'rotate-180' : ''}`}
+                      className={`transition-transform ${(link.dropdownType === "solutions" && solutionsDropdownOpen) || (link.dropdownType === "bpm" && bpmDropdownOpen) || (link.dropdownType === "ai" && aiDropdownOpen) ? 'rotate-180' : ''}`}
                     />
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
                   </motion.button>
@@ -582,49 +586,7 @@ export default function Navigation() {
                     </motion.div>
                   )}
 
-                  {/* Use Cases Dropdown */}
-                  {link.dropdownType === "useCases" && useCasesDropdownOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="fixed left-0 right-0 bg-white shadow-2xl border-t border-gray-200 p-8 z-[100]"
-                      style={{
-                        top: '80px',
-                        maxHeight: 'calc(100vh - 80px)',
-                        overflowY: 'auto'
-                      }}
-                    >
-                      <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
-                        <div className="flex items-center gap-2 mb-6">
-                          <Factory sx={{ fontSize: 24, color: '#3170b5' }} />
-                          <h3 className="text-lg font-bold text-primary">
-                            Industry Use Cases
-                          </h3>
-                        </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl">
-                          {useCaseIndustries.map((industry) => {
-                            const IconComponent = industry.icon;
-                            return (
-                              <Link
-                                key={industry.name}
-                                href={industry.href}
-                                onClick={() => setUseCasesDropdownOpen(false)}
-                                className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-colors group border w-fit ${pathname === industry.href ? 'bg-primary/5 border-primary/30' : 'border-gray-100 hover:bg-primary/5'}`}
-                              >
-                                {pathname === industry.href && <KeyboardArrowRight sx={{ fontSize: 18 }} className="text-primary" />}
-                                <IconComponent sx={{ fontSize: 20, color: '#3170b5' }} />
-                                <div className={`font-semibold text-sm transition-colors ${pathname === industry.href ? 'text-primary' : 'text-gray-800 group-hover:text-primary'}`}>
-                                  {industry.name}
-                                </div>
-                              </Link>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
+
 
                   {/* AI Solutions Dropdown */}
                   {link.dropdownType === "ai" && aiDropdownOpen && (
@@ -762,23 +724,15 @@ export default function Navigation() {
                         if (link.dropdownType === "solutions") {
                           setMobileSolutionsOpen(!mobileSolutionsOpen);
                           setMobileBpmOpen(false);
-                          setMobileUseCasesOpen(false);
                           setMobileAiOpen(false);
                         } else if (link.dropdownType === "bpm") {
                           setMobileBpmOpen(!mobileBpmOpen);
                           setMobileSolutionsOpen(false);
-                          setMobileUseCasesOpen(false);
-                          setMobileAiOpen(false);
-                        } else if (link.dropdownType === "useCases") {
-                          setMobileUseCasesOpen(!mobileUseCasesOpen);
-                          setMobileSolutionsOpen(false);
-                          setMobileBpmOpen(false);
                           setMobileAiOpen(false);
                         } else if (link.dropdownType === "ai") {
                           setMobileAiOpen(!mobileAiOpen);
                           setMobileSolutionsOpen(false);
                           setMobileBpmOpen(false);
-                          setMobileUseCasesOpen(false);
                         }
                       }}
                       className="text-gray-700 hover:text-primary hover:bg-gray-50 font-medium py-3 px-4 transition-colors flex items-center justify-between w-full rounded-lg"
@@ -788,7 +742,6 @@ export default function Navigation() {
                         sx={{ fontSize: 20 }}
                         className={`transition-transform duration-200 ${(link.dropdownType === "solutions" && mobileSolutionsOpen) ||
                           (link.dropdownType === "bpm" && mobileBpmOpen) ||
-                          (link.dropdownType === "useCases" && mobileUseCasesOpen) ||
                           (link.dropdownType === "ai" && mobileAiOpen)
                           ? 'rotate-180'
                           : ''
@@ -911,43 +864,7 @@ export default function Navigation() {
                       </motion.div>
                     )}
 
-                    {/* Use Cases Dropdown - Mobile */}
-                    {link.dropdownType === "useCases" && mobileUseCasesOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="ml-4 mt-2 flex flex-col gap-2"
-                      >
-                        <div className="bg-gray-50 rounded-lg p-2">
-                          <div className="flex items-center gap-2 text-sm font-semibold text-primary py-2 px-2 mb-1">
-                            <Factory sx={{ fontSize: 18 }} />
-                            Industry Use Cases
-                          </div>
-                          <div className="mt-1 space-y-1">
-                            {useCaseIndustries.map((industry) => {
-                              const IconComponent = industry.icon;
-                              return (
-                                <Link
-                                  key={industry.name}
-                                  href={industry.href}
-                                  onClick={() => {
-                                    setIsMobileMenuOpen(false);
-                                    setMobileUseCasesOpen(false);
-                                  }}
-                                  className="block text-gray-600 hover:text-primary hover:bg-white text-xs py-2 px-3 transition-colors rounded-md"
-                                >
-                                  <div className="flex items-center gap-2">
-                                    <IconComponent sx={{ fontSize: 16 }} />
-                                    <span>{industry.name}</span>
-                                  </div>
-                                </Link>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
+
 
                     {/* AI Solutions Dropdown - Mobile */}
                     {link.dropdownType === "ai" && mobileAiOpen && (

@@ -338,7 +338,7 @@ export default function CannyECMProductPage() {
               <div className="bg-primary-50 border-l-4 border-primary p-6 rounded-r-lg">
                 <p className="font-semibold text-secondary mb-2">🎯 Perfect For:</p>
                 <p className="text-gray-700">
-                  <Link href="/use-cases/healthcare" className="text-primary hover:underline">Healthcare</Link>, <Link href="/use-cases/legal" className="text-primary hover:underline">Legal</Link>, <Link href="/use-cases/bfsi" className="text-primary hover:underline">Finance</Link>, <Link href="/solutions/manufacturing" className="text-primary hover:underline">Manufacturing</Link>, Government, and any organization managing large volumes of documents
+                  <Link href="/solutions/healthcare" className="text-primary hover:underline">Healthcare</Link>, <Link href="/solutions/professional-services/legal" className="text-primary hover:underline">Legal</Link>, <Link href="/solutions/finance" className="text-primary hover:underline">Finance</Link>, <Link href="/solutions/manufacturing" className="text-primary hover:underline">Manufacturing</Link>, Government, and any organization managing large volumes of documents
                   requiring compliance, security, and efficient retrieval. For pharmaceutical compliance, explore our <Link href="/solutions/pharmaceutical" className="text-primary hover:underline">Pharmaceutical Solutions</Link>.
                 </p>
               </div>
@@ -677,7 +677,7 @@ export default function CannyECMProductPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-secondary mb-4">Healthcare & Medical</h3>
                 <p className="text-gray-700 mb-6">
-                  Manage patient records, medical histories, insurance claims, and lab results with HIPAA-compliant security. <Link href="/use-cases/healthcare" className="text-primary hover:underline">Learn more about healthcare solutions</Link>.
+                  Manage patient records, medical histories, insurance claims, and lab results with HIPAA-compliant security. <Link href="/solutions/healthcare" className="text-primary hover:underline">Learn more about healthcare solutions</Link>.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2"><CheckIcon sx={{ fontSize: 16, color: '#25d366' }} className="mt-0.5 flex-shrink-0" /><span className="text-sm text-gray-600">Electronic Health Records (EHR)</span></div>
@@ -694,7 +694,7 @@ export default function CannyECMProductPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-secondary mb-4">Legal & Law Firms</h3>
                 <p className="text-gray-700 mb-6">
-                  Organize case files, contracts, legal briefs, and client communications with matter-based filing. Explore our <Link href="/use-cases/legal" className="text-primary hover:underline">legal document management solutions</Link>.
+                  Organize case files, contracts, legal briefs, and client communications with matter-based filing. Explore our <Link href="/solutions/professional-services/legal" className="text-primary hover:underline">legal document management solutions</Link>.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2"><CheckIcon sx={{ fontSize: 16, color: '#25d366' }} className="mt-0.5 flex-shrink-0" /><span className="text-sm text-gray-600">Matter-centric organization</span></div>
@@ -711,7 +711,7 @@ export default function CannyECMProductPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-secondary mb-4">Finance & Banking</h3>
                 <p className="text-gray-700 mb-6">
-                  Handle loan applications, KYC documents, compliance reports with SOX and regulatory compliance. See our <Link href="/use-cases/bfsi" className="text-primary hover:underline">BFSI solutions</Link>.
+                  Handle loan applications, KYC documents, compliance reports with SOX and regulatory compliance. See our <Link href="/solutions/finance" className="text-primary hover:underline">Finance solutions</Link>.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2"><CheckIcon sx={{ fontSize: 16, color: '#25d366' }} className="mt-0.5 flex-shrink-0" /><span className="text-sm text-gray-600">KYC/AML documentation</span></div>
