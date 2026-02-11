@@ -231,7 +231,7 @@ export default function BottlingSolutionsPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {challenges.map((challenge, index) => (
                                 <div key={index} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                                    <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center text-red-500 mb-4">
+                                    <div className="w-12 h-12 bg-red-50 rounded-[10px] flex items-center justify-center text-red-500 mb-4">
                                         <challenge.icon sx={{ fontSize: 24 }} />
                                     </div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-2">{challenge.title}</h3>
@@ -258,7 +258,7 @@ export default function BottlingSolutionsPage() {
                             {keyFeatures.map((feature, index) => (
                                 <div key={index} className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                                     <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 mb-6">
+                                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-[10px] bg-cyan-100 text-cyan-600 mb-6">
                                             <feature.icon sx={{ fontSize: 24 }} />
                                         </div>
                                         <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>

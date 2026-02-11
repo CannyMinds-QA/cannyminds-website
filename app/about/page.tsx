@@ -147,24 +147,6 @@ export default function AboutPage() {
             <p className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed mb-8">
               Trusted Provider of Information Management & Digitization Solutions
             </p>
-            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-4 justify-center">
-              <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-lg px-4 sm:px-6 py-3">
-                <div className="text-lg sm:text-xl font-bold">ISO 9001</div>
-                <div className="text-xs sm:text-sm text-blue-100">Quality</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-lg px-4 sm:px-6 py-3">
-                <div className="text-lg sm:text-xl font-bold">ISO 15489</div>
-                <div className="text-xs sm:text-sm text-blue-100">Records</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-lg px-4 sm:px-6 py-3">
-                <div className="text-lg sm:text-xl font-bold">ISO 27001</div>
-                <div className="text-xs sm:text-sm text-blue-100">Security</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-lg px-4 sm:px-6 py-3">
-                <div className="text-lg sm:text-xl font-bold">FDA 21 CFR</div>
-                <div className="text-xs sm:text-sm text-blue-100">Part 11</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -203,7 +185,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Vision */}
             <div className="bg-white border-2 border-primary-200 rounded-xl p-8 hover:border-primary transition-all">
-              <div className="w-16 h-16 bg-primary-50 rounded-lg flex items-center justify-center mb-6 text-primary">
+              <div className="w-16 h-16 bg-primary-50 rounded-[10px] flex items-center justify-center mb-6 text-primary">
                 <VisionIcon sx={{ fontSize: 40 }} />
               </div>
               <h3 className="text-2xl font-bold text-secondary mb-4">Our Vision</h3>
@@ -214,7 +196,7 @@ export default function AboutPage() {
 
             {/* Mission */}
             <div className="bg-white border-2 border-green-200 rounded-xl p-8 hover:border-green-600 transition-all">
-              <div className="w-16 h-16 bg-green-50 rounded-lg flex items-center justify-center mb-6 text-green-600">
+              <div className="w-16 h-16 bg-green-50 rounded-[10px] flex items-center justify-center mb-6 text-green-600">
                 <MissionIcon sx={{ fontSize: 40 }} />
               </div>
               <h3 className="text-2xl font-bold text-secondary mb-4">Our Mission</h3>
@@ -236,7 +218,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {coreValues.map((value, idx) => (
               <div key={idx} className="bg-white border-2 border-gray-200 rounded-xl p-6 sm:p-8 hover:border-primary hover:shadow-lg transition-all">
-                <div className="w-14 h-14 bg-primary-50 rounded-lg flex items-center justify-center mb-4 text-primary">
+                <div className="w-14 h-14 bg-primary-50 rounded-[10px] flex items-center justify-center mb-4 text-primary">
                   {value.icon}
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-secondary mb-3">{value.title}</h3>

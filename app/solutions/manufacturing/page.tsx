@@ -192,7 +192,7 @@ export default function ManufacturingOverviewPage() {
                                     href={solution.href}
                                     className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-orange-300 transition-all"
                                 >
-                                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 mb-4">
+                                    <div className="w-12 h-12 bg-orange-100 rounded-[10px] flex items-center justify-center text-orange-600 mb-4">
                                         <solution.icon sx={{ fontSize: 28 }} />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">

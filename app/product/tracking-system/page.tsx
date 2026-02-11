@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import SocialShare from "@/components/ui/SocialShare";
 import {
   CheckCircle as CheckIcon,
@@ -227,12 +228,16 @@ export default function CannyTrackProductPage() {
                 </div>
               </div>
 
-              {/* Image Placeholder */}
-              <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-12 text-center" role="img" aria-label="CannyTrack dashboard showing productivity analytics, activity tracking, and workforce monitoring">
-                <ChartIcon sx={{ fontSize: 120, color: '#94a3b8' }} aria-hidden="true" />
-                <p className="text-gray-600 font-semibold mt-6 text-lg">IMAGE PLACEHOLDER</p>
-                <p className="text-sm text-gray-500 mt-2">CannyTrack Dashboard</p>
-                <p className="text-xs text-gray-400 mt-1">Recommended size: 1200x800px</p>
+              {/* Hero Image */}
+              <div className="relative flex justify-center">
+                <Image
+                  src="/images/products/cannytrack/cannytrack.png"
+                  alt="CannyTrack dashboard showing productivity analytics"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl"
+                  priority
+                />
               </div>
 
             </div>
@@ -334,6 +339,17 @@ export default function CannyTrackProductPage() {
               Comprehensive Monitoring Features
             </h2>
 
+            {/* Feature Diagram Image */}
+            <div className="mb-12 relative flex justify-center max-w-4xl mx-auto">
+              <Image
+                src="/images/products/cannytrack/cannytrack2.png"
+                alt="CannyTrack Comprehensive Monitoring Features Diagram"
+                width={800}
+                height={400}
+                className="rounded-2xl object-contain h-[400px]"
+              />
+            </div>
+
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -398,12 +414,24 @@ export default function CannyTrackProductPage() {
               Real-Time Activity Tracking & Status Monitoring
             </h2>
 
-            <div className="prose prose-lg max-w-none mb-8">
+            <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 text-lg leading-relaxed">
                 CannyTrack provides <strong>real-time visibility</strong> into employee activity with mouse and keyboard tracking,
                 active/idle time detection, and work status monitoring. Managers see live dashboards showing who's working,
                 who's idle, and who's on break enabling better resource allocation and productivity management.
               </p>
+            </div>
+
+            {/* Activity Monitoring Diagram Image */}
+            <div className="mt-8 mb-16 relative flex justify-center max-w-4xl mx-auto">
+              <Image
+                src="/images/products/cannytrack/cannytrack5.png?v=1.2"
+                alt="CannyTrack Real-Time Activity Tracking Diagram"
+                width={800}
+                height={400}
+                className="rounded-2xl object-contain h-[400px]"
+                unoptimized
+              />
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -452,12 +480,24 @@ export default function CannyTrackProductPage() {
               Consent-Based Monitoring with Full Transparency
             </h2>
 
-            <div className="prose prose-lg max-w-none mb-8">
+            <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 text-lg leading-relaxed">
                 Unlike stealth monitoring tools, CannyTrack operates on a <strong>transparent, consent-based model</strong>.
                 Employees are notified of monitoring, understand what data is collected, and have dashboard access to view
                 their own tracking data. This builds trust while maintaining productivity accountability.
               </p>
+            </div>
+
+            {/* Consent Monitoring Diagram Image */}
+            <div className="mt-8 mb-16 relative flex justify-center max-w-4xl mx-auto">
+              <Image
+                src="/images/products/cannytrack/cannytrack4.png?v=1.2"
+                alt="CannyTrack Consent-Based Monitoring Diagram"
+                width={800}
+                height={400}
+                className="rounded-2xl object-contain h-[400px]"
+                unoptimized
+              />
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">

@@ -255,7 +255,7 @@ export default function QualityManagementPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {qualityFeatures.map((feature, index) => (
                                 <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 mb-4">
+                                    <div className="w-12 h-12 bg-orange-100 rounded-[10px] flex items-center justify-center text-orange-600 mb-4">
                                         <feature.icon sx={{ fontSize: 28 }} />
                                     </div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
@@ -276,19 +276,19 @@ export default function QualityManagementPage() {
                             Streamlined Corrective and Preventive Action workflow from issue identification to verified closure.
                         </p>
 
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-12">
                             {workflowSteps.map((step, index) => (
-                                <div key={index} className="relative">
-                                    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 h-full">
+                                <div key={index} className="relative h-full">
+                                    <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 h-full">
                                         <div className="w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold mb-4">
                                             {step.step}
                                         </div>
                                         <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
-                                        <p className="text-gray-600 text-sm">{step.description}</p>
+                                        <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
                                     </div>
                                     {index < workflowSteps.length - 1 && (
-                                        <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                                            <ArrowForward className="text-orange-300" />
+                                        <div className="hidden lg:flex absolute top-1/2 -right-6 z-10 items-center justify-center transform -translate-y-1/2">
+                                            <ArrowForward className="text-orange-500" sx={{ fontSize: 32 }} />
                                         </div>
                                     )}
                                 </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import SocialShare from "@/components/ui/SocialShare";
 import {
   CheckCircle as CheckIcon,
@@ -213,12 +214,16 @@ export default function CannyScanProductPage() {
                 </div>
               </div>
 
-              {/* Image Placeholder */}
-              <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-12 text-center" role="img" aria-label="CannyScan Document Digitization Process Flow">
-                <ScannerIcon sx={{ fontSize: 120, color: '#94a3b8' }} aria-hidden="true" />
-                <p className="text-gray-600 font-semibold mt-6 text-lg">IMAGE PLACEHOLDER</p>
-                <p className="text-sm text-gray-500 mt-2">CannyScan Process Flow Diagram</p>
-                <p className="text-xs text-gray-400 mt-1">Recommended size: 1200x800px</p>
+              {/* Hero Image */}
+              <div className="relative flex justify-center">
+                <Image
+                  src="/images/products/cannyscan2.png"
+                  alt="CannyScan Document Digitization Process Flow"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl"
+                  priority
+                />
               </div>
 
             </div>
@@ -579,6 +584,17 @@ export default function CannyScanProductPage() {
             </p>
 
             <div className="relative">
+              {/* Process Flow Diagram Image */}
+              <div className="mb-12 relative flex justify-center">
+                <Image
+                  src="/images/products/cannyscan1.jpg"
+                  alt="Document Digitisation Process Flow Diagram"
+                  width={1000}
+                  height={600}
+                  className="rounded-2xl shadow-sm"
+                />
+              </div>
+
               {/* Process Steps */}
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 {[
@@ -721,22 +737,14 @@ export default function CannyScanProductPage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8">
-                <div className="text-center">
-                  <div className="flex justify-center gap-4 mb-6">
-                    <div className="w-20 h-20 bg-white rounded-xl shadow-lg flex items-center justify-center">
-                      <ScannerIcon sx={{ fontSize: 40, color: '#9333ea' }} />
-                    </div>
-                    <div className="flex items-center">
-                      <ArrowIcon sx={{ fontSize: 32, color: '#6b7280' }} />
-                    </div>
-                    <div className="w-20 h-20 bg-white rounded-xl shadow-lg flex items-center justify-center">
-                      <DocumentIcon sx={{ fontSize: 40, color: '#3170b5' }} />
-                    </div>
-                  </div>
-                  <p className="text-secondary font-semibold">CannyScan → CannyECM</p>
-                  <p className="text-sm text-gray-600 mt-2">Seamless document flow from scanning to archival</p>
-                </div>
+              <div className="relative flex justify-center">
+                <Image
+                  src="/images/products/cannyscan.png"
+                  alt="CannyScan and CannyECM Integration"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl"
+                />
               </div>
             </div>
           </section>

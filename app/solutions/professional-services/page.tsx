@@ -171,7 +171,7 @@ export default function ProfessionalServicesPage() {
                                     href={solution.href}
                                     className="group bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-gray-100 flex flex-col"
                                 >
-                                    <div className="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center text-slate-700 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                    <div className="w-14 h-14 bg-slate-100 rounded-[10px] flex items-center justify-center text-slate-700 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                                         <solution.icon sx={{ fontSize: 32 }} />
                                     </div>
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">

@@ -144,7 +144,7 @@ export default function FMCGTransformationPage() {
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
-                                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-700 mb-6">
+                                <div className="w-12 h-12 bg-green-100 rounded-[10px] flex items-center justify-center text-green-700 mb-6">
                                     <Description sx={{ fontSize: 32 }} />
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -199,7 +199,7 @@ export default function FMCGTransformationPage() {
                                 />
                             </div>
                             <div className="order-1 lg:order-2">
-                                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-700 mb-6">
+                                <div className="w-12 h-12 bg-blue-100 rounded-[10px] flex items-center justify-center text-blue-700 mb-6">
                                     <Assignment sx={{ fontSize: 32 }} />
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -238,7 +238,7 @@ export default function FMCGTransformationPage() {
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
-                                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-700 mb-6">
+                                <div className="w-12 h-12 bg-red-100 rounded-[10px] flex items-center justify-center text-red-700 mb-6">
                                     <Verified sx={{ fontSize: 32 }} />
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -293,7 +293,7 @@ export default function FMCGTransformationPage() {
                                 />
                             </div>
                             <div className="order-1 lg:order-2">
-                                <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-yellow-700 mb-6">
+                                <div className="w-12 h-12 bg-yellow-100 rounded-[10px] flex items-center justify-center text-yellow-700 mb-6">
                                     <HealthAndSafety sx={{ fontSize: 32 }} />
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -326,7 +326,7 @@ export default function FMCGTransformationPage() {
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
-                                <div className="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-gray-700 mb-6">
+                                <div className="w-12 h-12 bg-gray-200 rounded-[10px] flex items-center justify-center text-gray-700 mb-6">
                                     <Build sx={{ fontSize: 32 }} />
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -376,7 +376,7 @@ export default function FMCGTransformationPage() {
                                 />
                             </div>
                             <div className="order-1 lg:order-2">
-                                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-700 mb-6">
+                                <div className="w-12 h-12 bg-purple-100 rounded-[10px] flex items-center justify-center text-purple-700 mb-6">
                                     <LocalShipping sx={{ fontSize: 32 }} />
                                 </div>
                                 <h2 className="text-3xl font-bold text-gray-900 mb-4">

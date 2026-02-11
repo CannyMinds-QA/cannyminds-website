@@ -157,7 +157,9 @@ export default function ManufacturingSolutionsPage() {
                                                 variants={fadeInUp}
                                                 className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                                             >
-                                                <Icon className="text-blue-600 mb-4" sx={{ fontSize: 40 }} />
+                                                <div className="w-16 h-16 bg-blue-50 rounded-[10px] flex items-center justify-center mb-6 text-blue-600">
+                                                    <Icon sx={{ fontSize: 40 }} />
+                                                </div>
                                                 <h3 className="text-xl font-bold text-gray-900 mb-2">{useCase.title}</h3>
                                                 <p className="text-sm text-gray-600 mb-4 line-clamp-3">
                                                     {useCase.problem}

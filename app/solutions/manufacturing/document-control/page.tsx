@@ -238,7 +238,7 @@ export default function DocumentControlPage() {
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             {challenges.map((item, index) => (
                                 <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                                    <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-red-600 mb-4">
+                                    <div className="w-12 h-12 bg-red-100 rounded-[10px] flex items-center justify-center text-red-600 mb-4">
                                         <item.icon sx={{ fontSize: 28 }} />
                                     </div>
                                     <h3 className="font-bold text-gray-900 mb-2">{item.challenge}</h3>
@@ -356,7 +356,7 @@ export default function DocumentControlPage() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {benefits.map((benefit, index) => (
                                 <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 mb-4">
+                                    <div className="w-12 h-12 bg-orange-100 rounded-[10px] flex items-center justify-center text-orange-600 mb-4">
                                         <benefit.icon sx={{ fontSize: 28 }} />
                                     </div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>

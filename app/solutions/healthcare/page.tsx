@@ -368,7 +368,7 @@ export default function HealthcareOverviewPage() {
                                     href={solution.href}
                                     className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-teal-400 transition-all group"
                                 >
-                                    <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
+                                    <div className="w-14 h-14 bg-teal-100 rounded-[10px] flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
                                         <solution.icon sx={{ fontSize: 28 }} />
                                     </div>
 

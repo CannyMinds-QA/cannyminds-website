@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import SocialShare from "@/components/ui/SocialShare";
 import {
   CheckCircle as CheckIcon,
@@ -239,12 +240,17 @@ export default function CannyHRProductPage() {
                 </div>
               </div>
 
-              {/* Image Placeholder */}
-              <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-12 text-center" role="img" aria-label="CannyHR dashboard showing employee management, payroll, and attendance tracking">
-                <PeopleIcon sx={{ fontSize: 120, color: '#94a3b8' }} aria-hidden="true" />
-                <p className="text-gray-600 font-semibold mt-6 text-lg">IMAGE PLACEHOLDER</p>
-                <p className="text-sm text-gray-500 mt-2">CannyHR Dashboard</p>
-                <p className="text-xs text-gray-400 mt-1">Recommended size: 1200x800px</p>
+              {/* Hero Image */}
+              <div className="relative flex justify-center">
+                <Image
+                  src="/images/products/cannyhr/cannyhr4.png?v=1.1"
+                  alt="CannyHR Dashboard showing employee management, payroll, and attendance tracking"
+                  width={1200}
+                  height={800}
+                  className="rounded-2xl object-contain"
+                  priority
+                  unoptimized
+                />
               </div>
 
             </div>
@@ -345,6 +351,18 @@ export default function CannyHRProductPage() {
               Complete HR Modules for End-to-End Management
             </h2>
 
+            {/* Features Diagram Image */}
+            <div className="mb-12 relative flex justify-center max-w-4xl mx-auto">
+              <Image
+                src="/images/products/cannyhr/cannyhr1.png?v=1.0"
+                alt="CannyHR Complete HR Modules Overview"
+                width={800}
+                height={400}
+                className="rounded-2xl object-contain h-[400px]"
+                unoptimized
+              />
+            </div>
+
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -409,7 +427,7 @@ export default function CannyHRProductPage() {
               Comprehensive Payroll & Compensation Management
             </h2>
 
-            <div className="prose prose-lg max-w-none mb-8">
+            <div className="prose prose-lg max-w-none mb-12">
               <p className="text-gray-700 text-lg leading-relaxed">
                 Automate complex payroll calculations with <strong>CannyHR's intelligent payroll engine</strong>. Handle
                 multi-location payroll, variable pay structures, statutory compliance, and banking integration all in one platform.
@@ -488,12 +506,24 @@ export default function CannyHRProductPage() {
               Time & Attendance Tracking with 350+ Biometric Devices
             </h2>
 
-            <div className="prose prose-lg max-w-none mb-8">
+            <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 text-lg leading-relaxed">
                 Accurate attendance tracking integrated with <strong>350+ biometric devices</strong> including fingerprint scanners,
                 face recognition systems, RFID cards, and mobile GPS-based attendance. Eliminate time theft, buddy punching,
                 and manual errors with automated attendance reconciliation.
               </p>
+            </div>
+
+            {/* Attendance Monitoring Diagram Image */}
+            <div className="mt-8 mb-16 relative flex justify-center max-w-4xl mx-auto">
+              <Image
+                src="/images/products/cannyhr/cannyhr3.png?v=1.1"
+                alt="CannyHR Time & Attendance Monitoring Diagram"
+                width={800}
+                height={400}
+                className="rounded-2xl object-contain h-[400px]"
+                unoptimized
+              />
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -845,7 +875,7 @@ export default function CannyHRProductPage() {
         </article>
 
 
-      </div>
+      </div >
     </>
   );
 }

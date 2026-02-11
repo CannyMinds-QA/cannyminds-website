@@ -194,7 +194,7 @@ export default function FinanceSolutionsPage() {
                                     href={solution.href}
                                     className="group bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-start"
                                 >
-                                    <div className={`w-14 h-14 rounded-xl ${solution.bg} ${solution.color} flex items-center justify-center mb-6`}>
+                                    <div className={`w-14 h-14 rounded-[10px] ${solution.bg} ${solution.color} flex items-center justify-center mb-6`}>
                                         <solution.icon sx={{ fontSize: 32 }} />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">

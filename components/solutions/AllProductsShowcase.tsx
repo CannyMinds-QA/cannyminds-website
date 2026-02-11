@@ -194,7 +194,7 @@ export default function AllProductsShowcase() {
                                             <div className="flex flex-col md:flex-row gap-8 items-start">
                                                 {/* Left: Icon & Title */}
                                                 <div className="flex-shrink-0 flex md:block items-center gap-4 md:w-1/4">
-                                                    <div className={`w-16 h-16 rounded-xl ${product.bg} ${product.color} flex items-center justify-center mb-0 md:mb-4 group-hover:scale-105 transition-transform`}>
+                                                    <div className={`w-16 h-16 rounded-[10px] ${product.bg} ${product.color} flex items-center justify-center mb-0 md:mb-4 group-hover:scale-105 transition-transform`}>
                                                         <IconComponent sx={{ fontSize: 32 }} />
                                                     </div>
                                                     <div>
