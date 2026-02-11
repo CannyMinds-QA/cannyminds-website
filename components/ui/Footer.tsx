@@ -42,8 +42,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 to-primary text-white">
-      <div className="container mx-auto px-6 lg:px-12 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+      <div className="container mx-auto px-6 lg:px-12 py-8 pb-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-4">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -142,37 +142,11 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        {/* Certifications Section */}
-        <div className="border-t border-white/20 pt-8 pb-8">
-          <div className="text-center mb-6">
-            <h3 className="text-lg font-bold mb-2">Certified & Compliant</h3>
-            <p className="text-blue-100 text-sm">Trusted by organizations worldwide for quality and compliance</p>
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-6">
-            {certifications.map((cert) => (
-              <div key={cert.name} className="bg-white rounded-full p-2 hover:shadow-xl transition-shadow w-16 h-16 flex items-center justify-center border border-white/10">
-                <div className="relative w-10 h-10">
-                  <Image
-                    src={cert.image}
-                    alt={cert.name}
-                    fill
-                    className="object-contain rounded-full"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-blue-100 text-sm">
+        <div className="border-t border-white/20 pt-4 pb-0">
+          <div className="flex justify-center items-center">
+            <p className="text-blue-100 text-sm text-center">
               © {currentYear} CannyMinds Technology Solutions. All rights reserved.
-            </p>
-            <p className="text-blue-200 text-sm">
-              Global Offices: India • USA • Nigeria
             </p>
           </div>
         </div>

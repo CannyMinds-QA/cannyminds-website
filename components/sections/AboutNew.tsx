@@ -104,12 +104,17 @@ const certifications = [
   {
     name: "FDA 21 CFR Part 11",
     description: "Compliance Ready",
-    image: "/certifications/fda-21-cfr-part-11.png"
+    image: "/certifications/fda-21-cfr-part-11.jpg"
   },
   {
     name: "ISO 22716:2007",
     description: "Cosmetics GMP",
-    image: "/certifications/iso-22716-2007.jpg"
+    image: "/certifications/iso-22716-2007.png"
+  },
+  {
+    name: "NASSCOM",
+    description: "Member",
+    image: "/certifications/nasscom-logo.png"
   },
 ];
 

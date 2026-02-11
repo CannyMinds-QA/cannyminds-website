@@ -30,6 +30,8 @@ export const realEstateContent = {
             icon: SupportAgent,
             problem: "Real estate inquiries come 24/7 across multiple channels and languages. Manual handling leads to missed leads, delayed responses, and inconsistent customer experience, especially outside business hours.",
             solution: "An intelligent real estate assistant that delivers real-time, multilingual engagement across web, WhatsApp, and voice—managing property queries, visit bookings, and financing details anytime, anywhere.",
+            image: "/images/ai-Solution/multilingual chatbot.jpg",
+
             capabilities: [
                 "24x7 multilingual support across time zones",
                 "Omnichannel integration (WhatsApp, web, voice)",
@@ -40,7 +42,7 @@ export const realEstateContent = {
             benefits: {
                 cost: "60% reduction in operational costs",
                 quality: "Improved response time and customer satisfaction"
-            }
+            },
         },
         {
             id: "voice-lead-qualification",
@@ -58,7 +60,8 @@ export const realEstateContent = {
             benefits: {
                 cost: "70% reduction in qualification time",
                 quality: "Sales teams focus only on verified, high-potential prospects"
-            }
+            },
+            image: "/images/ai-Solution/voice.png"
         },
         {
             id: "listing-generator",
@@ -76,7 +79,8 @@ export const realEstateContent = {
             benefits: {
                 cost: "80% faster time-to-market",
                 quality: "Higher search rankings and qualified lead attraction"
-            }
+            },
+            image: "/images/ai-Solution/automated-listing.jpg"
         },
         {
             id: "blueprint-boq",
@@ -94,7 +98,8 @@ export const realEstateContent = {
             benefits: {
                 cost: "90% reduction in estimation time",
                 quality: "Improved bid accuracy and reduced cost overruns"
-            }
+            },
+            image: "/images/ai-Solution/blueprint.jpg"
         },
         {
             id: "site-safety-monitor",
@@ -112,7 +117,8 @@ export const realEstateContent = {
             benefits: {
                 cost: "75% reduction in on-site accidents",
                 quality: "Improved workplace safety and compliance"
-            }
+            },
+            image: "/images/ai-Solution/AI-site.jpg"
         },
         {
             id: "construction-progress",
@@ -130,7 +136,8 @@ export const realEstateContent = {
             benefits: {
                 cost: "Early delay detection saving project costs",
                 quality: "Proactive project control and execution efficiency"
-            }
+            },
+            image: "/images/ai-Solution/construction.jpg"
         },
         {
             id: "legal-document-analyzer",
@@ -148,7 +155,8 @@ export const realEstateContent = {
             benefits: {
                 cost: "85% reduction in legal review time",
                 quality: "Reduced risk from missed clauses or unfavorable terms"
-            }
+            },
+            image: "/images/ai-Solution/legal-document.png"
         },
         {
             id: "contract-lifecycle",
@@ -166,7 +174,8 @@ export const realEstateContent = {
             benefits: {
                 cost: "Zero missed renewals or expirations",
                 quality: "Complete compliance visibility and control"
-            }
+            },
+            image: "/images/ai-Solution/contract-lifecycle.jpg"
         },
         {
             id: "invoice-processing",
@@ -184,7 +193,8 @@ export const realEstateContent = {
             benefits: {
                 cost: "70% faster payment processing",
                 quality: "Reduced errors and accelerated vendor payments"
-            }
+            },
+            image: "/images/ai-Solution/invoice&payment.jpg"
         },
         {
             id: "employee-training-bot",
@@ -202,7 +212,8 @@ export const realEstateContent = {
             benefits: {
                 cost: "50% reduction in lookup time",
                 quality: "Instant, accurate answers improving productivity"
-            }
+            },
+            image: "/images/ai-Solution/AI-employees.png"
         }
     ],
     regulatoryMapping: [

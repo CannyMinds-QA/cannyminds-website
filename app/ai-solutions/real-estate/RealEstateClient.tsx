@@ -176,6 +176,7 @@ export default function RealEstateSolutionsPage() {
                                 {realEstateContent.useCases.map((useCase, index) => {
                                     const isEven = index % 2 === 0;
                                     const Icon = useCase.icon;
+                                    const image = (useCase as any).image;
 
                                     return (
                                         <section
@@ -211,18 +212,73 @@ export default function RealEstateSolutionsPage() {
                                                         {useCase.solution}
                                                     </p>
 
-                                                    <div className="grid sm:grid-cols-2 gap-6 bg-blue-50/50 p-6 rounded-xl border border-blue-100 mb-8">
-                                                        <div>
-                                                            <div className="text-3xl font-bold text-blue-600 mb-1">{useCase.benefits.cost.split(" ")[0]}</div>
-                                                            <div className="text-sm text-gray-600 font-medium">Efficiency Gain</div>
-                                                            <div className="text-xs text-gray-500 mt-1">{useCase.benefits.cost}</div>
+                                                    {/* Vertical Layout (For all except AI Concierge) */}
+                                                    {image && useCase.id !== "ai-concierge" ? (
+                                                        <>
+                                                            <div className={`relative w-full rounded-xl overflow-hidden mb-8 bg-gray-50 ${useCase.id === "voice-lead-qualification" ? "h-64 md:h-[600px]" : "h-64 md:h-[500px]"
+                                                                }`}>
+                                                                <Image
+                                                                    src={image}
+                                                                    alt={useCase.title}
+                                                                    fill
+                                                                    className="object-contain"
+                                                                />
+                                                            </div>
+                                                            <div className="grid sm:grid-cols-2 gap-6 bg-blue-50/50 p-6 rounded-xl border border-blue-100 mb-8">
+                                                                <div>
+                                                                    <div className="text-3xl font-bold text-blue-600 mb-1">{useCase.benefits.cost.split(" ")[0]}</div>
+                                                                    <div className="text-sm text-gray-600 font-medium">Efficiency Gain</div>
+                                                                    <div className="text-xs text-gray-500 mt-1">{useCase.benefits.cost}</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-3xl font-bold text-green-600 mb-1">High</div>
+                                                                    <div className="text-sm text-gray-600 font-medium">Business Impact</div>
+                                                                    <div className="text-xs text-gray-500 mt-1">{useCase.benefits.quality}</div>
+                                                                </div>
+                                                            </div>
+                                                        </>
+                                                    ) : image ? (
+                                                        /* Side-by-Side Layout (AI Concierge) */
+                                                        <div className="grid md:grid-cols-2 gap-8 mb-8">
+                                                            {/* Benefits Column */}
+                                                            <div className="flex flex-col justify-center gap-6">
+                                                                <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                                                                    <div className="text-3xl font-bold text-blue-600 mb-1">{useCase.benefits.cost.split(" ")[0]}</div>
+                                                                    <div className="text-sm text-gray-600 font-medium">Efficiency Gain</div>
+                                                                    <div className="text-xs text-gray-500 mt-1">{useCase.benefits.cost}</div>
+                                                                </div>
+                                                                <div className="bg-green-50/50 p-6 rounded-xl border border-green-100">
+                                                                    <div className="text-3xl font-bold text-green-600 mb-1">High</div>
+                                                                    <div className="text-sm text-gray-600 font-medium">Business Impact</div>
+                                                                    <div className="text-xs text-gray-500 mt-1">{useCase.benefits.quality}</div>
+                                                                </div>
+                                                            </div>
+
+                                                            {/* Image Column */}
+                                                            <div className="relative h-full min-h-[400px] w-full rounded-xl overflow-hidden">
+                                                                <Image
+                                                                    src={image}
+                                                                    alt={useCase.title}
+                                                                    fill
+                                                                    className="object-cover"
+                                                                />
+                                                            </div>
                                                         </div>
-                                                        <div>
-                                                            <div className="text-3xl font-bold text-green-600 mb-1">High</div>
-                                                            <div className="text-sm text-gray-600 font-medium">Business Impact</div>
-                                                            <div className="text-xs text-gray-500 mt-1">{useCase.benefits.quality}</div>
+                                                    ) : (
+                                                        /* No Image Default Layout */
+                                                        <div className="grid sm:grid-cols-2 gap-6 bg-blue-50/50 p-6 rounded-xl border border-blue-100 mb-8">
+                                                            <div>
+                                                                <div className="text-3xl font-bold text-blue-600 mb-1">{useCase.benefits.cost.split(" ")[0]}</div>
+                                                                <div className="text-sm text-gray-600 font-medium">Efficiency Gain</div>
+                                                                <div className="text-xs text-gray-500 mt-1">{useCase.benefits.cost}</div>
+                                                            </div>
+                                                            <div>
+                                                                <div className="text-3xl font-bold text-green-600 mb-1">High</div>
+                                                                <div className="text-sm text-gray-600 font-medium">Business Impact</div>
+                                                                <div className="text-xs text-gray-500 mt-1">{useCase.benefits.quality}</div>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    )}
 
                                                     <div className="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
                                                         <h3 className="text-lg font-bold text-gray-900 mb-4">Key Capabilities</h3>

@@ -331,8 +331,8 @@ export default function AboutPage() {
             Certifications & Compliance
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-12">
-            <div className="bg-white border-2 border-primary-200 rounded-xl p-6 hover:border-primary transition-all flex flex-col items-center text-center">
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            <div className="bg-white border-2 border-primary-200 rounded-xl p-6 hover:border-primary transition-all flex flex-col items-center text-center w-full sm:w-72">
               <div className="relative w-full h-40 mb-4">
                 <Image
                   src="/certifications/iso-9001-2015.png"
@@ -345,7 +345,7 @@ export default function AboutPage() {
               <p className="text-sm text-gray-600">Quality Management System</p>
             </div>
 
-            <div className="bg-white border-2 border-green-200 rounded-xl p-6 hover:border-green-600 transition-all flex flex-col items-center text-center">
+            <div className="bg-white border-2 border-green-200 rounded-xl p-6 hover:border-green-600 transition-all flex flex-col items-center text-center w-full sm:w-72">
               <div className="relative w-full h-40 mb-4">
                 <Image
                   src="/certifications/iso-15489-2016.png"
@@ -358,10 +358,10 @@ export default function AboutPage() {
               <p className="text-sm text-gray-600">Records Management</p>
             </div>
 
-            <div className="bg-white border-2 border-purple-200 rounded-xl p-6 hover:border-purple-600 transition-all flex flex-col items-center text-center">
+            <div className="bg-white border-2 border-purple-200 rounded-xl p-6 hover:border-purple-600 transition-all flex flex-col items-center text-center w-full sm:w-72">
               <div className="relative w-full h-40 mb-4">
                 <Image
-                  src="/certifications/iso-22716-2007.jpg"
+                  src="/certifications/iso-22716-2007.png"
                   alt="ISO 22716:2007 Certificate"
                   fill
                   className="object-contain"
@@ -371,10 +371,10 @@ export default function AboutPage() {
               <p className="text-sm text-gray-600">GMP Cosmetics</p>
             </div>
 
-            <div className="bg-white border-2 border-orange-200 rounded-xl p-6 hover:border-orange-600 transition-all flex flex-col items-center text-center">
+            <div className="bg-white border-2 border-orange-200 rounded-xl p-6 hover:border-orange-600 transition-all flex flex-col items-center text-center w-full sm:w-72">
               <div className="relative w-full h-40 mb-4">
                 <Image
-                  src="/certifications/fda-21-cfr-part-11.png"
+                  src="/certifications/fda-21-cfr-part-11.jpg"
                   alt="FDA 21 CFR Part 11 Compliant"
                   fill
                   className="object-contain"
@@ -382,6 +382,19 @@ export default function AboutPage() {
               </div>
               <h3 className="text-lg font-bold text-secondary mb-2">FDA 21 CFR Part 11</h3>
               <p className="text-sm text-gray-600">Compliance</p>
+            </div>
+
+            <div className="bg-white border-2 border-sky-200 rounded-xl p-6 hover:border-sky-600 transition-all flex flex-col items-center text-center w-full sm:w-72">
+              <div className="relative w-full h-40 mb-4">
+                <Image
+                  src="/certifications/nasscom-logo.png"
+                  alt="NASSCOM Member"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-lg font-bold text-secondary mb-2">NASSCOM</h3>
+              <p className="text-sm text-gray-600">Member</p>
             </div>
           </div>
 
