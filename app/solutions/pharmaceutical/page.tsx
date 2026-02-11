@@ -12,7 +12,7 @@ import {
     ChevronRight,
     FolderSpecial,
 } from "@mui/icons-material";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
 
 export const metadata: Metadata = {
@@ -177,40 +177,51 @@ export default function PharmaceuticalOverviewPage() {
                             <span className="text-gray-900 font-medium">Pharmaceutical</span>
                         </nav>
 
-                        <div className="max-w-4xl">
-                            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                                <Science sx={{ fontSize: 18 }} />
-                                Pharmaceutical Industry
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            <div className="max-w-4xl">
+                                <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                                    <Science sx={{ fontSize: 18 }} />
+                                    Pharmaceutical Industry
+                                </div>
+
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                                    Accelerating Pharma Manufacturing With Digital Transformation
+                                </h1>
+
+                                <div className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+                                    Accelerate pharmaceutical manufacturing with AI-powered automation. From electronic batch records (eBMR) to quality inspection and regulatory compliance, ensuring FDA 21 CFR Part 11 adherence and operational excellence.
+                                </div>
+
+
+
+                                <p className="text-lg text-gray-700 mb-8">
+                                    Our solutions align with global standards including <strong>ISO 9001</strong>, <strong>ISO 15489</strong>, <strong>ISO 27001</strong>, and <strong>FDA 21 CFR Part 11</strong>, enabling organizations to confidently meet audit, retention, and compliance requirements.
+                                </p>
+
+                                <div className="flex flex-wrap gap-4">
+                                    <Link
+                                        href="/contact"
+                                        className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2 shadow-lg"
+                                    >
+                                        Request Consultation
+                                        <ArrowForward sx={{ fontSize: 20 }} />
+                                    </Link>
+                                    <Link
+                                        href="#solutions"
+                                        className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-200 hover:border-primary hover:text-primary transition-colors"
+                                    >
+                                        Explore Solutions
+                                    </Link>
+                                </div>
                             </div>
-
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                                Accelerating Pharma Manufacturing With Digital Transformation
-                            </h1>
-
-                            <div className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
-                                Accelerate pharmaceutical manufacturing with AI-powered automation. From electronic batch records (eBMR) to quality inspection and regulatory compliance, ensuring FDA 21 CFR Part 11 adherence and operational excellence.
-                            </div>
-
-
-
-                            <p className="text-lg text-gray-700 mb-8">
-                                Our solutions align with global standards including <strong>ISO 9001</strong>, <strong>ISO 15489</strong>, <strong>ISO 27001</strong>, and <strong>FDA 21 CFR Part 11</strong>, enabling organizations to confidently meet audit, retention, and compliance requirements.
-                            </p>
-
-                            <div className="flex flex-wrap gap-4">
-                                <Link
-                                    href="/contact"
-                                    className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2 shadow-lg"
-                                >
-                                    Request Consultation
-                                    <ArrowForward sx={{ fontSize: 20 }} />
-                                </Link>
-                                <Link
-                                    href="#solutions"
-                                    className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-200 hover:border-primary hover:text-primary transition-colors"
-                                >
-                                    Explore Solutions
-                                </Link>
+                            <div className="relative flex justify-center">
+                                <Image
+                                    src="/images/solutions/Pharma/overview/Pharma-Manufacturing.png"
+                                    alt="Pharmaceutical Manufacturing"
+                                    width={600}
+                                    height={450}
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>
@@ -241,7 +252,14 @@ export default function PharmaceuticalOverviewPage() {
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
                             Industry Context
                         </h2>
-                        <ImagePlaceholder className="mb-8 h-64" text="Pharmaceutical Industry Overview" />
+                        <div className="flex justify-center mb-8">
+                            <Image
+                                src="/images/solutions/Pharma/overview/Industry-Context.png"
+                                alt="Pharmaceutical Industry Overview"
+                                width={1000}
+                                height={500}
+                            />
+                        </div>
                         <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
                             <p>
                                 The pharmaceutical industry operates in a high-stakes environment where documentation is just as important as the product itself. Meeting global standards such as FDA 21 CFR Part 11, EU GMP Annex 11, and ALCOA+ principles requires more than just digitization—it requires intelligent, validated systems that can predict quality shifts and ensure 100% data integrity throughout the product lifecycle.
@@ -363,15 +381,25 @@ export default function PharmaceuticalOverviewPage() {
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="bg-white p-2 rounded-2xl border border-gray-200 shadow-sm">
-                                    <ImagePlaceholder className="aspect-[4/3] rounded-xl" text="Digitization Workflow Dashboard" />
+                                <div className="flex justify-center p-2">
+                                    <Image
+                                        src="/images/solutions/Pharma/overview/Digitization-Services.png"
+                                        alt="Digitization Workflow Dashboard"
+                                        width={600}
+                                        height={450}
+                                    />
                                 </div>
                             </div>
 
                             {/* Records Management */}
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
-                                <div className="order-2 lg:order-1 bg-white p-2 rounded-2xl border border-gray-200 shadow-sm">
-                                    <ImagePlaceholder className="aspect-[4/3] rounded-xl" text="Records Management System" />
+                                <div className="order-2 lg:order-1 flex justify-center p-2">
+                                    <Image
+                                        src="/images/solutions/Pharma/overview/Records-Management.png"
+                                        alt="Records Management System"
+                                        width={600}
+                                        height={450}
+                                    />
                                 </div>
                                 <div className="order-1 lg:order-2">
                                     <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-6">

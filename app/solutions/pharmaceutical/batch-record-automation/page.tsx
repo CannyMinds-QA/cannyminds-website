@@ -16,7 +16,7 @@ import {
     Lightbulb,
     VerifiedUser,
 } from "@mui/icons-material";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
 
 export const metadata: Metadata = {
@@ -157,34 +157,45 @@ export default function BatchRecordAutomationPage() {
                             <span className="text-gray-900 font-medium">Batch Record Automation</span>
                         </nav>
 
-                        <div className="max-w-4xl">
-                            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                                <Description sx={{ fontSize: 18 }} />
-                                Production AI
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            <div className="max-w-4xl">
+                                <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                                    <Description sx={{ fontSize: 18 }} />
+                                    Production AI
+                                </div>
+
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                                    Batch Record Automation for Pharmaceutical Manufacturing
+                                </h1>
+
+                                <div className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+                                    Transform paper-intensive batch record review into intelligent, automated processes. Our GenAI-enabled eBMR solution reduces manual review effort by 45-65% while ensuring FDA 21 CFR Part 11 compliance and accelerating batch release from days to hours.
+                                </div>
+
+                                <div className="flex flex-wrap gap-4">
+                                    <Link
+                                        href="/contact"
+                                        className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2 shadow-lg"
+                                    >
+                                        Request Demo
+                                        <ArrowForward sx={{ fontSize: 20 }} />
+                                    </Link>
+                                    <Link
+                                        href="/solutions/pharmaceutical/quality-inspection-capa"
+                                        className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-200 hover:border-primary hover:text-primary transition-colors"
+                                    >
+                                        View Quality Solutions
+                                    </Link>
+                                </div>
                             </div>
-
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                                Batch Record Automation for Pharmaceutical Manufacturing
-                            </h1>
-
-                            <div className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
-                                Transform paper-intensive batch record review into intelligent, automated processes. Our GenAI-enabled eBMR solution reduces manual review effort by 45-65% while ensuring FDA 21 CFR Part 11 compliance and accelerating batch release from days to hours.
-                            </div>
-
-                            <div className="flex flex-wrap gap-4">
-                                <Link
-                                    href="/contact"
-                                    className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2 shadow-lg"
-                                >
-                                    Request Demo
-                                    <ArrowForward sx={{ fontSize: 20 }} />
-                                </Link>
-                                <Link
-                                    href="/solutions/pharmaceutical/quality-inspection-capa"
-                                    className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-200 hover:border-primary hover:text-primary transition-colors"
-                                >
-                                    View Quality Solutions
-                                </Link>
+                            <div className="relative flex justify-center">
+                                <Image
+                                    src="/images/solutions/Pharma/batch-record-automation/eBMR-Automation-for-Pharmaceutical-Manufacturing.png"
+                                    alt="Batch Record Automation"
+                                    width={600}
+                                    height={450}
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>
@@ -282,7 +293,14 @@ export default function BatchRecordAutomationPage() {
                             </div>
 
                             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
-                                <ImagePlaceholder className="mb-8" text="eBMR Interface Dashboard" />
+                                <div className="flex justify-center mb-8">
+                                    <Image
+                                        src="/images/solutions/Pharma/batch-record-automation/pharma-eBMR.png"
+                                        alt="eBMR Interface Dashboard"
+                                        width={800}
+                                        height={450}
+                                    />
+                                </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                                     <TrendingUp className="text-green-600" />
                                     Business Impact
@@ -317,7 +335,14 @@ export default function BatchRecordAutomationPage() {
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">
                             <div className="order-2 lg:order-1 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100">
-                                <ImagePlaceholder className="mb-8" text="Predictive Maintenance Dashboard" />
+                                <div className="flex justify-center mb-8">
+                                    <Image
+                                        src="/images/solutions/Pharma/batch-record-automation/Predictive-Equipment-Maintenance.png"
+                                        alt="Predictive Maintenance Dashboard"
+                                        width={800}
+                                        height={450}
+                                    />
+                                </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                                     <TrendingUp className="text-green-600" />
                                     Maintenance Intelligence

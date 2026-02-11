@@ -18,7 +18,7 @@ import {
     Warning,
     Lightbulb,
 } from "@mui/icons-material";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
 
 export const metadata: Metadata = {
@@ -219,34 +219,45 @@ export default function RegulatoryCompliancePage() {
                             <span className="text-gray-900 font-medium">Regulatory Compliance</span>
                         </nav>
 
-                        <div className="max-w-4xl">
-                            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                                <VerifiedUser sx={{ fontSize: 18 }} />
-                                Regulatory & Documentation
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            <div className="max-w-4xl">
+                                <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                                    <VerifiedUser sx={{ fontSize: 18 }} />
+                                    Regulatory & Documentation
+                                </div>
+
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                                    Regulatory Compliance & Document Control
+                                </h1>
+
+                                <div className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+                                    Streamline compliance with AI-driven document control, SOP management, and regulatory submission support. Ensure audit readiness and reduce compliance risks with full traceability and 21 CFR Part 11 compliant workflows.
+                                </div>
+
+                                <div className="flex flex-wrap gap-4">
+                                    <Link
+                                        href="/contact"
+                                        className="px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors inline-flex items-center gap-2 shadow-lg"
+                                    >
+                                        Request Demo
+                                        <ArrowForward sx={{ fontSize: 20 }} />
+                                    </Link>
+                                    <Link
+                                        href="/solutions/pharmaceutical/quality-inspection-capa"
+                                        className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-200 hover:border-purple-600 hover:text-purple-600 transition-colors"
+                                    >
+                                        View Quality Solutions
+                                    </Link>
+                                </div>
                             </div>
-
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                                Regulatory Compliance & Document Control
-                            </h1>
-
-                            <div className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
-                                Streamline compliance with AI-driven document control, SOP management, and regulatory submission support. Ensure audit readiness and reduce compliance risks with full traceability and 21 CFR Part 11 compliant workflows.
-                            </div>
-
-                            <div className="flex flex-wrap gap-4">
-                                <Link
-                                    href="/contact"
-                                    className="px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors inline-flex items-center gap-2 shadow-lg"
-                                >
-                                    Request Demo
-                                    <ArrowForward sx={{ fontSize: 20 }} />
-                                </Link>
-                                <Link
-                                    href="/solutions/pharmaceutical/quality-inspection-capa"
-                                    className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-200 hover:border-purple-600 hover:text-purple-600 transition-colors"
-                                >
-                                    View Quality Solutions
-                                </Link>
+                            <div className="relative flex justify-center">
+                                <Image
+                                    src="/images/solutions/Pharma/regulatory-compliance/Regulatory-Compliance-Document-Control.png"
+                                    alt="Regulatory Compliance & Document Control"
+                                    width={600}
+                                    height={450}
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>
@@ -354,7 +365,14 @@ export default function RegulatoryCompliancePage() {
                             </div>
 
                             <div className="space-y-6">
-                                <ImagePlaceholder className="h-48" text="Document Control Workflow" />
+                                <div className="flex justify-center mb-6">
+                                    <Image
+                                        src="/images/solutions/Pharma/regulatory-compliance/workflow-pharma.png"
+                                        alt="Document Control Workflow"
+                                        width={600}
+                                        height={450}
+                                    />
+                                </div>
                                 {/* SOP Management */}
                                 <div className="bg-white border border-gray-200 rounded-xl p-6">
                                     <div className="flex items-center gap-3 mb-4">
@@ -513,7 +531,14 @@ export default function RegulatoryCompliancePage() {
                             </div>
 
                             <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border border-cyan-100">
-                                <ImagePlaceholder className="mb-8" text="Regulatory Submission Dashboard" />
+                                <div className="flex justify-center mb-8">
+                                    <Image
+                                        src="/images/solutions/Pharma/regulatory-compliance/Regulatory-Document-Generation.png"
+                                        alt="Regulatory Submission Dashboard"
+                                        width={800}
+                                        height={450}
+                                    />
+                                </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                                     <TrendingUp className="text-cyan-600" />
                                     Submission Impact
