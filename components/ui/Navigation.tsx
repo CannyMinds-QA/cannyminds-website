@@ -713,7 +713,8 @@ export default function Navigation() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="lg:hidden pb-6 pt-4 border-t border-gray-200 bg-white"
+            className="lg:hidden pb-6 pt-4 border-t border-gray-200 bg-white max-h-[calc(100vh-64px)] sm:max-h-[calc(100vh-80px)] overflow-y-auto overscroll-y-contain"
+            data-lenis-prevent
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (

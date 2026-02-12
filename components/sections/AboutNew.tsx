@@ -237,11 +237,7 @@ export default function AboutNew() {
                     <div className="text-sm font-bold text-gray-900">{award.name}</div>
                   </motion.div>
 
-                  {index < awards.length - 1 && (
-                    <div className="hidden md:block text-orange-500">
-                      <ArrowIcon sx={{ fontSize: 48 }} />
-                    </div>
-                  )}
+                  {/* Arrow removed as per user request */}
                 </div>
               ))}
             </motion.div>

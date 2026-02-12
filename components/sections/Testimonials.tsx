@@ -135,7 +135,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Main Carousel Wrapper */}
-                    <div className="relative min-h-[340px] md:min-h-[380px] flex items-center justify-center">
+                    <div className="relative min-h-[520px] md:min-h-[550px] flex items-center justify-center">
                         <AnimatePresence initial={false} custom={direction}>
                             <motion.div
                                 key={currentIndex}
