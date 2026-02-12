@@ -41,9 +41,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-primary text-white">
-      <div className="container mx-auto px-6 lg:px-12 py-8 pb-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-4">
+    <footer className="bg-white border-t border-gray-200">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-6 lg:px-12 py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -56,11 +57,11 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <div className="text-xl font-bold">CannyMinds</div>
-                <div className="text-sm text-blue-200">Technology Solutions</div>
+                <div className="text-xl font-bold text-gray-900">CannyMinds</div>
+                <div className="text-sm text-gray-600">Technology Solutions</div>
               </div>
             </div>
-            <p className="text-blue-100 mb-4 leading-relaxed">
+            <p className="text-gray-600 mb-4 leading-relaxed">
               Empowering businesses worldwide with innovative IT solutions and
               digital transformation services.
             </p>
@@ -82,7 +83,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -2 }}
-                  className="flex items-center justify-center text-blue-100 hover:text-white transition-colors"
+                  className="flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon sx={{ fontSize: 26 }} />
@@ -93,13 +94,13 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Solutions</h3>
+            <h3 className="text-lg font-bold mb-4 text-gray-900">Solutions</h3>
             <ul className="space-y-2">
               {products.map((product) => (
                 <li key={product.name}>
                   <Link
                     href={product.href}
-                    className="text-blue-100 hover:text-white transition-colors"
+                    className="text-gray-600 hover:text-primary transition-colors"
                   >
                     {product.name}
                   </Link>
@@ -127,13 +128,13 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Company</h3>
+            <h3 className="text-lg font-bold mb-4 text-gray-900">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-blue-100 hover:text-white transition-colors"
+                    className="text-gray-600 hover:text-primary transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -143,9 +144,9 @@ export default function Footer() {
           </div>
         </div>
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 pt-4 pb-0">
+        <div className="border-t border-gray-200 pt-4 pb-0">
           <div className="flex justify-center items-center">
-            <p className="text-blue-100 text-sm text-center">
+            <p className="text-gray-600 text-sm text-center">
               © {currentYear} CannyMinds Technology Solutions. All rights reserved.
             </p>
           </div>
