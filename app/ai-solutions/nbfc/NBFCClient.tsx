@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import SecureImage from "@/components/ui/SecureImage";
 import TableOfContents from "@/components/ui/TableOfContents";
 import { TextAnimate } from "@/registry/magicui/text-animate";
 import { nbfcContent } from "./content";
@@ -317,13 +318,12 @@ export default function NBFCSolutionsPage() {
                                 >
                                     <div className="flex flex-col md:flex-row gap-8 items-start">
                                         <div className="flex-shrink-0 text-center md:text-left">
-                                            <div className="w-24 h-24 rounded-full bg-white border-2 border-green-200 mb-4 overflow-hidden mx-auto md:mx-0">
-                                                <Image
-                                                    src="/images/author-udayakumar.jpg"
+                                            <div className="w-24 h-24 rounded-full bg-white border-2 border-green-200 mb-4 overflow-hidden mx-auto md:mx-0 relative">
+                                                <SecureImage
+                                                    src="/images/about/Udayakumar-Murugan-Director.png"
                                                     alt="Udayakumar Murugan"
-                                                    width={96}
-                                                    height={96}
-                                                    className="w-full h-full object-cover"
+                                                    fill
+                                                    className="object-cover"
                                                 />
                                             </div>
                                             <h3 className="text-lg font-bold text-gray-900 mb-1">Udayakumar Murugan</h3>

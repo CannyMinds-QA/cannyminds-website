@@ -344,12 +344,12 @@ export default function AboutPage() {
               <div className="relative w-full h-40 mb-4">
                 <Image
                   src="/certifications/iso-22716-2007.png"
-                  alt="ISO 22716:2007 Certificate"
+                  alt="ISO 27001 Certificate"
                   fill
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-lg font-bold text-secondary mb-2">ISO 22716:2007</h3>
+              <h3 className="text-lg font-bold text-secondary mb-2">ISO 27001</h3>
               <p className="text-sm text-gray-600">GMP Cosmetics</p>
             </div>
 

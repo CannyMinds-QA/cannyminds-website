@@ -107,8 +107,8 @@ const certifications = [
     image: "/certifications/fda-21-cfr-part-11.jpg"
   },
   {
-    name: "ISO 22716:2007",
-    description: "Cosmetics GMP",
+    name: "ISO 27001",
+    description: "Information Security",
     image: "/certifications/iso-22716-2007.png"
   },
   {
@@ -122,7 +122,7 @@ export default function AboutNew() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -218,30 +218,31 @@ export default function AboutNew() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-30px" }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto"
+              className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-5xl mx-auto"
             >
-              {awards.map((award) => (
-                <motion.div
-                  key={award.name}
-                  variants={certCardVariants}
-                  whileHover={{
-                    scale: 1.05,
-                    y: -5,
-                    boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-                    transition: { duration: 0.2 },
-                  }}
-                  className="bg-white border border-gray-200 hover:border-primary rounded-lg p-6 text-center cursor-pointer transition-colors flex flex-col items-center justify-center"
-                >
-                  <div className="relative w-full h-64 mb-4 flex items-center justify-center">
-                    <Image
-                      src={award.image}
-                      alt={award.name}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="text-sm font-bold text-gray-900">{award.name}</div>
-                </motion.div>
+              {awards.map((award, index) => (
+                <div key={award.name} className="flex flex-col md:flex-row items-center gap-8">
+                  <motion.div
+                    variants={certCardVariants}
+                    className="bg-white rounded-lg p-6 text-center flex flex-col items-center justify-center max-w-sm"
+                  >
+                    <div className="relative w-full h-80 mb-4 flex items-center justify-center">
+                      <Image
+                        src={award.image}
+                        alt={award.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="text-sm font-bold text-gray-900">{award.name}</div>
+                  </motion.div>
+
+                  {index < awards.length - 1 && (
+                    <div className="hidden md:block text-orange-500">
+                      <ArrowIcon sx={{ fontSize: 48 }} />
+                    </div>
+                  )}
+                </div>
               ))}
             </motion.div>
           </motion.div>
@@ -267,7 +268,7 @@ export default function AboutNew() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-30px" }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6"
+              className="grid grid-cols-2 md:grid-cols-5 gap-6"
             >
               {certifications.map((cert) => {
                 return (

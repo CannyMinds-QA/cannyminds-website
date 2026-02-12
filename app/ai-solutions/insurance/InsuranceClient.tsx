@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import SecureImage from "@/components/ui/SecureImage";
 import TableOfContents from "@/components/ui/TableOfContents";
 import { TextAnimate } from "@/registry/magicui/text-animate";
 import { insuranceContent } from "./content";
@@ -97,13 +98,12 @@ export default function InsuranceSolutionsPage() {
                                 transition={{ duration: 0.6, delay: 0.2 }}
                                 className="relative"
                             >
-                                <div className="aspect-video rounded-2xl overflow-hidden border-2 border-blue-200 bg-white shadow-lg">
-                                    <Image
-                                        src="/images/ai-solutions/insurance-hero.jpg"
-                                        alt="Insurance AI Solutions - Claims Automation and Fraud Detection"
-                                        width={800}
-                                        height={450}
-                                        className="w-full h-full object-cover"
+                                <div className="aspect-video rounded-2xl overflow-hidden border-2 border-blue-200 bg-white shadow-lg relative">
+                                    <SecureImage
+                                        src="/images/ai-Solution/Gen AI for Insurance Operations/Gen AI for Insurance Operations.png"
+                                        alt="Insurance AI Solutions - Gen AI for Insurance Operations"
+                                        fill
+                                        className="object-cover"
                                         priority
                                     />
                                 </div>
@@ -317,13 +317,12 @@ export default function InsuranceSolutionsPage() {
                                 >
                                     <div className="flex flex-col md:flex-row gap-8 items-start">
                                         <div className="flex-shrink-0 text-center md:text-left">
-                                            <div className="w-24 h-24 rounded-full bg-white border-2 border-blue-200 mb-4 overflow-hidden mx-auto md:mx-0">
-                                                <Image
-                                                    src="/images/author-udayakumar.jpg"
+                                            <div className="w-24 h-24 rounded-full bg-white border-2 border-blue-200 mb-4 overflow-hidden mx-auto md:mx-0 relative">
+                                                <SecureImage
+                                                    src="/images/about/Udayakumar-Murugan-Director.png"
                                                     alt="Udayakumar Murugan"
-                                                    width={96}
-                                                    height={96}
-                                                    className="w-full h-full object-cover"
+                                                    fill
+                                                    className="object-cover"
                                                 />
                                             </div>
                                             <h3 className="text-lg font-bold text-gray-900 mb-1">Udayakumar Murugan</h3>

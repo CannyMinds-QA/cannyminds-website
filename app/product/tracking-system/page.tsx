@@ -742,8 +742,13 @@ export default function CannyTrackProductPage() {
           <section id="author" className="mb-20">
             <div className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-xl p-8">
               <div className="flex items-start gap-6">
-                <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-3xl font-bold text-orange-600">C</span>
+                <div className="w-24 h-24 relative flex-shrink-0 shadow-lg rounded-full overflow-hidden border-2 border-orange-100 bg-gray-100">
+                  <SecureImage
+                    src="/images/about/Christopher-Director.png"
+                    alt="Christopher - Head of Technical Department"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-secondary mb-2">About the Author</h3>
