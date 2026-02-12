@@ -189,7 +189,7 @@ export default function AISolutionsPage() {
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-[95vh] flex items-center bg-white overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center bg-white overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 w-full h-full">
           <Antigravity

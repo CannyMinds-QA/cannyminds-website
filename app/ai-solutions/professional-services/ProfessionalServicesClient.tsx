@@ -99,8 +99,8 @@ export default function ProfessionalServicesSolutionsPage() {
                             >
                                 <div className="aspect-video rounded-2xl overflow-hidden border-2 border-slate-300 bg-white shadow-lg">
                                     <Image
-                                        src="/images/ai-solutions/professional-services-hero.jpg"
-                                        alt="Professional Services AI Solutions - Legal, Accounting & HR Automation"
+                                        src="/images/ai-Solution/Gen AI for Legal, Accounting & HR/Gen AI for Legal, Accounting & HR.png"
+                                        alt="Gen AI for Legal, Accounting & HR"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

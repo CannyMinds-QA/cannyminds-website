@@ -3,209 +3,112 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  Article,
-  Description,
-  Business,
+  Science,
+  PrecisionManufacturing,
+  LocalPharmacy,
   ArrowForward,
-  CalendarMonth,
 } from "@mui/icons-material";
-
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1,
-    },
-  },
-} as const;
-
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 50,
-    rotateX: -15,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    rotateX: 0,
-    transition: {
-      type: "spring" as const,
-      stiffness: 100,
-      damping: 15,
-    },
-  },
-} as const;
-
-const titleVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-} as const;
 
 const resources = [
   {
-    type: "Product Guide",
-    icon: Description,
-    title: "CannyRMS: Physical Records Management System",
-    description: "Complete guide to managing physical records with barcode tracking, audit trails, and FDA compliance.",
-    date: "2026",
-    link: "/product/rms",
-    color: "bg-purple-500",
-  },
-  {
-    type: "Use Cases",
-    icon: Article,
-    title: "Industry Use Cases & Success Stories",
-    description: "Explore how organizations across healthcare, manufacturing, and government leverage our enterprise solutions.",
-    date: "2026",
-    link: "/use-cases",
-    color: "bg-green-500",
-  },
-  {
     type: "AI Solutions",
-    icon: Business,
-    title: "AI-Powered Enterprise Solutions",
-    description: "Discover how AI transforms document processing, workflow automation, and intelligent data extraction.",
-    date: "2026",
-    link: "/ai-solutions",
-    color: "bg-blue-500",
+    icon: Science,
+    title: "Gen AI for Pharmaceutical Manufacturing & Quality",
+    description:
+      "Accelerate compliance, quality, and time-to-market with FDA-compliant Generative AI. Automate eBMR, CAPA, and predictive maintenance.",
+    link: "/ai-solutions/pharmaceutical",
+  },
+  {
+    type: "Manufacturing",
+    icon: PrecisionManufacturing,
+    title: "Shop Floor Automation",
+    description:
+      "Transform manual paper-based hourly production recording into automated digital workflows with complete audit traceability.",
+    link: "/solutions/manufacturing/shop-floor-automation",
+  },
+  {
+    type: "Pharmaceutical",
+    icon: LocalPharmacy,
+    title: "Pharmaceutical Manufacturing Solutions",
+    description:
+      "AI-powered batch record automation, quality inspection, and CAPA management solutions. FDA 21 CFR Part 11 compliant.",
+    link: "/solutions/pharmaceutical",
   },
 ];
 
 export default function ResourcesPreview() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
-        {/* Section Header */}
+        {/* Header */}
         <motion.div
-          variants={titleVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mb-14"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
-          >
+          <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
             Resources & Insights
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
-          >
-            Stay informed with our latest case studies, whitepapers, and industry insights
-          </motion.p>
+          </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-snug mb-4">
+            Explore Our Industry Solutions
+          </h2>
+          <p className="text-gray-500 text-base lg:text-lg leading-relaxed">
+            Deep-dive into how we help pharmaceutical, manufacturing, and
+            enterprise teams digitize operations and stay compliant.
+          </p>
         </motion.div>
 
-        {/* Resources Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10"
-        >
-          {resources.map((resource) => {
-            const IconComponent = resource.icon;
+        {/* Cards Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+          {resources.map((resource, idx) => {
+            const Icon = resource.icon;
             return (
               <motion.div
                 key={resource.title}
-                variants={cardVariants}
-                whileHover={{
-                  scale: 1.04,
-                  y: -12,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
-                  transition: { type: "spring", stiffness: 300, damping: 20 },
-                }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
               >
                 <Link href={resource.link} className="block group h-full">
-                  <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-primary hover:shadow-xl transition-all h-full flex flex-col">
-                    {/* Type Badge */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <motion.div
-                          whileHover={{ scale: 1.15, rotate: 5 }}
-                          className={`w-8 h-8 ${resource.color} rounded-[10px] flex items-center justify-center`}
-                        >
-                          <IconComponent className="text-white" sx={{ fontSize: 16 }} />
-                        </motion.div>
-                        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                          {resource.type}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-1 text-xs text-gray-400">
-                        <CalendarMonth sx={{ fontSize: 14 }} />
-                        {resource.date}
-                      </div>
+                  <div className="bg-gray-50 rounded-2xl p-6 lg:p-7 border border-gray-100 hover:border-gray-200 hover:bg-white hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                    {/* Type + Icon */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <Icon
+                        className="text-primary"
+                        sx={{ fontSize: 20 }}
+                      />
+                      <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                        {resource.type}
+                      </span>
                     </div>
 
-                    {/* Content */}
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                    {/* Title */}
+                    <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                       {resource.title}
                     </h3>
-                    <p className="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">
+
+                    {/* Description */}
+                    <p className="text-sm text-gray-500 leading-relaxed mb-5 flex-1">
                       {resource.description}
                     </p>
 
                     {/* CTA */}
-                    <motion.div
-                      className="flex items-center gap-2 text-primary font-medium text-sm"
-                      whileHover={{ x: 5 }}
-                    >
+                    <div className="flex items-center gap-1.5 text-primary font-medium text-sm">
                       Read More
-                      <motion.span
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 1 }}
-                      >
-                        <ArrowForward sx={{ fontSize: 16 }} />
-                      </motion.span>
-                    </motion.div>
+                      <ArrowForward
+                        sx={{ fontSize: 14 }}
+                        className="group-hover:translate-x-1 transition-transform"
+                      />
+                    </div>
                   </div>
                 </Link>
               </motion.div>
             );
           })}
-        </motion.div>
-
-        {/* View All CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center"
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link
-              href="/solutions"
-              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors"
-            >
-              Explore All Solutions
-              <ArrowForward sx={{ fontSize: 18 }} />
-            </Link>
-          </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

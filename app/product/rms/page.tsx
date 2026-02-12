@@ -64,7 +64,7 @@ export default function CannyRMSPage() {
             <ol className="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto">
               <li><Link href="/" className="text-primary hover:text-primary/80 whitespace-nowrap">Home</Link></li>
               <li className="text-gray-400">/</li>
-              <li><Link href="/#solutions" className="text-primary hover:text-primary/80 whitespace-nowrap">Solutions</Link></li>
+              <li><Link href="/#products" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-600 font-medium truncate">CannyRMS - Physical Records Management</li>
             </ol>
@@ -122,7 +122,7 @@ export default function CannyRMSPage() {
                   <SocialShare
                     title="CannyRMS - Enterprise Physical Records Management System"
                     description="Prevent compliance fines with CannyRMS. Enterprise physical records management with barcode tracking & audit trails."
-                    url="https://cannyminds-website.vercel.app/solutions/rms"
+                    url="https://www.cannymindstech.com/solutions/rms"
                   />
                   <span className="text-xs text-gray-500">Share this solution</span>
                 </div>

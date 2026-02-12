@@ -4,8 +4,8 @@ export const siteConfig = {
   name: "CannyMinds Technology Solutions",
   description:
     "Leading IT solutions provider specializing in digital transformation, AI & automation, software development, and business process services. ISO certified with global presence.",
-  url: "https://cannyminds-website.vercel.app",
-  ogImage: "https://cannyminds-website.vercel.app/og-image.jpg",
+  url: "https://www.cannymindstech.com",
+  ogImage: "https://www.cannymindstech.com/og-image.jpg",
   keywords: [
     "digital transformation",
     "IT solutions",

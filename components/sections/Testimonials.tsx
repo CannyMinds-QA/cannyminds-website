@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { FormatQuote, Star, ChevronLeft, ChevronRight } from "@mui/icons-material";
 
@@ -34,24 +34,34 @@ const testimonials = [
 export default function Testimonials() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
-    const nextSlide = () => {
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth < 768);
+        check();
+        window.addEventListener("resize", check);
+        return () => window.removeEventListener("resize", check);
+    }, []);
+
+    const perSlide = isMobile ? 1 : 2;
+
+    const nextSlide = useCallback(() => {
         setDirection(1);
-        setCurrentIndex((prev) => (prev + 2) % testimonials.length);
-    };
+        setCurrentIndex((prev) => (prev + perSlide) % testimonials.length);
+    }, [perSlide]);
 
-    const prevSlide = () => {
+    const prevSlide = useCallback(() => {
         setDirection(-1);
-        setCurrentIndex((prev) => (prev - 2 + testimonials.length) % testimonials.length);
-    };
+        setCurrentIndex((prev) => (prev - perSlide + testimonials.length) % testimonials.length);
+    }, [perSlide]);
 
-    const totalSlides = Math.ceil(testimonials.length / 2);
-    const activeSlide = Math.floor(currentIndex / 2);
+    const totalSlides = Math.ceil(testimonials.length / perSlide);
+    const activeSlide = Math.floor(currentIndex / perSlide);
 
     useEffect(() => {
         const timer = setInterval(nextSlide, 8000);
         return () => clearInterval(timer);
-    }, []);
+    }, [nextSlide]);
 
     const variants: Variants = {
         enter: (direction: number) => ({
@@ -125,7 +135,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Main Carousel Wrapper */}
-                    <div className="relative min-h-[420px] md:min-h-[380px] flex items-center justify-center">
+                    <div className="relative min-h-[340px] md:min-h-[380px] flex items-center justify-center">
                         <AnimatePresence initial={false} custom={direction}>
                             <motion.div
                                 key={currentIndex}
@@ -136,31 +146,31 @@ export default function Testimonials() {
                                 exit="exit"
                                 className="absolute inset-0 flex items-center justify-center"
                             >
-                                <div className="w-full flex flex-col md:flex-row gap-6 items-stretch justify-center px-2">
-                                    {[0, 1].map((offset) => {
+                                <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6 items-stretch justify-center px-2">
+                                    {Array.from({ length: perSlide }).map((_, offset) => {
                                         const testimonial = testimonials[(currentIndex + offset) % testimonials.length];
                                         return (
                                             <div
                                                 key={`${currentIndex}-${offset}`}
-                                                className="flex-1 bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.08)] relative overflow-hidden flex flex-col items-center min-h-[380px]"
+                                                className="flex-1 bg-white rounded-2xl p-5 sm:p-6 md:p-8 border border-gray-100 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.08)] relative overflow-hidden flex flex-col items-center"
                                             >
                                                 {/* Floating Quote Icon */}
-                                                <FormatQuote className="absolute -top-3 -left-3 text-gray-400/5 text-[9rem] -rotate-12 pointer-events-none" />
+                                                <FormatQuote className="absolute -top-3 -left-3 text-gray-400/5 text-[7rem] md:text-[9rem] -rotate-12 pointer-events-none" />
 
                                                 {/* Star Rating */}
-                                                <div className="flex gap-1 mb-6 relative z-10">
+                                                <div className="flex gap-1 mb-4 md:mb-6 relative z-10">
                                                     {[...Array(testimonial.rating)].map((_, i) => (
-                                                        <Star key={i} className="text-amber-400" sx={{ fontSize: 22 }} />
+                                                        <Star key={i} className="text-amber-400" sx={{ fontSize: 20 }} />
                                                     ))}
                                                 </div>
 
-                                                <p className="text-gray-700 text-base md:text-lg leading-relaxed text-center font-medium italic mb-8 relative z-10 flex-grow">
+                                                <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed text-center font-medium italic mb-6 md:mb-8 relative z-10 flex-grow">
                                                     “{testimonial.quote}”
                                                 </p>
 
-                                                <div className="text-center relative z-10 border-t border-gray-200 pt-6 w-full">
-                                                    <h4 className="text-xl font-black text-gray-900 mb-0.5">{testimonial.author}</h4>
-                                                    <p className="text-primary-900 font-bold text-xs tracking-widest uppercase truncate px-2">
+                                                <div className="text-center relative z-10 border-t border-gray-200 pt-4 md:pt-6 w-full">
+                                                    <h4 className="text-lg md:text-xl font-black text-gray-900 mb-0.5">{testimonial.author}</h4>
+                                                    <p className="text-primary-900 font-bold text-[10px] md:text-xs tracking-widest uppercase truncate px-2">
                                                         {testimonial.company}
                                                     </p>
                                                 </div>
@@ -173,37 +183,37 @@ export default function Testimonials() {
                     </div>
 
                     {/* Mobile Navigation Controls & Pagination */}
-                    <div className="flex flex-col items-center gap-8 mt-16 relative z-20">
+                    <div className="flex flex-col items-center gap-6 mt-10 md:mt-16 relative z-20">
                         {/* Pagination Dots */}
-                        <div className="flex gap-3">
+                        <div className="flex gap-2.5">
                             {[...Array(totalSlides)].map((_, i) => (
                                 <button
                                     key={i}
                                     onClick={() => {
                                         setDirection(i > activeSlide ? 1 : -1);
-                                        setCurrentIndex(i * 2);
+                                        setCurrentIndex(i * perSlide);
                                     }}
-                                    className={`transition-all duration-500 rounded-full h-2.5 ${i === activeSlide ? "w-16 bg-primary-900 shadow-md shadow-primary/30" : "w-2.5 bg-gray-200 hover:bg-gray-300"
+                                    className={`transition-all duration-500 rounded-full h-2.5 ${i === activeSlide ? "w-10 md:w-16 bg-primary-900 shadow-md shadow-primary/30" : "w-2.5 bg-gray-200 hover:bg-gray-300"
                                         }`}
                                 />
                             ))}
                         </div>
 
                         {/* Mobile Arrows */}
-                        <div className="flex gap-5 lg:hidden">
+                        <div className="flex gap-4 lg:hidden">
                             <motion.button
                                 whileTap={{ scale: 0.9 }}
                                 onClick={prevSlide}
-                                className="w-12 h-12 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-900"
+                                className="w-10 h-10 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-900"
                             >
-                                <ChevronLeft sx={{ fontSize: 20 }} />
+                                <ChevronLeft sx={{ fontSize: 18 }} />
                             </motion.button>
                             <motion.button
                                 whileTap={{ scale: 0.9 }}
                                 onClick={nextSlide}
-                                className="w-12 h-12 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-900"
+                                className="w-10 h-10 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-900"
                             >
-                                <ChevronRight sx={{ fontSize: 20 }} />
+                                <ChevronRight sx={{ fontSize: 18 }} />
                             </motion.button>
                         </div>
                     </div>

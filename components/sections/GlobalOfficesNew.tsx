@@ -19,7 +19,6 @@ const globalOffices = [
     city: "Chennai",
     address: "No 88 Ram Nagar 6th St, Velachery\nChennai-600042, Tamil Nadu",
     phone: "+91 93618 01926",
-    phone2: "044-35100366",
     email: "info@cannymindstech.com",
     hours: "Mon-Sat: 9:00 AM - 6:00 PM IST",
     flag: "🇮🇳",

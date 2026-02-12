@@ -137,7 +137,7 @@ export default function ManufacturingOverviewPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-16 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -167,9 +167,9 @@ export default function ManufacturingOverviewPage() {
 
                             <div className="relative flex justify-center">
                                 <Image
-                                    src="/images/solutions/manfactureing/overview/Mechanical-overview.png"
-                                    alt="Mechanical Engineering Overview"
-                                    width={600}
+                                    src="/images/ai-Solution/Gen AI for Manufacturing & Automotive/Gen AI for Manufacturing & Automotive.png"
+                                    alt="AI-Powered Manufacturing Solutions"
+                                    width={800}
                                     height={450}
                                     priority
                                 />

@@ -9,7 +9,7 @@ const offices = [
     country: "India",
     flag: "🇮🇳",
     address: "No 88 Ram Nagar 6th St, Velachery, Chennai-600042",
-    phone: ["044-35100366", "+91-9361801926"],
+    phone: ["+91-9361801926"],
     email: "info@cannymindstech.com",
   },
   {
@@ -81,11 +81,10 @@ export default function GlobalOffices() {
               <motion.div
                 whileHover={{ y: -8, scale: 1.02 }}
                 onClick={() => setActiveOffice(index)}
-                className={`cursor-pointer bg-white rounded-xl p-6 shadow-lg border-2 transition-all duration-300 ${
-                  activeOffice === index
+                className={`cursor-pointer bg-white rounded-xl p-6 shadow-lg border-2 transition-all duration-300 ${activeOffice === index
                     ? "border-primary shadow-xl shadow-primary/20"
                     : "border-gray-100"
-                }`}
+                  }`}
               >
                 <div className="text-5xl mb-3">{office.flag}</div>
                 <h3 className="text-xl font-bold text-secondary mb-2">

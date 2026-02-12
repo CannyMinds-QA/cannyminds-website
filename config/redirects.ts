@@ -1,252 +1,309 @@
-import type { NextConfig } from "next";
-
-/**
- * Redirect Configuration
- * Handles URL migrations and deprecated routes
- */
+import { NextConfig } from 'next';
 
 export const redirects: NextConfig['redirects'] = async () => {
-    return [
-        // Pharmaceutical solutions redirects
+    const baseRedirects = [
+        // Core Pages
         {
-            source: '/solutions/pharmaceutical/ebmr',
-            destination: '/solutions/pharmaceutical/batch-record-automation',
+            source: '/index',
+            destination: '/',
             permanent: true,
         },
         {
-            source: '/solutions/pharmaceutical/predictive-maintenance',
-            destination: '/solutions/pharmaceutical/batch-record-automation',
+            source: '/demo',
+            destination: '/contact',
             permanent: true,
         },
         {
-            source: '/solutions/pharmaceutical/process-optimization',
-            destination: '/solutions/pharmaceutical/batch-record-automation',
+            source: '/about',
+            destination: '/about',
             permanent: true,
         },
         {
-            source: '/solutions/pharmaceutical/quality-inspection',
-            destination: '/solutions/pharmaceutical/quality-inspection-capa',
+            source: '/why-canny',
+            destination: '/about',
             permanent: true,
         },
         {
-            source: '/solutions/pharmaceutical/deviation-capa',
-            destination: '/solutions/pharmaceutical/quality-inspection-capa',
+            source: '/career',
+            destination: '/about', // Fallback as no career page exists yet
             permanent: true,
         },
         {
-            source: '/solutions/pharmaceutical/ppe-monitoring',
-            destination: '/solutions/pharmaceutical/quality-inspection-capa',
+            source: '/contact',
+            destination: '/contact',
             permanent: true,
         },
         {
-            source: '/solutions/pharmaceutical/cleaning-validation',
-            destination: '/solutions/pharmaceutical/quality-inspection-capa',
+            source: '/resume',
+            destination: '/about',
             permanent: true,
         },
+
+        // Products
         {
-            source: '/solutions/pharmaceutical/regulatory-assistant',
-            destination: '/solutions/pharmaceutical/regulatory-compliance',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/sop-assistant',
-            destination: '/solutions/pharmaceutical/regulatory-compliance',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/training-compliance',
-            destination: '/solutions/pharmaceutical/regulatory-compliance',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/production',
-            destination: '/solutions/pharmaceutical/batch-record-automation',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/quality',
-            destination: '/solutions/pharmaceutical/quality-inspection-capa',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/regulatory',
-            destination: '/solutions/pharmaceutical/regulatory-compliance',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/digitization',
-            destination: '/product/scanning-solution',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/records',
-            destination: '/product/rms',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/sop-management',
-            destination: '/solutions/pharmaceutical/regulatory-compliance',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/stp-protocol',
-            destination: '/solutions/pharmaceutical/regulatory-compliance',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/license-management',
-            destination: '/solutions/pharmaceutical/regulatory-compliance',
-            permanent: true,
-        },
-        {
-            source: '/solutions/pharmaceutical/change-control',
-            destination: '/solutions/pharmaceutical/regulatory-compliance',
-            permanent: true,
-        },
-        {
-            source: '/solutions/rms',
-            destination: '/product/rms',
-            permanent: true,
-        },
-        {
-            source: '/solutions/hr-management',
+            source: '/hr-payroll-management-software',
             destination: '/product/hr-management',
             permanent: true,
         },
         {
-            source: '/solutions/scanning-solution',
+            source: '/document-management-software',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/scanning-services',
             destination: '/product/scanning-solution',
             permanent: true,
         },
         {
-            source: '/solutions/tracking-system',
+            source: '/productivity-monitoring-software',
             destination: '/product/tracking-system',
             permanent: true,
         },
         {
-            source: '/solutions/document-management',
-            destination: '/product/document-management',
+            source: '/digitization-services',
+            destination: '/product/scanning-solution',
             permanent: true,
         },
         {
-            source: '/solutions/product/ai-solutions',
-            destination: '/ai-solutions',
-            permanent: true,
-        },
-        {
-            source: '/solutions/product/cms',
-            destination: '/product/document-management',
-            permanent: true,
-        },
-        {
-            source: '/solutions/product/invoice-management',
-            destination: '/product/document-management',
-            permanent: true,
-        },
-        {
-            source: '/solutions/product/rms',
+            source: '/physical-record-management-services',
             destination: '/product/rms',
             permanent: true,
         },
         {
-            source: '/solutions/product/hr-management',
-            destination: '/product/hr-management',
+            source: '/record-management',
+            destination: '/product/rms',
             permanent: true,
         },
         {
-            source: '/solutions/product/scanning-solution',
-            destination: '/product/scanning-solution',
-            permanent: true,
-        },
-        {
-            source: '/solutions/product/tracking-system',
-            destination: '/product/tracking-system',
-            permanent: true,
-        },
-        {
-            source: '/solutions/product/document-management',
+            source: '/CannyDocs',
             destination: '/product/document-management',
             permanent: true,
         },
+
+        // Solutions & Services
         {
-            source: '/solutions/product/ebmr',
-            destination: '/product/ebmr',
+            source: '/education-management-Software',
+            destination: '/solutions', // Fallback
             permanent: true,
         },
         {
-            source: '/use-cases/pharmaceutical',
+            source: '/canny-ckyc-and-cersai',
+            destination: '/solutions/finance',
+            permanent: true,
+        },
+        {
+            source: '/digital-marketing-services',
+            destination: '/ai-solutions/marketing',
+            permanent: true,
+        },
+        {
+            source: '/software-development',
+            destination: '/ai-solutions/professional-services',
+            permanent: true,
+        },
+        {
+            source: '/businessprocess',
+            destination: '/bpm',
+            permanent: true,
+        },
+        {
+            source: '/pharmacuetical',
             destination: '/solutions/pharmaceutical',
             permanent: true,
         },
+
+        // Blog / Articles -> Product Pages (Best Match)
         {
-            source: '/use-cases/fmcg',
-            destination: '/solutions/manufacturing',
-            permanent: true,
-        },
-        {
-            source: '/use-cases/manufacturing-engineering',
-            destination: '/solutions/manufacturing',
-            permanent: true,
-        },
-        {
-            source: '/bpm/safety-compliance',
-            destination: '/solutions/manufacturing',
-            permanent: true,
-        },
-        {
-            source: '/bpm/legal-management',
+            source: '/cannydocs-a-smart-document',
             destination: '/product/document-management',
             permanent: true,
         },
         {
-            source: '/bpm/invoice-management',
+            source: '/streamlines-workflow-efficiency',
             destination: '/product/document-management',
             permanent: true,
         },
         {
-            source: '/bpm/procurement',
+            source: '/importance-of-cannydocs',
             destination: '/product/document-management',
             permanent: true,
         },
         {
-            source: '/bpm/custom-workflows',
+            source: '/digital-transformation',
+            destination: '/solutions/professional-services',
+            permanent: true,
+        },
+        {
+            source: '/benefits-of-implementing-cannytrack',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
+            source: '/streamline-your-workflow-with-document',
             destination: '/product/document-management',
             permanent: true,
         },
         {
-            source: '/product/invoice-management',
-            destination: '/product/document-management',
+            source: '/what-is-employee-productivity',
+            destination: '/product/tracking-system',
             permanent: true,
         },
         {
-            source: '/product/ai-solutions',
+            source: '/benefits-of-document-scanning-for-businesses',
+            destination: '/product/scanning-solution',
+            permanent: true,
+        },
+        {
+            source: '/ways-to-track-and-manage-your-employee-time-off',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/why-is-physical-records-management-important-today',
+            destination: '/product/rms',
+            permanent: true,
+        },
+        {
+            source: '/benefits-of-aI',
             destination: '/ai-solutions',
             permanent: true,
         },
         {
-            source: '/use-cases/healthcare',
+            source: '/benefits-payroll-software-businesses-india',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/streamlined-hr-processes-with-software',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/document-scanning-technology-hr-payroll-software',
+            destination: '/product/scanning-solution',
+            permanent: true,
+        },
+        {
+            source: '/strategic-role-of-workforce-tracking-hr',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
+            source: '/security-features-document-management-software',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/digitization-of-physical-records',
+            destination: '/product/scanning-solution',
+            permanent: true,
+        },
+        {
+            source: '/why-business-process-automation-is-a-must-for-every-company',
+            destination: '/bpm',
+            permanent: true,
+        },
+        {
+            source: '/navigating-ethics-employee-productivity-monitoring',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
+            source: '/understanding-the-importance-data-security-in-the-workpalce',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
+            source: '/implement-innovative-document-management-solutions-improve-financial-services',
+            destination: '/solutions/finance',
+            permanent: true,
+        },
+        {
+            source: '/improving-compliance-in-healthcare',
             destination: '/solutions/healthcare',
             permanent: true,
         },
         {
-            source: '/use-cases/bottling',
-            destination: '/solutions/manufacturing/bottling',
+            source: '/improving-access-healthcare',
+            destination: '/solutions/healthcare',
             permanent: true,
         },
         {
-            source: '/use-cases/legal',
-            destination: '/solutions/professional-services/legal',
+            source: '/businesses-utilize-payroll-software',
+            destination: '/product/hr-management',
             permanent: true,
         },
         {
-            source: '/use-cases/audit-firms',
-            destination: '/solutions/professional-services/audit-firms',
+            source: '/files-maximizing-efficiency-document-scanning',
+            destination: '/product/scanning-solution',
             permanent: true,
         },
         {
-            source: '/use-cases/bfsi',
-            destination: '/solutions/finance',
+            source: '/document-manangement-software-in-india',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/guide-implementing-workflow-automation',
+            destination: '/bpm',
+            permanent: true,
+        },
+        {
+            source: '/anticipating-future-document-management',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/choosing-the-right-document-management-software',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/maximizing-efficiency-integrating-cannyhr',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/importance-of-document-management',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/unleashing-cannyhr-management-software\'s',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/document-management-system-software-can-drive-cost-savings-and-roi-for-businesses',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/document-management-system-software-can-enhance-data-security-and-compliance',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/blog',
+            destination: '/',
+            permanent: true,
+        },
+        {
+            source: '/CannyDocs/:path*',
+            destination: '/product/document-management',
             permanent: true,
         },
     ];
+
+    // Automatically generate .html redirects for all static paths
+    const htmlRedirects = baseRedirects
+        .filter(redirect => !redirect.source.includes(':') && !redirect.source.includes('*'))
+        .map(redirect => ({
+            source: `${redirect.source}.html`,
+            destination: redirect.destination,
+            permanent: redirect.permanent,
+        }));
+
+    return [...baseRedirects, ...htmlRedirects];
 };

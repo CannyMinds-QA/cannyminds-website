@@ -12,7 +12,7 @@ const offices = [
     country: "India",
     countryCode: "IN",
     address: "No 88 Ram Nagar 6th St, Velachery, Chennai-600042",
-    phone: ["044-35100366", "+91-9361801926"],
+    phone: ["+91-9361801926"],
     email: "info@cannymindstech.com",
     color: "from-orange-500 to-green-500",
   },
@@ -88,11 +88,10 @@ export default function GlobalOfficesUpdated() {
               <motion.div
                 whileHover={{ y: -8, scale: 1.02 }}
                 onClick={() => setActiveOffice(index)}
-                className={`cursor-pointer bg-white rounded-lg sm:rounded-xl p-5 sm:p-6 shadow-lg border-2 transition-all duration-300 h-full flex flex-col ${
-                  activeOffice === index
+                className={`cursor-pointer bg-white rounded-lg sm:rounded-xl p-5 sm:p-6 shadow-lg border-2 transition-all duration-300 h-full flex flex-col ${activeOffice === index
                     ? "border-primary shadow-xl shadow-primary/20"
                     : "border-gray-100"
-                }`}
+                  }`}
               >
                 <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-br ${office.color} flex items-center justify-center mb-3 sm:mb-4 opacity-90`}>
                   <PublicIcon sx={{ fontSize: { xs: 28, sm: 32 }, color: 'white' }} />

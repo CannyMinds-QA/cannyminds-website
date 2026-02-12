@@ -2,57 +2,15 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
-  Psychology,
-  AutoAwesome,
   LocalHospital,
   Factory,
   AccountBalance,
   ShoppingCart,
   Biotech,
   ArrowForward,
-  Speed,
-  Security,
-  TrendingUp,
 } from "@mui/icons-material";
-
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-} as const;
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: "spring" as const,
-      stiffness: 100,
-      damping: 15,
-    },
-  },
-};
-
-const floatingVariants = {
-  animate: {
-    y: [0, -10, 0],
-    transition: {
-      duration: 3,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-  },
-};
 
 const industries = [
   {
@@ -61,7 +19,9 @@ const industries = [
     icon: LocalHospital,
     stat: "60%",
     statLabel: "Faster Diagnosis",
-    color: "from-red-500 to-pink-500",
+    description:
+      "AI-powered diagnostics, patient record analysis, and clinical decision support systems that transform care delivery.",
+    capabilities: ["Medical imaging AI", "Patient risk scoring", "Clinical NLP"],
   },
   {
     name: "Pharmaceutical",
@@ -69,7 +29,9 @@ const industries = [
     icon: Biotech,
     stat: "40%",
     statLabel: "Faster Discovery",
-    color: "from-purple-500 to-indigo-500",
+    description:
+      "Accelerate drug discovery, automate regulatory compliance, and streamline batch record management with intelligent automation.",
+    capabilities: ["Document compliance", "Batch analytics", "Quality control AI"],
   },
   {
     name: "Manufacturing",
@@ -77,7 +39,9 @@ const industries = [
     icon: Factory,
     stat: "50%",
     statLabel: "Less Downtime",
-    color: "from-orange-500 to-amber-500",
+    description:
+      "Predictive maintenance, quality inspection, and supply chain optimization powered by machine learning and computer vision.",
+    capabilities: ["Predictive maintenance", "Defect detection", "Process optimization"],
   },
   {
     name: "NBFC & Finance",
@@ -85,7 +49,9 @@ const industries = [
     icon: AccountBalance,
     stat: "80%",
     statLabel: "Faster Processing",
-    color: "from-green-500 to-emerald-500",
+    description:
+      "Intelligent document processing, fraud detection, and automated KYC/AML workflows for financial institutions.",
+    capabilities: ["Document extraction", "Fraud analytics", "Automated KYC"],
   },
   {
     name: "E-Commerce",
@@ -93,215 +59,166 @@ const industries = [
     icon: ShoppingCart,
     stat: "35%",
     statLabel: "Higher AOV",
-    color: "from-violet-500 to-purple-500",
+    description:
+      "Personalized recommendations, inventory forecasting, and customer behavior analytics to drive revenue growth.",
+    capabilities: ["Product recommendations", "Demand forecasting", "Customer analytics"],
   },
 ];
 
-const capabilities = [
-  { icon: Speed, label: "10x Faster Processing" },
-  { icon: Security, label: "Enterprise Security" },
-  { icon: TrendingUp, label: "40% Cost Reduction" },
-];
-
 export default function AISolutionsPreview() {
-  const [particles, setParticles] = useState<{ id: number; left: string; top: string; duration: number; delay: number }[]>([]);
-
-  useEffect(() => {
-    const newParticles = Array.from({ length: 15 }).map((_, i) => ({
-      id: i,
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      duration: 2 + Math.random() * 2,
-      delay: Math.random() * 2,
-    }));
-    setParticles(newParticles);
-  }, []);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const active = industries[activeIndex];
+  const ActiveIcon = active.icon;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-primary to-blue-900 relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
-        {/* Floating particles */}
-        {particles.map((particle) => (
-          <motion.div
-            key={particle.id}
-            className="absolute w-1 h-1 bg-white/30 rounded-full"
-            style={{
-              left: particle.left,
-              top: particle.top,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: particle.duration,
-              repeat: Infinity,
-              delay: particle.delay,
-            }}
-          />
-        ))}
-        {/* Glowing orbs */}
+    <section className="py-20 lg:py-28 bg-gray-50">
+      <div className="container mx-auto px-6 lg:px-12">
+        {/* Header */}
         <motion.div
-          className="absolute w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl"
-          style={{ top: '10%', right: '10%' }}
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute w-48 h-48 bg-purple-500/20 rounded-full blur-3xl"
-          style={{ bottom: '10%', left: '5%' }}
-          animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
-          transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-        />
-      </div>
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mb-14"
+        >
+          <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
+            AI Solutions
+          </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-snug mb-4">
+            Industry-Specific AI That Delivers Results
+          </h2>
+          <p className="text-gray-500 text-base lg:text-lg leading-relaxed">
+            Enterprise AI tailored to your industry — measurable ROI, not just
+            promises.
+          </p>
+        </motion.div>
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        {/* Section Header */}
+        {/* Main content: industry selector + detail panel */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="grid lg:grid-cols-[320px_1fr] gap-6 lg:gap-0 mb-14"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6"
-          >
-            <motion.span
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-            >
-              <AutoAwesome sx={{ fontSize: 18 }} />
-            </motion.span>
-            Generative AI Solutions
-          </motion.div>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl lg:text-5xl font-bold text-white mb-4"
-          >
-            Industry-Specific{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              AI Solutions
-            </span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-blue-100 max-w-2xl mx-auto"
-          >
-            Transform your business with enterprise AI that delivers measurable ROI
-          </motion.p>
-
-          {/* Quick Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-6 mt-8"
-          >
-            {capabilities.map((cap, index) => {
-              const IconComponent = cap.icon;
+          {/* Left: industry list */}
+          <div className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 lg:border-r lg:border-gray-200 lg:pr-6">
+            {industries.map((industry, idx) => {
+              const Icon = industry.icon;
+              const isActive = idx === activeIndex;
               return (
-                <div key={cap.label} className="flex items-center gap-2 text-white/80">
-                  <IconComponent sx={{ fontSize: 20 }} className="text-cyan-400" />
-                  <span className="text-sm font-medium">{cap.label}</span>
-                </div>
+                <button
+                  key={industry.slug}
+                  onClick={() => setActiveIndex(idx)}
+                  className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-left transition-all duration-200 flex-shrink-0 lg:flex-shrink min-w-[160px] lg:min-w-0 ${isActive
+                      ? "bg-white text-gray-900 shadow-sm border border-gray-200"
+                      : "text-gray-500 hover:text-gray-700 hover:bg-white/60"
+                    }`}
+                >
+                  <div
+                    className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${isActive ? "bg-primary text-white" : "bg-gray-100 text-gray-400"
+                      }`}
+                  >
+                    <Icon sx={{ fontSize: 18 }} />
+                  </div>
+                  <span className="font-medium text-sm">{industry.name}</span>
+                </button>
               );
             })}
-          </motion.div>
-        </motion.div>
+          </div>
 
-        {/* Industries Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12"
-        >
-          {industries.map((industry) => {
-            const IconComponent = industry.icon;
-            return (
-              <motion.div key={industry.slug} variants={cardVariants}>
-                <Link href={`/ai-solutions/${industry.slug}`}>
-                  <motion.div
-                    whileHover={{
-                      y: -8,
-                      scale: 1.02,
-                    }}
-                    className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all cursor-pointer h-full"
+          {/* Right: detail panel */}
+          <div className="lg:pl-10">
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 lg:p-10 min-h-[320px]">
+              {/* Stat row */}
+              <div className="flex items-end gap-3 mb-6">
+                <span className="text-5xl lg:text-6xl font-bold text-primary leading-none tracking-tight">
+                  {active.stat}
+                </span>
+                <span className="text-gray-400 text-sm font-medium pb-1.5">
+                  {active.statLabel}
+                </span>
+              </div>
+
+              {/* Industry name + icon */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <ActiveIcon className="text-primary" sx={{ fontSize: 20 }} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">{active.name}</h3>
+              </div>
+
+              {/* Description */}
+              <p className="text-gray-500 text-[15px] leading-relaxed mb-6 max-w-xl">
+                {active.description}
+              </p>
+
+              {/* Capabilities */}
+              <div className="flex flex-wrap gap-2 mb-8">
+                {active.capabilities.map((cap) => (
+                  <span
+                    key={cap}
+                    className="text-xs text-gray-600 bg-gray-100 px-3 py-1.5 rounded-md font-medium"
                   >
-                    {/* Icon */}
-                    <motion.div
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${industry.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                      whileHover={{ rotate: 5 }}
-                    >
-                      <IconComponent className="text-white" sx={{ fontSize: 28 }} />
-                    </motion.div>
+                    {cap}
+                  </span>
+                ))}
+              </div>
 
-                    {/* Content */}
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                      {industry.name}
-                    </h3>
-
-                    {/* Stat */}
-                    <div className="mb-3">
-                      <span className="text-2xl font-bold text-cyan-400">{industry.stat}</span>
-                      <span className="text-xs text-blue-200 ml-1 block">{industry.statLabel}</span>
-                    </div>
-
-                    {/* CTA */}
-                    <div className="flex items-center gap-1 text-cyan-300 text-sm font-medium group-hover:gap-2 transition-all">
-                      Explore
-                      <ArrowForward sx={{ fontSize: 16 }} />
-                    </div>
-                  </motion.div>
-                </Link>
-              </motion.div>
-            );
-          })}
+              {/* CTA */}
+              <Link
+                href={`/ai-solutions/${active.slug}`}
+                className="inline-flex items-center gap-2 text-primary text-sm font-medium group"
+              >
+                Explore {active.name} Solutions
+                <ArrowForward
+                  sx={{ fontSize: 15 }}
+                  className="transition-transform duration-200 group-hover:translate-x-0.5"
+                />
+              </Link>
+            </div>
+          </div>
         </motion.div>
 
-        {/* Bottom CTA */}
+        {/* Bottom: stats strip + CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="text-center"
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-gray-200"
         >
-          <div className="flex flex-wrap justify-center gap-4">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="/ai-solutions"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-primary-50 transition-colors"
-              >
-                <Psychology sx={{ fontSize: 20 }} />
-                Explore All AI Solutions
-                <ArrowForward sx={{ fontSize: 18 }} />
-              </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
-              >
-                Schedule AI Consultation
-              </Link>
-            </motion.div>
+          {/* Quick stats */}
+          <div className="flex gap-8">
+            <div>
+              <div className="text-2xl font-bold text-gray-900">10x</div>
+              <div className="text-xs text-gray-400">Faster Processing</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-gray-900">40%</div>
+              <div className="text-xs text-gray-400">Cost Reduction</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-gray-900">50+</div>
+              <div className="text-xs text-gray-400">Clients Served</div>
+            </div>
+          </div>
+
+          {/* CTAs */}
+          <div className="flex gap-3">
+            <Link
+              href="/ai-solutions"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-sm rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Explore All AI Solutions
+              <ArrowForward sx={{ fontSize: 16 }} />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-600 text-sm rounded-lg font-medium hover:border-gray-400 hover:text-gray-900 transition-colors"
+            >
+              Get a Consultation
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -99,8 +99,8 @@ export default function TextileSolutionsPage() {
                             >
                                 <div className="aspect-video rounded-2xl overflow-hidden border-2 border-indigo-200 bg-white shadow-lg">
                                     <Image
-                                        src="/images/ai-solutions/textile-hero.jpg"
-                                        alt="Textile AI Solutions - Design and Manufacturing Automation"
+                                        src="/images/ai-Solution/Gen AI for Textile & Apparel Industry/Gen AI for Textile & Apparel Industry.png"
+                                        alt="Gen AI for Textile & Apparel Industry"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

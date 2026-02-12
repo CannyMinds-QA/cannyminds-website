@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "CannyECM - Enterprise DMS | Document Management 2026",
     description: "Enterprise DMS with 99% OCR accuracy, workflow automation, cloud/on-premise. Organize 50,000+ documents. 30-day free trial available.",
     type: "article",
-    url: "https://cannyminds-website.vercel.app/product/document-management",
+    url: "https://www.cannymindstech.com/product/document-management",
     authors: ["Christopher"],
     images: [
       {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://cannyminds-website.vercel.app/product/document-management",
+    canonical: "https://www.cannymindstech.com/product/document-management",
   },
   robots: { index: true, follow: true },
 };
@@ -69,13 +69,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cannyminds-website.vercel.app/"
+          "item": "https://www.cannymindstech.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Products",
-          "item": "https://cannyminds-website.vercel.app/#products"
+          "item": "https://www.cannymindstech.com/#products"
         },
         {
           "@type": "ListItem",
@@ -88,27 +88,27 @@ const jsonLd = {
       "@type": "Article",
       "headline": "CannyECM - Enterprise Document Management Software",
       "description": "Comprehensive guide to CannyECM enterprise document management system with OCR, workflow automation, and cloud/on-premise deployment options.",
-      "image": "https://cannyminds-website.vercel.app/images/CannyECM-dashboard.jpg",
+      "image": "https://www.cannymindstech.com/images/CannyECM-dashboard.jpg",
       "author": {
         "@type": "Person",
         "name": "Christopher",
         "jobTitle": "Head of Technical Department & Investor",
-        "url": "https://cannyminds-website.vercel.app/about"
+        "url": "https://www.cannymindstech.com/about"
       },
       "publisher": {
         "@type": "Organization",
         "name": "CannyMinds Technology Solutions",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://cannyminds-website.vercel.app/logo.png"
+          "url": "https://www.cannymindstech.com/logo.png"
         },
-        "url": "https://cannyminds-website.vercel.app"
+        "url": "https://www.cannymindstech.com"
       },
       "datePublished": "2026-01-15",
       "dateModified": new Date().toISOString(),
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://cannyminds-website.vercel.app/solutions/document-management"
+        "@id": "https://www.cannymindstech.com/solutions/document-management"
       }
     },
     {
@@ -122,7 +122,7 @@ const jsonLd = {
         "price": "0",
         "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
-        "url": "https://cannyminds-website.vercel.app/product/document-management",
+        "url": "https://www.cannymindstech.com/product/document-management",
         "priceSpecification": {
           "@type": "PriceSpecification",
           "price": "Custom Pricing",
@@ -180,7 +180,7 @@ export default function CannyECMProductPage() {
             <ol className="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto">
               <li><Link href="/" className="text-primary hover:text-primary/80 whitespace-nowrap">Home</Link></li>
               <li className="text-gray-400">/</li>
-              <li><Link href="/#solutions" className="text-primary hover:text-primary/80 whitespace-nowrap">Solutions</Link></li>
+              <li><Link href="/#products" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-600 font-medium truncate">CannyECM - Document Management Software</li>
             </ol>
@@ -1240,7 +1240,7 @@ export default function CannyECMProductPage() {
                   title: "HR Management System",
                   description: "Comprehensive HR solution for employee management, payroll, attendance, and performance tracking.",
                   features: ["Employee Records", "Payroll Automation", "Leave Management", "Performance Reviews"],
-                  link: "/solutions/product/hr-management",
+                  link: "/product/hr-management",
                   color: "from-green-50 to-white border-green-200"
                 },
                 {
@@ -1248,7 +1248,7 @@ export default function CannyECMProductPage() {
                   title: "Enterprise Scanning Solution",
                   description: "High-speed document scanning with OCR, batch processing, and direct integration with CannyECM.",
                   features: ["Batch Scanning", "Auto-Classification", "Quality Enhancement", "Direct Upload to CannyECM"],
-                  link: "/solutions/product/scanning-solution",
+                  link: "/product/scanning-solution",
                   color: "from-purple-50 to-white border-purple-200"
                 },
                 {
@@ -1256,7 +1256,7 @@ export default function CannyECMProductPage() {
                   title: "Document Tracking System",
                   description: "Real-time tracking of physical and digital documents with barcode/QR integration and chain of custody.",
                   features: ["Barcode Tracking", "Chain of Custody", "Location Monitoring", "Audit Compliance"],
-                  link: "/solutions/product/tracking-system",
+                  link: "/product/tracking-system",
                   color: "from-orange-50 to-white border-orange-200"
                 },
               ].map((product, idx) => (

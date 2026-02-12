@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "CannyTrack - Employee Productivity Monitoring Software",
     description: "Workforce productivity monitoring with activity tracking, screenshots, and data loss prevention. Consent-based, real-time analytics with offline support.",
     type: "article",
-    url: "https://cannyminds-website.vercel.app/product/tracking-system",
+    url: "https://www.cannymindstech.com/product/tracking-system",
     authors: ["Christopher"],
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://cannyminds-website.vercel.app/product/tracking-system",
+    canonical: "https://www.cannymindstech.com/product/tracking-system",
   },
   robots: { index: true, follow: true },
 };
@@ -67,13 +67,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cannyminds-website.vercel.app/"
+          "item": "https://www.cannymindstech.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Products",
-          "item": "https://cannyminds-website.vercel.app/#products"
+          "item": "https://www.cannymindstech.com/#products"
         },
         {
           "@type": "ListItem",
@@ -86,27 +86,27 @@ const jsonLd = {
       "@type": "Article",
       "headline": "CannyTrack - Employee Productivity Monitoring & Tracking Software",
       "description": "Comprehensive guide to CannyTrack productivity monitoring platform with activity tracking, screenshot capture, and data loss prevention.",
-      "image": "https://cannyminds-website.vercel.app/images/cannytrack-dashboard.jpg",
+      "image": "https://www.cannymindstech.com/images/cannytrack-dashboard.jpg",
       "author": {
         "@type": "Person",
         "name": "Christopher",
         "jobTitle": "Head of Technical Department & Investor",
-        "url": "https://cannyminds-website.vercel.app/about"
+        "url": "https://www.cannymindstech.com/about"
       },
       "publisher": {
         "@type": "Organization",
         "name": "CannyMinds Technology Solutions",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://cannyminds-website.vercel.app/logo.png"
+          "url": "https://www.cannymindstech.com/logo.png"
         },
-        "url": "https://cannyminds-website.vercel.app"
+        "url": "https://www.cannymindstech.com"
       },
       "datePublished": "2026-01-15",
       "dateModified": new Date().toISOString(),
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://cannyminds-website.vercel.app/solutions/tracking-system"
+        "@id": "https://www.cannymindstech.com/solutions/tracking-system"
       }
     },
     {
@@ -167,7 +167,7 @@ export default function CannyTrackProductPage() {
             <ol className="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto">
               <li><Link href="/" className="text-primary hover:text-primary/80 whitespace-nowrap">Home</Link></li>
               <li className="text-gray-400">/</li>
-              <li><Link href="/#solutions" className="text-primary hover:text-primary/80 whitespace-nowrap">Solutions</Link></li>
+              <li><Link href="/#products" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-600 font-medium truncate">CannyTrack - Productivity Monitoring System</li>
             </ol>
@@ -834,21 +834,21 @@ export default function CannyTrackProductPage() {
                   name: "CannyDocs",
                   tagline: "Document Management System",
                   description: "Secure document management with access control, version tracking, and audit trails. Perfect complement to CannyTrack for monitoring document access and preventing data leaks.",
-                  link: "/solutions/product/document-management",
+                  link: "/product/document-management",
                   color: "blue",
                 },
                 {
                   name: "CannyHR",
                   tagline: "HR & Payroll Management",
                   description: "Complete HRMS with time tracking, attendance, and payroll. Integrate with CannyTrack for comprehensive workforce management and productivity analytics.",
-                  link: "/solutions/product/hr-management",
+                  link: "/product/hr-management",
                   color: "green",
                 },
                 {
                   name: "CannyScan",
                   tagline: "Document Scanning Services",
                   description: "Professional document digitization services with OCR and secure cloud storage. Digitize physical records for complete digital asset tracking.",
-                  link: "/solutions/product/scanning-solution",
+                  link: "/product/scanning-solution",
                   color: "purple",
                 },
               ].map((product, idx) => (

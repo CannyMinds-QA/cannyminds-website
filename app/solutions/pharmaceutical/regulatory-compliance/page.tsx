@@ -189,7 +189,7 @@ export default function RegulatoryCompliancePage() {
 
             <main className="min-h-screen bg-white">
                 {/* Hero Section */}
-                <section className="relative pt-24 pb-16 bg-gradient-to-b from-purple-50 to-white">
+                <section className="relative min-h-[60vh] flex items-center pt-24 pb-16 bg-gradient-to-b from-purple-50 to-white">
                     <div className="absolute inset-0 opacity-5">
                         <div
                             className="absolute inset-0"

@@ -419,7 +419,7 @@ export default function Navigation() {
                               </button>
                               <div className="border-t border-gray-200 my-3"></div>
                               <Link
-                                href="/solutions"
+                                href="/products"
                                 onClick={() => setSolutionsDropdownOpen(false)}
                                 className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center gap-2"
                               >

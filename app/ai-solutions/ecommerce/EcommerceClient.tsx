@@ -99,8 +99,8 @@ export default function EcommerceSolutionsPage() {
                             >
                                 <div className="aspect-video rounded-2xl overflow-hidden border-2 border-cyan-200 bg-white shadow-lg">
                                     <Image
-                                        src="/images/ai-solutions/ecommerce-hero.jpg"
-                                        alt="E-Commerce AI Solutions - Smart Retail Automation"
+                                        src="/images/ai-Solution/Gen AI for E-Commerce & Retail/Gen AI for E-Commerce & Retail.png"
+                                        alt="Gen AI for E-Commerce & Retail"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

@@ -18,8 +18,8 @@ export const enhancedSiteConfig = {
   longDescription:
     "Transform your business with CannyMinds Technology Solutions - your trusted partner for digital transformation, AI-powered automation, custom software development, and enterprise IT services. With ISO 9001:2015, ISO 15489:2016, ISO 22716:2007, and FDA 21 CFR Part 11 certifications, we deliver world-class solutions including CannyECM (document management), CannyHR (HR & payroll), CannyScan (digitization), and CannyTrack (productivity monitoring). Serving global clients with 24/7 support and industry-leading expertise.",
 
-  url: "https://cannyminds-website.vercel.app",
-  ogImage: "https://cannyminds-website.vercel.app/og-image.jpg",
+  url: "https://www.cannymindstech.com",
+  ogImage: "https://www.cannymindstech.com/og-image.jpg",
 
   // Enhanced keywords with long-tail variations
   keywords: [

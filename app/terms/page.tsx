@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service | CannyMinds Technology Solutions',
   description: 'Terms of Service for CannyMinds Technology Solutions. Read our terms and conditions for using our services and products.',
   alternates: {
-    canonical: 'https://cannyminds-website.vercel.app/terms',
+    canonical: 'https://www.cannymindstech.com/terms',
   },
 };
 

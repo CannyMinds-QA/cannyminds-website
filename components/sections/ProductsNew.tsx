@@ -4,239 +4,168 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   Description as DocIcon,
-  People as PeopleIcon,
   Scanner as ScanIcon,
   Inventory as InventoryIcon,
   ArrowForward as ArrowIcon,
-  CheckCircle as CheckIcon,
   Science as ScienceIcon,
 } from "@mui/icons-material";
 
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
-    },
-  },
-} as const;
-
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 60,
-    scale: 0.9,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: "spring" as const,
-      stiffness: 80,
-      damping: 15,
-    },
-  },
-} as const;
-
-const iconVariants = {
-  hidden: { scale: 0, opacity: 0 },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      type: "spring" as const,
-      stiffness: 200,
-      delay: 0.1,
-    },
-  },
-} as const;
-
-const featureVariants = {
-  hidden: { opacity: 0, x: -10 },
-  visible: (i: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: 0.3 + i * 0.1,
-      duration: 0.3,
-    },
-  }),
-};
-
-// Featured products for home page (4 key products)
 const products = [
   {
     name: "CannyECM",
     title: "Enterprise Content Management",
-    description: "Enterprise-grade ECM with OCR, workflow automation, and cloud/on-premise deployment.",
+    description:
+      "Enterprise-grade ECM with OCR, workflow automation, and cloud/on-premise deployment.",
     icon: DocIcon,
     link: "/product/document-management",
-    features: ["99% OCR Accuracy", "Workflow Automation", "Cloud & On-Premise"],
+    features: ["99% OCR Accuracy", "Workflow Automation", "Cloud, On-Premise & SaaS"],
+    number: "01",
   },
   {
     name: "CannyScan",
     title: "Document Scanning Services",
-    description: "Professional scanning for paper documents, microfilm, and blueprints with 99.9% accuracy.",
+    description: "Professional document digitization services for scanning all sizes of paper documents.",
     icon: ScanIcon,
     link: "/product/scanning-solution",
     features: ["99.9% Accuracy", "All Document Types", "Secure Storage"],
+    number: "02",
   },
   {
     name: "CannyRMS",
     title: "Records Management System",
-    description: "Physical records management with barcode tracking, audit trails, and compliance support.",
+    description:
+      "Physical records management with barcode/RFID tracking, audit trails, and compliance support.",
     icon: InventoryIcon,
     link: "/product/rms",
-    features: ["Barcode Tracking", "Audit Trails", "FDA Compliant"],
+    features: ["Barcode/RFID Tracking", "Audit Trails", "FDA Compliant"],
+    number: "03",
   },
   {
     name: "Canny eBMR",
     title: "Electronic Batch Records",
-    description: "FDA 21 CFR Part 11 compliant eBMR for pharmaceutical manufacturing.",
+    description:
+      "FDA 21 CFR Part 11 compliant eBMR for pharmaceutical manufacturing.",
     icon: ScienceIcon,
     link: "/product/ebmr",
     features: ["FDA Compliant", "Audit Trails", "Review by Exception"],
+    number: "04",
   },
 ];
 
 export default function ProductsNew() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900"
-            >
-              Enterprise Software Solutions &amp; Business Automation Tools
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.25 }}
-              className="text-lg text-gray-600"
-            >
-              Comprehensive enterprise software trusted by 50+ companies worldwide
-            </motion.p>
-          </motion.div>
-        </div>
-
-        {/* Products Grid - 2x2 layout for featured products */}
+        {/* Header */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mb-14"
         >
-          {products.map((product) => {
-            const IconComponent = product.icon;
+          <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
+            Our Products
+          </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-snug mb-4">
+            Enterprise Software Solutions &amp; Business Automation
+          </h2>
+          <p className="text-gray-500 text-base lg:text-lg leading-relaxed">
+            Comprehensive enterprise software trusted by 50+ companies worldwide
+            for digital transformation and process automation.
+          </p>
+        </motion.div>
+
+        {/* Products — 2×2 grid */}
+        <div className="grid md:grid-cols-2 gap-5 lg:gap-6 max-w-5xl mx-auto mb-14">
+          {products.map((product, idx) => {
+            const Icon = product.icon;
             return (
               <motion.div
                 key={product.name}
-                variants={cardVariants}
-                whileHover={{
-                  scale: 1.05,
-                  y: -12,
-                  boxShadow: "0 25px 50px -12px rgba(37, 99, 235, 0.15)",
-                  transition: { type: "spring", stiffness: 300, damping: 20 },
-                }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: idx * 0.1 }}
               >
-                <Link href={product.link}>
-                  <div className="group bg-white rounded-lg p-6 border border-gray-200 hover:border-primary hover:shadow-xl h-full cursor-pointer transition-all">
-                    {/* Icon */}
-                    <div className="mb-4">
-                      <motion.div
-                        variants={iconVariants}
-                        whileHover={{ rotate: 5, scale: 1.1 }}
-                        className="inline-flex p-3 rounded-lg bg-primary/10"
-                      >
-                        <IconComponent className="text-primary" sx={{ fontSize: 32 }} />
-                      </motion.div>
+                <Link href={product.link} className="block h-full">
+                  <div className="group relative bg-gray-50 rounded-2xl p-6 lg:p-7 h-full border border-gray-100 hover:border-gray-200 hover:bg-white hover:shadow-md transition-all duration-300">
+                    {/* Left accent line */}
+                    <div className="absolute left-0 top-6 bottom-6 w-[3px] rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    {/* Top row: number + icon + name */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon className="text-primary" sx={{ fontSize: 22 }} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-lg font-bold text-gray-900">
+                            {product.name}
+                          </h3>
+                          <span className="text-[11px] font-mono text-gray-300 tracking-wide">
+                            {product.number}
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-400">{product.title}</p>
+                      </div>
                     </div>
 
-                    {/* Content */}
-                    <div className="space-y-3">
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                          {product.name}
-                        </h3>
-                        <p className="text-sm text-gray-600 mb-2">{product.title}</p>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {product.description}
-                        </p>
-                      </div>
+                    {/* Description */}
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {product.description}
+                    </p>
 
-                      {/* Features */}
-                      <div className="flex flex-wrap gap-2 pt-2">
-                        {product.features.map((feature, i) => (
-                          <motion.span
-                            key={feature}
-                            custom={i}
-                            variants={featureVariants}
-                            className="inline-flex items-center gap-1 text-xs text-gray-600"
-                          >
-                            <CheckIcon sx={{ fontSize: 12 }} className="text-green-600" />
-                            {feature}
-                          </motion.span>
-                        ))}
-                      </div>
-
-                      {/* CTA */}
-                      <motion.div
-                        className="pt-3 flex items-center gap-2 text-primary font-medium text-sm"
-                        whileHover={{ x: 5 }}
-                      >
-                        Learn More
-                        <motion.span
-                          animate={{ x: [0, 4, 0] }}
-                          transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 2 }}
+                    {/* Features as inline list */}
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 mb-5">
+                      {product.features.map((f) => (
+                        <span
+                          key={f}
+                          className="text-xs text-gray-500 flex items-center gap-1.5"
                         >
-                          <ArrowIcon sx={{ fontSize: 16 }} />
-                        </motion.span>
-                      </motion.div>
+                          <span className="w-1 h-1 rounded-full bg-primary inline-block" />
+                          {f}
+                        </span>
+                      ))}
                     </div>
+
+                    {/* CTA */}
+                    <span className="inline-flex items-center gap-1.5 text-primary text-sm font-medium">
+                      Learn more
+                      <ArrowIcon
+                        sx={{ fontSize: 15 }}
+                        className="transition-transform duration-200 group-hover:translate-x-0.5"
+                      />
+                    </span>
                   </div>
                 </Link>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-center mt-12"
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="flex flex-wrap gap-4 justify-center"
         >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-white rounded-lg font-semibold text-sm hover:bg-blue-700 transition-colors"
           >
-            <Link href="/solutions">
-              <button className="px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center gap-2">
-                View All Products
-                <ArrowIcon fontSize="small" />
-              </button>
-            </Link>
-          </motion.div>
+            View All Products
+            <ArrowIcon sx={{ fontSize: 18 }} />
+          </Link>
+          <Link
+            href="/solutions"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-primary border-2 border-primary/20 rounded-lg font-semibold text-sm hover:bg-primary/5 transition-colors"
+          >
+            View Industry Solutions
+            <ArrowIcon sx={{ fontSize: 18 }} />
+          </Link>
         </motion.div>
       </div>
     </section>

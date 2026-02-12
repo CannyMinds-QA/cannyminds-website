@@ -34,16 +34,6 @@ export default function FinalCTA() {
                                 </motion.button>
                             </Link>
 
-                            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm font-medium text-blue-50">
-                                <a href="mailto:info@cannymindstech.com" className="flex items-center gap-2 hover:text-white transition-colors">
-                                    <EmailIcon sx={{ fontSize: 18 }} />
-                                    info@cannymindstech.com
-                                </a>
-                                <a href="tel:044-35100366" className="flex items-center gap-2 hover:text-white transition-colors">
-                                    <PhoneIcon sx={{ fontSize: 18 }} />
-                                    044-35100366
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </RevealOnScroll>

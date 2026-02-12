@@ -119,7 +119,7 @@ export default function ProfessionalServicesPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>

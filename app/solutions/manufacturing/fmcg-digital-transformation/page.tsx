@@ -95,7 +95,7 @@ export default function FMCGTransformationPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-16 px-6 lg:px-12">
                     <div className="container mx-auto max-w-5xl text-center">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 text-green-700 font-medium text-sm mb-6">
                             <Factory sx={{ fontSize: 18 }} />

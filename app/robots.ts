@@ -15,7 +15,7 @@ function getBaseUrl(): string {
 
   // Production fallback - always use this
   // Never use VERCEL_URL as it returns preview URLs on staging deployments
-  return 'https://cannyminds-website.vercel.app'
+  return 'https://www.cannymindstech.com'
 }
 
 export default function robots(): MetadataRoute.Robots {

@@ -99,8 +99,8 @@ export default function NBFCSolutionsPage() {
                             >
                                 <div className="aspect-video rounded-2xl overflow-hidden border-2 border-green-200 bg-white shadow-lg">
                                     <Image
-                                        src="/images/ai-solutions/nbfc-hero.jpg"
-                                        alt="NBFC AI Solutions - Lending Automation and Credit Decisioning"
+                                        src="/images/ai-Solution/Gen AI for Lending finance/Gen AI for Lending & NBFC Operations.png"
+                                        alt="Gen AI for Lending & NBFC Operations"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

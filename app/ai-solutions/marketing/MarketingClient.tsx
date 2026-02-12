@@ -99,8 +99,8 @@ export default function MarketingSolutionsPage() {
                             >
                                 <div className="aspect-video rounded-2xl overflow-hidden border-2 border-rose-200 bg-white shadow-lg">
                                     <Image
-                                        src="/images/ai-solutions/marketing-hero.jpg"
-                                        alt="Marketing AI Solutions - Creative Content Automation"
+                                        src="/images/ai-Solution/Gen AI for Marketing & Creative/Gen AI for Marketing & Creative.png"
+                                        alt="Gen AI for Marketing & Creative"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

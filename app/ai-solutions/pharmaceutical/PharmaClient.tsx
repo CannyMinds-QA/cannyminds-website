@@ -100,8 +100,8 @@ export default function PharmaClient() {
                             >
                                 <div className="aspect-video rounded-2xl overflow-hidden border-2 border-purple-200 bg-white shadow-lg">
                                     <Image
-                                        src="/images/ai-solutions/pharmaceutical-hero.jpg"
-                                        alt="Pharmaceutical AI Solutions - FDA Compliant Manufacturing Automation"
+                                        src="/images/ai-Solution/Gen AI for Pharmaceutical Manufacturing/Gen AI for Pharmaceutical Manufacturing.png"
+                                        alt="Gen AI for Pharmaceutical Manufacturing"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

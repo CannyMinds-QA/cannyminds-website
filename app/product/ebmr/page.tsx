@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         "pharmaceutical compliance software",
     ],
     alternates: {
-        canonical: "/solutions/product/ebmr",
+        canonical: "/product/ebmr",
     },
     openGraph: {
         title: "CannyECM e-BMR | Electronic Batch Manufacturing Record",
@@ -176,8 +176,8 @@ export default function CannyEBMRPage() {
                                 Home
                             </Link>
                             <ChevronRight sx={{ fontSize: 16 }} className="text-gray-400" />
-                            <Link href="/solutions" className="hover:text-primary">
-                                Solutions
+                            <Link href="/#products" className="hover:text-primary">
+                                Products
                             </Link>
                             <ChevronRight sx={{ fontSize: 16 }} className="text-gray-400" />
                             <span className="text-gray-900 font-medium">e-BMR</span>

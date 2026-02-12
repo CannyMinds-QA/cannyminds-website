@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "CannyScan - Document Digitization & Scanning Solution",
     description: "Professional document digitization with image cleansing, OCR extraction, barcode reading, and quality control workflows.",
     type: "article",
-    url: "https://cannyminds-website.vercel.app/product/scanning-solution",
+    url: "https://www.cannymindstech.com/product/scanning-solution",
     images: [
       {
         url: "/og-image.jpg",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://cannyminds-website.vercel.app/product/scanning-solution",
+    canonical: "https://www.cannymindstech.com/product/scanning-solution",
   },
   robots: { index: true, follow: true },
 };
@@ -72,13 +72,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cannyminds-website.vercel.app/"
+          "item": "https://www.cannymindstech.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Solutions",
-          "item": "https://cannyminds-website.vercel.app/#solutions"
+          "name": "Products",
+          "item": "https://www.cannymindstech.com/#products"
         },
         {
           "@type": "ListItem",
@@ -153,7 +153,7 @@ export default function CannyScanProductPage() {
             <ol className="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto">
               <li><Link href="/" className="text-purple-600 hover:text-purple-800 whitespace-nowrap">Home</Link></li>
               <li className="text-gray-400">/</li>
-              <li><Link href="/#solutions" className="text-purple-600 hover:text-purple-800 whitespace-nowrap">Solutions</Link></li>
+              <li><Link href="/#products" className="text-purple-600 hover:text-purple-800 whitespace-nowrap">Products</Link></li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-600 font-medium truncate">CannyScan - Document Digitization</li>
             </ol>
@@ -799,7 +799,7 @@ export default function CannyScanProductPage() {
                   title: "Enterprise Content Management",
                   description: "FDA 21 CFR Part 11 compliant ECM for SOPs, STPs, COAs, change control, and QMS integration.",
                   features: ["Document Control", "Approval Workflows", "QMS Integration", "Audit Trails"],
-                  link: "/solutions/product/document-management",
+                  link: "/product/document-management",
                   color: "from-blue-50 to-white border-blue-200"
                 },
                 {
@@ -807,7 +807,7 @@ export default function CannyScanProductPage() {
                   title: "Physical Records Management",
                   description: "Web-based system to digitize, control, and optimize physical file and storage management.",
                   features: ["Rack Optimization", "Retrieval Tracking", "Audit Compliance", "Billing Support"],
-                  link: "/solutions/product/rms",
+                  link: "/product/rms",
                   color: "from-orange-50 to-white border-orange-200"
                 },
                 {
@@ -815,7 +815,7 @@ export default function CannyScanProductPage() {
                   title: "HR Management System",
                   description: "Comprehensive HR solution for employee management, payroll, and attendance tracking.",
                   features: ["Employee Records", "Payroll Automation", "Leave Management", "Performance Reviews"],
-                  link: "/solutions/product/hr-management",
+                  link: "/product/hr-management",
                   color: "from-green-50 to-white border-green-200"
                 },
               ].map((product, idx) => (

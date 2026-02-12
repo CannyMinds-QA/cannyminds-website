@@ -99,8 +99,8 @@ export default function RealEstateSolutionsPage() {
                             >
                                 <div className="aspect-video rounded-2xl overflow-hidden border-2 border-amber-200 bg-white shadow-lg">
                                     <Image
-                                        src="/images/ai-solutions/real-estate-hero.jpg"
-                                        alt="Real Estate AI Solutions - Smart Property Management"
+                                        src="/images/ai-Solution/Gen AI for Real Estate & Construction/Gen AI for Real Estate & Construction.png"
+                                        alt="Gen AI for Real Estate & Construction"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

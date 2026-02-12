@@ -99,8 +99,8 @@ export default function HealthcareClient() {
                             >
                                 <div className="aspect-video rounded-2xl overflow-hidden border-2 border-red-200 bg-white shadow-lg">
                                     <Image
-                                        src="/images/ai-solutions/healthcare-hero.jpg"
-                                        alt="Healthcare AI Solutions - HIPAA Compliant Patient Care Automation"
+                                        src="/images/ai-Solution/healthcare/Gen AI for Healthcare & Hospitals.png"
+                                        alt="Gen AI for Healthcare & Hospitals"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

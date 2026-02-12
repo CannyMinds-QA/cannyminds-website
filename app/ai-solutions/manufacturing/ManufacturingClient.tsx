@@ -99,8 +99,8 @@ export default function ManufacturingSolutionsPage() {
                             >
                                 <div className="aspect-video rounded-2xl overflow-hidden border-2 border-orange-200 bg-white shadow-lg">
                                     <Image
-                                        src="/images/ai-solutions/manufacturing-hero.jpg"
-                                        alt="Manufacturing AI Solutions - Smart Factory Automation"
+                                        src="/images/ai-Solution/Gen AI for Manufacturing & Automotive/Gen AI for Manufacturing & Automotive.png"
+                                        alt="Gen AI for Manufacturing & Automotive"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"

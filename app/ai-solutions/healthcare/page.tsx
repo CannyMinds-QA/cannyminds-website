@@ -16,20 +16,22 @@ export const metadata: Metadata = {
         "CannyMinds Healthcare Solutions",
     ],
     alternates: {
-        canonical: "https://cannyminds-website.vercel.app/ai-solutions/healthcare",
+        canonical: "https://www.cannymindstech.com/ai-solutions/healthcare",
     },
     openGraph: {
         title: "Generative AI for Healthcare & Hospitals | CannyMinds",
         description:
             "Transform patient care with HIPAA-compliant Gen AI. Automate registration, billing, and clinical coding with enterprise-grade AI solutions.",
-        url: "https://cannyminds-website.vercel.app/ai-solutions/healthcare",
+        url: "https://www.cannymindstech.com/ai-solutions/healthcare",
+        siteName: "CannyMinds",
+        locale: "en_US",
         type: "website",
         images: [
             {
-                url: "/images/ai-solutions/healthcare-hero.jpg",
+                url: "/images/ai-Solution/healthcare/Gen AI for Healthcare & Hospitals.png",
                 width: 1200,
                 height: 630,
-                alt: "Generative AI for Healthcare Solutions",
+                alt: "Gen AI for Healthcare & Hospitals",
             },
         ],
     },

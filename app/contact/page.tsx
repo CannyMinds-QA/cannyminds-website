@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact CannyMinds | Get in Touch Today',
     description: 'Contact CannyMinds for digital transformation and enterprise software. Offices in India, USA, Nigeria. 24/7 support for enterprise clients.',
-    url: 'https://cannyminds-website.vercel.app/contact',
+    url: 'https://www.cannymindstech.com/contact',
     type: 'website',
     images: [
       {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://cannyminds-website.vercel.app/contact',
+    canonical: 'https://www.cannymindstech.com/contact',
   },
 };
 

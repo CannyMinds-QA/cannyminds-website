@@ -1,24 +1,22 @@
 import type { Metadata } from 'next';
-import AllProductsShowcase from '@/components/solutions/AllProductsShowcase';
+import AllIndustriesShowcase from '@/components/solutions/AllIndustriesShowcase';
 
 export const metadata: Metadata = {
-    title: 'All Solutions | Enterprise Software Products by CannyMinds',
-    description: 'Explore all enterprise software solutions from CannyMinds: Document Management, HR, Scanning, Productivity Tracking, RMS, eBMR, and AI Automation. ISO-certified, FDA-compliant systems.',
+    title: 'Industry Solutions | CannyMinds',
+    description: 'Explore tailored software solutions for Pharmaceutical, Manufacturing, Healthcare, Finance, and more. ISO-certified compliance and automation.',
     keywords: [
-        'enterprise software solutions',
-        'document management system',
-        'HR management software',
-        'scanning services',
-        'productivity monitoring',
-        'retail management system',
-        'eBMR software',
-        'AI automation',
-        'CannyMinds products',
+        'industry solutions',
+        'pharmaceutical software',
+        'manufacturing automation',
+        'healthcare it solutions',
+        'financial technology',
+        'legal tech',
+        'cannyminds industries'
     ],
     openGraph: {
-        title: 'All Solutions | Enterprise Software Products by CannyMinds',
-        description: 'Explore all enterprise software solutions from CannyMinds. ISO-certified, FDA-compliant systems trusted by 50+ organizations globally.',
-        url: 'https://cannyminds-website.vercel.app/solutions',
+        title: 'Industry Solutions | CannyMinds',
+        description: 'Explore tailored software solutions for Pharmaceutical, Manufacturing, Healthcare, Finance, and more.',
+        url: 'https://www.cannymindstech.com/solutions',
         type: 'website',
     },
 };
@@ -26,7 +24,7 @@ export const metadata: Metadata = {
 export default function AllSolutionsPage() {
     return (
         <main>
-            <AllProductsShowcase />
+            <AllIndustriesShowcase />
         </main>
     );
 }

@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | CannyMinds Technology Solutions',
   description: 'Privacy Policy for CannyMinds Technology Solutions. Learn how we collect, use, and protect your personal information.',
   alternates: {
-    canonical: 'https://cannyminds-website.vercel.app/privacy-policy',
+    canonical: 'https://www.cannymindstech.com/privacy-policy',
   },
 };
 

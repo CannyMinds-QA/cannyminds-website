@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "CannyHR - HR & Payroll Management | HRMS Solution 2026",
     description: "Complete HRMS with payroll, time tracking, leave management, and performance reviews. 350+ biometric integrations. Mobile app included.",
     type: "article",
-    url: "https://cannyminds-website.vercel.app/product/hr-management",
+    url: "https://www.cannymindstech.com/product/hr-management",
     authors: ["Christopher"],
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://cannyminds-website.vercel.app/product/hr-management",
+    canonical: "https://www.cannymindstech.com/product/hr-management",
   },
   robots: { index: true, follow: true },
 };
@@ -67,13 +67,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cannyminds-website.vercel.app/"
+          "item": "https://www.cannymindstech.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Products",
-          "item": "https://cannyminds-website.vercel.app/#products"
+          "item": "https://www.cannymindstech.com/#products"
         },
         {
           "@type": "ListItem",
@@ -86,27 +86,27 @@ const jsonLd = {
       "@type": "Article",
       "headline": "CannyHR - Complete HR & Payroll Management Software",
       "description": "Comprehensive guide to CannyHR HR and payroll management platform with attendance tracking, leave management, performance reviews, and mobile access.",
-      "image": "https://cannyminds-website.vercel.app/images/cannyhr-dashboard.jpg",
+      "image": "https://www.cannymindstech.com/images/cannyhr-dashboard.jpg",
       "author": {
         "@type": "Person",
         "name": "Christopher",
         "jobTitle": "Head of Technical Department & Investor",
-        "url": "https://cannyminds-website.vercel.app/about"
+        "url": "https://www.cannymindstech.com/about"
       },
       "publisher": {
         "@type": "Organization",
         "name": "CannyMinds Technology Solutions",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://cannyminds-website.vercel.app/logo.png"
+          "url": "https://www.cannymindstech.com/logo.png"
         },
-        "url": "https://cannyminds-website.vercel.app"
+        "url": "https://www.cannymindstech.com"
       },
       "datePublished": "2026-01-15",
       "dateModified": new Date().toISOString(),
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://cannyminds-website.vercel.app/solutions/hr-management"
+        "@id": "https://www.cannymindstech.com/solutions/hr-management"
       }
     },
     {
@@ -120,7 +120,7 @@ const jsonLd = {
         "price": "0",
         "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
-        "url": "https://cannyminds-website.vercel.app/product/hr-management",
+        "url": "https://www.cannymindstech.com/product/hr-management",
         "priceSpecification": {
           "@type": "PriceSpecification",
           "price": "Custom Pricing",
@@ -179,7 +179,7 @@ export default function CannyHRProductPage() {
             <ol className="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto">
               <li><Link href="/" className="text-primary hover:text-primary/80 whitespace-nowrap">Home</Link></li>
               <li className="text-gray-400">/</li>
-              <li><Link href="/#solutions" className="text-primary hover:text-primary/80 whitespace-nowrap">Solutions</Link></li>
+              <li><Link href="/#products" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-600 font-medium truncate">CannyHR - HR & Payroll Management Software</li>
             </ol>
@@ -805,21 +805,21 @@ export default function CannyHRProductPage() {
                   name: "CannyDocs",
                   tagline: "Document Management System",
                   description: "Complete DMS for HR documents including employee records, contracts, offer letters, and performance reviews. Automated workflows with 99% OCR accuracy.",
-                  link: "/solutions/product/document-management",
+                  link: "/product/document-management",
                   color: "blue",
                 },
                 {
                   name: "CannyScan",
                   tagline: "Document Scanning Services",
                   description: "Professional scanning services for digitizing employee files, historical HR records, and compliance documents. Secure, accurate, and fast digitization.",
-                  link: "/solutions/product/scanning-solution",
+                  link: "/product/scanning-solution",
                   color: "purple",
                 },
                 {
                   name: "CannyTrack",
                   tagline: "Productivity Monitoring",
                   description: "Workforce productivity tracking with activity monitoring, screenshots, and data loss prevention. Monitor remote employees with consent-based tracking.",
-                  link: "/solutions/product/tracking-system",
+                  link: "/product/tracking-system",
                   color: "orange",
                 },
               ].map((product, idx) => (
