@@ -6,7 +6,6 @@ import {
   Email as EmailIcon,
   Phone as PhoneIcon,
   LocationOn as LocationIcon,
-  Schedule as ScheduleIcon,
   LinkedIn as LinkedInIcon,
   Twitter as TwitterIcon,
   Facebook as FacebookIcon,
@@ -99,11 +98,22 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-secondary mb-1">Call Us</h3>
-                      <a href="tel:+919361801926" className="text-primary hover:underline">
-                        +91 93618 01926
-                      </a>
-                      <p className="text-sm text-gray-600 mt-1">
-                        Mon-Sat: 9:00 AM - 6:00 PM IST
+                      <div className="flex flex-col gap-1">
+                        <a href="tel:+919361801926" className="text-primary hover:underline">
+                          +91 93618 01926
+                        </a>
+                        <a href="tel:+919444216400" className="text-primary hover:underline">
+                          +91 94442 16400
+                        </a>
+                        <a href="tel:+919361801928" className="text-primary hover:underline">
+                          +91 93618 01928
+                        </a>
+                        <a href="tel:+919444333574" className="text-primary hover:underline">
+                          +91 94443 33574
+                        </a>
+                      </div>
+                      <p className="text-sm text-gray-600 mt-2">
+                        Global Support Line
                       </p>
                     </div>
                   </div>
@@ -116,7 +126,7 @@ export default function ContactPage() {
                       <h3 className="font-bold text-secondary mb-1">Visit Us</h3>
                       <p className="text-gray-700">Chennai, Tamil Nadu, India</p>
                       <p className="text-sm text-gray-600 mt-1">
-                        Schedule an appointment
+                        Global Headquarters
                       </p>
                     </div>
                   </div>
@@ -167,29 +177,7 @@ export default function ContactPage() {
               </div>
 
               {/* Business Hours */}
-              <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-orange-200 rounded-xl p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <ScheduleIcon sx={{ fontSize: 32, color: '#ea580c' }} />
-                  <h3 className="text-2xl font-bold text-secondary">Business Hours</h3>
-                </div>
-                <div className="space-y-2 text-gray-700">
-                  <div className="flex justify-between">
-                    <span className="font-semibold">Monday - Friday:</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-semibold">Saturday:</span>
-                    <span>9:00 AM - 2:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-semibold">Sunday:</span>
-                    <span className="text-red-600">Closed</span>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-600 mt-4">
-                  * Times shown for India (IST). We provide 24/7 support for enterprise clients.
-                </p>
-              </div>
+
             </div>
 
           </div>
@@ -207,7 +195,7 @@ export default function ContactPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join 50+ organizations worldwide that trust CannyMinds for their digital transformation journey.
+              Join 100+ organizations worldwide that trust CannyMinds for their digital transformation journey.
               Let's discuss how we can help you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

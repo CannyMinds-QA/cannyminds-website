@@ -265,7 +265,7 @@ export default function PharmaceuticalOverviewPage() {
                                 The pharmaceutical industry operates in a high-stakes environment where documentation is just as important as the product itself. Meeting global standards such as FDA 21 CFR Part 11, EU GMP Annex 11, and ALCOA+ principles requires more than just digitization—it requires intelligent, validated systems that can predict quality shifts and ensure 100% data integrity throughout the product lifecycle.
                             </p>
                             <p className="mt-4">
-                                We specialize in Physical Record Management, Onsite & Offsite Digitization, Enterprise Content Management (ECM), and Compliance-driven Information Governance—with a strong focus on regulated industries such as Pharmaceuticals, Life Sciences, Healthcare, and Manufacturing.
+                                We specialize in Enterprise Content Management (ECM),Physical Record Management, Onsite & Offsite Digitizatio and Compliance-driven Information Governance—with a strong focus on regulated industries such as Pharmaceuticals, Life Sciences, Healthcare, and Manufacturing.
                             </p>
                         </div>
                     </div>

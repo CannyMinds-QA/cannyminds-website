@@ -116,7 +116,7 @@ export default function Hero() {
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
               Leading IT solutions provider with 20+ years of experience in digital transformation,
               AI automation, enterprise software development, and business process services.
-              ISO 27001 certified, serving 50+ clients across India, USA, Nigeria, and UAE.
+              ISO 27001 certified, serving 100+ clients across India, USA, Nigeria, and UAE.
             </p>
           </RevealOnScroll>
 
@@ -156,7 +156,7 @@ export default function Hero() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-12 sm:mt-16 md:mt-20 pt-8 sm:pt-12 border-t border-gray-200 px-4">
               {[
                 { value: "3", label: "Global Offices" },
-                { value: "50+", label: "Clients Worldwide" },
+                { value: "100+", label: "Clients Worldwide" },
                 { value: "20+", label: "Years Experience" },
                 { value: "ISO", label: "Certified" },
               ].map((stat, index) => (

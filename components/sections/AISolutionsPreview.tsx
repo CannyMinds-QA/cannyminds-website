@@ -111,8 +111,8 @@ export default function AISolutionsPreview() {
                   key={industry.slug}
                   onClick={() => setActiveIndex(idx)}
                   className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-left transition-all duration-200 flex-shrink-0 lg:flex-shrink min-w-[160px] lg:min-w-0 ${isActive
-                      ? "bg-white text-gray-900 shadow-sm border border-gray-200"
-                      : "text-gray-500 hover:text-gray-700 hover:bg-white/60"
+                    ? "bg-white text-gray-900 shadow-sm border border-gray-200"
+                    : "text-gray-500 hover:text-gray-700 hover:bg-white/60"
                     }`}
                 >
                   <div
@@ -199,7 +199,7 @@ export default function AISolutionsPreview() {
               <div className="text-xs text-gray-400">Cost Reduction</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gray-900">50+</div>
+              <div className="text-2xl font-bold text-gray-900">100+</div>
               <div className="text-xs text-gray-400">Clients Served</div>
             </div>
           </div>

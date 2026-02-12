@@ -78,7 +78,7 @@ export const enhancedSiteConfig = {
   business: {
     founded: "2003",
     employees: "50+",
-    clients: "50+",
+    clients: "100+",
     countries: "4",
     offices: 4,
     rating: 4.9,

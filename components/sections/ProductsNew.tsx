@@ -71,7 +71,7 @@ export default function ProductsNew() {
             Enterprise Software Solutions &amp; Business Automation
           </h2>
           <p className="text-gray-500 text-base lg:text-lg leading-relaxed">
-            Comprehensive enterprise software trusted by 50+ companies worldwide
+            Comprehensive enterprise software trusted by 100+ companies worldwide
             for digital transformation and process automation.
           </p>
         </motion.div>

@@ -263,7 +263,7 @@ export default function CannyECMProductPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center text-white">
               {[
-                { number: "50+", label: "Happy Clients" },
+                { number: "100+", label: "Happy Clients" },
                 { number: "100K+", label: "Documents Managed" },
                 { number: "99%", label: "OCR Accuracy" },
                 { number: "99.9%", label: "Uptime Guarantee" },

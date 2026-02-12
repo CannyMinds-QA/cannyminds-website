@@ -114,7 +114,7 @@ export default function CannyRMSPage() {
                   <div className="flex flex-col">
                     <span className="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Trusted By</span>
                     <div className="flex -space-x-2">
-                      <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-gray-600">50+</div>
+                      <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-gray-600">100+</div>
                       <div className="w-8 h-8 rounded-full bg-blue-100 border-2 border-white flex items-center justify-center text-[10px] text-blue-600"><Business sx={{ fontSize: 14 }} /></div>
                       <div className="w-8 h-8 rounded-full bg-green-100 border-2 border-white flex items-center justify-center text-[10px] text-green-600"><Shield sx={{ fontSize: 14 }} /></div>
                     </div>

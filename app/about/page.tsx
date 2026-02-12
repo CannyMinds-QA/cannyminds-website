@@ -55,7 +55,7 @@ export default function AboutPage() {
   const leaders = [
     {
       name: "Udayakumar Murugan",
-      title: "Digital Transformation Specialist",
+      title: "CEO & Director",
       bio: "Udayakumar leads CannyMinds' digital transformation initiatives, helping businesses modernize their operations through innovative technology solutions. With extensive experience in enterprise architecture and cloud migration, he ensures clients achieve measurable ROI from their digital investments.",
       image: "/images/about/Udayakumar-Murugan-Director.png",
       placeholder: "UM",
@@ -63,7 +63,7 @@ export default function AboutPage() {
     },
     {
       name: "Christopher Arulandu",
-      title: "Chief Technology Officer",
+      title: "CTO & Director",
       bio: "As CTO, Christopher oversees all technical innovation and product development at CannyMinds Technology Solutions. He leads the engineering teams responsible for CannyECM, CannyHR, CannyScan, and CannyTrack, ensuring world-class quality and cutting-edge features.",
       image: "/images/about/Christopher-Director.png",
       placeholder: "CA",
@@ -71,7 +71,7 @@ export default function AboutPage() {
     },
     {
       name: "Mahesh Kumar",
-      title: "Vice President Operations",
+      title: "VP – Operations & Director",
       bio: "Mahesh ensures operational excellence across all CannyMinds offices and client projects. He manages service delivery, client success, and operational scalability, maintaining the highest standards of quality and customer satisfaction.",
       image: "/images/about/Maheshkumar-Director.png",
       placeholder: "MK",
@@ -79,7 +79,7 @@ export default function AboutPage() {
     },
     {
       name: "Parthiban K",
-      title: "Vice President at CannyMinds Technology Solutions",
+      title: "VP – Business Development & Director",
       bio: "Parthiban drives business growth and strategic partnerships for CannyMinds. He leads client acquisition, market expansion, and relationship management, positioning CannyMinds as a trusted technology partner across global markets.",
       image: "/images/about/Parthiban-Director.png",
       placeholder: "PK",
@@ -87,7 +87,7 @@ export default function AboutPage() {
     },
     {
       name: "Bhaskaran Gopalakrishnan",
-      title: "Director - Strategy & Business Development",
+      title: "Chief Business Officer & Director",
       bio: "Bhaskaran shapes CannyMinds' long-term strategy and business development initiatives. He identifies new market opportunities, guides product roadmaps, and ensures the company stays ahead of industry trends in digital transformation and AI automation.",
       image: "/images/about/Bhaskaran-Gopalakrishnan-Director.png",
       placeholder: "BG",
@@ -163,7 +163,7 @@ export default function AboutPage() {
                 CannyMinds is a trusted provider of information management and digitization solutions, helping organizations securely manage, preserve, and transform their critical records across their lifecycle.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                We specialize in <strong>Physical Record Management, Onsite & Offsite Digitization, Enterprise Content Management (ECM), and Compliance-driven Information Governance</strong>—with a strong focus on regulated industries such as Pharmaceuticals, Life Sciences, Healthcare, and Manufacturing.
+                We specialize in <strong> Enterprise Content Management (ECM), Physical Record Management, Onsite & Offsite Digitization and Compliance-driven Information Governance</strong>—with a strong focus on regulated industries such as Pharmaceuticals, Life Sciences, Healthcare, and Manufacturing.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
                 At CannyMinds, we combine process expertise, advanced technology, and strict quality controls to ensure data accuracy, security, and regulatory compliance. Our solutions are designed to align with global standards including <strong>ISO 9001, ISO 15489, ISO 27001, and FDA 21 CFR Part 11</strong>, enabling organizations to confidently meet audit, retention, and compliance requirements.

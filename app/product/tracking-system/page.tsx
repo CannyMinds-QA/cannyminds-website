@@ -250,7 +250,7 @@ export default function CannyTrackProductPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center text-white">
               {[
-                { number: "50+", label: "Happy Clients" },
+                { number: "100+", label: "Happy Clients" },
                 { number: "2,000+", label: "Users Monitored" },
                 { number: "Real-Time", label: "Activity Tracking" },
                 { number: "100%", label: "Data Privacy" },
@@ -902,7 +902,7 @@ export default function CannyTrackProductPage() {
                 </Link>
               </div>
               <p className="text-sm text-white/70 mt-6">
-                Trusted by 50+ organizations monitoring 2,000+ users
+                Trusted by 100+ organizations monitoring 2,000+ users
               </p>
             </div>
           </section>
