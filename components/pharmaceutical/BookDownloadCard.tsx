@@ -28,6 +28,7 @@ interface FormErrors {
 }
 
 export default function BookDownloadCard() {
+    const [isCardVisible, setIsCardVisible] = useState(true);
     const [showForm, setShowForm] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
@@ -131,36 +132,47 @@ export default function BookDownloadCard() {
     return (
         <>
             {/* Sticky Sidebar Card */}
-            <div className="sticky top-24">
-                <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-                    {/* Book Cover Image */}
-                    <div className="relative aspect-[3/4] bg-gray-100">
-                        <Image
-                            src="/pharama book/pharma-book-cover.png"
-                            alt="Pharmaceutical Guide"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-
-                    {/* Download Section */}
-                    <div className="p-4">
-                        <p className="text-sm font-bold text-secondary mb-1 text-center">
-                            Free Download
-                        </p>
-                        <p className="text-xs text-gray-500 mb-3 text-center">
-                            Pharmaceutical Compliance Guide
-                        </p>
+            {isCardVisible && (
+                <div className="sticky top-24">
+                    <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden relative">
+                        {/* Close Button */}
                         <button
-                            onClick={() => setShowForm(true)}
-                            className="w-full py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                            onClick={() => setIsCardVisible(false)}
+                            className="absolute top-2 right-2 z-10 bg-white/90 hover:bg-white text-gray-400 hover:text-gray-600 rounded-full p-1 shadow-sm transition-colors"
+                            aria-label="Close download card"
                         >
-                            <Download sx={{ fontSize: 18 }} />
-                            Download Now
+                            <Close sx={{ fontSize: 18 }} />
                         </button>
+
+                        {/* Book Cover Image */}
+                        <div className="relative aspect-[3/4] bg-gray-100">
+                            <Image
+                                src="/pharama book/pharma-book-cover.png"
+                                alt="Pharmaceutical Guide"
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+
+                        {/* Download Section */}
+                        <div className="p-4">
+                            <p className="text-sm font-bold text-secondary mb-1 text-center">
+                                Free Download
+                            </p>
+                            <p className="text-xs text-gray-500 mb-3 text-center">
+                                Pharmaceutical Compliance Guide
+                            </p>
+                            <button
+                                onClick={() => setShowForm(true)}
+                                className="w-full py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                            >
+                                <Download sx={{ fontSize: 18 }} />
+                                Download Now
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
 
             {/* Modal Form */}
             {showForm && (
