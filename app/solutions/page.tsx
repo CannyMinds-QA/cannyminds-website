@@ -19,6 +19,9 @@ export const metadata: Metadata = {
         url: 'https://www.cannymindstech.com/solutions',
         type: 'website',
     },
+    alternates: {
+        canonical: 'https://www.cannymindstech.com/solutions',
+    },
 };
 
 export default function AllSolutionsPage() {

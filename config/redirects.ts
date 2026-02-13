@@ -80,6 +80,16 @@ export const redirects: NextConfig['redirects'] = async () => {
             destination: '/product/document-management',
             permanent: true,
         },
+        {
+            source: '/product/invoice-management',
+            destination: '/ai-solutions/professional-services',
+            permanent: true,
+        },
+        {
+            source: '/product/ai-solutions',
+            destination: '/ai-solutions',
+            permanent: true,
+        },
 
         // Solutions & Services
         {

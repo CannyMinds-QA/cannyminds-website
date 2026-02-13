@@ -124,15 +124,10 @@ export default function AllProductsShowcase() {
     return (
         <div className="bg-white font-sans text-gray-900">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 bg-gray-50 overflow-hidden">
-                {/* Background Image */}
+            <section className="relative pt-32 pb-24 bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50 overflow-hidden">
+                {/* Background Pattern */}
                 <div className="absolute inset-0 z-0">
-                    <img
-                        src="/images/solutions-hero.png"
-                        alt="Enterprise Solutions Background"
-                        className="w-full h-full object-cover opacity-20"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/60 to-white/95" />
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10">

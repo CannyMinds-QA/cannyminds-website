@@ -18,7 +18,7 @@ export const professionalServicesContent = {
         subtitle: "Automate Expertise, Accelerate Decisions, Ensure Compliance",
         description: (
             <>
-                Transform your professional services operations with <Link href="/product/document-management" className="text-blue-600 hover:underline">AI-powered contract intelligence</Link>, <Link href="/product/invoice-management" className="text-blue-600 hover:underline">automated financial matching</Link>, intelligent tax assistance, and smart HR automation that delivers faster turnaround and reduced operational costs.
+                Transform your professional services operations with <Link href="/product/document-management" className="text-blue-600 hover:underline">AI-powered contract intelligence</Link>, automated financial matching, intelligent tax assistance, and smart HR automation that delivers faster turnaround and reduced operational costs.
             </>
         ),
     },

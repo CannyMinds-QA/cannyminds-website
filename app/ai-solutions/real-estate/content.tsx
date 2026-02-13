@@ -19,7 +19,7 @@ export const realEstateContent = {
         subtitle: "Build Smarter, Sell Faster, Operate Better",
         description: (
             <>
-                Transform your real estate operations with <Link href="/product/ai-solutions" className="text-blue-600 hover:underline">AI-powered lead qualification</Link>, automated listings, intelligent site monitoring, and <Link href="/product/document-management" className="text-blue-600 hover:underline">smart contract management</Link> that delivers faster sales cycles and reduced operational costs.
+                Transform your real estate operations with AI-powered lead qualification, automated listings, intelligent site monitoring, and <Link href="/product/document-management" className="text-blue-600 hover:underline">smart contract management</Link> that delivers faster sales cycles and reduced operational costs.
             </>
         ),
     },

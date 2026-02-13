@@ -23,7 +23,7 @@ export const nbfcContent = {
         subtitle: "Accelerate Lending, Reduce Risk, Enhance Collections",
         description: (
             <>
-                Transform your lending operations with <Link href="/product/ai-solutions" className="text-blue-600 hover:underline">AI-powered lead qualification</Link>, automated credit decisioning, <Link href="/product/document-management" className="text-blue-600 hover:underline">intelligent document processing</Link>, and smart collection management that delivers faster turnaround and lower NPAs.
+                Transform your lending operations with AI-powered lead qualification, automated credit decisioning, <Link href="/product/document-management" className="text-blue-600 hover:underline">intelligent document processing</Link>, and smart collection management that delivers faster turnaround and lower NPAs.
             </>
         ),
     },
