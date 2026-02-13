@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         "document lifecycle management",
     ],
     alternates: {
-        canonical: "/solutions/manufacturing/document-control",
+        canonical: "https://www.cannymindstech.com/solutions/manufacturing/document-control",
     },
     openGraph: {
         title: "Document Control & SOP Management | Manufacturing Solutions",

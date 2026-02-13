@@ -29,12 +29,13 @@ export const metadata: Metadata = {
         "pharmaceutical content management",
     ],
     alternates: {
-        canonical: "/solutions/pharmaceutical",
+        canonical: "https://www.cannymindstech.com/solutions/pharmaceutical",
     },
     openGraph: {
         title: "Pharmaceutical Solutions",
         description: "Transform pharma manufacturing with AI-driven compliance, quality control, and automation.",
-        images: [{ url: "/images/pharma-solutions-og.jpg", width: 1200, height: 630 }],
+        url: "https://www.cannymindstech.com/solutions/pharmaceutical",
+        images: [{ url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630 }],
     },
 };
 

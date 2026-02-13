@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         "legal document management"
     ],
     alternates: {
-        canonical: "/solutions/finance/governance-compliance",
+        canonical: "https://www.cannymindstech.com/solutions/finance/governance-compliance",
     },
     openGraph: {
         title: "Governance & Compliance Solutions",

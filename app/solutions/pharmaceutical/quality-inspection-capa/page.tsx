@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         "GMP quality compliance",
     ],
     alternates: {
-        canonical: "/solutions/pharmaceutical/quality-inspection-capa",
+        canonical: "https://www.cannymindstech.com/solutions/pharmaceutical/quality-inspection-capa",
     },
     openGraph: {
         title: "Quality Inspection & CAPA",

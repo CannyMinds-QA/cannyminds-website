@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         "digital SOP management",
     ],
     alternates: {
-        canonical: "/solutions/manufacturing/fmcg-digital-transformation",
+        canonical: "https://www.cannymindstech.com/solutions/manufacturing/fmcg-digital-transformation",
     },
     openGraph: {
         title: "FMCG Digital Transformation | CannyMinds Solutions",

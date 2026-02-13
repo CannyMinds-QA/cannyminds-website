@@ -37,12 +37,13 @@ export const metadata: Metadata = {
         "smart manufacturing",
     ],
     alternates: {
-        canonical: "/solutions/manufacturing",
+        canonical: "https://www.cannymindstech.com/solutions/manufacturing",
     },
     openGraph: {
         title: "Manufacturing Solutions",
         description: "Transform your manufacturing operations with intelligent automation and real-time quality control.",
-        images: [{ url: "/images/manufacturing-solutions-og.jpg", width: 1200, height: 630 }],
+        url: "https://www.cannymindstech.com/solutions/manufacturing",
+        images: [{ url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630 }],
     },
 };
 

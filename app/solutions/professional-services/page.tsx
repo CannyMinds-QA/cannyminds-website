@@ -29,12 +29,13 @@ export const metadata: Metadata = {
         "compliance software"
     ],
     alternates: {
-        canonical: "/solutions/professional-services",
+        canonical: "https://www.cannymindstech.com/solutions/professional-services",
     },
     openGraph: {
         title: "Professional Services Solutions | CannyMinds",
         description: "Elevate your practice with secure, compliant, and efficient document workflows.",
-        images: [{ url: "/images/professional-services-og.jpg", width: 1200, height: 630 }],
+        url: "https://www.cannymindstech.com/solutions/professional-services",
+        images: [{ url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630 }],
     },
 };
 

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         "client portal for auditors"
     ],
     alternates: {
-        canonical: "/solutions/professional-services/audit-firms",
+        canonical: "https://www.cannymindstech.com/solutions/professional-services/audit-firms",
     },
     openGraph: {
         title: "Audit Management Solutions | CannyMinds",

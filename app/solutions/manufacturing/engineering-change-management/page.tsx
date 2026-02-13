@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         "PLM change management",
     ],
     alternates: {
-        canonical: "/solutions/manufacturing/engineering-change-management",
+        canonical: "https://www.cannymindstech.com/solutions/manufacturing/engineering-change-management",
     },
     openGraph: {
         title: "Engineering Change Management | Manufacturing Solutions",

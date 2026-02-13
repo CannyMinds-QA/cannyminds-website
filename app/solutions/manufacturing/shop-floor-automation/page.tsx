@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         "production approval workflow",
     ],
     alternates: {
-        canonical: "/solutions/manufacturing/shop-floor-automation",
+        canonical: "https://www.cannymindstech.com/solutions/manufacturing/shop-floor-automation",
     },
     openGraph: {
         title: "Shop Floor Automation",

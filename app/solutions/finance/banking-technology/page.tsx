@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         "retail banking solutions"
     ],
     alternates: {
-        canonical: "/solutions/finance/banking-technology",
+        canonical: "https://www.cannymindstech.com/solutions/finance/banking-technology",
     },
     openGraph: {
         title: "Banking Technology Solutions",

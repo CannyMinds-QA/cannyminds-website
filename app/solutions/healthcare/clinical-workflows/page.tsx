@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         "hospital workflow software",
     ],
     alternates: {
-        canonical: "/solutions/healthcare/clinical-workflows",
+        canonical: "https://www.cannymindstech.com/solutions/healthcare/clinical-workflows",
     },
     openGraph: {
         title: "Clinical Workflow Automation | CannyMinds",

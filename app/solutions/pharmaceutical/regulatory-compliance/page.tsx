@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         "electronic content management",
     ],
     alternates: {
-        canonical: "/solutions/pharmaceutical/regulatory-compliance",
+        canonical: "https://www.cannymindstech.com/solutions/pharmaceutical/regulatory-compliance",
     },
     openGraph: {
         title: "Regulatory Compliance",

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         "GMP batch records",
     ],
     alternates: {
-        canonical: "/solutions/pharmaceutical/batch-record-automation",
+        canonical: "https://www.cannymindstech.com/solutions/pharmaceutical/batch-record-automation",
     },
     openGraph: {
         title: "Batch Record Automation & eBMR",

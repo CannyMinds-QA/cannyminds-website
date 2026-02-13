@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         "insurtech solutions"
     ],
     alternates: {
-        canonical: "/solutions/finance/insurance-technology",
+        canonical: "https://www.cannymindstech.com/solutions/finance/insurance-technology",
     },
     openGraph: {
         title: "Insurance Technology Solutions",

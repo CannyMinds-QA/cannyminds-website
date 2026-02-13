@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Solutions & Generative AI for Enterprise | CannyMinds",
     description: "Industry-specific Generative AI solutions that automate processes, extract insights, and drive measurable ROI across your organization.",
-    images: [{ url: "/images/ai-solutions-og.jpg", width: 1200, height: 630, alt: "CannyMinds AI Solutions" }],
+    url: "https://www.cannymindstech.com/ai-solutions",
+    images: [{ url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630, alt: "CannyMinds AI Solutions" }],
     type: "website",
   },
   twitter: {

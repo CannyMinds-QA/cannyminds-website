@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         "pharmaceutical compliance software",
     ],
     alternates: {
-        canonical: "/product/ebmr",
+        canonical: "https://www.cannymindstech.com/product/ebmr",
     },
     openGraph: {
         title: "CannyECM e-BMR | Electronic Batch Manufacturing Record",

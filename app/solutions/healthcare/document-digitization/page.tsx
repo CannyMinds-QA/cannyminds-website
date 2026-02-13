@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         "patient record digitization",
     ],
     alternates: {
-        canonical: "/solutions/healthcare/document-digitization",
+        canonical: "https://www.cannymindstech.com/solutions/healthcare/document-digitization",
     },
     openGraph: {
         title: "Medical Document Digitization | CannyMinds",

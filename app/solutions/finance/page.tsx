@@ -31,12 +31,13 @@ export const metadata: Metadata = {
         "audit trail software for banks"
     ],
     alternates: {
-        canonical: "/solutions/finance",
+        canonical: "https://www.cannymindstech.com/solutions/finance",
     },
     openGraph: {
         title: "Finance & Insurance Solutions | CannyMinds",
         description: "Modernize your financial operations with CannyECM. Secure, compliant, and automated workflows for the digital age.",
-        images: [{ url: "/images/finance-solutions-og.jpg", width: 1200, height: 630 }],
+        url: "https://www.cannymindstech.com/solutions/finance",
+        images: [{ url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630 }],
     },
 };
 

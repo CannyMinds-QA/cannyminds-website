@@ -33,14 +33,15 @@ export const metadata: Metadata = {
         "EHR document integration",
     ],
     alternates: {
-        canonical: "/solutions/healthcare",
+        canonical: "https://www.cannymindstech.com/solutions/healthcare",
     },
     openGraph: {
         title: "Healthcare Solutions | CannyMinds",
         description:
             "Document management built for hospitals. Patient records, clinical workflows, compliance, and digitization, all in one system.",
+        url: "https://www.cannymindstech.com/solutions/healthcare",
         images: [
-            { url: "/images/healthcare-solutions-og.jpg", width: 1200, height: 630 },
+            { url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630 },
         ],
     },
 };

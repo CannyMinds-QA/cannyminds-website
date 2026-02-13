@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         "legal deadline tracking"
     ],
     alternates: {
-        canonical: "/solutions/professional-services/legal",
+        canonical: "https://www.cannymindstech.com/solutions/professional-services/legal",
     },
     openGraph: {
         title: "Legal Document Management Solutions",

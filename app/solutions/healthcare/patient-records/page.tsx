@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         "clinical document access",
     ],
     alternates: {
-        canonical: "/solutions/healthcare/patient-records",
+        canonical: "https://www.cannymindstech.com/solutions/healthcare/patient-records",
     },
     openGraph: {
         title: "Patient Record Management | CannyMinds",

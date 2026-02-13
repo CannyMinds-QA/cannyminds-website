@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         "ISO 27001 healthcare",
     ],
     alternates: {
-        canonical: "/solutions/healthcare/compliance-audit",
+        canonical: "https://www.cannymindstech.com/solutions/healthcare/compliance-audit",
     },
     openGraph: {
         title: "HIPAA Compliance & Audit Readiness | CannyMinds",

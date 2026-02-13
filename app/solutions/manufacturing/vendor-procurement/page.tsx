@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         "manufacturing procurement",
     ],
     alternates: {
-        canonical: "/solutions/manufacturing/vendor-procurement",
+        canonical: "https://www.cannymindstech.com/solutions/manufacturing/vendor-procurement",
     },
     openGraph: {
         title: "Vendor & Procurement Management | Manufacturing Solutions",

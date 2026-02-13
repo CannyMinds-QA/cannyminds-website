@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         "maintenance compliance",
     ],
     alternates: {
-        canonical: "/solutions/manufacturing/equipment-maintenance",
+        canonical: "https://www.cannymindstech.com/solutions/manufacturing/equipment-maintenance",
     },
     openGraph: {
         title: "Equipment Maintenance | Manufacturing Solutions",

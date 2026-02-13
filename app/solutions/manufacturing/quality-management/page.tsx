@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         "ISO quality management",
     ],
     alternates: {
-        canonical: "/solutions/manufacturing/quality-management",
+        canonical: "https://www.cannymindstech.com/solutions/manufacturing/quality-management",
     },
     openGraph: {
         title: "Quality Management | Manufacturing Solutions",

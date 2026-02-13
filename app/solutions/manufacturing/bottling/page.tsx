@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         "bottling inventory management",
     ],
     alternates: {
-        canonical: "/solutions/manufacturing/bottling",
+        canonical: "https://www.cannymindstech.com/solutions/manufacturing/bottling",
     },
     openGraph: {
         title: "Bottling Manufacturing Solutions",
