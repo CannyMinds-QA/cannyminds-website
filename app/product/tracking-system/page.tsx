@@ -43,7 +43,6 @@ export const metadata: Metadata = {
     siteName: 'CannyMinds',
     locale: 'en_US',
     url: "https://www.cannymindstech.com/product/tracking-system",
-    authors: ["Christopher"],
     images: [
       {
         url: "https://www.cannymindstech.com/og-image.jpg",
