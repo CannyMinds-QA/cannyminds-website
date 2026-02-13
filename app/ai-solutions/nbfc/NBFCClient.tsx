@@ -39,7 +39,6 @@ export default function NBFCSolutionsPage() {
         ...nbfcContent.useCases.map((uc) => ({ id: uc.id, title: uc.title })),
         { id: "regulatory-compliance", title: "Regulatory Hub" },
         { id: "case-studies", title: "Results" },
-        { id: "expert-insights", title: "Expert Support" },
     ];
 
     return (
@@ -306,59 +305,6 @@ export default function NBFCSolutionsPage() {
                                         </div>
                                     ))}
                                 </div>
-                            </section>
-
-                            {/* Expert Insights Section */}
-                            <section id="expert-insights" className="scroll-mt-24 bg-green-50/50 rounded-2xl p-8 border border-green-100">
-                                <motion.div
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    variants={fadeInUp}
-                                >
-                                    <div className="flex flex-col md:flex-row gap-8 items-start">
-                                        <div className="flex-shrink-0 text-center md:text-left">
-                                            <div className="w-24 h-24 rounded-full bg-white border-2 border-green-200 mb-4 overflow-hidden mx-auto md:mx-0 relative">
-                                                <SecureImage
-                                                    src="/images/about/Udayakumar-Murugan-Director.png"
-                                                    alt="Udayakumar Murugan"
-                                                    fill
-                                                    className="object-cover"
-                                                />
-                                            </div>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-1">Udayakumar Murugan</h3>
-                                            <p className="text-sm font-semibold text-green-600 mb-2">Subject Matter Expert – Gen AI</p>
-                                            <p className="text-xs text-gray-600">Founder & Director</p>
-                                        </div>
-
-                                        <div className="space-y-6">
-                                            <div>
-                                                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                                                    20+ Years of Enterprise AI Excellence
-                                                </h3>
-                                                <p className="text-gray-600 leading-relaxed">
-                                                    Our lending AI solutions are developed by a team with deep domain expertise,
-                                                    combining decades of enterprise software experience with cutting-edge Generative AI capabilities.
-                                                </p>
-                                            </div>
-
-                                            <div className="grid sm:grid-cols-2 gap-4">
-                                                <div className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-100">
-                                                    <VerifiedUser className="text-green-600 flex-shrink-0" sx={{ fontSize: 20 }} />
-                                                    <div>
-                                                        <p className="font-semibold text-gray-900 text-sm">ISO 27001 Certified</p>
-                                                    </div>
-                                                </div>
-                                                <div className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-100">
-                                                    <Business className="text-blue-600 flex-shrink-0" sx={{ fontSize: 20 }} />
-                                                    <div>
-                                                        <p className="font-semibold text-gray-900 text-sm">Global Presence</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </motion.div>
                             </section>
 
                         </div>

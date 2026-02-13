@@ -81,6 +81,66 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/CannyHr',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/CannyScan',
+            destination: '/product/scanning-solution',
+            permanent: true,
+        },
+        {
+            source: '/CannyTrack',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
+            source: '/CannyEdu',
+            destination: '/solutions',
+            permanent: true,
+        },
+        {
+            source: '/Document_Management_Software',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/Scanning_Services',
+            destination: '/product/scanning-solution',
+            permanent: true,
+        },
+        {
+            source: '/HR_Payroll_Management_Software',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/Productivity_Monitoring_Software',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
+            source: '/Career',
+            destination: '/about',
+            permanent: true,
+        },
+        {
+            source: '/Blog',
+            destination: '/',
+            permanent: true,
+        },
+        {
+            source: '/index.html',
+            destination: '/',
+            permanent: true,
+        },
+        {
+            source: '/digital-marketing',
+            destination: '/ai-solutions/marketing',
+            permanent: true,
+        },
+        {
             source: '/product/invoice-management',
             destination: '/ai-solutions/professional-services',
             permanent: true,
@@ -130,7 +190,17 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/CannyDocs_A_Smart_Document',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
             source: '/streamlines-workflow-efficiency',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/Streamlines_workflow_Efficiency',
             destination: '/product/document-management',
             permanent: true,
         },
@@ -140,7 +210,22 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/Importance_of_CannyDocs',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/IMPORTANCE_OF_DOCUMENT%20_MANAGEMENT',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
             source: '/digital-transformation',
+            destination: '/solutions/professional-services',
+            permanent: true,
+        },
+        {
+            source: '/Digital_Transformation',
             destination: '/solutions/professional-services',
             permanent: true,
         },
@@ -150,7 +235,17 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/Benefits_of_Implementing_CannyTrack',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
             source: '/streamline-your-workflow-with-document',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/Streamline_Your_Workflow_with_Document',
             destination: '/product/document-management',
             permanent: true,
         },
@@ -165,7 +260,22 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/Benefits_of_Document_Scanning_for_Businesses',
+            destination: '/product/scanning-solution',
+            permanent: true,
+        },
+        {
+            source: '/Files_Maximizing_Efficiency_Document_Scanning',
+            destination: '/product/scanning-solution',
+            permanent: true,
+        },
+        {
             source: '/ways-to-track-and-manage-your-employee-time-off',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/Ways_to_Track_and_Manage_Your_Employee_Time_Off',
             destination: '/product/hr-management',
             permanent: true,
         },
@@ -175,7 +285,17 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/Why_Is_Physical_Records_Management_Important_Today',
+            destination: '/product/rms',
+            permanent: true,
+        },
+        {
             source: '/benefits-of-aI',
+            destination: '/ai-solutions',
+            permanent: true,
+        },
+        {
+            source: '/Benefits_of_AI',
             destination: '/ai-solutions',
             permanent: true,
         },
@@ -186,6 +306,26 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/streamlined-hr-processes-with-software',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/Streamlined_HR_Processes_with_Software',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/Maximizing_Efficiency_Integrating_CannyHR',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/Unleashing_CannyHR%20_Management_Software\'s',
+            destination: '/product/hr-management',
+            permanent: true,
+        },
+        {
+            source: '/Businesses_utilize_payroll_software',
             destination: '/product/hr-management',
             permanent: true,
         },
@@ -205,6 +345,31 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/Security_features_document_management_software',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/Document_manangement_software_in_India',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/Document_Management_System_Software_Can_Enhance_Data_Security_and_Compliance',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/_Document_Management_System_Software_Can_Drive_Cost_Savings_and_ROI_for_Businesses',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
+            source: '/CHOOSING_THE%20_RIGHT_DOCUMENT_MANAGEMENT_SOFTWARE',
+            destination: '/product/document-management',
+            permanent: true,
+        },
+        {
             source: '/digitization-of-physical-records',
             destination: '/product/scanning-solution',
             permanent: true,
@@ -215,7 +380,22 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/Why_Business_Process_Automation_is_a_Must_for_Every_Company',
+            destination: '/bpm',
+            permanent: true,
+        },
+        {
+            source: '/Guide_Implementing_Workflow_Automation',
+            destination: '/bpm',
+            permanent: true,
+        },
+        {
             source: '/navigating-ethics-employee-productivity-monitoring',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
+            source: '/Navigating_Ethics_Employee_Productivity_Monitoring',
             destination: '/product/tracking-system',
             permanent: true,
         },
@@ -225,7 +405,32 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/Understanding_the_importance_data_security_in_the_workpalce',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
+            source: '/What_is_Employee_Productivity',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
+            source: '/Strategic_Role_of_Workforce_Tracking_HR',
+            destination: '/product/tracking-system',
+            permanent: true,
+        },
+        {
             source: '/implement-innovative-document-management-solutions-improve-financial-services',
+            destination: '/solutions/finance',
+            permanent: true,
+        },
+        {
+            source: '/Implement_Innovative_Document_Management_Solutions_Improve_Financial_Services',
+            destination: '/solutions/finance',
+            permanent: true,
+        },
+        {
+            source: '/Canny-Ckyc-and-Cersai',
             destination: '/solutions/finance',
             permanent: true,
         },
@@ -235,7 +440,17 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
+            source: '/Improving_Compliance_in_healthcare',
+            destination: '/solutions/healthcare',
+            permanent: true,
+        },
+        {
             source: '/improving-access-healthcare',
+            destination: '/solutions/healthcare',
+            permanent: true,
+        },
+        {
+            source: '/Improving_Access_healthcare',
             destination: '/solutions/healthcare',
             permanent: true,
         },
