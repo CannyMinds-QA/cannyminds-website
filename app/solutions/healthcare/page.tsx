@@ -181,7 +181,7 @@ export default function HealthcareOverviewPage() {
 
             <main className="min-h-screen bg-white">
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center pt-24 pb-16 bg-gradient-to-b from-teal-50 to-white overflow-hidden">
+                <section className="relative min-h-[60vh] flex items-center pt-16 pb-12 bg-gradient-to-b from-teal-50 to-white overflow-hidden">
                     <div className="absolute inset-0 opacity-5">
                         <div
                             className="absolute inset-0"
@@ -327,7 +327,7 @@ export default function HealthcareOverviewPage() {
                 </section>
 
                 {/* Challenges Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             What Hospitals Actually Deal With
@@ -366,7 +366,7 @@ export default function HealthcareOverviewPage() {
                 </section>
 
                 {/* Solutions Grid */}
-                <section id="solutions" className="py-16 px-6 lg:px-12 scroll-mt-24">
+                <section id="solutions" className="py-12 px-6 lg:px-12 scroll-mt-24">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Our Healthcare Solutions
@@ -417,7 +417,7 @@ export default function HealthcareOverviewPage() {
                 </section>
 
                 {/* Cross-linking to related products */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
                             Powered by CannyMinds Products
@@ -518,7 +518,7 @@ export default function HealthcareOverviewPage() {
                 </div>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-teal-700">
+                <section className="py-12 px-6 lg:px-12 bg-teal-700">
                     <div className="container mx-auto text-center text-white">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Want to See How It Works for Your Hospital?

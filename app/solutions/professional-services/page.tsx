@@ -120,7 +120,7 @@ export default function ProfessionalServicesPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-slate-900 to-slate-800 text-white py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -163,7 +163,7 @@ export default function ProfessionalServicesPage() {
                 </section>
 
                 {/* Sub-Solutions Grid */}
-                <section id="solutions" className="py-20 px-6 lg:px-12 -mt-10">
+                <section id="solutions" className="py-12 px-6 lg:px-12 -mt-10">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid md:grid-cols-2 gap-8">
                             {subSolutions.map((solution, index) => (
@@ -201,7 +201,7 @@ export default function ProfessionalServicesPage() {
                 </section>
 
                 {/* Shared Benefits Section */}
-                <section className="py-20 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -229,7 +229,7 @@ export default function ProfessionalServicesPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-20 px-6 lg:px-12 bg-white border-t border-gray-100">
+                <section className="py-12 px-6 lg:px-12 bg-white border-t border-gray-100">
                     <div className="container mx-auto text-center max-w-4xl">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                             Ready to Modernize Your Practice?

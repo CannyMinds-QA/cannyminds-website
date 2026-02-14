@@ -172,7 +172,7 @@ export default function BankingTechnologyPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-blue-50 via-sky-50 to-white py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-blue-50 via-sky-50 to-white py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -219,7 +219,7 @@ export default function BankingTechnologyPage() {
                 </section>
 
                 {/* Challenges Section */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -245,7 +245,7 @@ export default function BankingTechnologyPage() {
                 </section>
 
                 {/* Key Features Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -294,7 +294,7 @@ export default function BankingTechnologyPage() {
                 </section>
 
                 {/* Benefits Section */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -320,7 +320,7 @@ export default function BankingTechnologyPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-blue-900 text-white">
+                <section className="py-12 px-6 lg:px-12 bg-blue-900 text-white">
                     <div className="container mx-auto text-center">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Ready to Upgrade Your Banking Stack?

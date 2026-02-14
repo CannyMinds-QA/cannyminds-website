@@ -205,7 +205,7 @@ export default function RegulatoryCompliancePage() {
 
             <main className="min-h-screen bg-white">
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center pt-24 pb-16 bg-gradient-to-b from-purple-50 to-white">
+                <section className="relative min-h-[60vh] flex items-center pt-16 pb-12 bg-gradient-to-b from-purple-50 to-white">
                     <div className="absolute inset-0 opacity-5">
                         <div
                             className="absolute inset-0"
@@ -299,7 +299,7 @@ export default function RegulatoryCompliancePage() {
                 </div>
 
                 {/* Challenges Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-5xl">
                         <div className="flex items-center gap-3 mb-8 justify-center">
                             <Warning className="text-orange-600" sx={{ fontSize: 28 }} />
@@ -330,7 +330,7 @@ export default function RegulatoryCompliancePage() {
                 </section>
 
                 {/* Document Control Section */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">
                             <div>
@@ -436,7 +436,7 @@ export default function RegulatoryCompliancePage() {
                 </section>
 
                 {/* Change Control & License Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {/* Change Control */}
@@ -506,7 +506,7 @@ export default function RegulatoryCompliancePage() {
                 </section>
 
                 {/* Regulatory Document Generation */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">
                             <div>
@@ -585,7 +585,7 @@ export default function RegulatoryCompliancePage() {
                 </section>
 
                 {/* Key Benefits */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-5xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
                             Key Benefits for Pharma
@@ -602,7 +602,7 @@ export default function RegulatoryCompliancePage() {
                 </section>
 
                 {/* Compliance Section */}
-                <section className="py-16 px-6 lg:px-12 bg-slate-900 text-white">
+                <section className="py-12 px-6 lg:px-12 bg-slate-900 text-white">
                     <div className="container mx-auto max-w-5xl">
                         <div className="text-center mb-12">
                             <Security sx={{ fontSize: 48 }} className="text-purple-400 mb-4" />
@@ -672,7 +672,7 @@ export default function RegulatoryCompliancePage() {
                 </div>
 
                 {/* Related Solutions */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-5xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
                             Related Solutions
@@ -713,7 +713,7 @@ export default function RegulatoryCompliancePage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-purple-600">
+                <section className="py-12 px-6 lg:px-12 bg-purple-600">
                     <div className="container mx-auto text-center text-white">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Ready to Streamline Your Regulatory Compliance?

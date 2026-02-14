@@ -152,7 +152,7 @@ export default function PharmaceuticalOverviewPage() {
 
             <main className="min-h-screen bg-white">
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center pt-24 pb-16 bg-gradient-to-b from-blue-50 to-white">
+                <section className="relative min-h-[60vh] flex items-center pt-16 pb-12 bg-gradient-to-b from-blue-50 to-white">
                     <div className="absolute inset-0 opacity-5">
                         <div
                             className="absolute inset-0"
@@ -248,7 +248,7 @@ export default function PharmaceuticalOverviewPage() {
                 </div>
 
                 {/* Industry Context */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-5xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
                             Industry Context
@@ -273,7 +273,7 @@ export default function PharmaceuticalOverviewPage() {
                 </section>
 
                 {/* Challenges Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Key Business Challenges
@@ -304,7 +304,7 @@ export default function PharmaceuticalOverviewPage() {
                 </section>
 
                 {/* Solutions Section */}
-                <section id="solutions" className="py-16 px-6 lg:px-12 scroll-mt-24">
+                <section id="solutions" className="py-12 px-6 lg:px-12 scroll-mt-24">
                     <div className="container mx-auto">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Our Pharmaceutical Solutions
@@ -429,7 +429,7 @@ export default function PharmaceuticalOverviewPage() {
                 </section>
 
                 {/* Compliance Section */}
-                <section className="py-16 px-6 lg:px-12 bg-slate-900 text-white">
+                <section className="py-12 px-6 lg:px-12 bg-slate-900 text-white">
                     <div className="container mx-auto text-center">
                         <Security sx={{ fontSize: 48 }} className="text-blue-400 mb-4" />
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -478,7 +478,7 @@ export default function PharmaceuticalOverviewPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-primary">
+                <section className="py-12 px-6 lg:px-12 bg-primary">
                     <div className="container mx-auto text-center text-white">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Ready to Transform Your Pharmaceutical Operations?

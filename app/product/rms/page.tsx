@@ -74,7 +74,7 @@ export default function CannyRMSPage() {
 
         {/* Hero Section */}
         <section className="relative w-full flex min-h-[60vh] items-center bg-gradient-to-br from-primary/5 via-white to-primary/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-12">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
               <div className="space-y-8">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary leading-tight">
@@ -170,7 +170,7 @@ export default function CannyRMSPage() {
         </section>
 
         {/* Key Stats Bar */}
-        <section className="py-20 bg-secondary">
+        <section className="py-12 bg-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center text-white">
               {[
@@ -190,7 +190,7 @@ export default function CannyRMSPage() {
         </section>
 
         {/* Table of Contents */}
-        <section className="bg-gray-50 py-16">
+        <section className="bg-gray-50 py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-6 text-center">
               Table of Contents
@@ -963,7 +963,7 @@ export default function CannyRMSPage() {
         </article>
 
         {/* CTA Section */}
-        <section id="get-started" className="py-20 bg-gradient-to-r from-primary to-blue-700 scroll-mt-28">
+        <section id="get-started" className="py-12 bg-gradient-to-r from-primary to-blue-700 scroll-mt-28">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Records Management?
@@ -1051,7 +1051,7 @@ export default function CannyRMSPage() {
         />
 
         {/* Cross-Linking: Related Solutions */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-4 text-center">
               Explore Our Complete Business Solutions Suite

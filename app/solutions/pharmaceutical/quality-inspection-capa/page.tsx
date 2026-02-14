@@ -160,7 +160,7 @@ export default function QualityInspectionCapaPage() {
 
             <main className="min-h-screen bg-white">
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center pt-24 pb-16 bg-gradient-to-b from-green-50 to-white">
+                <section className="relative min-h-[60vh] flex items-center pt-16 pb-12 bg-gradient-to-b from-green-50 to-white">
                     <div className="absolute inset-0 opacity-5">
                         <div
                             className="absolute inset-0"
@@ -254,7 +254,7 @@ export default function QualityInspectionCapaPage() {
                 </div>
 
                 {/* Challenges Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-5xl">
                         <div className="flex items-center gap-3 mb-8 justify-center">
                             <Warning className="text-orange-600" sx={{ fontSize: 28 }} />
@@ -285,7 +285,7 @@ export default function QualityInspectionCapaPage() {
                 </section>
 
                 {/* Quality Inspection Section */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">
                             <div>
@@ -364,7 +364,7 @@ export default function QualityInspectionCapaPage() {
                 </section>
 
                 {/* CAPA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">
                             <div className="order-2 lg:order-1 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 border border-purple-100">
@@ -443,7 +443,7 @@ export default function QualityInspectionCapaPage() {
                 </section>
 
                 {/* Lab Data Management Section */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">
                             <div>
@@ -546,7 +546,7 @@ export default function QualityInspectionCapaPage() {
                 </section>
 
                 {/* Compliance Section */}
-                <section className="py-16 px-6 lg:px-12 bg-slate-900 text-white">
+                <section className="py-12 px-6 lg:px-12 bg-slate-900 text-white">
                     <div className="container mx-auto max-w-5xl text-center">
                         <Security sx={{ fontSize: 48 }} className="text-green-400 mb-4" />
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -588,7 +588,7 @@ export default function QualityInspectionCapaPage() {
                 </div>
 
                 {/* Related Solutions */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-5xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
                             Related Solutions
@@ -629,7 +629,7 @@ export default function QualityInspectionCapaPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-green-600">
+                <section className="py-12 px-6 lg:px-12 bg-green-600">
                     <div className="container mx-auto text-center text-white">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Ready to Transform Your Quality Operations?

@@ -204,7 +204,7 @@ export default function CannyEBMRPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 py-16 px-6 lg:px-12">
+                <section className="bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -265,7 +265,7 @@ export default function CannyEBMRPage() {
                 </div>
 
                 {/* Challenges Section */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Challenges with Paper-Based BMR
@@ -288,7 +288,7 @@ export default function CannyEBMRPage() {
                 </section>
 
                 {/* Solution Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="container mx-auto max-w-4xl">
                             <div className="text-center mb-10">
@@ -322,7 +322,7 @@ export default function CannyEBMRPage() {
                 </section>
 
                 {/* Key Features */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Key Features
@@ -346,7 +346,7 @@ export default function CannyEBMRPage() {
                 </section>
 
                 {/* Regulatory Compliance */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-900 text-white">
+                <section className="py-12 px-6 lg:px-12 bg-gray-900 text-white">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">
                             Regulatory Compliance
@@ -367,7 +367,7 @@ export default function CannyEBMRPage() {
                 </section>
 
                 {/* Benefits */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Benefits
@@ -390,7 +390,7 @@ export default function CannyEBMRPage() {
                 </section>
 
                 {/* Ideal For */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Ideal For
@@ -413,7 +413,7 @@ export default function CannyEBMRPage() {
                 </section>
 
                 {/* Related Solutions */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
                             Related Pharmaceutical Solutions
@@ -469,7 +469,7 @@ export default function CannyEBMRPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-purple-600">
+                <section className="py-12 px-6 lg:px-12 bg-purple-600">
                     <div className="container mx-auto text-center text-white max-w-4xl">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Transform Your Batch Records with CannyECM

@@ -173,7 +173,7 @@ export default function InsuranceTechnologyPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-indigo-50 via-purple-50 to-white py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-indigo-50 via-purple-50 to-white py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -220,7 +220,7 @@ export default function InsuranceTechnologyPage() {
                 </section>
 
                 {/* Challenges Section */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -246,7 +246,7 @@ export default function InsuranceTechnologyPage() {
                 </section>
 
                 {/* Key Features Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -295,7 +295,7 @@ export default function InsuranceTechnologyPage() {
                 </section>
 
                 {/* Benefits Section */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -321,7 +321,7 @@ export default function InsuranceTechnologyPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-indigo-900 text-white">
+                <section className="py-12 px-6 lg:px-12 bg-indigo-900 text-white">
                     <div className="container mx-auto text-center">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Ready to Transform Your Claims Process?

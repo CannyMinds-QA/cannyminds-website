@@ -321,7 +321,7 @@ export default function CannyHRProductPage() {
         </section>
 
         {/* Main Content */}
-        <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
           {/* What is CannyHR */}
           <section id="what-is" className="mb-20">

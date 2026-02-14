@@ -111,7 +111,7 @@ export default function FMCGTransformationPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-5xl text-center">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 text-green-700 font-medium text-sm mb-6">
                             <Factory sx={{ fontSize: 18 }} />
@@ -141,7 +141,7 @@ export default function FMCGTransformationPage() {
                 </section>
 
                 {/* Introduction / Context */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-4xl">
                         <div className="prose prose-lg max-w-none text-gray-600">
                             <h2 className="text-3xl font-bold text-gray-900 mb-6">The High-Speed Challenge</h2>
@@ -156,7 +156,7 @@ export default function FMCGTransformationPage() {
                 </section>
 
                 {/* Topic 1: Production Records */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -203,7 +203,7 @@ export default function FMCGTransformationPage() {
                 </section>
 
                 {/* Topic 2: SOPs & Process Control */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="order-2 lg:order-1 relative flex justify-center">
@@ -250,7 +250,7 @@ export default function FMCGTransformationPage() {
                 </section>
 
                 {/* Topic 3: Quality & CAPA */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -297,7 +297,7 @@ export default function FMCGTransformationPage() {
                 </section>
 
                 {/* Topic 4: Hygiene & Safety */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="order-2 lg:order-1 relative flex justify-center">
@@ -338,7 +338,7 @@ export default function FMCGTransformationPage() {
                 </section>
 
                 {/* Topic 5: Maintenance & Assets */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -380,7 +380,7 @@ export default function FMCGTransformationPage() {
 
 
                 {/* Topic 6: Vendor Management */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="order-2 lg:order-1 relative flex justify-center">
@@ -421,7 +421,7 @@ export default function FMCGTransformationPage() {
                 </section>
 
                 {/* Compliance & Standards (Expertise & Authority) */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-900 text-white">
+                <section className="py-12 px-6 lg:px-12 bg-gray-900 text-white">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-4">Built for Regulatory Compliance</h2>
@@ -504,7 +504,7 @@ export default function FMCGTransformationPage() {
                 </section>
 
                 {/* Conclusion / CTA */}
-                <section className="py-20 px-6 lg:px-12 bg-gray-900 text-white text-center">
+                <section className="py-12 px-6 lg:px-12 bg-gray-900 text-white text-center">
                     <div className="container mx-auto max-w-4xl">
                         <h2 className="text-3xl md:text-4xl font-bold mb-6">
                             Ready to Modernize Your FMCG Plant?

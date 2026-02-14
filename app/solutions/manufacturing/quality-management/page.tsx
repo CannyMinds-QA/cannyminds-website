@@ -211,7 +211,7 @@ export default function QualityManagementPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -259,7 +259,7 @@ export default function QualityManagementPage() {
                 </section>
 
                 {/* Quality Features Grid */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Comprehensive Quality Management
@@ -283,7 +283,7 @@ export default function QualityManagementPage() {
                 </section>
 
                 {/* CAPA Workflow */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             CAPA Workflow Process
@@ -314,7 +314,7 @@ export default function QualityManagementPage() {
                 </section>
 
                 {/* Benefits with Stats */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Measurable Business Benefits
@@ -337,7 +337,7 @@ export default function QualityManagementPage() {
                 </section>
 
                 {/* Compliance Standards */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-900 text-white">
+                <section className="py-12 px-6 lg:px-12 bg-gray-900 text-white">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">
                             Compliance & Standards Alignment
@@ -358,7 +358,7 @@ export default function QualityManagementPage() {
                 </section>
 
                 {/* Integration with Other Solutions */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
                             Related Manufacturing Solutions
@@ -414,7 +414,7 @@ export default function QualityManagementPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-orange-600">
+                <section className="py-12 px-6 lg:px-12 bg-orange-600">
                     <div className="container mx-auto text-center text-white">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Ready to Elevate Your Quality Management?

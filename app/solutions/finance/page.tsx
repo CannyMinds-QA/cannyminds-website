@@ -137,7 +137,7 @@ export default function FinanceSolutionsPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -177,7 +177,7 @@ export default function FinanceSolutionsPage() {
                 </section>
 
                 {/* Sub-Solutions Grid */}
-                <section className="py-20 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -214,7 +214,7 @@ export default function FinanceSolutionsPage() {
                 </section>
 
                 {/* Benefits Section */}
-                <section className="py-20 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-16">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -238,7 +238,7 @@ export default function FinanceSolutionsPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-slate-900 text-white">
+                <section className="py-12 px-6 lg:px-12 bg-slate-900 text-white">
                     <div className="container mx-auto text-center">
                         <h2 className="text-2xl md:text-3xl font-bold mb-6">
                             Secure Your Future Today

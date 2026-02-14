@@ -233,7 +233,7 @@ export default function ClinicalWorkflowsPage() {
                 </div>
 
                 {/* Hero */}
-                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-teal-50 via-emerald-50 to-white py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-teal-50 via-emerald-50 to-white py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -291,7 +291,7 @@ export default function ClinicalWorkflowsPage() {
                 </section>
 
                 {/* Why Workflows Break Down */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Why Clinical Workflows Break Down
@@ -329,7 +329,7 @@ export default function ClinicalWorkflowsPage() {
                 </section>
 
                 {/* How CannyECM Automates */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             How CannyECM Automates Clinical Document Flow
@@ -374,7 +374,7 @@ export default function ClinicalWorkflowsPage() {
                 </section>
 
                 {/* Real Workflow Examples */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">
                             Real Workflow Examples
@@ -419,7 +419,7 @@ export default function ClinicalWorkflowsPage() {
                 </section>
 
                 {/* What Changes for Staff */}
-                <section className="py-16 px-6 lg:px-12 bg-teal-50">
+                <section className="py-12 px-6 lg:px-12 bg-teal-50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">
                             What Changes for Your Hospital Staff
@@ -543,7 +543,7 @@ export default function ClinicalWorkflowsPage() {
                 </div>
 
                 {/* CTA */}
-                <section className="py-16 px-6 lg:px-12 bg-teal-700">
+                <section className="py-12 px-6 lg:px-12 bg-teal-700">
                     <div className="container mx-auto text-center text-white">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Want to Automate Your Clinical Approvals?

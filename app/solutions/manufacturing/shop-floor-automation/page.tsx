@@ -164,7 +164,7 @@ export default function ShopFloorAutomationPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -212,7 +212,7 @@ export default function ShopFloorAutomationPage() {
                 </section>
 
                 {/* Background Section - Manual Process */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -266,7 +266,7 @@ export default function ShopFloorAutomationPage() {
                 </section>
 
                 {/* Objective Section */}
-                <section className="py-16 px-6 lg:px-12 bg-orange-50">
+                <section className="py-12 px-6 lg:px-12 bg-orange-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="order-2 lg:order-1">
@@ -303,7 +303,7 @@ export default function ShopFloorAutomationPage() {
                 </section>
 
                 {/* People Involved Section */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -329,7 +329,7 @@ export default function ShopFloorAutomationPage() {
                 </section>
 
                 {/* Process Flow Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -683,7 +683,7 @@ export default function ShopFloorAutomationPage() {
                 </section>
 
                 {/* Key Business Benefits */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -720,7 +720,7 @@ export default function ShopFloorAutomationPage() {
                 </div>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-orange-600">
+                <section className="py-12 px-6 lg:px-12 bg-orange-600">
                     <div className="container mx-auto text-center text-white">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Ready to Automate Your Shop Floor?

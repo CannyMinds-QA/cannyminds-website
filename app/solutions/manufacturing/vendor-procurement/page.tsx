@@ -228,7 +228,7 @@ export default function VendorProcurementPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-16 px-6 lg:px-12">
+                <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
@@ -276,7 +276,7 @@ export default function VendorProcurementPage() {
                 </section>
 
                 {/* Problem Statement */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -320,7 +320,7 @@ export default function VendorProcurementPage() {
                 </section>
 
                 {/* Features Grid */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Comprehensive Vendor Management Features
@@ -344,7 +344,7 @@ export default function VendorProcurementPage() {
                 </section>
 
                 {/* Document Types */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Managed Document Types
@@ -375,7 +375,7 @@ export default function VendorProcurementPage() {
                 </section>
 
                 {/* Workflow */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Vendor Document Workflow
@@ -399,7 +399,7 @@ export default function VendorProcurementPage() {
                 </section>
 
                 {/* Benefits Section */}
-                <section className="py-16 px-6 lg:px-12 bg-gray-50">
+                <section className="py-12 px-6 lg:px-12 bg-gray-50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
                             Business Benefits
@@ -423,7 +423,7 @@ export default function VendorProcurementPage() {
                 </section>
 
                 {/* Related Solutions */}
-                <section className="py-16 px-6 lg:px-12">
+                <section className="py-12 px-6 lg:px-12">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
                             Related Manufacturing Solutions
@@ -479,7 +479,7 @@ export default function VendorProcurementPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 px-6 lg:px-12 bg-orange-600">
+                <section className="py-12 px-6 lg:px-12 bg-orange-600">
                     <div className="container mx-auto text-center text-white">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Ready to Streamline Vendor Management?
