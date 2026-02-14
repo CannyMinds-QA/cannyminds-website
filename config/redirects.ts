@@ -142,7 +142,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/product/invoice-management',
-            destination: '/ai-solutions/professional-services',
+            destination: '/solutions/professional-services',
             permanent: true,
         },
         {
@@ -152,6 +152,11 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
 
         // Solutions & Services
+        {
+            source: '/ai-solutions/manufacturing',
+            destination: '/solutions/manufacturing',
+            permanent: true,
+        },
         {
             source: '/education-management-Software',
             destination: '/solutions', // Fallback
@@ -169,7 +174,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/software-development',
-            destination: '/ai-solutions/professional-services',
+            destination: '/solutions/professional-services',
             permanent: true,
         },
         {
@@ -517,6 +522,13 @@ export const redirects: NextConfig['redirects'] = async () => {
         {
             source: '/CannyDocs/:path*',
             destination: '/product/document-management',
+            permanent: true,
+        },
+
+        // BPM page redirect (missing destination page)
+        {
+            source: '/bpm',
+            destination: '/solutions/professional-services',
             permanent: true,
         },
     ];
