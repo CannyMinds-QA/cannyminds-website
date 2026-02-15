@@ -1075,7 +1075,7 @@ export default function CannyRMSPage() {
                 <p className="text-gray-600 text-sm mb-4">
                   Comprehensive digital document management with workflow automation, OCR, and FDA 21 CFR Part 11 compliance.
                 </p>
-                <Link href="/product/document-management" className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                <Link href="/product/enterprise-content-management" className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
                   Learn about CannyECM <ArrowForward sx={{ fontSize: 16 }} />
                 </Link>
               </div>

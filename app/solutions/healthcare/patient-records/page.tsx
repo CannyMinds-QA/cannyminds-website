@@ -253,7 +253,7 @@ export default function PatientRecordsPage() {
 
                                 <p className="text-lg text-gray-700 mb-8">
                                     <Link
-                                        href="/product/document-management"
+                                        href="/product/enterprise-content-management"
                                         className="text-primary hover:underline font-medium"
                                     >
                                         CannyECM

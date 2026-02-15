@@ -29,7 +29,7 @@ const products = [
         color: "text-blue-600",
         bg: "bg-blue-50",
         borderColor: "hover:border-blue-500",
-        link: "/product/document-management",
+        link: "/product/enterprise-content-management",
         features: ["99%+ OCR Accuracy", "Workflow Automation", "Cloud & On-Premise", "Version Control", "Secure Sharing"],
         stats: { value: "50K+", label: "Docs Managed" },
     },

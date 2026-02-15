@@ -161,7 +161,7 @@ export default function ShopFloorAutomationPage() {
     ];
 
     const benefits = [
-        { benefit: "No paper handling", description: <span>Eliminate physical forms and manual data entry with digital <Link href="/product/document-management" className="text-orange-600 hover:underline">document management</Link></span> },
+        { benefit: "No paper handling", description: <span>Eliminate physical forms and manual data entry with digital <Link href="/product/enterprise-content-management" className="text-orange-600 hover:underline">document management</Link></span> },
         { benefit: "No missing or damaged records", description: "All data stored securely in the system" },
         { benefit: "Accurate hourly tracking", description: "Real-time production data capture" },
         { benefit: "Faster approvals", description: "Streamlined digital approval workflow" },

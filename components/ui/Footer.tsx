@@ -13,7 +13,7 @@ export default function Footer() {
     { name: "Manufacturing", href: "/solutions/manufacturing" },
     { name: "FMCG Digital Transformation", href: "/solutions/manufacturing/fmcg-digital-transformation" },
     { name: "Bottling Manufacturing", href: "/solutions/manufacturing/bottling" },
-    { name: "CannyECM", href: "/product/document-management" },
+    { name: "Enterprise Content Management", href: "/product/enterprise-content-management" },
     { name: "CannyHR", href: "/product/hr-management" },
     { name: "CannyScan", href: "/product/scanning-solution" },
     { name: "CannyTrack", href: "/product/tracking-system" },

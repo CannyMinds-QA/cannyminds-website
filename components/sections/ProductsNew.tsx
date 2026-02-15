@@ -17,7 +17,7 @@ const products = [
     description:
       "Enterprise-grade ECM with OCR, workflow automation, and cloud/on-premise deployment.",
     icon: DocIcon,
-    link: "/product/document-management",
+    link: "/product/enterprise-content-management",
     features: ["99% OCR Accuracy", "Workflow Automation", "Cloud, On-Premise & SaaS"],
     number: "01",
   },

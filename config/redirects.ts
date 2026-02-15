@@ -40,6 +40,12 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
 
         // Products
+        // Redirect old document-management URL to new enterprise-content-management URL
+        {
+            source: '/product/document-management',
+            destination: '/product/enterprise-content-management',
+            permanent: true,
+        },
         {
             source: '/hr-payroll-management-software',
             destination: '/product/hr-management',
@@ -47,7 +53,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/document-management-software',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -77,7 +83,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/CannyDocs',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -102,7 +108,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/Document_Management_Software',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -186,37 +192,37 @@ export const redirects: NextConfig['redirects'] = async () => {
         // Blog / Articles -> Product Pages (Best Match)
         {
             source: '/cannydocs-a-smart-document',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/CannyDocs_A_Smart_Document',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/streamlines-workflow-efficiency',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/Streamlines_workflow_Efficiency',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/importance-of-cannydocs',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/Importance_of_CannyDocs',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/IMPORTANCE_OF_DOCUMENT%20_MANAGEMENT',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -241,12 +247,12 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/streamline-your-workflow-with-document',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/Streamline_Your_Workflow_with_Document',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -341,32 +347,32 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/security-features-document-management-software',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/Security_features_document_management_software',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/Document_manangement_software_in_India',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/Document_Management_System_Software_Can_Enhance_Data_Security_and_Compliance',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/_Document_Management_System_Software_Can_Drive_Cost_Savings_and_ROI_for_Businesses',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/CHOOSING_THE%20_RIGHT_DOCUMENT_MANAGEMENT_SOFTWARE',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -466,7 +472,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/document-manangement-software-in-india',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -476,12 +482,12 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/anticipating-future-document-management',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/choosing-the-right-document-management-software',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -491,7 +497,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/importance-of-document-management',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -501,12 +507,12 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/document-management-system-software-can-drive-cost-savings-and-roi-for-businesses',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
             source: '/document-management-system-software-can-enhance-data-security-and-compliance',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
         {
@@ -516,7 +522,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/CannyDocs/:path*',
-            destination: '/product/document-management',
+            destination: '/product/enterprise-content-management',
             permanent: true,
         },
 

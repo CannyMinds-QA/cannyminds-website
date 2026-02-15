@@ -69,7 +69,7 @@ const jsonLd = {
                         "name": "CannyECM",
                         "applicationCategory": "BusinessApplication",
                         "description": "Smart Content Management Software",
-                        "url": `${baseUrl}/product/document-management`
+                        "url": `${baseUrl}/product/enterprise-content-management`
                     },
                     {
                         "@type": "SoftwareApplication",

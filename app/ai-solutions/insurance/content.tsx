@@ -19,7 +19,7 @@ export const insuranceContent = {
         subtitle: "Automate Claims, Detect Fraud, Accelerate Underwriting",
         description: (
             <>
-                Transform insurance operations with <Link href="/product/document-management" className="text-blue-600 hover:underline">intelligent document processing</Link>, AI-powered claims automation, advanced fraud detection, and data-driven underwriting decisions that improve loss ratios and customer satisfaction.
+                Transform insurance operations with <Link href="/product/enterprise-content-management" className="text-blue-600 hover:underline">intelligent document processing</Link>, AI-powered claims automation, advanced fraud detection, and data-driven underwriting decisions that improve loss ratios and customer satisfaction.
             </>
         ),
     },

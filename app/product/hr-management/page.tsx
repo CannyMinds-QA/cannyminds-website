@@ -818,7 +818,7 @@ export default function CannyHRProductPage() {
                   name: "CannyDocs",
                   tagline: "Document Management System",
                   description: "Complete DMS for HR documents including employee records, contracts, offer letters, and performance reviews. Automated workflows with 99% OCR accuracy.",
-                  link: "/product/document-management",
+                  link: "/product/enterprise-content-management",
                   color: "blue",
                 },
                 {

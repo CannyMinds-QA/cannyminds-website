@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: 'CannyMinds',
     locale: 'en_US',
-    url: "https://www.cannymindstech.com/product/document-management",
+    url: "https://www.cannymindstech.com/product/enterprise-content-management",
     images: [
       {
         url: "https://www.cannymindstech.com/og-image.jpg",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },
   alternates: {
-    canonical: "https://www.cannymindstech.com/product/document-management",
+    canonical: "https://www.cannymindstech.com/product/enterprise-content-management",
   },
   robots: { index: true, follow: true },
 };
@@ -132,7 +132,7 @@ const jsonLd = {
         "price": "0",
         "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.cannymindstech.com/product/document-management",
+        "url": "https://www.cannymindstech.com/product/enterprise-content-management",
         "priceSpecification": {
           "@type": "PriceSpecification",
           "price": "Custom Pricing",

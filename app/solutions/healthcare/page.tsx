@@ -237,7 +237,7 @@ export default function HealthcareOverviewPage() {
                                     documents are stuck in paper files and disconnected systems,
                                     things slow down, get lost, or fall out of compliance.{" "}
                                     <Link
-                                        href="/product/document-management"
+                                        href="/product/enterprise-content-management"
                                         className="text-primary hover:underline font-medium"
                                     >
                                         CannyECM
@@ -427,7 +427,7 @@ export default function HealthcareOverviewPage() {
                         </h2>
                         <div className="grid md:grid-cols-3 gap-6">
                             <Link
-                                href="/product/document-management"
+                                href="/product/enterprise-content-management"
                                 className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-primary transition-all group"
                             >
                                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary">

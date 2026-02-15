@@ -737,7 +737,7 @@ export default function CannyScanProductPage() {
 
                 <div className="mt-8">
                   <Link
-                    href="/product/document-management"
+                    href="/product/enterprise-content-management"
                     className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 font-semibold"
                   >
                     Learn More About CannyECM
@@ -808,7 +808,7 @@ export default function CannyScanProductPage() {
                   title: "Enterprise Content Management",
                   description: "FDA 21 CFR Part 11 compliant ECM for SOPs, STPs, COAs, change control, and QMS integration.",
                   features: ["Document Control", "Approval Workflows", "QMS Integration", "Audit Trails"],
-                  link: "/product/document-management",
+                  link: "/product/enterprise-content-management",
                   color: "from-blue-50 to-white border-blue-200"
                 },
                 {

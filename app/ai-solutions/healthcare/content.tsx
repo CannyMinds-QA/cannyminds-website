@@ -21,7 +21,7 @@ export const healthcareContent = {
         subtitle: "Transform Patient Care with Intelligent Automation",
         description: (
             <>
-                Streamline patient registration, automate billing workflows, enhance clinical coding accuracy, and improve TPA communication with enterprise-grade AI solutions designed for <Link href="/product/document-management" className="text-blue-600 hover:underline">HIPAA compliance</Link>.
+                Streamline patient registration, automate billing workflows, enhance clinical coding accuracy, and improve TPA communication with enterprise-grade AI solutions designed for <Link href="/product/enterprise-content-management" className="text-blue-600 hover:underline">HIPAA compliance</Link>.
             </>
         ),
     },

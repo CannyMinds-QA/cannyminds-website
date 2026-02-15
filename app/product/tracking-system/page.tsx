@@ -847,7 +847,7 @@ export default function CannyTrackProductPage() {
                   name: "CannyDocs",
                   tagline: "Document Management System",
                   description: "Secure document management with access control, version tracking, and audit trails. Perfect complement to CannyTrack for monitoring document access and preventing data leaks.",
-                  link: "/product/document-management",
+                  link: "/product/enterprise-content-management",
                   color: "blue",
                 },
                 {

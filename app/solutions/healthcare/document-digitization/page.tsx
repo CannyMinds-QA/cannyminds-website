@@ -276,7 +276,7 @@ export default function DocumentDigitizationPage() {
                                     digitization service converts all of that into searchable,
                                     indexed digital files, integrated with{" "}
                                     <Link
-                                        href="/product/document-management"
+                                        href="/product/enterprise-content-management"
                                         className="text-primary hover:underline font-medium"
                                     >
                                         CannyECM
@@ -550,7 +550,7 @@ export default function DocumentDigitizationPage() {
                                 CannyScan: Scanning Solution →
                             </Link>
                             <Link
-                                href="/product/document-management"
+                                href="/product/enterprise-content-management"
                                 className="px-6 py-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors font-medium text-sm"
                             >
                                 CannyECM: Content Management →
