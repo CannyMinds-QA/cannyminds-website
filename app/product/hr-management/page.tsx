@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/enhanced-seo";
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -68,28 +69,11 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.cannymindstech.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Products",
-          "item": "https://www.cannymindstech.com/#products"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "CannyHR - HR & Payroll Management"
-        }
-      ]
-    },
+    generateBreadcrumbSchema([
+      { name: "Home", item: "/" },
+      { name: "Products", item: "/product" },
+      { name: "CannyHR - HR & Payroll Management", item: "/product/hr-management" },
+    ]),
     {
       "@type": "Article",
       "headline": "CannyHR - Complete HR & Payroll Management Software",
@@ -135,41 +119,21 @@ const jsonLd = {
           "priceCurrency": "INR"
         }
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "10"
-      }
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is CannyHR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CannyHR is a comprehensive Hire-to-Retire HR and payroll management platform that automates employee lifecycle management, payroll processing, time tracking, leave management, and performance reviews with mobile access."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does CannyHR support biometric devices?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. CannyHR integrates with 350+ biometric devices for accurate attendance tracking and check-in/check-out functionality."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is CannyHR available on mobile?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. CannyHR provides native mobile applications for iOS and Android, enabling employees to access payslips, apply for leave, mark attendance, and manage their profiles on the go."
-          }
-        }
-      ]
-    }
+    generateFAQSchema([
+      {
+        question: "What is CannyHR?",
+        answer: "CannyHR is a comprehensive Hire-to-Retire HR and payroll management platform that automates employee lifecycle management, payroll processing, time tracking, leave management, and performance reviews with mobile access."
+      },
+      {
+        question: "Does CannyHR support biometric devices?",
+        answer: "Yes. CannyHR integrates with 350+ biometric devices for accurate attendance tracking and check-in/check-out functionality."
+      },
+      {
+        question: "Is CannyHR available on mobile?",
+        answer: "Yes. CannyHR provides native mobile applications for iOS and Android, enabling employees to access payslips, apply for leave, mark attendance, and manage their profiles on the go."
+      }
+    ]),
   ]
 };
 

@@ -488,3 +488,64 @@ export const enhancedJsonLd = {
     },
   ],
 };
+
+// Helper interfaces for structured data
+export interface BreadcrumbItem {
+  name: string;
+  item: string;
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface VideoItem {
+  name: string;
+  description: string;
+  uploadDate: string;
+  thumbnailUrl: string;
+  contentUrl?: string;
+  embedUrl?: string;
+  duration?: string;
+}
+
+// Structured Data Generators
+export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.item.startsWith("http") ? item.item : `${baseUrl}${item.item}`,
+    })),
+  };
+}
+
+export function generateFAQSchema(faqs: FAQItem[]) {
+  return {
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+export function generateVideoSchema(video: VideoItem) {
+  return {
+    "@type": "VideoObject",
+    name: video.name,
+    description: video.description,
+    uploadDate: video.uploadDate,
+    thumbnailUrl: [video.thumbnailUrl],
+    contentUrl: video.contentUrl,
+    embedUrl: video.embedUrl,
+    duration: video.duration,
+  };
+}

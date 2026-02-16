@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema } from "@/lib/enhanced-seo";
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -74,38 +75,28 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.cannymindstech.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Products",
-          "item": "https://www.cannymindstech.com/#products"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "CannyScan - Document Digitization"
-        }
-      ]
-    },
+    generateBreadcrumbSchema([
+      { name: "Home", item: "/" },
+      { name: "Products", item: "/product" },
+      { name: "CannyScan", item: "/product/scanning-solution" },
+    ]),
     {
       "@type": "SoftwareApplication",
       "name": "CannyScan",
       "applicationCategory": "BusinessApplication",
       "description": "Document digitization solution with image cleansing, OCR extraction, barcode reading, and quality control",
       "operatingSystem": "Web, Windows",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "10"
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.cannymindstech.com/product/scanning-solution",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "Custom Pricing",
+          "priceCurrency": "INR"
+        }
       }
     },
     {

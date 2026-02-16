@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/enhanced-seo";
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -75,28 +76,11 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.cannymindstech.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Products",
-          "item": "https://www.cannymindstech.com/#products"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "CannyECM - Content Management Software"
-        }
-      ]
-    },
+    generateBreadcrumbSchema([
+      { name: "Home", item: "/" },
+      { name: "Products", item: "/product" },
+      { name: "CannyECM - Content Management Software", item: "/product/enterprise-content-management" },
+    ]),
     {
       "@type": "Article",
       "headline": "Enterprise Content Management System - CannyECM",
@@ -142,41 +126,21 @@ const jsonLd = {
           "priceCurrency": "INR"
         }
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "10"
-      }
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is CannyECM?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CannyECM is an enterprise content management software that helps organizations digitize, organize, and manage documents with OCR technology, workflow automation, and secure cloud/on-premise storage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the system requirements for CannyECM?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For cloud deployment, you only need a modern web browser (Chrome, Firefox, Safari, Edge). For on-premise, you need Windows Server 2016+/Linux, 16GB RAM minimum, SQL Server/PostgreSQL database, and .NET Core runtime."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does CannyECM support mobile access?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. CannyECM is fully responsive and accessible via mobile browsers on iOS and Android devices. Native mobile apps are planned for future releases."
-          }
-        }
-      ]
-    }
+    generateFAQSchema([
+      {
+        question: "What is CannyECM?",
+        answer: "CannyECM is an enterprise content management software that helps organizations digitize, organize, and manage documents with OCR technology, workflow automation, and secure cloud/on-premise storage."
+      },
+      {
+        question: "What are the system requirements for CannyECM?",
+        answer: "For cloud deployment, you only need a modern web browser (Chrome, Firefox, Safari, Edge). For on-premise, you need Windows Server 2016+/Linux, 16GB RAM minimum, SQL Server/PostgreSQL database, and .NET Core runtime."
+      },
+      {
+        question: "Does CannyECM support mobile access?",
+        answer: "Yes. CannyECM is fully responsive and accessible via mobile browsers on iOS and Android devices. Native mobile apps are planned for future releases."
+      }
+    ]),
   ]
 };
 

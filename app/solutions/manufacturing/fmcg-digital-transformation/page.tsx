@@ -20,7 +20,7 @@ import {
     HealthAndSafety,
     Build,
 } from "@mui/icons-material";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/enhanced-seo";
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
@@ -83,71 +83,30 @@ const jsonLd = {
             "datePublished": new Date().toISOString().split('T')[0],
             "dateModified": new Date().toISOString().split('T')[0]
         },
-        {
-            "@type": "BreadcrumbList",
-            itemListElement: [
-                {
-                    "@type": "ListItem",
-                    position: 1,
-                    name: "Home",
-                    item: `${baseUrl}/`,
-                },
-                {
-                    "@type": "ListItem",
-                    position: 2,
-                    name: "Solutions",
-                    item: `${baseUrl}/solutions`,
-                },
-                {
-                    "@type": "ListItem",
-                    position: 3,
-                    name: "Manufacturing Solutions",
-                    item: `${baseUrl}/solutions/manufacturing`,
-                },
-                {
-                    "@type": "ListItem",
-                    position: 4,
-                    name: "FMCG Digital Transformation",
-                },
-            ],
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Can this system integrate with our existing ERP?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, CannyMinds ECM seamlessly integrates with major ERPs like SAP, Oracle, and Microsoft Dynamics to sync material master data, POs, and batch information."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Is the system suitable for high-speed bottling lines?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Absolutely. Our 'lite' shop floor interface is designed for rapid data capture, ensuring it keeps up with high-speed filling and packaging lines without slowing down operators."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How long does implementation take?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "A typical pilot implementation for one manufacturing line can be completed in 4-6 weeks, with full plant roll-outs following a phased approach."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Is the data stored securely?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "We use enterprise-grade encryption for data at rest and in transit, with role-based access controls to ensuring only authorized personnel can view or approve sensitive records."
-                    }
-                }
-            ]
-        },
+        generateBreadcrumbSchema([
+            { name: "Home", item: "/" },
+            { name: "Solutions", item: "/solutions" },
+            { name: "Manufacturing Solutions", item: "/solutions/manufacturing" },
+            { name: "FMCG Digital Transformation", item: "/solutions/manufacturing/fmcg-digital-transformation" },
+        ]),
+        generateFAQSchema([
+            {
+                question: "Can this system integrate with our existing ERP?",
+                answer: "Yes, CannyMinds ECM seamlessly integrates with major ERPs like SAP, Oracle, and Microsoft Dynamics to sync material master data, POs, and batch information."
+            },
+            {
+                question: "Is the system suitable for high-speed bottling lines?",
+                answer: "Absolutely. Our 'lite' shop floor interface is designed for rapid data capture, ensuring it keeps up with high-speed filling and packaging lines without slowing down operators."
+            },
+            {
+                question: "How long does implementation take?",
+                answer: "A typical pilot implementation for one manufacturing line can be completed in 4-6 weeks, with full plant roll-outs following a phased approach."
+            },
+            {
+                question: "Is the data stored securely?",
+                answer: "We use enterprise-grade encryption for data at rest and in transit, with role-based access controls to ensuring only authorized personnel can view or approve sensitive records."
+            }
+        ]),
     ],
 };
 

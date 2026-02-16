@@ -28,7 +28,7 @@ import {
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateBreadcrumbSchema } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
     title: "CannyECM e-BMR | Electronic Batch Manufacturing Record ",
@@ -75,25 +75,34 @@ export const metadata: Metadata = {
 
 const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "CannyECM e-BMR",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web-based",
-    "description": "Electronic Batch Manufacturing Record system for pharmaceutical compliance with 21 CFR Part 11, WHO GMP, EU GMP Annex 11.",
-    "publisher": {
-        "@type": "Organization",
-        "name": "CannyMinds Technology Solutions",
-        "logo": {
-            "@type": "ImageObject",
-            "url": `${baseUrl}/logo.png`
+    "@graph": [
+        generateBreadcrumbSchema([
+            { name: "Home", item: "/" },
+            { name: "Products", item: "/product" },
+            { name: "CannyECM e-BMR", item: "/product/ebmr" },
+        ]),
+        {
+            "@type": "SoftwareApplication",
+            "name": "CannyECM e-BMR",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web-based",
+            "description": "Electronic Batch Manufacturing Record system for pharmaceutical compliance with 21 CFR Part 11, WHO GMP, EU GMP Annex 11.",
+            "publisher": {
+                "@type": "Organization",
+                "name": "CannyMinds Technology Solutions",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": `${baseUrl}/logo.png`
+                }
+            },
+            "offers": {
+                "@type": "Offer",
+                "availability": "https://schema.org/InStock"
+            },
+            "datePublished": new Date().toISOString().split('T')[0],
+            "dateModified": new Date().toISOString().split('T')[0]
         }
-    },
-    "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock"
-    },
-    "datePublished": new Date().toISOString().split('T')[0],
-    "dateModified": new Date().toISOString().split('T')[0]
+    ]
 };
 
 export default function CannyEBMRPage() {

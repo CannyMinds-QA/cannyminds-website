@@ -18,7 +18,7 @@ import {
     LocalShipping,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateBreadcrumbSchema } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
     title: "Manufacturing Solutions | Digital Transformation for Industry 4.0 ",
@@ -52,23 +52,32 @@ export const metadata: Metadata = {
 
 const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Manufacturing Solutions ",
-    "description": "Digital transformation solutions for manufacturing including shop floor automation, production recording, and workflow management.",
-    "publisher": {
-        "@type": "Organization",
-        "name": "CannyMinds Technology Solutions",
-        "logo": {
-            "@type": "ImageObject",
-            "url": `${baseUrl}/logo.png`
-        }
-    },
-    "author": {
-        "@type": "Organization",
-        "name": "CannyMinds Technology Solutions"
-    },
-    "datePublished": new Date().toISOString().split('T')[0],
-    "dateModified": new Date().toISOString().split('T')[0]
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "name": "Manufacturing Solutions",
+            "description": "Digital transformation solutions for manufacturing including shop floor automation, production recording, and workflow management.",
+            "publisher": {
+                "@type": "Organization",
+                "name": "CannyMinds Technology Solutions",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": `${baseUrl}/logo.png`
+                }
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "CannyMinds Technology Solutions"
+            },
+            "datePublished": new Date().toISOString().split('T')[0],
+            "dateModified": new Date().toISOString().split('T')[0]
+        },
+        generateBreadcrumbSchema([
+            { name: "Home", item: "/" },
+            { name: "Solutions", item: "/solutions" },
+            { name: "Manufacturing Solutions", item: "/solutions/manufacturing" },
+        ])
+    ]
 };
 
 export default function ManufacturingOverviewPage() {

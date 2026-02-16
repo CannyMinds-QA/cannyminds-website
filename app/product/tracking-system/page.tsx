@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/enhanced-seo";
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -68,28 +69,25 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.cannymindstech.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Products",
-          "item": "https://www.cannymindstech.com/#products"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "CannyTrack - Productivity Monitoring"
-        }
-      ]
-    },
+    generateBreadcrumbSchema([
+      { name: "Home", item: "/" },
+      { name: "Products", item: "/product" },
+      { name: "CannyTrack", item: "/product/tracking-system" },
+    ]),
+    generateFAQSchema([
+      {
+        question: "How does the tracking system work?",
+        answer: "Our tracking system uses advanced GPS and RFID technology to provide real-time updates on your assets' location and status."
+      },
+      {
+        question: "Is the system compatible with mobile devices?",
+        answer: "Yes, our system is fully accessible via mobile apps on both iOS and Android platforms."
+      },
+      {
+        question: "Can I customize alerts and notifications?",
+        answer: "Absolutely. You can set up custom alerts for various events such as route deviation, unauthorized usage, and maintenance reminders."
+      }
+    ]),
     {
       "@type": "Article",
       "headline": "CannyTrack - Employee Productivity Monitoring & Tracking Software",
@@ -123,10 +121,17 @@ const jsonLd = {
       "applicationCategory": "BusinessApplication",
       "description": "Employee productivity monitoring and tracking system with activity analytics and data loss prevention",
       "operatingSystem": "Web, Windows, macOS, Linux",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "10"
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.cannymindstech.com/product/tracking-system",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "Custom Pricing",
+          "priceCurrency": "INR"
+        }
       }
     },
     {

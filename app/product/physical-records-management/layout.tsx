@@ -120,6 +120,18 @@ const jsonLd = {
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web, Windows, macOS, Linux",
             "description": "Enterprise physical records management software for tracking cartons, files, and documents with barcode scanning, approval workflows, and complete audit trails.",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.cannymindstech.com/product/physical-records-management",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "Custom Pricing",
+                    "priceCurrency": "INR"
+                }
+            },
             "featureList": [
                 "Barcode-based document tracking",
                 "8-step retrieval workflow",
