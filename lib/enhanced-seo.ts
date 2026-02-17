@@ -185,7 +185,12 @@ export const enhancedJsonLd = {
         width: 512,
         height: 512,
       },
-      image: enhancedSiteConfig.ogImage,
+      image: {
+        "@type": "ImageObject",
+        url: enhancedSiteConfig.ogImage,
+        width: 1200,
+        height: 630,
+      },
       description: enhancedSiteConfig.description,
 
       // Contact information
@@ -199,7 +204,8 @@ export const enhancedJsonLd = {
       foundingDate: enhancedSiteConfig.business.founded,
       numberOfEmployees: {
         "@type": "QuantitativeValue",
-        value: enhancedSiteConfig.business.employees,
+        value: 50,
+        minValue: 50,
       },
 
 
@@ -208,8 +214,8 @@ export const enhancedJsonLd = {
         {
           "@type": "ContactPoint",
           telephone: "+91-9361801926",
-          contactType: "Customer Service",
-          contactOption: "TollFree",
+          contactType: "customer service",
+          contactOption: "https://schema.org/TollFree",
           areaServed: ["IN", "Asia"],
           availableLanguage: ["English", "Hindi", "Tamil"],
           hoursAvailable: {
@@ -222,26 +228,26 @@ export const enhancedJsonLd = {
         {
           "@type": "ContactPoint",
           telephone: "+1-214-727-0422",
-          contactType: "Customer Service",
+          contactType: "customer service",
           areaServed: ["US", "North America"],
           availableLanguage: "English",
         },
         {
           "@type": "ContactPoint",
           telephone: "+234-708-632-3687",
-          contactType: "Customer Service",
+          contactType: "customer service",
           areaServed: ["NG", "Africa"],
           availableLanguage: "English",
         },
         {
           "@type": "ContactPoint",
-          contactType: "Technical Support",
+          contactType: "technical support",
           email: "support@cannymindstech.com",
           areaServed: "Worldwide",
         },
         {
           "@type": "ContactPoint",
-          contactType: "Sales",
+          contactType: "sales",
           email: "sales@cannymindstech.com",
           areaServed: "Worldwide",
         },
@@ -327,44 +333,12 @@ export const enhancedJsonLd = {
         ],
       },
 
-      // Certifications
-      accreditation: [
-        {
-          "@type": "EducationalOccupationalCredential",
-          credentialCategory: "certification",
-          recognizedBy: {
-            "@type": "Organization",
-            name: "ISO",
-          },
-          name: "ISO 9001:2015 Quality Management System",
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          credentialCategory: "certification",
-          recognizedBy: {
-            "@type": "Organization",
-            name: "ISO",
-          },
-          name: "ISO 15489:2016 Records Management",
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          credentialCategory: "certification",
-          recognizedBy: {
-            "@type": "Organization",
-            name: "ISO",
-          },
-          name: "ISO 22716:2007 GMP Cosmetics",
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          credentialCategory: "certification",
-          recognizedBy: {
-            "@type": "Organization",
-            name: "FDA",
-          },
-          name: "FDA 21 CFR Part 11 Compliance",
-        },
+      // Awards and certifications
+      award: [
+        "ISO 9001:2015 Quality Management System Certified",
+        "ISO 15489:2016 Records Management Certified",
+        "ISO 22716:2007 GMP Cosmetics Certified",
+        "FDA 21 CFR Part 11 Compliance Certified",
       ],
     },
 
@@ -404,10 +378,15 @@ export const enhancedJsonLd = {
 
     // Local Business Schema for each office
     {
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": `${enhancedSiteConfig.url}/#localbusiness-india`,
-      name: "CannyMinds Technology Solutions - India",
-      image: enhancedSiteConfig.ogImage,
+      name: "CannyMinds Technology Solutions",
+      image: {
+        "@type": "ImageObject",
+        url: enhancedSiteConfig.ogImage,
+        width: 1200,
+        height: 630,
+      },
       address: {
         "@type": "PostalAddress",
         streetAddress: "No 88 Ram Nagar 6th St, Velachery",
@@ -473,7 +452,7 @@ export const enhancedJsonLd = {
       ],
     },
 
-    // Breadcrumb Schema
+    // Breadcrumb Schema - homepage breadcrumb showing main navigation paths
     {
       "@type": "BreadcrumbList",
       "@id": `${enhancedSiteConfig.url}/#breadcrumb`,
@@ -483,6 +462,18 @@ export const enhancedJsonLd = {
           position: 1,
           name: "Home",
           item: enhancedSiteConfig.url,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Products",
+          item: `${enhancedSiteConfig.url}/products`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Solutions",
+          item: `${enhancedSiteConfig.url}/solutions`,
         },
       ],
     },

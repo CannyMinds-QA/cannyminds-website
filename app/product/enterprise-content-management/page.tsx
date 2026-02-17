@@ -85,7 +85,12 @@ const jsonLd = {
       "@type": "Article",
       "headline": "Enterprise Content Management System - CannyECM",
       "description": "Comprehensive guide to enterprise content management systems. Learn how CannyECM delivers advanced ECM features with OCR, workflow automation, and flexible deployment options.",
-      "image": "https://www.cannymindstech.com/images/CannyECM-dashboard.jpg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.cannymindstech.com/images/CannyECM-dashboard.jpg",
+        "width": 1200,
+        "height": 630
+      },
       "author": {
         "@type": "Person",
         "name": "Christopher",
@@ -116,15 +121,8 @@ const jsonLd = {
       "operatingSystem": "Web, Windows, macOS, Linux",
       "offers": {
         "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.cannymindstech.com/product/enterprise-content-management",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "Custom Pricing",
-          "priceCurrency": "INR"
-        }
+        "url": "https://www.cannymindstech.com/product/enterprise-content-management"
       },
     },
     generateFAQSchema([

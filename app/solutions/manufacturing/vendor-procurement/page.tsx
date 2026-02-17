@@ -117,6 +117,7 @@ const jsonLd = {
                     "@type": "ListItem",
                     position: 4,
                     name: "Vendor & Procurement Management",
+                    item: `${baseUrl}/solutions/manufacturing/vendor-procurement`,
                 },
             ],
         },

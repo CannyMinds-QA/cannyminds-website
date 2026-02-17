@@ -126,7 +126,8 @@ const jsonLd = {
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "Products"
+                    "name": "Products",
+                    "item": "https://www.cannymindstech.com/products"
                 }
             ]
         }

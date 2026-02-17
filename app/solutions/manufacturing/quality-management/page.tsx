@@ -117,6 +117,7 @@ const jsonLd = {
                     "@type": "ListItem",
                     position: 4,
                     name: "Quality Management",
+                    item: `${baseUrl}/solutions/manufacturing/quality-management`,
                 },
             ],
         },

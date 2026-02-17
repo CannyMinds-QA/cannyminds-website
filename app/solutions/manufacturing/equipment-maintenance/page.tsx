@@ -118,6 +118,7 @@ const jsonLd = {
                     "@type": "ListItem",
                     position: 4,
                     name: "Equipment Maintenance",
+                    item: `${baseUrl}/solutions/manufacturing/equipment-maintenance`,
                 },
             ],
         },

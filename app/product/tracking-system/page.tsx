@@ -92,7 +92,12 @@ const jsonLd = {
       "@type": "Article",
       "headline": "CannyTrack - Employee Productivity Monitoring & Tracking Software",
       "description": "Comprehensive guide to CannyTrack productivity monitoring platform with activity tracking, screenshot capture, and data loss prevention.",
-      "image": "https://www.cannymindstech.com/images/cannytrack-dashboard.jpg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.cannymindstech.com/images/cannytrack-dashboard.jpg",
+        "width": 1200,
+        "height": 630
+      },
       "author": {
         "@type": "Person",
         "name": "Christopher",
@@ -123,15 +128,8 @@ const jsonLd = {
       "operatingSystem": "Web, Windows, macOS, Linux",
       "offers": {
         "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.cannymindstech.com/product/tracking-system",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "Custom Pricing",
-          "priceCurrency": "INR"
-        }
+        "url": "https://www.cannymindstech.com/product/tracking-system"
       }
     },
     {

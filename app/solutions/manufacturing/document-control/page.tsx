@@ -117,6 +117,7 @@ const jsonLd = {
                     "@type": "ListItem",
                     position: 4,
                     name: "Document Control & SOP Management",
+                    item: `${baseUrl}/solutions/manufacturing/document-control`,
                 },
             ],
         },

@@ -88,15 +88,8 @@ const jsonLd = {
       "operatingSystem": "Web, Windows",
       "offers": {
         "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.cannymindstech.com/product/scanning-solution",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "Custom Pricing",
-          "priceCurrency": "INR"
-        }
+        "url": "https://www.cannymindstech.com/product/scanning-solution"
       }
     },
     {

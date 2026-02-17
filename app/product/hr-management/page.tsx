@@ -78,7 +78,12 @@ const jsonLd = {
       "@type": "Article",
       "headline": "CannyHR - Complete HR & Payroll Management Software",
       "description": "Comprehensive guide to CannyHR HR and payroll management platform with attendance tracking, leave management, performance reviews, and mobile access.",
-      "image": "https://www.cannymindstech.com/images/cannyhr-dashboard.jpg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.cannymindstech.com/images/cannyhr-dashboard.jpg",
+        "width": 1200,
+        "height": 630
+      },
       "author": {
         "@type": "Person",
         "name": "Christopher",
@@ -109,15 +114,8 @@ const jsonLd = {
       "operatingSystem": "Web, Windows, macOS, Linux, iOS, Android",
       "offers": {
         "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.cannymindstech.com/product/hr-management",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "Custom Pricing",
-          "priceCurrency": "INR"
-        }
+        "url": "https://www.cannymindstech.com/product/hr-management"
       },
     },
     generateFAQSchema([

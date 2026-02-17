@@ -92,7 +92,12 @@ const jsonLd = {
             "@type": "Article",
             "headline": "Physical Records Management System - CannyRMS",
             "description": "Comprehensive guide to physical records management systems. Learn how CannyRMS delivers enterprise-grade physical records management with barcode tracking, approval workflows, and complete audit trails.",
-            "image": "https://www.cannymindstech.com/images/rms/cannyrms-dashboard.png",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://www.cannymindstech.com/images/rms/cannyrms-dashboard.png",
+                "width": 1200,
+                "height": 630
+            },
             "author": {
                 "@type": "Organization",
                 "name": "CannyMinds Technology Solutions",
@@ -122,15 +127,8 @@ const jsonLd = {
             "description": "Enterprise physical records management software for tracking cartons, files, and documents with barcode scanning, approval workflows, and complete audit trails.",
             "offers": {
                 "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "INR",
                 "availability": "https://schema.org/InStock",
-                "url": "https://www.cannymindstech.com/product/physical-records-management",
-                "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "price": "Custom Pricing",
-                    "priceCurrency": "INR"
-                }
+                "url": "https://www.cannymindstech.com/product/physical-records-management"
             },
             "featureList": [
                 "Barcode-based document tracking",
