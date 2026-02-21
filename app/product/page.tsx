@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'All Products | Enterprise Software by CannyMinds',
         description: 'Explore our complete suite of enterprise software products. ISO-certified, FDA-compliant systems trusted by global organizations.',
-        url: 'https://www.cannymindstech.com/products',
+        url: 'https://www.cannymindstech.com/product',
         type: 'website',
         siteName: 'CannyMinds',
         locale: 'en_US',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         images: ['https://www.cannymindstech.com/og-image.jpg'],
     },
     alternates: {
-        canonical: 'https://www.cannymindstech.com/products',
+        canonical: 'https://www.cannymindstech.com/product',
     },
 };
 
@@ -51,7 +51,7 @@ const jsonLd = {
             "@type": "CollectionPage",
             "name": "Enterprise Software Products | CannyMinds",
             "description": "Complete suite of enterprise software products for document management, HR, productivity tracking, and records management.",
-            "url": `${baseUrl}/products`,
+            "url": `${baseUrl}/product`,
             "publisher": {
                 "@type": "Organization",
                 "name": "CannyMinds Technology Solutions",
@@ -127,7 +127,7 @@ const jsonLd = {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Products",
-                    "item": "https://www.cannymindstech.com/products"
+                    "item": "https://www.cannymindstech.com/product"
                 }
             ]
         }

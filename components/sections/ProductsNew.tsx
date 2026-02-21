@@ -153,7 +153,7 @@ export default function ProductsNew() {
           className="flex flex-wrap gap-4 justify-center"
         >
           <Link
-            href="/products"
+            href="/product"
             className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-white rounded-lg font-semibold text-sm hover:bg-blue-700 transition-colors"
           >
             View All Products

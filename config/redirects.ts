@@ -40,6 +40,11 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
 
         // Products
+        {
+            source: '/products',
+            destination: '/product',
+            permanent: true,
+        },
         // Redirect old document-management URL to new enterprise-content-management URL
         {
             source: '/product/document-management',

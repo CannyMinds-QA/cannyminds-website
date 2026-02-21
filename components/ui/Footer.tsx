@@ -9,7 +9,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const products = [
-    { name: "All Products", href: "/products" },
+    { name: "All Products", href: "/product" },
     { name: "Manufacturing", href: "/solutions/manufacturing" },
     { name: "FMCG Digital Transformation", href: "/solutions/manufacturing/fmcg-digital-transformation" },
     { name: "Bottling Manufacturing", href: "/solutions/manufacturing/bottling" },
