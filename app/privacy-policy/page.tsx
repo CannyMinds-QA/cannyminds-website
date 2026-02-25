@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { baseUrl } from '@/lib/enhanced-seo';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | CannyMinds Technology Solutions',
@@ -85,7 +86,7 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-2xl font-bold text-secondary mb-4">1. Introduction</h2>
               <p className="text-gray-700 leading-relaxed">
-                CannyMinds Technology Solutions (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                CannyMinds Technology Solutions (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our <Link href="/product" className="text-primary hover:underline">enterprise software products</Link>. By using our services, you also agree to our <Link href="/terms" className="text-primary hover:underline">Terms of Service</Link>.
               </p>
             </div>
 
@@ -115,7 +116,7 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-2xl font-bold text-secondary mb-4">4. Data Security</h2>
               <p className="text-gray-700 leading-relaxed">
-                We implement industry-standard security measures to protect your personal information. Our systems are designed to comply with ISO 27001 standards, and we use encryption, access controls, and regular security audits to safeguard your data.
+                We implement industry-standard security measures to protect your personal information. Our systems are designed to comply with ISO 27001 standards, and we use encryption, access controls, and regular security audits to safeguard your data. Learn more about our <Link href="/about" className="text-primary hover:underline">certifications and compliance standards</Link>.
               </p>
             </div>
 
@@ -175,13 +176,13 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-2xl font-bold text-secondary mb-4">11. Contact Us</h2>
               <p className="text-gray-700 leading-relaxed">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
+                If you have any questions about this Privacy Policy or our data practices, please <Link href="/contact" className="text-primary hover:underline">contact us</Link>:
               </p>
               <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                 <p className="text-gray-700"><strong>CannyMinds Technology Solutions</strong></p>
                 <p className="text-gray-700">Data Protection Officer</p>
-                <p className="text-gray-700">Email: privacy@cannymindstech.com</p>
-                <p className="text-gray-700">Phone: +91-44-4000-0000</p>
+                <p className="text-gray-700">Email: <a href="mailto:privacy@cannymindstech.com" className="text-primary hover:underline">privacy@cannymindstech.com</a></p>
+                <p className="text-gray-700">Phone: <a href="tel:+914440000000" className="text-primary hover:underline">+91-44-4000-0000</a></p>
               </div>
             </div>
 

@@ -208,6 +208,16 @@ export const enhancedJsonLd = {
         minValue: 50,
       },
 
+      // Aggregate Rating for reviews/testimonials
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: enhancedSiteConfig.business.rating,
+        bestRating: 5,
+        worstRating: 1,
+        ratingCount: enhancedSiteConfig.business.reviews,
+        reviewCount: enhancedSiteConfig.business.reviews,
+      },
+
 
       // Multiple contact points
       contactPoint: [
@@ -374,11 +384,12 @@ export const enhancedJsonLd = {
       inLanguage: "en-US",
     },
 
-    // Local Business Schema for each office
+    // Local Business Schema - India Office (Headquarters)
     {
       "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": `${enhancedSiteConfig.url}/#localbusiness-india`,
-      name: "CannyMinds Technology Solutions",
+      name: "CannyMinds Technology Solutions - India (Headquarters)",
+      description: "Enterprise software development and AI automation solutions provider. Headquarters office serving Asia-Pacific region.",
       image: {
         "@type": "ImageObject",
         url: enhancedSiteConfig.ogImage,
@@ -408,6 +419,91 @@ export const enhancedJsonLd = {
         closes: "18:00",
       },
       priceRange: "$$",
+      areaServed: ["IN", "Asia"],
+      parentOrganization: {
+        "@id": `${enhancedSiteConfig.url}/#organization`,
+      },
+    },
+
+    // Local Business Schema - USA Office
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": `${enhancedSiteConfig.url}/#localbusiness-usa`,
+      name: "CannyMinds Technology Solutions - USA",
+      description: "Enterprise software development and AI automation solutions provider serving North American clients.",
+      image: {
+        "@type": "ImageObject",
+        url: enhancedSiteConfig.ogImage,
+        width: 1200,
+        height: 630,
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "8751 Collin McKinney Pkwy Suite 1102 #525",
+        addressLocality: "McKinney",
+        addressRegion: "TX",
+        postalCode: "75070",
+        addressCountry: "US",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "33.1972",
+        longitude: "-96.6397",
+      },
+      telephone: "+1-214-727-0422",
+      email: "usa@cannymindstech.com",
+      url: enhancedSiteConfig.url,
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
+      priceRange: "$$$",
+      areaServed: ["US", "CA", "North America"],
+      parentOrganization: {
+        "@id": `${enhancedSiteConfig.url}/#organization`,
+      },
+    },
+
+    // Local Business Schema - Nigeria Office
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": `${enhancedSiteConfig.url}/#localbusiness-nigeria`,
+      name: "CannyMinds Technology Solutions - Nigeria",
+      description: "Enterprise software development and AI automation solutions provider serving African clients.",
+      image: {
+        "@type": "ImageObject",
+        url: enhancedSiteConfig.ogImage,
+        width: 1200,
+        height: 630,
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "No:16, Adeola Adeleye Street, Off Coker Road, Illupeju",
+        addressLocality: "Lagos",
+        addressRegion: "Lagos State",
+        addressCountry: "NG",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "6.5538",
+        longitude: "3.3515",
+      },
+      telephone: "+234-708-632-3687",
+      email: "nigeria@cannymindstech.com",
+      url: enhancedSiteConfig.url,
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
+      priceRange: "$$",
+      areaServed: ["NG", "Africa"],
+      parentOrganization: {
+        "@id": `${enhancedSiteConfig.url}/#organization`,
+      },
     },
 
     // FAQ Schema for common questions

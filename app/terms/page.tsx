@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { baseUrl } from '@/lib/enhanced-seo';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | CannyMinds Technology Solutions',
@@ -95,12 +96,12 @@ export default function TermsPage() {
                 CannyMinds Technology Solutions provides enterprise software solutions including but not limited to:
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
-                <li>Content Management Systems (CannyECM)</li>
-                <li>HR Management Solutions (CannyHR)</li>
-                <li>Scanning and Digitization Services (CannyScan)</li>
-                <li>Document Tracking Systems (CannyTrack)</li>
-                <li>AI-powered Business Solutions</li>
-                <li>Pharmaceutical Compliance Solutions</li>
+                <li><Link href="/product/enterprise-content-management" className="text-primary hover:underline">Content Management Systems (CannyECM)</Link></li>
+                <li><Link href="/product/hr-management" className="text-primary hover:underline">HR Management Solutions (CannyHR)</Link></li>
+                <li><Link href="/product/scanning-solution" className="text-primary hover:underline">Scanning and Digitization Services (CannyScan)</Link></li>
+                <li><Link href="/product/tracking-system" className="text-primary hover:underline">Document Tracking Systems (CannyTrack)</Link></li>
+                <li><Link href="/ai-solutions" className="text-primary hover:underline">AI-powered Business Solutions</Link></li>
+                <li><Link href="/solutions/pharmaceutical" className="text-primary hover:underline">Pharmaceutical Compliance Solutions</Link></li>
               </ul>
             </div>
 
@@ -121,7 +122,7 @@ export default function TermsPage() {
             <div>
               <h2 className="text-2xl font-bold text-secondary mb-4">5. Data Protection</h2>
               <p className="text-gray-700 leading-relaxed">
-                We are committed to protecting your data in compliance with applicable data protection regulations. Our software solutions are designed to meet industry standards including ISO 27001, HIPAA, and FDA 21 CFR Part 11 requirements where applicable.
+                We are committed to protecting your data in compliance with applicable data protection regulations. Our software solutions are designed to meet industry standards including ISO 27001, HIPAA, and FDA 21 CFR Part 11 requirements where applicable. For detailed information on how we handle your data, please review our <Link href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.
               </p>
             </div>
 
@@ -156,12 +157,12 @@ export default function TermsPage() {
             <div>
               <h2 className="text-2xl font-bold text-secondary mb-4">10. Contact Information</h2>
               <p className="text-gray-700 leading-relaxed">
-                For any questions regarding these Terms of Service, please contact us at:
+                For any questions regarding these Terms of Service, please <Link href="/contact" className="text-primary hover:underline">contact us</Link>:
               </p>
               <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                 <p className="text-gray-700"><strong>CannyMinds Technology Solutions</strong></p>
-                <p className="text-gray-700">Email: info@cannymindstech.com</p>
-                <p className="text-gray-700">Phone: +91-44-4000-0000</p>
+                <p className="text-gray-700">Email: <a href="mailto:info@cannymindstech.com" className="text-primary hover:underline">info@cannymindstech.com</a></p>
+                <p className="text-gray-700">Phone: <a href="tel:+914440000000" className="text-primary hover:underline">+91-44-4000-0000</a></p>
               </div>
             </div>
 
