@@ -138,14 +138,13 @@ In other words, good documentation doesn't just keep operations running smoothly
         author: {
             name: 'Christopher',
             role: 'Chief Technology Officer',
-            bio: 'Christopher is the CTO at CannyMinds Technology Solutions with 20+ years of experience in enterprise software development and digital transformation. He leads technical innovation and has successfully implemented document management and automation solutions for 500+ organizations across healthcare, finance, manufacturing, and pharmaceutical industries.',
+            bio: 'Christopher is the CTO at CannyMinds Technology Solutions, leading technical innovation in enterprise software development and digital transformation.',
             image: '/images/about/Christopher-Director.png',
             credentials: [
-                'B.Tech (IT)',
-                '20+ Years in Enterprise Software',
+                'Chief Technology Officer',
                 'Expert in Document Management Systems',
                 'Led 500+ Digital Transformation Projects',
-                'Former NewGen Soft Ltd & WRITER Information'
+                'Specialized in Healthcare, Finance & Manufacturing'
             ],
             linkedIn: 'https://in.linkedin.com/company/cannyminds-technology-solutions',
             twitter: 'https://x.com/cannyminds'

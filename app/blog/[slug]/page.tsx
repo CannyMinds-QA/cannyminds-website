@@ -9,14 +9,13 @@ import {
     ArrowBack,
     ArrowForward,
     LocalOffer,
-    LinkedIn,
-    Twitter,
-    Facebook,
-    Share,
     CheckCircle,
     Update,
+    LinkedIn,
+    Twitter,
 } from '@mui/icons-material';
 import { baseUrl } from '@/lib/enhanced-seo';
+import BlogSocialShare from '@/components/blog/BlogSocialShare';
 
 // ── Static params ─────────────────────────────────────────────────────────────
 export async function generateStaticParams() {
@@ -425,52 +424,27 @@ export default async function BlogPostPage({
                         <aside className="lg:w-72 xl:w-80 flex-shrink-0 space-y-6">
 
                             {/* Social Share */}
-                            <div className="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <Share sx={{ fontSize: 18 }} className="text-gray-500" />
-                                    <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wide">Share Article</h3>
-                                </div>
-                                <div className="space-y-2">
-                                    <a
-                                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(post.seo.canonicalUrl)}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#0a66c2] hover:bg-[#004182] text-white rounded-lg transition-colors text-sm font-medium"
-                                        aria-label="Share on LinkedIn"
-                                    >
-                                        <LinkedIn sx={{ fontSize: 18 }} />
-                                        <span>LinkedIn</span>
-                                    </a>
-                                    <a
-                                        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(post.seo.canonicalUrl)}&text=${encodeURIComponent(post.title)}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#1DA1F2] hover:bg-[#1a8cd8] text-white rounded-lg transition-colors text-sm font-medium"
-                                        aria-label="Share on Twitter"
-                                    >
-                                        <Twitter sx={{ fontSize: 18 }} />
-                                        <span>Twitter</span>
-                                    </a>
-                                    <a
-                                        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(post.seo.canonicalUrl)}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#1877f2] hover:bg-[#0c63d4] text-white rounded-lg transition-colors text-sm font-medium"
-                                        aria-label="Share on Facebook"
-                                    >
-                                        <Facebook sx={{ fontSize: 18 }} />
-                                        <span>Facebook</span>
-                                    </a>
-                                </div>
-                            </div>
+                            <BlogSocialShare url={post.seo.canonicalUrl} title={post.title} />
 
                             {/* Author Bio - E-E-A-T */}
                             <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200 shadow-sm">
                                 <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">About the Author</h3>
                                 <div className="flex items-start gap-3 mb-4">
-                                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-bold text-xl flex-shrink-0 shadow-md">
-                                        {post.author.name.charAt(0)}
-                                    </div>
+                                    {post.author.image ? (
+                                        <div className="relative w-14 h-14 rounded-full flex-shrink-0 overflow-hidden shadow-md">
+                                            <Image
+                                                src={post.author.image}
+                                                alt={post.author.name}
+                                                fill
+                                                className="object-cover"
+                                                sizes="56px"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-bold text-xl flex-shrink-0 shadow-md">
+                                            {post.author.name.charAt(0)}
+                                        </div>
+                                    )}
                                     <div>
                                         <div className="font-bold text-gray-900 text-base">{post.author.name}</div>
                                         <div className="text-xs text-gray-600 leading-relaxed">{post.author.role}</div>
