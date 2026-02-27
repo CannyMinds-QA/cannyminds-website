@@ -76,7 +76,7 @@ export const enhancedSiteConfig = {
 
   // Business information for local SEO
   business: {
-    founded: "2003",
+    founded: "2020",
     employees: "50+",
     clients: "100+",
     countries: "4",

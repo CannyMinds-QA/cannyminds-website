@@ -142,11 +142,7 @@ export const redirects: NextConfig['redirects'] = async () => {
             destination: '/about',
             permanent: true,
         },
-        {
-            source: '/Blog',
-            destination: '/',
-            permanent: true,
-        },
+
         {
             source: '/index.html',
             destination: '/',
@@ -526,11 +522,7 @@ export const redirects: NextConfig['redirects'] = async () => {
             destination: '/product/enterprise-content-management',
             permanent: true,
         },
-        {
-            source: '/blog',
-            destination: '/',
-            permanent: true,
-        },
+
         {
             source: '/CannyDocs/:path*',
             destination: '/product/enterprise-content-management',

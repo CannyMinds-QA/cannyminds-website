@@ -134,7 +134,7 @@ export const jsonLd = {
     "@type": "Person",
     name: "CannyMinds Founders",
   },
-  foundingDate: "2003",
+  foundingDate: "2020",
   numberOfEmployees: {
     "@type": "QuantitativeValue",
     value: "100+",

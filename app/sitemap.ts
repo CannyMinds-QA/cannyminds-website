@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { statSync } from 'fs'
 import { join } from 'path'
+import { getAllPosts } from '@/lib/blog-data'
 
 /**
  * Sitemap Implementation following Google's Official Guidelines
@@ -358,6 +359,16 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[] }> = [
     ],
   },
 
+  // ============== BLOG ==============
+  {
+    route: '/blog',
+  },
+
+  // ============== BLOG ==============
+  {
+    route: '/blog',
+  },
+
   // ============== LEGAL PAGES (LAST) ==============
   {
     route: '/privacy-policy',
@@ -372,7 +383,7 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[] }> = [
  * lastmod reflects actual file modification time, not build time
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  return PAGES_WITH_IMAGES.map(({ route, images }) => {
+  const staticPages = PAGES_WITH_IMAGES.map(({ route, images }) => {
     const entry: MetadataRoute.Sitemap[number] = {
       url: `${BASE_URL}${route}`,
       lastModified: getPageLastModified(route),
@@ -385,4 +396,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return entry
   })
+
+  // Add blog posts dynamically with images
+  const blogPosts = getAllPosts().map(post => {
+    const entry: MetadataRoute.Sitemap[number] = {
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified: new Date(post.updatedAt),
+    }
+
+    // Collect all images from the blog post
+    const postImages: string[] = []
+
+    // Add cover image
+    if (post.coverImage) {
+      postImages.push(`${BASE_URL}${post.coverImage}`)
+    }
+
+    // Add section-specific images based on section IDs
+    // These are the images shown after specific sections
+    if (post.slug === 'digital-transformation-documentation') {
+      postImages.push(
+        `${BASE_URL}/images/Blogs/digital-transformation-documentation/documentation-powers-automation.png`,
+        `${BASE_URL}/images/Blogs/digital-transformation-documentation/documentation-improves-collaboration.png`
+      )
+    }
+
+    // Add author image
+    if (post.author.image) {
+      postImages.push(`${BASE_URL}${post.author.image}`)
+    }
+
+    // Add images to sitemap entry
+    if (postImages.length > 0) {
+      entry.images = postImages
+    }
+
+    return entry
+  })
+
+  return [...staticPages, ...blogPosts]
 }

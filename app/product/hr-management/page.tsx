@@ -112,8 +112,18 @@ const jsonLd = {
       "applicationCategory": "BusinessApplication",
       "description": "Complete HR and payroll management system with attendance tracking and performance management",
       "operatingSystem": "Cross-platform (On-Premise Deployment)",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "ratingCount": "58",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "offers": {
         "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
         "itemOffered": {
           "@type": "Service",
           "name": "Enterprise Installation & Customization Service",

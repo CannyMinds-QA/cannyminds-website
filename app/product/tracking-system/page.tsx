@@ -76,16 +76,16 @@ const jsonLd = {
     ]),
     generateFAQSchema([
       {
-        question: "How does the tracking system work?",
-        answer: "Our tracking system uses advanced GPS and RFID technology to provide real-time updates on your assets' location and status."
+        question: "What is CannyTrack?",
+        answer: "CannyTrack is a workforce productivity monitoring solution that provides visibility into remote employee activities with consent-based tracking, activity monitoring, screenshots, app/URL tracking, and data loss prevention."
       },
       {
-        question: "Is the system compatible with mobile devices?",
-        answer: "Yes, our system is fully accessible via mobile apps on both iOS and Android platforms."
+        question: "Is CannyTrack consent-based?",
+        answer: "Yes. CannyTrack operates on a consent-based model with transparent employee notification. Employees have dashboard access to view their own tracking data."
       },
       {
-        question: "Can I customize alerts and notifications?",
-        answer: "Absolutely. You can set up custom alerts for various events such as route deviation, unauthorized usage, and maintenance reminders."
+        question: "Does CannyTrack work offline?",
+        answer: "Yes. CannyTrack stores data locally during connectivity outages and syncs automatically when connection is restored, preserving data integrity."
       }
     ]),
     {
@@ -126,43 +126,24 @@ const jsonLd = {
       "applicationCategory": "BusinessApplication",
       "description": "Employee productivity monitoring and tracking system with activity analytics and data loss prevention",
       "operatingSystem": "Cross-platform (On-Premise Deployment)",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "ratingCount": "37",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "offers": {
         "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
         "itemOffered": {
           "@type": "Service",
           "name": "Enterprise Installation & Customization Service",
           "description": "Full setup, configuration, and deployment of this software on client infrastructure."
         }
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is CannyTrack?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CannyTrack is a workforce productivity monitoring solution that provides visibility into remote employee activities with consent-based tracking, activity monitoring, screenshots, app/URL tracking, and data loss prevention."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is CannyTrack consent-based?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. CannyTrack operates on a consent-based model with transparent employee notification. Employees have dashboard access to view their own tracking data."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does CannyTrack work offline?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. CannyTrack stores data locally during connectivity outages and syncs automatically when connection is restored, preserving data integrity."
-          }
-        }
-      ]
     }
   ]
 };

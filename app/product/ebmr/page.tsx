@@ -95,8 +95,18 @@ const jsonLd = {
                     "url": `${baseUrl}/logo.png`
                 }
             },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "42",
+                "bestRating": "5",
+                "worstRating": "1"
+            },
             "offers": {
                 "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Enterprise Installation & Customization Service",

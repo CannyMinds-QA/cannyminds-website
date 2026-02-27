@@ -315,6 +315,7 @@ export default function Navigation() {
     { name: "Solutions", href: "/#solutions", hasDropdown: true, dropdownType: "solutions" },
     { name: "AI Solutions", href: "/ai-solutions", hasDropdown: true, dropdownType: "ai" },
     { name: "BPM", href: "/bpm", hasDropdown: true, dropdownType: "bpm" },
+    { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];

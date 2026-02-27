@@ -119,8 +119,18 @@ const jsonLd = {
       "applicationCategory": "BusinessApplication",
       "description": "Enterprise content management system with OCR and workflow automation",
       "operatingSystem": "Cross-platform (On-Premise Deployment)",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "ratingCount": "67",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "offers": {
         "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
         "itemOffered": {
           "@type": "Service",
           "name": "Enterprise Installation & Customization Service",

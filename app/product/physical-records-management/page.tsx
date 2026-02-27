@@ -160,6 +160,7 @@ export default function CannyRMSPage() {
                     alt="CannyRMS Dashboard showing records management interface with barcode tracking and file search"
                     width={1200}
                     height={675}
+                    priority
                     className="w-full h-auto object-cover select-none"
                     unoptimized
                   />
