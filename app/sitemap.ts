@@ -364,11 +364,6 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[] }> = [
     route: '/blog',
   },
 
-  // ============== BLOG ==============
-  {
-    route: '/blog',
-  },
-
   // ============== LEGAL PAGES (LAST) ==============
   {
     route: '/privacy-policy',

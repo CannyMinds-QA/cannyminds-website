@@ -14,11 +14,6 @@ export const redirects: NextConfig['redirects'] = async () => {
             permanent: true,
         },
         {
-            source: '/about',
-            destination: '/about',
-            permanent: true,
-        },
-        {
             source: '/why-canny',
             destination: '/about',
             permanent: true,
@@ -26,11 +21,6 @@ export const redirects: NextConfig['redirects'] = async () => {
         {
             source: '/career',
             destination: '/about', // Fallback as no career page exists yet
-            permanent: true,
-        },
-        {
-            source: '/contact',
-            destination: '/contact',
             permanent: true,
         },
         {
@@ -294,12 +284,12 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/why-is-physical-records-management-important-today',
-            destination: '/product/rms',
+            destination: '/product/physical-records-management',
             permanent: true,
         },
         {
             source: '/Why_Is_Physical_Records_Management_Important_Today',
-            destination: '/product/rms',
+            destination: '/product/physical-records-management',
             permanent: true,
         },
         {
