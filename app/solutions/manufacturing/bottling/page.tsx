@@ -30,7 +30,7 @@ import {
 import { baseUrl } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Bottling Manufacturing Solutions | Traceability & Compliance ",
+    title: "Bottling Manufacturing | Traceability & Compliance",
     description: "End-to-end digital transformation for bottling plants. Automate batch records (BMR), ensure FSSAI/FDA compliance, and achieve 100% traceability from raw material to finished goods.",
     keywords: [
         "bottling manufacturing software",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/manufacturing/bottling",
     },
     openGraph: {
-        title: "Bottling Manufacturing Solutions",
+        title: "Bottling Manufacturing | Traceability & Compliance",
         description: "Digitize your bottling operations. From mixing and filling to packing and dispatch, ensure quality and compliance at every step.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/bottling",

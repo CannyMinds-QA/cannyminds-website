@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: 'https://www.cannymindstech.com/ai-solutions/manufacturing',
     },
     openGraph: {
-        title: 'Gen AI for Manufacturing & Automotive | CannyMinds',
+        title: 'AI in Manufacturing & Automotive | Smart Factory Solutions',
         description: 'Transform manufacturing with AI-powered predictive maintenance, quality control, and safety monitoring.',
         url: 'https://www.cannymindstech.com/ai-solutions/manufacturing',
         siteName: 'CannyMinds',

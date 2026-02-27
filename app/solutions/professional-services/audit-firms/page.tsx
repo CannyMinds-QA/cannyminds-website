@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/professional-services/audit-firms",
     },
     openGraph: {
-        title: "Audit Management Solutions ",
+        title: "Audit Management Software | CPA & Audit Firms ",
         description: "Ensure audit quality and compliance with structured, secure digital working papers.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/professional-services/audit-firms",

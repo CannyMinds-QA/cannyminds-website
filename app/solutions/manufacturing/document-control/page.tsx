@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/manufacturing/document-control",
     },
     openGraph: {
-        title: "Document Control & SOP Management | Manufacturing Solutions",
+        title: "Document Control & SOP Management | Manufacturing Solutions ",
         description: "Transform engineering documentation with centralized control, automated approvals, and complete traceability.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/document-control",

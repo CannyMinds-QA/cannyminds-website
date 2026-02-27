@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: 'https://www.cannymindstech.com/ai-solutions/real-estate',
     },
     openGraph: {
-        title: 'Gen AI for Real Estate & Construction | CannyMinds',
+        title: 'AI in Real Estate | Property Management & Valuation',
         description: 'Revolutionize property valuation, tenant screening, and lease management with Generative AI for real estate.',
         url: 'https://www.cannymindstech.com/ai-solutions/real-estate',
         siteName: 'CannyMinds',

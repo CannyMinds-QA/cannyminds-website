@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/healthcare/document-digitization",
     },
     openGraph: {
-        title: "Medical Document Digitization | CannyMinds",
+        title: "Medical Document Digitization | Hospital Scanning & OCR",
         description:
             "Scan, OCR, and migrate paper medical records into a searchable digital system. Convert decades of paper archives.",
         type: 'website',

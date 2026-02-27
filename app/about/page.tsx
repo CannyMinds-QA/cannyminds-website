@@ -21,7 +21,7 @@ import {
 import { baseUrl } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
-  title: 'About CannyMinds | Information Management & Digitization Solutions',
+  title: 'About CannyMinds | Information Management Solutions',
   description: 'CannyMinds is a trusted provider of information management and digitization solutions. ISO 9001, ISO 15489, ISO 27001 & FDA 21 CFR Part 11 compliant.',
   keywords: [
     'about CannyMinds',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     'pharmaceutical digitization',
   ],
   openGraph: {
-    title: 'About CannyMinds | Information Management & Digitization Solutions',
+    title: 'About CannyMinds | Information Management Solutions',
     description: 'CannyMinds is a trusted provider of information management and digitization solutions for regulated industries.',
     url: 'https://www.cannymindstech.com/about',
     type: 'website',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About CannyMinds | Information Management & Digitization Solutions',
+    title: 'About CannyMinds | Information Management Solutions',
     description: 'CannyMinds is a trusted provider of information management and digitization solutions for regulated industries.',
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },
@@ -65,7 +65,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "AboutPage",
-      "name": "About CannyMinds | Information Management & Digitization Solutions",
+      "name": "About CannyMinds | Information Management Solutions",
       "description": "CannyMinds is a trusted provider of information management and digitization solutions. ISO 9001, ISO 15489, ISO 27001 & FDA 21 CFR Part 11 compliant.",
       "url": `${baseUrl}/about`,
       "publisher": {
@@ -244,7 +244,7 @@ export default function AboutPage() {
                   CannyMinds is a trusted provider of information management and digitization solutions, helping organizations securely manage, preserve, and transform their critical records across their lifecycle.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  We specialize in <strong> Enterprise Content Management (ECM), Physical Record Management, Onsite & Offsite Digitization and Compliance-driven Information Governance</strong>—with a strong focus on regulated industries such as Pharmaceuticals, Life Sciences, Healthcare, and Manufacturing.
+                  We specialize in <strong> Enterprise Content Management (ECM), Physical Record Management, Onsite & Offsite Digitization and Compliance-driven Information Governance</strong>—with a strong focus on regulated industries such as Pharmaceuticals, Life Sciences, Healthcare, and Manufacturing. Discover <Link href="/blog/digital-transformation-documentation" className="text-primary hover:underline font-medium">why proper documentation is the foundation of digital transformation success</Link>.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
                   At CannyMinds, we combine process expertise, advanced technology, and strict quality controls to ensure data accuracy, security, and regulatory compliance. Our solutions are designed to align with global standards including <strong>ISO 9001, ISO 15489, ISO 27001, and FDA 21 CFR Part 11</strong>, enabling organizations to confidently meet audit, retention, and compliance requirements.

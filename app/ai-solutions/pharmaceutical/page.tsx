@@ -3,7 +3,7 @@ import PharmaClient from "./PharmaClient";
 import { baseUrl } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Gen AI for Pharmaceutical Manufacturing & Quality | CannyMinds",
+    title: "Gen AI for Pharma Manufacturing | CannyMinds",
     description:
         "Accelerate compliance, quality, and time-to-market with FDA-compliant Generative AI. Automate eBMR, CAPA, and predictive maintenance.",
     keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/ai-solutions/pharmaceutical",
     },
     openGraph: {
-        title: "Gen AI for Pharmaceutical Manufacturing & Quality | CannyMinds",
+        title: "Gen AI for Pharma Manufacturing | CannyMinds",
         description:
             "Accelerate compliance, quality, and time-to-market with FDA-compliant Generative AI. Automate eBMR, CAPA, and predictive maintenance.",
         url: "https://www.cannymindstech.com/ai-solutions/pharmaceutical",

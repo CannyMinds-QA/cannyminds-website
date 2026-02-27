@@ -21,7 +21,7 @@ import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { baseUrl, generateBreadcrumbSchema } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Manufacturing Solutions | Digital Transformation for Industry 4.0 ",
+    title: "Manufacturing Solutions | Industry 4.0 Automation",
     description: "Comprehensive manufacturing solutions including shop floor automation, document control, quality management, engineering change management, and equipment maintenance.",
     keywords: [
         "manufacturing automation",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         siteName: "CannyMinds",
-        title: "Manufacturing Solutions",
+        title: "Manufacturing Solutions | Industry 4.0 Automation",
         description: "Transform your manufacturing operations with intelligent automation and real-time quality control.",
         url: "https://www.cannymindstech.com/solutions/manufacturing",
         images: [{ url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630, alt: "Manufacturing Solutions" }],

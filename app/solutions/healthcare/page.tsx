@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         siteName: "CannyMinds",
-        title: "Healthcare Solutions | CannyMinds",
+        title: "Healthcare Solutions | Hospital Document Management",
         description:
             "Document management built for hospitals. Patient records, clinical workflows, compliance, and digitization, all in one system.",
         url: "https://www.cannymindstech.com/solutions/healthcare",

@@ -169,6 +169,27 @@ export default function AllIndustriesShowcase() {
                     </div>
                 </div>
             </section>
+
+            {/* CTA Section */}
+            <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-3xl mx-auto text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Ready to Transform Your Business?
+                        </h2>
+                        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            Learn how <Link href="/blog/digital-transformation-documentation" className="text-primary hover:underline font-semibold">proper documentation drives successful digital transformation</Link> and discover the right solution for your industry.
+                        </p>
+                        <Link
+                            href="/contact"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl"
+                        >
+                            Get Started Today
+                            <ArrowForward sx={{ fontSize: 20 }} />
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }

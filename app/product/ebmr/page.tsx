@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/product/ebmr",
     },
     openGraph: {
-        title: "CannyECM e-BMR | Electronic Batch Manufacturing Record",
+        title: "CannyECM e-BMR | Electronic Batch Manufacturing Record ",
         description: "Transform paper-based batch records into a fully digital, compliant, and audit-ready system.",
         type: 'website',
         url: "https://www.cannymindstech.com/product/ebmr",

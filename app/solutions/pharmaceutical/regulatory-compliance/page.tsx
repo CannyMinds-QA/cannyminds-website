@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/pharmaceutical/regulatory-compliance",
     },
     openGraph: {
-        title: "Regulatory Compliance",
+        title: "Regulatory Compliance & Document Control",
         description: "Streamline compliance with AI-driven document control and regulatory support.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/pharmaceutical/regulatory-compliance",

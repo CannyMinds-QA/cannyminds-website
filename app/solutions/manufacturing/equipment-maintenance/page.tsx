@@ -24,7 +24,7 @@ import {
 import { baseUrl } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Equipment Maintenance & Asset Documentation | Manufacturing Solutions ",
+    title: "Equipment Maintenance & Asset Documentation | Mfg",
     description: "Digital equipment manuals, service logs, and asset documentation management with maintenance workflows and secure long-term retention for manufacturing.",
     keywords: [
         "equipment maintenance documentation",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/manufacturing/equipment-maintenance",
     },
     openGraph: {
-        title: "Equipment Maintenance | Manufacturing Solutions",
+        title: "Equipment Maintenance & Asset Documentation | Mfg",
         description: "Comprehensive equipment documentation and maintenance workflow management for operational continuity.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/equipment-maintenance",

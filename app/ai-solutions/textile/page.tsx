@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: 'https://www.cannymindstech.com/ai-solutions/textile',
     },
     openGraph: {
-        title: 'Gen AI for Textile & Apparel | CannyMinds',
+        title: 'AI for Textile & Apparel | Design & Supply Chain',
         description: 'Optimize supply chains, predict trends, and automate quality inspection with Generative AI for textile.',
         url: 'https://www.cannymindstech.com/ai-solutions/textile',
         siteName: 'CannyMinds',

@@ -6,10 +6,19 @@ import {
   Science,
   PrecisionManufacturing,
   LocalPharmacy,
+  Article,
   ArrowForward,
 } from "@mui/icons-material";
 
 const resources = [
+  {
+    type: "Blog",
+    icon: Article,
+    title: "Digital Transformation Starts With Documentation",
+    description:
+      "Learn why proper documentation is the foundation of successful digital transformation and how it powers automation, compliance, and business growth.",
+    link: "/blog/digital-transformation-documentation",
+  },
   {
     type: "AI Solutions",
     icon: Science,

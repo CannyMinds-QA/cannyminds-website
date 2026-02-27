@@ -22,7 +22,7 @@ import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { baseUrl } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Insurance Technology Solutions | Claims Processing & Policy Management ",
+    title: "Insurance Technology | Claims & Policy Automation",
     description: "Automate insurance claims processing, streamline policy administration, and detect fraud with CannyECM. Digital transformation for modern insurers.",
     keywords: [
         "insurance claims automation",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/finance/insurance-technology",
     },
     openGraph: {
-        title: "Insurance Technology Solutions",
+        title: "Insurance Technology | Claims & Policy Automation",
         description: "Faster claims. Smarter underwriting. Better customer experiences.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/finance/insurance-technology",

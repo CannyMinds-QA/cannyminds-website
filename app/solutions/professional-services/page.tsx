@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         siteName: "CannyMinds",
-        title: "Professional Services Solutions ",
+        title: "Professional Services Solutions | Legal & Audit Firms ",
         description: "Elevate your practice with secure, compliant, and efficient document workflows.",
         url: "https://www.cannymindstech.com/solutions/professional-services",
         images: [{ url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630, alt: "Professional Services Solutions" }],
@@ -238,7 +238,7 @@ export default function ProfessionalServicesPage() {
                             Ready to Modernize Your Practice?
                         </h2>
                         <p className="text-lg text-gray-600 mb-8">
-                            Join forward-thinking firms that use CannyECM to attract better clients and talent.
+                            Join forward-thinking firms that use CannyECM to attract better clients and talent. Learn more about <Link href="/blog/digital-transformation-documentation" className="text-primary hover:underline font-semibold">how digital transformation starts with proper documentation</Link>.
                         </p>
                         <Link
                             href="/contact"

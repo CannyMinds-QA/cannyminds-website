@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/finance/governance-compliance",
     },
     openGraph: {
-        title: "Governance & Compliance Solutions",
+        title: "Governance, Risk & Compliance (GRC) Solutions ",
         description: "Stay audit-ready, always. Automate compliance and mitigate risk with CannyECM.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/finance/governance-compliance",

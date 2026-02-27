@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: 'https://www.cannymindstech.com/ai-solutions/nbfc',
     },
     openGraph: {
-        title: 'Gen AI for Lending & NBFC Operations | CannyMinds',
+        title: 'AI for NBFCs & Fintech | Credit Scoring & Risk Management',
         description: 'Enhance credit assessment, automate loan processing, and ensure compliance with Generative AI for NBFC.',
         url: 'https://www.cannymindstech.com/ai-solutions/nbfc',
         siteName: 'CannyMinds',

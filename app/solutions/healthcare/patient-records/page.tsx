@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/healthcare/patient-records",
     },
     openGraph: {
-        title: "Patient Record Management | CannyMinds",
+        title: "Patient Record Management | EHR Document Integration",
         description:
             "One patient, one digital folder. Centralize, search, and secure every patient document in your hospital.",
         type: 'website',

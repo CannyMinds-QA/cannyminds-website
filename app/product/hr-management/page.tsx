@@ -22,7 +22,7 @@ import FAQ from "@/components/sections/FAQ";
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "CannyHR - HR & Payroll Management | HRMS Solution 2026",
+  title: "CannyHR - HR & Payroll Management | HRMS Solution",
   description: "Complete HRMS with payroll, time tracking, leave management, and performance reviews. 350+ biometric integrations. Mobile app included.",
   keywords: [
     "CannyHR",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Christopher" }],
   openGraph: {
-    title: "CannyHR - HR & Payroll Management | HRMS Solution 2026",
+    title: "CannyHR - HR & Payroll Management | HRMS Solution",
     description: "Complete HRMS with payroll, time tracking, leave management, and performance reviews. 350+ biometric integrations. Mobile app included.",
     type: "website",
     siteName: 'CannyMinds',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "CannyHR - HR & Payroll Management | HRMS Solution 2026",
+    title: "CannyHR - HR & Payroll Management | HRMS Solution",
     description: "Complete HRMS with payroll, time tracking, leave management, and performance reviews. 350+ biometric integrations. Mobile app included.",
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },

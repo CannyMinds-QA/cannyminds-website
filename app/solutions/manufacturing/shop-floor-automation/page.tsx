@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/manufacturing/shop-floor-automation",
     },
     openGraph: {
-        title: "Shop Floor Automation",
+        title: "Shop Floor Automation | Manufacturing Production Recording",
         description: "From manual paper entry to automated digital production reports. Transform your manufacturing floor operations.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/shop-floor-automation",

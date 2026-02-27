@@ -23,7 +23,7 @@ import {
 import { baseUrl } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Vendor & Procurement Document Management | Manufacturing Solutions ",
+    title: "Vendor & Procurement Document Management | Mfg",
     description: "Centralized vendor document repository and contract lifecycle management with approval workflows and easy retrieval for manufacturing procurement teams.",
     keywords: [
         "vendor document management",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/manufacturing/vendor-procurement",
     },
     openGraph: {
-        title: "Vendor & Procurement Management | Manufacturing Solutions",
+        title: "Vendor & Procurement Document Management | Mfg",
         description: "Streamline vendor documentation and contract management with centralized control and automated workflows.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/vendor-procurement",

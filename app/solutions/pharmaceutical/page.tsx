@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         siteName: "CannyMinds",
-        title: "Pharmaceutical Solutions",
+        title: "Pharmaceutical Manufacturing Solutions",
         description: "Transform pharma manufacturing with AI-driven compliance, quality control, and automation.",
         url: "https://www.cannymindstech.com/solutions/pharmaceutical",
         images: [{ url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630, alt: "Pharmaceutical Solutions" }],

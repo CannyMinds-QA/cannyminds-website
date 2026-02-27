@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/professional-services/legal",
     },
     openGraph: {
-        title: "Legal Document Management Solutions",
+        title: "Legal Document Management Software | Law Firms ",
         description: "Win more cases with organized evidence and streamlined workflows.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/professional-services/legal",

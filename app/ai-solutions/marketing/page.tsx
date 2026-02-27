@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: 'https://www.cannymindstech.com/ai-solutions/marketing',
     },
     openGraph: {
-        title: 'Gen AI for Marketing & Creative | CannyMinds',
+        title: 'Generative AI for Marketing | Content & Campaign Automation',
         description: 'Scale content creation, personalize campaigns, and optimize ad spend with Generative AI for marketing.',
         url: 'https://www.cannymindstech.com/ai-solutions/marketing',
         siteName: 'CannyMinds',

@@ -23,7 +23,7 @@ import {
 import { baseUrl } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Quality Management (QA/QC, CAPA, NCR) | Manufacturing Solutions ",
+    title: "Quality Management (QA/QC, CAPA, NCR) | Mfg",
     description: "Digitized quality management with automated CAPA workflows, NCR tracking, root cause analysis, and complete audit trails for manufacturing excellence.",
     keywords: [
         "quality management system",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/manufacturing/quality-management",
     },
     openGraph: {
-        title: "Quality Management | Manufacturing Solutions",
+        title: "Quality Management (QA/QC, CAPA, NCR) | Mfg",
         description: "Transform quality management with digitized QA/QC records, automated CAPA workflows, and comprehensive audit trails.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/quality-management",

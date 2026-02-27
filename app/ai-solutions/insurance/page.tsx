@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: 'https://www.cannymindstech.com/ai-solutions/insurance',
     },
     openGraph: {
-        title: 'Gen AI for Insurance Operations | CannyMinds',
+        title: 'AI for Insurance | Claims Processing & Fraud Detection',
         description: 'Automate claims, detect fraud, and enhance underwriting with Generative AI for insurance.',
         url: 'https://www.cannymindstech.com/ai-solutions/insurance',
         siteName: 'CannyMinds',

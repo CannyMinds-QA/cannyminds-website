@@ -26,7 +26,7 @@ import FAQ from "@/components/sections/FAQ";
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "CannyScan - Document Digitization & Scanning Solution | OCR & Barcode Extraction",
+  title: "Document Scanning & Digitization | CannyScan OCR",
   description: "Professional document digitization with image cleansing, OCR extraction, barcode reading, auto-cropping, and quality control workflows. Export to DMS with audit reports.",
   keywords: [
     "CannyScan",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "CannyMinds Technology Solutions" }],
   openGraph: {
-    title: "CannyScan - Document Digitization & Scanning Solution",
+    title: "Document Scanning & Digitization | CannyScan OCR",
     description: "Professional document digitization with image cleansing, OCR extraction, barcode reading, and quality control workflows.",
     type: "website",
     siteName: 'CannyMinds',

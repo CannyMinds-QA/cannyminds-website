@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/manufacturing/fmcg-digital-transformation",
     },
     openGraph: {
-        title: "FMCG Digital Transformation | CannyMinds Solutions",
+        title: "FMCG Digital Transformation | Manufacturing Solutions ",
         description: "Transform high-speed FMCG operations with end-to-end digital documentation and workflow automation.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/fmcg-digital-transformation",

@@ -25,7 +25,7 @@ import FAQ from "@/components/sections/FAQ";
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "Enterprise Content Management System | CannyECM 2026",
+  title: "Enterprise Content Management System | CannyECM",
   description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise deployment. Manage 50,000+ documents with advanced ECM features. 30-day free trial.",
   keywords: [
     "enterprise content management system",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Christopher" }],
   openGraph: {
-    title: "Enterprise Content Management System | CannyECM 2026",
+    title: "Enterprise Content Management System | CannyECM",
     description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise deployment. Manage 50,000+ documents with advanced ECM features.",
     type: "website",
     siteName: 'CannyMinds',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Enterprise Content Management System | CannyECM 2026",
+    title: "Enterprise Content Management System | CannyECM",
     description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise deployment. Manage 50,000+ documents.",
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },
@@ -319,7 +319,7 @@ export default function CannyECMProductPage() {
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
                 Built for modern businesses, CannyECM operates seamlessly on any browser and offers flexible deployment options <strong>cloud,
                   on-premise, or hybrid</strong>. With advanced <strong>OCR technology powered by Elasticsearch</strong>, full-text search capabilities,
-                and intuitive workflow automation, CannyECM transforms how organizations handle content management challenges.
+                and intuitive workflow automation, CannyECM transforms how organizations handle content management challenges. Learn more about <Link href="/blog/digital-transformation-documentation" className="text-primary hover:underline font-medium">why documentation is the foundation of successful digital transformation</Link>.
               </p>
 
               <div className="bg-primary-50 border-l-4 border-primary p-6 rounded-r-lg">

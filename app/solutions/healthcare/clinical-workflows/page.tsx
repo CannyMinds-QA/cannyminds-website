@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/healthcare/clinical-workflows",
     },
     openGraph: {
-        title: "Clinical Workflow Automation | CannyMinds",
+        title: "Clinical Workflow Automation | Hospital Approval System",
         description:
             "Stop chasing signatures. Route treatment plans, discharge summaries, and referrals automatically to the right people.",
         type: 'website',

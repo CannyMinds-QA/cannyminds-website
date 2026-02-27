@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: 'https://www.cannymindstech.com/ai-solutions/professional-services',
     },
     openGraph: {
-        title: 'Gen AI for Legal, Accounting & HR | CannyMinds',
+        title: 'AI for Professional Services | Legal & Consulting Automation',
         description: 'Streamline contract review, automate reports, and improve knowledge management in legal and consulting firms with Generative AI.',
         url: 'https://www.cannymindstech.com/ai-solutions/professional-services',
         siteName: 'CannyMinds',

@@ -33,8 +33,7 @@ export async function generateMetadata({
     const post = getPostBySlug(slug);
     if (!post) return {};
 
-    const url = `${baseUrl}/blog/${post.slug}`;
-    const ogImage = post.seo.ogImage || `${baseUrl}/og-image.jpg`;
+    const ogImage = post.seo.ogImage ? `https://www.cannymindstech.com${post.seo.ogImage}` : `${baseUrl}/og-image.jpg`;
 
     return {
         title: post.seo.metaTitle,
@@ -44,7 +43,7 @@ export async function generateMetadata({
         openGraph: {
             title: post.seo.metaTitle,
             description: post.seo.metaDescription,
-            url,
+            url: post.seo.canonicalUrl,
             type: 'article',
             siteName: 'CannyMinds Technology Solutions',
             locale: 'en_US',
@@ -112,7 +111,6 @@ export default async function BlogPostPage({
     const currentIndex = allPosts.findIndex((p) => p.slug === post.slug);
     const prev = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
     const next = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
-    const related = allPosts.filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 2);
 
     // Enhanced schema with multiple image sizes and author URL
     const jsonLd = {
@@ -120,27 +118,27 @@ export default async function BlogPostPage({
         '@type': 'BlogPosting',
         headline: post.title,
         description: post.excerpt,
-        url: `${baseUrl}/blog/${post.slug}`,
+        url: post.seo.canonicalUrl,
         datePublished: post.publishedAt,
         dateModified: post.updatedAt,
         image: post.coverImage ? [
             {
                 '@type': 'ImageObject',
-                url: `${baseUrl}${post.coverImage}`,
+                url: `https://www.cannymindstech.com${post.coverImage}`,
                 width: 1200,
                 height: 675,
                 caption: post.title
             },
             {
                 '@type': 'ImageObject',
-                url: `${baseUrl}${post.coverImage}`,
+                url: `https://www.cannymindstech.com${post.coverImage}`,
                 width: 1200,
                 height: 900,
                 caption: post.title
             },
             {
                 '@type': 'ImageObject',
-                url: `${baseUrl}${post.coverImage}`,
+                url: `https://www.cannymindstech.com${post.coverImage}`,
                 width: 1200,
                 height: 1200,
                 caption: post.title
@@ -150,7 +148,7 @@ export default async function BlogPostPage({
             '@type': 'Person',
             name: post.author.name,
             description: post.author.bio,
-            url: post.author.linkedIn || `${baseUrl}/about`,
+            url: post.author.linkedIn || 'https://www.cannymindstech.com/about',
             jobTitle: post.author.role
         },
         publisher: {
@@ -158,11 +156,11 @@ export default async function BlogPostPage({
             name: 'CannyMinds Technology Solutions',
             logo: {
                 '@type': 'ImageObject',
-                url: `${baseUrl}/logo.png`,
+                url: 'https://www.cannymindstech.com/logo.png',
                 width: 600,
                 height: 60
             },
-            url: baseUrl,
+            url: 'https://www.cannymindstech.com',
             sameAs: [
                 'https://in.linkedin.com/company/cannyminds-technology-solutions',
                 'https://x.com/cannyminds',
@@ -175,7 +173,7 @@ export default async function BlogPostPage({
         inLanguage: 'en-IN',
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `${baseUrl}/blog/${post.slug}`
+            '@id': post.seo.canonicalUrl
         }
     };
 
@@ -183,9 +181,9 @@ export default async function BlogPostPage({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${baseUrl}/blog` },
-            { '@type': 'ListItem', position: 3, name: post.title, item: `${baseUrl}/blog/${post.slug}` }
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cannymindstech.com' },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.cannymindstech.com/blog' },
+            { '@type': 'ListItem', position: 3, name: post.title, item: post.seo.canonicalUrl }
         ]
     };
 
@@ -434,7 +432,7 @@ export default async function BlogPostPage({
                                 </div>
                                 <div className="space-y-2">
                                     <a
-                                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/blog/${post.slug}`}
+                                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(post.seo.canonicalUrl)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#0a66c2] hover:bg-[#004182] text-white rounded-lg transition-colors text-sm font-medium"
@@ -444,7 +442,7 @@ export default async function BlogPostPage({
                                         <span>LinkedIn</span>
                                     </a>
                                     <a
-                                        href={`https://twitter.com/intent/tweet?url=${baseUrl}/blog/${post.slug}&text=${encodeURIComponent(post.title)}`}
+                                        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(post.seo.canonicalUrl)}&text=${encodeURIComponent(post.title)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#1DA1F2] hover:bg-[#1a8cd8] text-white rounded-lg transition-colors text-sm font-medium"
@@ -454,7 +452,7 @@ export default async function BlogPostPage({
                                         <span>Twitter</span>
                                     </a>
                                     <a
-                                        href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/blog/${post.slug}`}
+                                        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(post.seo.canonicalUrl)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#1877f2] hover:bg-[#0c63d4] text-white rounded-lg transition-colors text-sm font-medium"

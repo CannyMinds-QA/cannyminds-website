@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: 'https://www.cannymindstech.com/ai-solutions/ecommerce',
     },
     openGraph: {
-        title: 'Gen AI for E-Commerce & Retail | CannyMinds',
+        title: 'AI for E-Commerce & Retail | Personalization & Automation',
         description: 'Boost sales with AI-driven product recommendations, automated content generation, and customer support with Generative AI.',
         url: 'https://www.cannymindstech.com/ai-solutions/ecommerce',
         siteName: 'CannyMinds',

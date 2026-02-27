@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/healthcare/compliance-audit",
     },
     openGraph: {
-        title: "HIPAA Compliance & Audit Readiness | CannyMinds",
+        title: "HIPAA Compliance & Audit Readiness | Healthcare DMS",
         description:
             "Complete audit trails, role-based access, automatic retention, and secure deletion — CannyECM keeps hospitals audit-ready.",
         type: 'website',

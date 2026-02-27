@@ -22,7 +22,7 @@ import {
 import { baseUrl } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Engineering Change Management (ECN/ECR) | Manufacturing Solutions ",
+    title: "Engineering Change Management (ECN/ECR) | Mfg",
     description: "Controlled ECN/ECR workflows with impact analysis, automated approvals, notifications, and complete change history for manufacturing engineering teams.",
     keywords: [
         "engineering change management",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/manufacturing/engineering-change-management",
     },
     openGraph: {
-        title: "Engineering Change Management | Manufacturing Solutions",
+        title: "Engineering Change Management (ECN/ECR) | Mfg",
         description: "Streamline ECN/ECR workflows with automated impact analysis, approvals, and complete traceability.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/engineering-change-management",

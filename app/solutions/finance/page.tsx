@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         siteName: "CannyMinds",
-        title: "Finance & Insurance Solutions ",
+        title: "Finance & Insurance Solutions | Digital Transformation ",
         description: "Modernize your financial operations with CannyECM. Secure, compliant, and automated workflows for the digital age.",
         url: "https://www.cannymindstech.com/solutions/finance",
         images: [{ url: "https://www.cannymindstech.com/og-image.jpg", width: 1200, height: 630, alt: "Finance & Insurance Solutions" }],

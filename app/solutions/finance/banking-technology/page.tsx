@@ -21,7 +21,7 @@ import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { baseUrl } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Banking Technology Solutions | Loan Processing & KYC Automation ",
+    title: "Banking Technology | Loan Processing & KYC",
     description: "Accelerate loan origination, automate KYC/onboarding, and streamline credit approvals with CannyECM. Secure, compliant banking workflow automation.",
     keywords: [
         "loan origination system",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         canonical: "https://www.cannymindstech.com/solutions/finance/banking-technology",
     },
     openGraph: {
-        title: "Banking Technology Solutions",
+        title: "Banking Technology | Loan Processing & KYC",
         description: "Transform your banking operations. From instant account opening to automated loan approvals.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/finance/banking-technology",
