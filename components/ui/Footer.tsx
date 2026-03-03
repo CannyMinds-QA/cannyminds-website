@@ -1,6 +1,6 @@
 "use client";
 
-import { LinkedIn, X, Facebook, Instagram } from "@mui/icons-material";
+import { LinkedIn, X, Facebook, Instagram, YouTube, LocationOn, Phone } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -78,21 +78,30 @@ export default function Footer() {
               Empowering businesses worldwide with innovative IT solutions and
               digital transformation services.
             </p>
+
+            {/* Address & Phone (visible for Local SEO) */}
+            <div className="mb-4 space-y-2">
+              <div className="flex items-start gap-2 text-gray-600 text-sm">
+                <LocationOn sx={{ fontSize: 18, marginTop: '2px', flexShrink: 0 }} />
+                <span>No 88, Ram Nagar 6th St, Velachery, Chennai, Tamil Nadu 600042, India</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-600 text-sm">
+                <Phone sx={{ fontSize: 18, flexShrink: 0 }} />
+                <a href="tel:+919361801926" className="hover:text-primary transition-colors">+91-9361801926</a>
+              </div>
+            </div>
+
             <div className="flex gap-4">
               {[
-                { id: "linkedin", icon: LinkedIn, label: "LinkedIn" },
-                { id: "twitter", icon: X, label: "X (Twitter)" },
-                { id: "facebook", icon: Facebook, label: "Facebook" },
-                { id: "instagram", icon: Instagram, label: "Instagram" },
+                { id: "linkedin", icon: LinkedIn, label: "LinkedIn", href: "https://in.linkedin.com/company/cannyminds-technology-solutions" },
+                { id: "twitter", icon: X, label: "X (Twitter)", href: "https://x.com/cannyminds" },
+                { id: "facebook", icon: Facebook, label: "Facebook", href: "https://www.facebook.com/p/CannyMinds-Technology-Solutions-100063646614219/" },
+                { id: "instagram", icon: Instagram, label: "Instagram", href: "https://www.instagram.com/cannyminds_technology/" },
+                { id: "youtube", icon: YouTube, label: "YouTube", href: "https://www.youtube.com/channel/UCs6j4JpOxqSsULlTss3cSxg" },
               ].map((social) => (
                 <motion.a
                   key={social.id}
-                  href={
-                    social.id === "linkedin" ? "https://in.linkedin.com/company/cannyminds-technology-solutions" :
-                      social.id === "twitter" ? "https://x.com/cannyminds" :
-                        social.id === "facebook" ? "https://www.facebook.com/p/CannyMinds-Technology-Solutions-100063646614219/" :
-                          social.id === "instagram" ? "https://www.instagram.com/cannyminds_technology/" : "#"
-                  }
+                  href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -2 }}

@@ -75,10 +75,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteConfig.url,
+    languages: {
+      'en': siteConfig.url,
+      'x-default': siteConfig.url,
+    },
   },
   verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
+    google: "fQ2boW5cw6cIVfgTxwovUdz1xrLT0xrySKRUjxU9cKg",
   },
 };
 
@@ -95,6 +98,7 @@ export const jsonLd = {
     "https://x.com/cannyminds",
     "https://www.facebook.com/p/CannyMinds-Technology-Solutions-100063646614219/",
     "https://www.instagram.com/cannyminds_technology/",
+    "https://www.youtube.com/channel/UCs6j4JpOxqSsULlTss3cSxg",
   ],
   contactPoint: [
     {

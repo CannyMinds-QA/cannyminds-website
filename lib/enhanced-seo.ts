@@ -8,7 +8,7 @@ import { Metadata } from "next";
 
 export const enhancedSiteConfig = {
   name: "CannyMinds",
-  tagline: "Enterprise Software & AI Experts",
+  tagline: "Enterprise Software & AI Solutions Provider",
 
   // Primary description optimized for featured snippets (Shortened < 160 chars)
   description:
@@ -91,7 +91,7 @@ export const enhancedSiteConfig = {
     twitter: "https://x.com/cannyminds",
     facebook: "https://www.facebook.com/p/CannyMinds-Technology-Solutions-100063646614219/",
     instagram: "https://www.instagram.com/cannyminds_technology/",
-    youtube: "https://www.youtube.com/cannyminds",
+    youtube: "https://www.youtube.com/channel/UCs6j4JpOxqSsULlTss3cSxg",
   },
 };
 
@@ -156,6 +156,10 @@ export const enhancedMetadata: Metadata = {
 
   alternates: {
     canonical: enhancedSiteConfig.url,
+    languages: {
+      'en': enhancedSiteConfig.url,
+      'x-default': enhancedSiteConfig.url,
+    },
   },
 
   verification: {

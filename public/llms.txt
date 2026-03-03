@@ -1,0 +1,58 @@
+# CannyMinds Technology Solutions
+
+> Enterprise software development, AI automation, and digital transformation solutions provider.
+
+## About
+
+CannyMinds Technology Solutions is an ISO-certified IT solutions company founded in 2020. We specialize in enterprise content management, HR & payroll systems, document digitization, workforce productivity monitoring, and AI-powered automation. We serve clients globally from offices in India, USA, and Nigeria.
+
+## Certifications
+
+- ISO 9001:2015 (Quality Management)
+- ISO 15489:2016 (Records Management)
+- ISO 22716:2007 (GMP Cosmetics)
+- FDA 21 CFR Part 11 Compliance
+
+## Products
+
+- [CannyECM](https://www.cannymindstech.com/product/enterprise-content-management): Enterprise content management software for document organization, version control, workflow automation, and compliance.
+- [CannyHR](https://www.cannymindstech.com/product/hr-management): HR and payroll management system with attendance tracking, leave management, and statutory compliance.
+- [CannyScan](https://www.cannymindstech.com/product/scanning-solution): Document scanning and digitization solution for converting physical records to searchable digital formats.
+- [CannyTrack](https://www.cannymindstech.com/product/tracking-system): Consent-based employee productivity monitoring with activity tracking, screenshots, and data loss prevention.
+- [Physical Records Management](https://www.cannymindstech.com/product/physical-records-management): End-to-end physical records storage, tracking, retrieval, and destruction services.
+- [Canny eBMR](https://www.cannymindstech.com/product/ebmr): Electronic batch manufacturing records for pharmaceutical production compliance.
+
+## Industry Solutions
+
+- [Manufacturing](https://www.cannymindstech.com/solutions/manufacturing): Shop floor automation, batch record digitization, FMCG transformation.
+- [Healthcare](https://www.cannymindstech.com/solutions/healthcare): Clinical workflows, patient records, compliance audit, document digitization.
+- [Pharmaceutical](https://www.cannymindstech.com/solutions/pharmaceutical): GMP compliance, batch records, quality management, regulatory documentation.
+- [Finance](https://www.cannymindstech.com/solutions/finance): Banking technology, insurance technology, governance & compliance.
+- [Professional Services](https://www.cannymindstech.com/solutions/professional-services): Audit firms, legal document management.
+
+## AI Solutions
+
+- [Manufacturing AI](https://www.cannymindstech.com/ai-solutions/manufacturing)
+- [Professional Services AI](https://www.cannymindstech.com/ai-solutions/professional-services)
+- [NBFC & Finance AI](https://www.cannymindstech.com/ai-solutions/nbfc)
+- [Healthcare AI](https://www.cannymindstech.com/ai-solutions/healthcare)
+- [Pharmaceutical AI](https://www.cannymindstech.com/ai-solutions/pharmaceutical)
+- [Real Estate AI](https://www.cannymindstech.com/ai-solutions/real-estate)
+- [E-commerce AI](https://www.cannymindstech.com/ai-solutions/ecommerce)
+- [Marketing AI](https://www.cannymindstech.com/ai-solutions/marketing)
+
+## Offices
+
+- **India**: No 88 Ram Nagar 6th St, Velachery, Chennai, Tamil Nadu 600042. Phone: +91-9361801926
+- **USA**: 8751 Collin McKinney Pkwy Suite 1102 #525, McKinney, TX 75070. Phone: +1-214-727-0422
+- **Nigeria**: No:16, Adeola Adeleye Street, Off Coker Road, Illupeju, Lagos. Phone: +234-708-632-3687
+
+## Blog
+
+- [Digital Transformation Starts With Documentation: Here's Why](https://www.cannymindstech.com/blog/digital-transformation-documentation): Why proper documentation is the foundation of successful digital transformation and how it powers automation, compliance, and business growth.
+
+## Contact
+
+- Website: https://www.cannymindstech.com
+- Email: info@cannymindstech.com
+- Contact Page: https://www.cannymindstech.com/contact
