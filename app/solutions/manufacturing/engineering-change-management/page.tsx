@@ -19,7 +19,7 @@ import {
     Timeline,
     TaskAlt,
 } from "@mui/icons-material";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Engineering Change Management (ECN/ECR) | Mfg",
@@ -36,9 +36,7 @@ export const metadata: Metadata = {
         "manufacturing change management",
         "PLM change management",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/manufacturing/engineering-change-management",
-    },
+    alternates: generateAlternates('/solutions/manufacturing/engineering-change-management'),
     openGraph: {
         title: "Engineering Change Management (ECN/ECR) | Mfg",
         description: "Streamline ECN/ECR workflows with automated impact analysis, approvals, and complete traceability.",

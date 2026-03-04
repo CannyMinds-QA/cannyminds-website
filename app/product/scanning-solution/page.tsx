@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateBreadcrumbSchema } from "@/lib/enhanced-seo";
+import { generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -65,9 +65,7 @@ export const metadata: Metadata = {
     description: "Professional document digitization with image cleansing, OCR extraction, barcode reading, and quality control workflows.",
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },
-  alternates: {
-    canonical: "https://www.cannymindstech.com/product/scanning-solution",
-  },
+  alternates: generateAlternates('/product/scanning-solution'),
   robots: { index: true, follow: true },
 };
 

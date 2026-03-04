@@ -1,13 +1,11 @@
 import type { Metadata } from 'next'
 import NBFCSolutionsPage from './NBFCClient'
-import { baseUrl } from '@/lib/enhanced-seo'
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo'
 
 export const metadata: Metadata = {
     title: 'AI for NBFCs & Fintech | Credit Scoring & Risk Management',
     description: 'Enhance credit assessment, automate loan processing, and ensure compliance for Non-Banking Financial Companies.',
-    alternates: {
-        canonical: 'https://www.cannymindstech.com/ai-solutions/nbfc',
-    },
+    alternates: generateAlternates('/ai-solutions/nbfc'),
     openGraph: {
         title: 'AI for NBFCs & Fintech | Credit Scoring & Risk Management',
         description: 'Enhance credit assessment, automate loan processing, and ensure compliance with Generative AI for NBFC.',

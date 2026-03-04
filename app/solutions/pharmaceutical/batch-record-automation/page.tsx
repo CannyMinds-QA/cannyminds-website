@@ -32,9 +32,7 @@ export const metadata: Metadata = {
         "batch release acceleration",
         "GMP batch records",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/pharmaceutical/batch-record-automation",
-    },
+    alternates: generateAlternates('/solutions/pharmaceutical/batch-record-automation'),
     openGraph: {
         title: "Batch Record Automation & eBMR",
         description: "Transform paper-intensive batch record review into intelligent, automated processes.",
@@ -59,7 +57,7 @@ export const metadata: Metadata = {
     },
 };
 
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 const jsonLd = {
     "@context": "https://schema.org",

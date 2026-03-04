@@ -27,7 +27,7 @@ import {
     Build,
     Rule,
 } from "@mui/icons-material";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Bottling Manufacturing | Traceability & Compliance",
@@ -44,9 +44,7 @@ export const metadata: Metadata = {
         "cleaning in place documentation",
         "bottling inventory management",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/manufacturing/bottling",
-    },
+    alternates: generateAlternates('/solutions/manufacturing/bottling'),
     openGraph: {
         title: "Bottling Manufacturing | Traceability & Compliance",
         description: "Digitize your bottling operations. From mixing and filling to packing and dispatch, ensure quality and compliance at every step.",

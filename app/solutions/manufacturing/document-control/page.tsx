@@ -20,7 +20,7 @@ import {
     Assignment,
     Timeline,
 } from "@mui/icons-material";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Document Control & SOP Management | Manufacturing Solutions ",
@@ -37,9 +37,7 @@ export const metadata: Metadata = {
         "ISO document control",
         "document lifecycle management",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/manufacturing/document-control",
-    },
+    alternates: generateAlternates('/solutions/manufacturing/document-control'),
     openGraph: {
         title: "Document Control & SOP Management | Manufacturing Solutions ",
         description: "Transform engineering documentation with centralized control, automated approvals, and complete traceability.",

@@ -18,7 +18,7 @@ import {
     LocalShipping,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl, generateBreadcrumbSchema } from "@/lib/enhanced-seo";
+import { baseUrl, generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Manufacturing Solutions | Industry 4.0 Automation",
@@ -36,9 +36,7 @@ export const metadata: Metadata = {
         "Industry 4.0 solutions",
         "smart manufacturing",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/manufacturing",
-    },
+    alternates: generateAlternates('/solutions/manufacturing'),
     openGraph: {
         type: "website",
         locale: "en_US",

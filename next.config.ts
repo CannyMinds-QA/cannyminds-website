@@ -3,14 +3,13 @@ import { redirects } from "./config/redirects";
 
 const nextConfig: NextConfig = {
   redirects,
-  /* config options here */
   compress: true,
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 2592000, // 30 days – eliminates redundant re-fetches
     remotePatterns: [
       {
         protocol: 'https',
@@ -20,6 +19,16 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      {
+        // Long-term cache for static assets
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
       {
         source: '/:path*',
         headers: [

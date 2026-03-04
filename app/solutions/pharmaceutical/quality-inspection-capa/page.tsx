@@ -32,9 +32,7 @@ export const metadata: Metadata = {
         "quality control automation",
         "GMP quality compliance",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/pharmaceutical/quality-inspection-capa",
-    },
+    alternates: generateAlternates('/solutions/pharmaceutical/quality-inspection-capa'),
     openGraph: {
         title: "Quality Inspection & CAPA Management",
         description: "Ensure consistent quality with AI-powered inspection and automated CAPA workflows.",
@@ -59,7 +57,7 @@ export const metadata: Metadata = {
     },
 };
 
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 const jsonLd = {
     "@context": "https://schema.org",

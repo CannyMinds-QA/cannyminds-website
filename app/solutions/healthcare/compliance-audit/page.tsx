@@ -16,7 +16,7 @@ import {
     FactCheck,
     Cancel,
 } from "@mui/icons-material";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "HIPAA Compliance & Audit Readiness | Healthcare DMS",
@@ -34,9 +34,7 @@ export const metadata: Metadata = {
         "healthcare data security",
         "ISO 27001 healthcare",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/healthcare/compliance-audit",
-    },
+    alternates: generateAlternates('/solutions/healthcare/compliance-audit'),
     openGraph: {
         title: "HIPAA Compliance & Audit Readiness | Healthcare DMS",
         description:

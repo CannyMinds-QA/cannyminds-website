@@ -28,7 +28,7 @@ import {
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
-import { baseUrl, generateBreadcrumbSchema } from "@/lib/enhanced-seo";
+import { baseUrl, generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "CannyECM e-BMR | Electronic Batch Manufacturing Record ",
@@ -46,9 +46,7 @@ export const metadata: Metadata = {
         "batch record automation",
         "pharmaceutical compliance software",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/product/ebmr",
-    },
+    alternates: generateAlternates('/product/ebmr'),
     openGraph: {
         title: "CannyECM e-BMR | Electronic Batch Manufacturing Record ",
         description: "Transform paper-based batch records into a fully digital, compliant, and audit-ready system.",

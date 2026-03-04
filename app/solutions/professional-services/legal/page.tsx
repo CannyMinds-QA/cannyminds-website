@@ -18,7 +18,7 @@ import {
     AccessTime,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Legal Document Management Software | Law Firms ",
@@ -32,9 +32,7 @@ export const metadata: Metadata = {
         "contract lifecycle management",
         "legal deadline tracking"
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/professional-services/legal",
-    },
+    alternates: generateAlternates('/solutions/professional-services/legal'),
     openGraph: {
         title: "Legal Document Management Software | Law Firms ",
         description: "Win more cases with organized evidence and streamlined workflows.",

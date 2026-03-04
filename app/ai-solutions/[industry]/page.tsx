@@ -37,6 +37,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: `Discover how CannyMinds uses Generative AI to transform ${toTitleCase(industry)} operations. Automate workflows, enhance decision-making, and drive efficiency with our enterprise AI solutions.`,
         alternates: {
             canonical: `https://www.cannymindstech.com/ai-solutions/${industry}`,
+            languages: {
+                'en': `https://www.cannymindstech.com/ai-solutions/${industry}`,
+                'x-default': `https://www.cannymindstech.com/ai-solutions/${industry}`,
+            },
         },
         openGraph: {
             title,

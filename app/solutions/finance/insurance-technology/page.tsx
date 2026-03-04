@@ -19,7 +19,7 @@ import {
     AssignmentLate,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Insurance Technology | Claims & Policy Automation",
@@ -34,9 +34,7 @@ export const metadata: Metadata = {
         "claims processing software",
         "insurtech solutions"
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/finance/insurance-technology",
-    },
+    alternates: generateAlternates('/solutions/finance/insurance-technology'),
     openGraph: {
         title: "Insurance Technology | Claims & Policy Automation",
         description: "Faster claims. Smarter underwriting. Better customer experiences.",

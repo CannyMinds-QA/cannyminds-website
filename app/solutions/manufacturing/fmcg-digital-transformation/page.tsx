@@ -20,7 +20,7 @@ import {
     HealthAndSafety,
     Build,
 } from "@mui/icons-material";
-import { baseUrl, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/enhanced-seo";
+import { baseUrl, generateBreadcrumbSchema, generateFAQSchema, generateAlternates } from '@/lib/enhanced-seo';
 import FAQ from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
@@ -34,9 +34,7 @@ export const metadata: Metadata = {
         "manufacturing compliance automation",
         "digital SOP management",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/manufacturing/fmcg-digital-transformation",
-    },
+    alternates: generateAlternates('/solutions/manufacturing/fmcg-digital-transformation'),
     openGraph: {
         title: "FMCG Digital Transformation | Manufacturing Solutions ",
         description: "Transform high-speed FMCG operations with end-to-end digital documentation and workflow automation.",

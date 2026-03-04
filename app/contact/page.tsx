@@ -9,7 +9,7 @@ import {
   ArrowForward as ArrowIcon,
 } from '@mui/icons-material';
 import GlobalOfficesNew from '@/components/sections/GlobalOfficesNew';
-import { baseUrl } from '@/lib/enhanced-seo';
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
   title: 'Contact CannyMinds | Get in Touch Today',
@@ -45,9 +45,7 @@ export const metadata: Metadata = {
     description: 'Contact CannyMinds for digital transformation and enterprise software. Offices in India, USA, Nigeria. 24/7 support for enterprise clients.',
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },
-  alternates: {
-    canonical: 'https://www.cannymindstech.com/contact',
-  },
+  alternates: generateAlternates('/contact'),
 };
 
 const jsonLd = {

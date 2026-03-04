@@ -638,3 +638,19 @@ export function generateVideoSchema(video: VideoItem) {
     duration: video.duration,
   };
 }
+
+/**
+ * Generate proper alternates metadata with self-referencing hreflang
+ * @param path - The page path (e.g., '/about', '/blog', '/product/ecm')
+ * @returns Metadata alternates object with canonical and self-referencing hreflang
+ */
+export function generateAlternates(path: string) {
+  const url = `${baseUrl}${path}`;
+  return {
+    canonical: url,
+    languages: {
+      'en': url,
+      'x-default': url,
+    },
+  };
+}

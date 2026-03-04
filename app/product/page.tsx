@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import AllProductsShowcase from '@/components/solutions/AllProductsShowcase';
-import { baseUrl } from '@/lib/enhanced-seo';
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: 'All Products | Enterprise Software by CannyMinds',
@@ -39,9 +39,7 @@ export const metadata: Metadata = {
         description: 'Explore our complete suite of enterprise software products. ISO-certified, FDA-compliant systems trusted by global organizations.',
         images: ['https://www.cannymindstech.com/og-image.jpg'],
     },
-    alternates: {
-        canonical: 'https://www.cannymindstech.com/product',
-    },
+    alternates: generateAlternates('/product'),
 };
 
 const jsonLd = {

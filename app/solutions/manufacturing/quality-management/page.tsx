@@ -20,7 +20,7 @@ import {
     Assessment,
     Gavel,
 } from "@mui/icons-material";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Quality Management (QA/QC, CAPA, NCR) | Mfg",
@@ -37,9 +37,7 @@ export const metadata: Metadata = {
         "manufacturing quality control",
         "ISO quality management",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/manufacturing/quality-management",
-    },
+    alternates: generateAlternates('/solutions/manufacturing/quality-management'),
     openGraph: {
         title: "Quality Management (QA/QC, CAPA, NCR) | Mfg",
         description: "Transform quality management with digitized QA/QC records, automated CAPA workflows, and comprehensive audit trails.",

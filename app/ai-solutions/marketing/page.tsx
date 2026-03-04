@@ -1,13 +1,11 @@
 import type { Metadata } from 'next'
 import MarketingSolutionsPage from './MarketingClient'
-import { baseUrl } from '@/lib/enhanced-seo'
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo'
 
 export const metadata: Metadata = {
     title: 'Generative AI for Marketing | Content & Campaign Automation',
     description: 'Scale content creation, personalize campaigns, and optimize ad spend with our Gen AI marketing suite.',
-    alternates: {
-        canonical: 'https://www.cannymindstech.com/ai-solutions/marketing',
-    },
+    alternates: generateAlternates('/ai-solutions/marketing'),
     openGraph: {
         title: 'Generative AI for Marketing | Content & Campaign Automation',
         description: 'Scale content creation, personalize campaigns, and optimize ad spend with Generative AI for marketing.',

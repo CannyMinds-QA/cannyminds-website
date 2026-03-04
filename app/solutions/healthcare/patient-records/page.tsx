@@ -18,7 +18,7 @@ import {
     Assignment,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Patient Record Management | EHR Document Integration",
@@ -36,9 +36,7 @@ export const metadata: Metadata = {
         "patient document folder",
         "clinical document access",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/healthcare/patient-records",
-    },
+    alternates: generateAlternates('/solutions/healthcare/patient-records'),
     openGraph: {
         title: "Patient Record Management | EHR Document Integration",
         description:

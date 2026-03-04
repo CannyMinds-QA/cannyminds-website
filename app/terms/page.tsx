@@ -1,13 +1,11 @@
 import { Metadata } from 'next';
-import { baseUrl } from '@/lib/enhanced-seo';
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | CannyMinds Technology Solutions',
   description: 'Terms of Service for CannyMinds Technology Solutions. Read our terms and conditions for using our services and products.',
-  alternates: {
-    canonical: 'https://www.cannymindstech.com/terms',
-  },
+  alternates: generateAlternates('/terms'),
   openGraph: {
     type: 'website',
     url: 'https://www.cannymindstech.com/terms',

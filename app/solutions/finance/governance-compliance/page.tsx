@@ -18,7 +18,7 @@ import {
     Rule,
 } from "@mui/icons-material";
 
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Governance, Risk & Compliance (GRC) Solutions ",
@@ -33,9 +33,7 @@ export const metadata: Metadata = {
         "GDPR compliance tools",
         "legal document management"
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/finance/governance-compliance",
-    },
+    alternates: generateAlternates('/solutions/finance/governance-compliance'),
     openGraph: {
         title: "Governance, Risk & Compliance (GRC) Solutions ",
         description: "Stay audit-ready, always. Automate compliance and mitigate risk with CannyECM.",

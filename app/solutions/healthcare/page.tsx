@@ -14,7 +14,7 @@ import {
     Scanner,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Healthcare Solutions | Hospital Document Management",
@@ -32,9 +32,7 @@ export const metadata: Metadata = {
         "hospital paperless solution",
         "EHR document integration",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/healthcare",
-    },
+    alternates: generateAlternates('/solutions/healthcare'),
     openGraph: {
         type: "website",
         locale: "en_US",

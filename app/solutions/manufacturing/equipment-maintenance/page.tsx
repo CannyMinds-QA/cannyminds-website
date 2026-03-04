@@ -21,7 +21,7 @@ import {
     Category,
     Assessment,
 } from "@mui/icons-material";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Equipment Maintenance & Asset Documentation | Mfg",
@@ -38,9 +38,7 @@ export const metadata: Metadata = {
         "manufacturing asset management",
         "maintenance compliance",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/manufacturing/equipment-maintenance",
-    },
+    alternates: generateAlternates('/solutions/manufacturing/equipment-maintenance'),
     openGraph: {
         title: "Equipment Maintenance & Asset Documentation | Mfg",
         description: "Comprehensive equipment documentation and maintenance workflow management for operational continuity.",

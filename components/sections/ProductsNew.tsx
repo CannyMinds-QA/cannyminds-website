@@ -72,7 +72,7 @@ export default function ProductsNew() {
           </h2>
           <p className="text-gray-500 text-base lg:text-lg leading-relaxed">
             Comprehensive enterprise software trusted by 100+ companies worldwide
-            for digital transformation and process automation.
+            for <Link href="/blog/digital-transformation-documentation" className="text-primary hover:underline font-medium">digital transformation</Link> and process automation.
           </p>
         </motion.div>
 

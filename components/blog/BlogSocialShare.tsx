@@ -36,70 +36,65 @@ export default function BlogSocialShare({ url, title }: BlogSocialShareProps) {
                 <Share sx={{ fontSize: 18 }} className="text-gray-500" />
                 <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wide">Share Article</h3>
             </div>
-            <div className="space-y-2">
+            <div className="flex flex-wrap items-center gap-2">
                 <a
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#0a66c2] hover:bg-[#004182] text-white rounded-lg transition-colors text-sm font-medium"
+                    className="flex items-center justify-center p-2.5 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 text-[#0a66c2] rounded-lg transition-colors"
+                    title="Share on LinkedIn"
                     aria-label="Share on LinkedIn"
                 >
-                    <LinkedIn sx={{ fontSize: 18 }} />
-                    <span>LinkedIn</span>
+                    <LinkedIn sx={{ fontSize: 20 }} />
                 </a>
                 <a
                     href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#1DA1F2] hover:bg-[#1a8cd8] text-white rounded-lg transition-colors text-sm font-medium"
+                    className="flex items-center justify-center p-2.5 bg-[#1DA1F2]/10 hover:bg-[#1DA1F2]/20 text-[#1DA1F2] rounded-lg transition-colors"
+                    title="Share on Twitter"
                     aria-label="Share on Twitter"
                 >
-                    <Twitter sx={{ fontSize: 18 }} />
-                    <span>Twitter</span>
+                    <Twitter sx={{ fontSize: 20 }} />
                 </a>
                 <a
                     href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#1877f2] hover:bg-[#0c63d4] text-white rounded-lg transition-colors text-sm font-medium"
+                    className="flex items-center justify-center p-2.5 bg-[#1877f2]/10 hover:bg-[#1877f2]/20 text-[#1877f2] rounded-lg transition-colors"
+                    title="Share on Facebook"
                     aria-label="Share on Facebook"
                 >
-                    <Facebook sx={{ fontSize: 18 }} />
-                    <span>Facebook</span>
+                    <Facebook sx={{ fontSize: 20 }} />
                 </a>
                 <a
                     href={`https://wa.me/?text=${encodeURIComponent(title + ' ' + url)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#1da851] text-white rounded-lg transition-colors text-sm font-medium"
+                    className="flex items-center justify-center p-2.5 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] rounded-lg transition-colors"
+                    title="Share on WhatsApp"
                     aria-label="Share on WhatsApp"
                 >
-                    <WhatsApp sx={{ fontSize: 18 }} />
-                    <span>WhatsApp</span>
+                    <WhatsApp sx={{ fontSize: 20 }} />
                 </a>
                 <a
                     href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`Check out this article: ${url}`)}`}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors text-sm font-medium"
+                    className="flex items-center justify-center p-2.5 bg-gray-500/10 hover:bg-gray-500/20 text-gray-600 rounded-lg transition-colors"
+                    title="Share via Email"
                     aria-label="Share via Email"
                 >
-                    <Email sx={{ fontSize: 18 }} />
-                    <span>Email</span>
+                    <Email sx={{ fontSize: 20 }} />
                 </a>
                 <button
                     onClick={handleCopyLink}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-500 hover:bg-gray-600 text-white rounded-lg transition-colors text-sm font-medium"
+                    className="flex items-center justify-center p-2.5 bg-gray-500/10 hover:bg-gray-500/20 text-gray-600 rounded-lg transition-colors"
+                    title="Copy link"
                     aria-label="Copy link"
                 >
                     {copied ? (
-                        <>
-                            <Check sx={{ fontSize: 18 }} />
-                            <span>Copied!</span>
-                        </>
+                        <Check sx={{ fontSize: 20 }} className="text-green-600" />
                     ) : (
-                        <>
-                            <ContentCopy sx={{ fontSize: 18 }} />
-                            <span>Copy Link</span>
-                        </>
+                        <ContentCopy sx={{ fontSize: 20 }} />
                     )}
                 </button>
             </div>

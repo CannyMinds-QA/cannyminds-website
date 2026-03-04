@@ -17,7 +17,7 @@ import {
     Cancel,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Medical Document Digitization | Hospital Scanning & OCR",
@@ -35,9 +35,7 @@ export const metadata: Metadata = {
         "medical form OCR",
         "patient record digitization",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/healthcare/document-digitization",
-    },
+    alternates: generateAlternates('/solutions/healthcare/document-digitization'),
     openGraph: {
         title: "Medical Document Digitization | Hospital Scanning & OCR",
         description:

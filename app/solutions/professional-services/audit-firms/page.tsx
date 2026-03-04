@@ -20,7 +20,7 @@ import {
     FactCheck
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Audit Management Software | CPA & Audit Firms ",
@@ -34,9 +34,7 @@ export const metadata: Metadata = {
         "peer review documentation",
         "client portal for auditors"
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/professional-services/audit-firms",
-    },
+    alternates: generateAlternates('/solutions/professional-services/audit-firms'),
     openGraph: {
         title: "Audit Management Software | CPA & Audit Firms ",
         description: "Ensure audit quality and compliance with structured, secure digital working papers.",

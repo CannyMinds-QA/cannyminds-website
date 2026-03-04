@@ -1,13 +1,11 @@
 import type { Metadata } from 'next'
 import RealEstateSolutionsPage from './RealEstateClient'
-import { baseUrl } from '@/lib/enhanced-seo'
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo'
 
 export const metadata: Metadata = {
     title: 'AI in Real Estate | Property Management & Valuation',
     description: 'Revolutionize property valuation, tenant screening, and lease management with predictive AI solutions.',
-    alternates: {
-        canonical: 'https://www.cannymindstech.com/ai-solutions/real-estate',
-    },
+    alternates: generateAlternates('/ai-solutions/real-estate'),
     openGraph: {
         title: 'AI in Real Estate | Property Management & Valuation',
         description: 'Revolutionize property valuation, tenant screening, and lease management with Generative AI for real estate.',

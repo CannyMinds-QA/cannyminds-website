@@ -1,13 +1,11 @@
 import type { Metadata } from 'next'
 import TextileSolutionsPage from './TextileClient'
-import { baseUrl } from '@/lib/enhanced-seo'
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo'
 
 export const metadata: Metadata = {
     title: 'AI for Textile & Apparel | Design & Supply Chain',
     description: 'Optimize supply chains, predict trends, and automate quality inspection in textile manufacturing.',
-    alternates: {
-        canonical: 'https://www.cannymindstech.com/ai-solutions/textile',
-    },
+    alternates: generateAlternates('/ai-solutions/textile'),
     openGraph: {
         title: 'AI for Textile & Apparel | Design & Supply Chain',
         description: 'Optimize supply chains, predict trends, and automate quality inspection with Generative AI for textile.',

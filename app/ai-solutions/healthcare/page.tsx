@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import HealthcareClient from "./HealthcareClient";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Generative AI for Healthcare & Hospitals | CannyMinds",
@@ -16,9 +16,7 @@ export const metadata: Metadata = {
         "HIPAA Compliant AI",
         "CannyMinds Healthcare Solutions",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/ai-solutions/healthcare",
-    },
+    alternates: generateAlternates('/ai-solutions/healthcare'),
     openGraph: {
         title: "Generative AI for Healthcare & Hospitals | CannyMinds",
         description:

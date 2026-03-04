@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/enhanced-seo";
+import { generateBreadcrumbSchema, generateFAQSchema, generateAlternates } from '@/lib/enhanced-seo';
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -59,9 +59,7 @@ export const metadata: Metadata = {
     description: "Complete HRMS with payroll, time tracking, leave management, and performance reviews. 350+ biometric integrations. Mobile app included.",
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },
-  alternates: {
-    canonical: "https://www.cannymindstech.com/product/hr-management",
-  },
+  alternates: generateAlternates('/product/hr-management'),
   robots: { index: true, follow: true },
 };
 

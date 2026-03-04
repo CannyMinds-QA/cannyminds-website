@@ -14,7 +14,7 @@ import {
     Lock,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Professional Services Solutions | Legal & Audit Firms ",
@@ -28,9 +28,7 @@ export const metadata: Metadata = {
         "legal case management",
         "compliance software"
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/professional-services",
-    },
+    alternates: generateAlternates('/solutions/professional-services'),
     openGraph: {
         type: "website",
         locale: "en_US",

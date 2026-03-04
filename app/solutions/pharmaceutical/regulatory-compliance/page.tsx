@@ -34,9 +34,7 @@ export const metadata: Metadata = {
         "21 CFR Part 11 software",
         "electronic content management",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/pharmaceutical/regulatory-compliance",
-    },
+    alternates: generateAlternates('/solutions/pharmaceutical/regulatory-compliance'),
     openGraph: {
         title: "Regulatory Compliance & Document Control",
         description: "Streamline compliance with AI-driven document control and regulatory support.",
@@ -61,7 +59,7 @@ export const metadata: Metadata = {
     },
 };
 
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 const jsonLd = {
     "@context": "https://schema.org",

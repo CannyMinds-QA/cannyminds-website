@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/enhanced-seo";
+import { generateBreadcrumbSchema, generateFAQSchema, generateAlternates } from '@/lib/enhanced-seo';
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -66,9 +66,7 @@ export const metadata: Metadata = {
     description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise deployment. Manage 50,000+ documents.",
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },
-  alternates: {
-    canonical: "https://www.cannymindstech.com/product/enterprise-content-management",
-  },
+  alternates: generateAlternates('/product/enterprise-content-management'),
   robots: { index: true, follow: true },
 };
 

@@ -18,7 +18,7 @@ import {
   Favorite as CustomerIcon,
   TrendingUp as ImprovementIcon,
 } from '@mui/icons-material';
-import { baseUrl } from '@/lib/enhanced-seo';
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
   title: 'About CannyMinds | Information Management Solutions',
@@ -55,9 +55,7 @@ export const metadata: Metadata = {
     description: 'CannyMinds is a trusted provider of information management and digitization solutions for regulated industries.',
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },
-  alternates: {
-    canonical: 'https://www.cannymindstech.com/about',
-  },
+  alternates: generateAlternates('/about'),
 };
 
 const jsonLd = {

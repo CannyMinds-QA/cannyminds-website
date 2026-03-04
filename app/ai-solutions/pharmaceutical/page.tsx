@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import PharmaClient from "./PharmaClient";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Gen AI for Pharma Manufacturing | CannyMinds",
@@ -16,9 +16,7 @@ export const metadata: Metadata = {
         "Pharma Quality Inspection AI",
         "CannyMinds Pharma Solutions",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/ai-solutions/pharmaceutical",
-    },
+    alternates: generateAlternates('/ai-solutions/pharmaceutical'),
     openGraph: {
         title: "Gen AI for Pharma Manufacturing | CannyMinds",
         description:

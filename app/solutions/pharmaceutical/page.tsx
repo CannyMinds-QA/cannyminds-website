@@ -28,9 +28,7 @@ export const metadata: Metadata = {
         "GxP compliance solutions",
         "pharmaceutical content management",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/pharmaceutical",
-    },
+    alternates: generateAlternates('/solutions/pharmaceutical'),
     openGraph: {
         type: "website",
         locale: "en_US",
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
     },
 };
 
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 const jsonLd = {
     "@context": "https://schema.org",

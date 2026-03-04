@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/enhanced-seo";
+import { generateBreadcrumbSchema, generateFAQSchema, generateAlternates } from '@/lib/enhanced-seo';
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -59,9 +59,7 @@ export const metadata: Metadata = {
     description: "Workforce productivity monitoring with activity tracking, screenshots, and data loss prevention. Consent-based, real-time analytics with offline support.",
     images: ['https://www.cannymindstech.com/og-image.jpg'],
   },
-  alternates: {
-    canonical: "https://www.cannymindstech.com/product/tracking-system",
-  },
+  alternates: generateAlternates('/product/tracking-system'),
   robots: { index: true, follow: true },
 };
 

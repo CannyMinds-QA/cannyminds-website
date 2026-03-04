@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateAlternates } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
     title: "Physical Records Management System | CannyRMS 2026",
@@ -53,9 +54,7 @@ export const metadata: Metadata = {
         description: "Physical records management system with barcode tracking, workflow automation, and compliance-ready audit trails for enterprises.",
         images: ["/images/rms/cannyrms-dashboard.png"],
     },
-    alternates: {
-        canonical: "https://www.cannymindstech.com/product/physical-records-management",
-    },
+    alternates: generateAlternates("/product/physical-records-management"),
     robots: {
         index: true,
         follow: true,

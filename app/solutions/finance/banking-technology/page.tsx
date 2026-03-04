@@ -18,7 +18,7 @@ import {
     Savings,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Banking Technology | Loan Processing & KYC",
@@ -33,9 +33,7 @@ export const metadata: Metadata = {
         "customer onboarding automation",
         "retail banking solutions"
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/finance/banking-technology",
-    },
+    alternates: generateAlternates('/solutions/finance/banking-technology'),
     openGraph: {
         title: "Banking Technology | Loan Processing & KYC",
         description: "Transform your banking operations. From instant account opening to automated loan approvals.",

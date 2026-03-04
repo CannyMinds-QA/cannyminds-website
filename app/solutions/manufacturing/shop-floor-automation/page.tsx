@@ -32,7 +32,7 @@ import {
     Done,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Shop Floor Automation | Manufacturing Production Recording",
@@ -49,9 +49,7 @@ export const metadata: Metadata = {
         "manufacturing audit trail",
         "production approval workflow",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/manufacturing/shop-floor-automation",
-    },
+    alternates: generateAlternates('/solutions/manufacturing/shop-floor-automation'),
     openGraph: {
         title: "Shop Floor Automation | Manufacturing Production Recording",
         description: "From manual paper entry to automated digital production reports. Transform your manufacturing floor operations.",

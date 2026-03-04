@@ -20,7 +20,7 @@ import {
     Handshake,
     Inventory,
 } from "@mui/icons-material";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Vendor & Procurement Document Management | Mfg",
@@ -37,9 +37,7 @@ export const metadata: Metadata = {
         "supplier compliance",
         "manufacturing procurement",
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/manufacturing/vendor-procurement",
-    },
+    alternates: generateAlternates('/solutions/manufacturing/vendor-procurement'),
     openGraph: {
         title: "Vendor & Procurement Document Management | Mfg",
         description: "Streamline vendor documentation and contract management with centralized control and automated workflows.",

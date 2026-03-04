@@ -1,13 +1,11 @@
 import { Metadata } from 'next';
-import { baseUrl } from '@/lib/enhanced-seo';
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | CannyMinds Technology Solutions',
   description: 'Privacy Policy for CannyMinds Technology Solutions. Learn how we collect, use, and protect your personal information.',
-  alternates: {
-    canonical: 'https://www.cannymindstech.com/privacy-policy',
-  },
+  alternates: generateAlternates('/privacy-policy'),
   openGraph: {
     type: 'website',
     url: 'https://www.cannymindstech.com/privacy-policy',

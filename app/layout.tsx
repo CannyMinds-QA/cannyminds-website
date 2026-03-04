@@ -38,6 +38,12 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="alternate" hrefLang="en" href="https://www.cannymindstech.com/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.cannymindstech.com/" />
+        {/* Preconnect: establish early connections to third-party origins */}
+        <link rel="preconnect" href="https://va.tawk.to" />
+        <link rel="dns-prefetch" href="https://va.tawk.to" />
+        <link rel="preconnect" href="https://embed.tawk.to" />
+        <link rel="dns-prefetch" href="https://embed.tawk.to" />
+        <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="0QPPhEaCa6E3iNGO8b5ttw" async></script>
         <meta name="ahrefs-site-verification" content="99e32a8d5cf6c0e56b76bd14a0ba19104d7bc3a634f23bfb63da66d0abdaf6e2" />
 

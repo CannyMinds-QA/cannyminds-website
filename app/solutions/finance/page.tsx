@@ -15,7 +15,7 @@ import {
     CloudSync,
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import { baseUrl } from "@/lib/enhanced-seo";
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Finance & Insurance Solutions | Digital Transformation ",
@@ -30,9 +30,7 @@ export const metadata: Metadata = {
         "fintech document solutions",
         "audit trail software for banks"
     ],
-    alternates: {
-        canonical: "https://www.cannymindstech.com/solutions/finance",
-    },
+    alternates: generateAlternates('/solutions/finance'),
     openGraph: {
         type: "website",
         locale: "en_US",
@@ -158,7 +156,7 @@ export default function FinanceSolutionsPage() {
                                 </p>
 
                                 <div className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
-                                    Modernize your legacy systems with CannyECM. We help banks, insurers, and fintechs securely digitize documents, automate complex workflows, and maintain strict regulatory compliance.
+                                    Modernize your legacy systems with CannyECM. We help banks, insurers, and fintechs securely <Link href="/blog/digital-transformation-documentation" className="text-blue-600 hover:underline font-medium">digitize documents</Link>, automate complex workflows, and maintain strict regulatory compliance.
                                 </div>
 
                                 <div className="flex flex-wrap gap-4">

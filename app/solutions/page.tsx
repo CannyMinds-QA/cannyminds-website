@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import AllIndustriesShowcase from '@/components/solutions/AllIndustriesShowcase';
-import { baseUrl } from '@/lib/enhanced-seo';
+import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: 'Industry Solutions | CannyMinds',
@@ -36,9 +36,7 @@ export const metadata: Metadata = {
         description: 'Explore tailored software solutions for Pharmaceutical, Manufacturing, Healthcare, Finance, and more.',
         images: ['https://www.cannymindstech.com/og-image.jpg'],
     },
-    alternates: {
-        canonical: 'https://www.cannymindstech.com/solutions',
-    },
+    alternates: generateAlternates('/solutions'),
 };
 
 const jsonLd = {

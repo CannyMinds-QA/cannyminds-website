@@ -16,6 +16,7 @@ import {
 } from '@mui/icons-material';
 import { baseUrl } from '@/lib/enhanced-seo';
 import BlogSocialShare from '@/components/blog/BlogSocialShare';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 
 // ── Static params ─────────────────────────────────────────────────────────────
 export async function generateStaticParams() {
@@ -38,7 +39,13 @@ export async function generateMetadata({
         title: post.seo.metaTitle,
         description: post.seo.metaDescription,
         keywords: post.seo.keywords,
-        alternates: { canonical: post.seo.canonicalUrl },
+        alternates: {
+            canonical: post.seo.canonicalUrl,
+            languages: {
+                'en': post.seo.canonicalUrl,
+                'x-default': post.seo.canonicalUrl,
+            },
+        },
         openGraph: {
             title: post.seo.metaTitle,
             description: post.seo.metaDescription,
@@ -57,6 +64,16 @@ export async function generateMetadata({
             title: post.seo.metaTitle,
             description: post.seo.metaDescription,
             images: [ogImage],
+        },
+        robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
+                'max-image-preview': 'large',
+                'max-snippet': -1,
+            },
         },
     };
 }
@@ -186,6 +203,40 @@ export default async function BlogPostPage({
         ]
     };
 
+    // Extract FAQs from the sections array instead of post.content
+    const faqSection = post.sections?.find(s => s.heading.toLowerCase().includes('faq'));
+    const faqsData: { question: string, answer: string }[] = [];
+
+    if (faqSection) {
+        // Parse HTML format: <strong>Question?</strong><br>Answer text<br><br>
+        const matches = Array.from(faqSection.content.matchAll(/<strong>(.*?)<\/strong><br>(.*?)((?:<br><br>)|$)/g));
+        matches.forEach(m => {
+            faqsData.push({
+                question: m[1].trim(),
+                answer: m[2].trim().replace(/<br>/g, '\n')
+            });
+        });
+    }
+
+    let faqJsonLd = null;
+    if (faqsData.length > 0) {
+        faqJsonLd = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqsData.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                }
+            }))
+        };
+    }
+
+    // Filter out FAQ sections from the generic map to avoid duplicate display
+    const regularSections = post.sections ? post.sections.filter(s => !s.heading.toLowerCase().includes('faq')) : [];
+
     const relatedPosts = getRelatedPosts(post.slug, post.category, 3);
 
     return (
@@ -198,6 +249,12 @@ export default async function BlogPostPage({
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
+            {faqJsonLd && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+                />
+            )}
             <main className="min-h-screen bg-white pt-16 sm:pt-20">
 
                 {/* ── Breadcrumb ── */}
@@ -281,6 +338,7 @@ export default async function BlogPostPage({
                                         height={675}
                                         priority
                                         quality={90}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(100vw - 320px), 900px"
                                         className="w-full h-auto aspect-[16/9] object-cover"
                                     />
                                 ) : (
@@ -308,15 +366,15 @@ export default async function BlogPostPage({
                                 <div className="text-gray-700 leading-relaxed mb-8" dangerouslySetInnerHTML={{ __html: renderContent(post.content) }} />
                             )}
 
-                            {/* Table of Contents */}
-                            {post.sections && post.sections.length > 0 && (
-                                <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 mb-10">
+                            {/* Table of Contents (Mobile/Tablet) */}
+                            {regularSections.length > 0 && (
+                                <div className="lg:hidden bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 mb-10">
                                     <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                                         <span className="w-1 h-6 bg-primary rounded-full"></span>
                                         Table of Contents
                                     </h2>
                                     <nav className="space-y-2">
-                                        {post.sections.map((section, index) => (
+                                        {regularSections.map((section, index) => (
                                             <a
                                                 key={section.id}
                                                 href={`#${section.id}`}
@@ -330,7 +388,7 @@ export default async function BlogPostPage({
                             )}
 
                             {/* Main Sections */}
-                            {post.sections && post.sections.map((section, index) => (
+                            {regularSections.map((section, index) => (
                                 <div key={section.id}>
                                     <section id={section.id} className="mb-12 scroll-mt-20">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-center gap-3">
@@ -352,6 +410,7 @@ export default async function BlogPostPage({
                                                 height={675}
                                                 loading="lazy"
                                                 quality={85}
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(100vw - 320px), 900px"
                                                 className="w-full h-auto aspect-[16/9] object-cover"
                                             />
                                         </div>
@@ -365,8 +424,25 @@ export default async function BlogPostPage({
                                                 height={675}
                                                 loading="lazy"
                                                 quality={85}
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(100vw - 320px), 900px"
                                                 className="w-full h-auto aspect-[16/9] object-cover"
                                             />
+                                        </div>
+                                    )}
+
+                                    {/* Inline CTA — appears after section 2 */}
+                                    {index === 1 && (
+                                        <div className="my-10 flex flex-col sm:flex-row items-center justify-between gap-4 bg-primary text-white rounded-2xl px-6 py-5">
+                                            <div>
+                                                <p className="font-bold text-base sm:text-lg leading-tight">Still managing documents manually?</p>
+                                                <p className="text-blue-100 text-sm mt-1">See how CannyMinds cuts document retrieval time by 90%.</p>
+                                            </div>
+                                            <Link
+                                                href="/contact"
+                                                className="flex-shrink-0 bg-white text-primary font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-blue-50 transition-colors"
+                                            >
+                                                Book a Demo
+                                            </Link>
                                         </div>
                                     )}
                                 </div>
@@ -397,8 +473,92 @@ export default async function BlogPostPage({
                                 ))}
                             </div>
 
+                            {/* Appended FAQ Component */}
+                            {faqsData.length > 0 && (
+                                <BlogFAQ faqs={faqsData} />
+                            )}
+
+                            {/* Author Bio - Moved from sidebar */}
+                            <div className="mt-10 pt-6 border-t border-gray-200">
+                                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm">
+                                    <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4 md:mb-6">About the Author</h3>
+                                    <div className="flex flex-col md:flex-row gap-6">
+                                        <div className="flex-shrink-0">
+                                            {post.author.image ? (
+                                                <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden shadow-md">
+                                                    <Image
+                                                        src={post.author.image}
+                                                        alt={post.author.name}
+                                                        fill
+                                                        className="object-cover"
+                                                        sizes="(max-width: 768px) 80px, 96px"
+                                                    />
+                                                </div>
+                                            ) : (
+                                                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-bold text-3xl shadow-md">
+                                                    {post.author.name.charAt(0)}
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="flex-1">
+                                            <div className="font-bold text-gray-900 text-xl">{post.author.name}</div>
+                                            <div className="text-sm md:text-base text-gray-600 mb-3">{post.author.role}</div>
+                                            <p className="text-gray-700 leading-relaxed mb-4">
+                                                {post.author.bio}
+                                            </p>
+
+                                            {/* Credentials & Social */}
+                                            <div className="flex flex-col sm:flex-row gap-6 sm:items-center">
+                                                <div className="space-y-2">
+                                                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Credentials</div>
+                                                    {post.author.credentials.map((credential, idx) => (
+                                                        <div key={idx} className="flex items-start gap-2 text-xs md:text-sm text-gray-600">
+                                                            <CheckCircle sx={{ fontSize: 16 }} className="text-green-500 mt-0.5 flex-shrink-0" />
+                                                            <span>{credential}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+
+                                                {(post.author.linkedIn || post.author.twitter) && (
+                                                    <div className="flex gap-3 sm:ml-auto pt-4 sm:pt-0 sm:border-l sm:border-gray-200 sm:pl-6">
+                                                        {post.author.linkedIn && (
+                                                            <a href={post.author.linkedIn} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 text-[#0a66c2] rounded-full transition-colors">
+                                                                <LinkedIn />
+                                                            </a>
+                                                        )}
+                                                        {post.author.twitter && (
+                                                            <a href={post.author.twitter} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1DA1F2]/10 hover:bg-[#1DA1F2]/20 text-[#1DA1F2] rounded-full transition-colors">
+                                                                <Twitter />
+                                                            </a>
+                                                        )}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Sidebar CTA - Moved from sidebar */}
+                            <div className="mt-10 bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 md:p-10 text-white shadow-lg relative overflow-hidden">
+                                <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                                    <div className="flex-1">
+                                        <h3 className="font-bold text-2xl mb-2">Need Expert Guidance?</h3>
+                                        <p className="text-blue-100 leading-relaxed md:text-lg">
+                                            Talk to our team about document management, AI automation, or compliance challenges.
+                                        </p>
+                                    </div>
+                                    <Link href="/contact" className="flex-shrink-0 flex items-center justify-center gap-2 bg-white text-primary font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5">
+                                        Contact Us <ArrowForward />
+                                    </Link>
+                                </div>
+                                {/* Decorative elements */}
+                                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                                <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-48 h-48 bg-blue-500/20 rounded-full blur-2xl"></div>
+                            </div>
+
                             {/* Prev / Next */}
-                            <div className="mt-10 grid sm:grid-cols-2 gap-4">
+                            <div className="mt-12 grid sm:grid-cols-2 gap-4 pt-6 border-t border-gray-200">
                                 {prev && (
                                     <Link href={`/blog/${prev.slug}`} className="group flex items-start gap-3 p-4 rounded-xl border border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
                                         <ArrowBack sx={{ fontSize: 20 }} className="text-gray-400 group-hover:text-primary mt-0.5 flex-shrink-0" />
@@ -421,115 +581,59 @@ export default async function BlogPostPage({
                         </article>
 
                         {/* ── Sidebar ── */}
-                        <aside className="lg:w-72 xl:w-80 flex-shrink-0 space-y-6">
+                        <aside className="lg:w-72 xl:w-80 flex-shrink-0 hidden lg:block">
+                            <div className="sticky top-24 space-y-8 pb-10">
 
-                            {/* Social Share */}
-                            <BlogSocialShare url={post.seo.canonicalUrl} title={post.title} />
-
-                            {/* Author Bio - E-E-A-T */}
-                            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                                <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">About the Author</h3>
-                                <div className="flex items-start gap-3 mb-4">
-                                    {post.author.image ? (
-                                        <div className="relative w-14 h-14 rounded-full flex-shrink-0 overflow-hidden shadow-md">
-                                            <Image
-                                                src={post.author.image}
-                                                alt={post.author.name}
-                                                fill
-                                                className="object-cover"
-                                                sizes="56px"
-                                            />
-                                        </div>
-                                    ) : (
-                                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-bold text-xl flex-shrink-0 shadow-md">
-                                            {post.author.name.charAt(0)}
-                                        </div>
-                                    )}
-                                    <div>
-                                        <div className="font-bold text-gray-900 text-base">{post.author.name}</div>
-                                        <div className="text-xs text-gray-600 leading-relaxed">{post.author.role}</div>
-                                    </div>
-                                </div>
-                                <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                                    {post.author.bio}
-                                </p>
-
-                                {/* Credentials - E-E-A-T Trust Signals */}
-                                <div className="space-y-2 mb-4">
-                                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Credentials</div>
-                                    {post.author.credentials.map((credential, idx) => (
-                                        <div key={idx} className="flex items-start gap-2 text-xs text-gray-600">
-                                            <CheckCircle sx={{ fontSize: 14 }} className="text-green-500 mt-0.5 flex-shrink-0" />
-                                            <span>{credential}</span>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Social Links */}
-                                {(post.author.linkedIn || post.author.twitter) && (
-                                    <div className="flex gap-2 pt-4 border-t border-gray-200">
-                                        {post.author.linkedIn && (
-                                            <a
-                                                href={post.author.linkedIn}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex-1 flex items-center justify-center gap-1 px-3 py-2 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 text-[#0a66c2] rounded-lg transition-colors text-xs font-medium"
-                                            >
-                                                <LinkedIn sx={{ fontSize: 14 }} />
-                                                Connect
-                                            </a>
-                                        )}
-                                        {post.author.twitter && (
-                                            <a
-                                                href={post.author.twitter}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex-1 flex items-center justify-center gap-1 px-3 py-2 bg-[#1DA1F2]/10 hover:bg-[#1DA1F2]/20 text-[#1DA1F2] rounded-lg transition-colors text-xs font-medium"
-                                            >
-                                                <Twitter sx={{ fontSize: 14 }} />
-                                                Follow
-                                            </a>
-                                        )}
+                                {/* Table of Contents (Desktop) */}
+                                {regularSections.length > 0 && (
+                                    <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                                        <h2 className="text-sm font-bold text-gray-900 mb-4 flex items-center gap-2 uppercase tracking-wider">
+                                            <span className="w-1 h-4 bg-primary rounded-full"></span>
+                                            On this page
+                                        </h2>
+                                        <nav className="space-y-1">
+                                            {regularSections.map((section, index) => (
+                                                <a
+                                                    key={section.id}
+                                                    href={`#${section.id}`}
+                                                    className="block px-3 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition-all"
+                                                >
+                                                    {index + 1}. {section.heading}
+                                                </a>
+                                            ))}
+                                        </nav>
                                     </div>
                                 )}
-                            </div>
 
-                            {/* Related Articles */}
-                            {relatedPosts.length > 0 && (
-                                <div>
-                                    <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Related Articles</h3>
-                                    <div className="space-y-3">
-                                        {relatedPosts.map((r) => (
-                                            <Link key={r.slug} href={`/blog/${r.slug}`} className="block p-4 rounded-xl border border-gray-200 hover:border-primary hover:bg-primary/5 transition-all group">
-                                                <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold border mb-2 ${CATEGORY_COLORS[r.category]}`}>
-                                                    {r.category}
-                                                </span>
-                                                <div className="text-sm font-semibold text-gray-800 group-hover:text-primary leading-snug line-clamp-2">{r.title}</div>
-                                                <div className="flex items-center gap-1 text-xs text-gray-400 mt-2">
-                                                    <AccessTime sx={{ fontSize: 12 }} /> {r.readingTimeMin} min read
-                                                </div>
-                                            </Link>
-                                        ))}
+                                {/* Social Share */}
+                                <BlogSocialShare url={post.seo.canonicalUrl} title={post.title} />
+
+                                {/* Related Articles */}
+                                {relatedPosts.length > 0 && (
+                                    <div>
+                                        <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Related Articles</h3>
+                                        <div className="space-y-3">
+                                            {relatedPosts.map((r) => (
+                                                <Link key={r.slug} href={`/blog/${r.slug}`} className="block p-4 rounded-xl border border-gray-200 hover:border-primary hover:bg-primary/5 transition-all group shadow-sm bg-white">
+                                                    <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold border mb-2 ${CATEGORY_COLORS[r.category]}`}>
+                                                        {r.category}
+                                                    </span>
+                                                    <div className="text-sm font-semibold text-gray-800 group-hover:text-primary leading-snug line-clamp-2">{r.title}</div>
+                                                    <div className="flex items-center gap-1 text-xs text-gray-400 mt-2">
+                                                        <AccessTime sx={{ fontSize: 12 }} /> {r.readingTimeMin} min read
+                                                    </div>
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
-                            )}
+                                )}
 
-                            {/* CTA */}
-                            <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 text-white">
-                                <h3 className="font-bold text-lg mb-2">Need Expert Guidance?</h3>
-                                <p className="text-sm text-blue-100 mb-4 leading-relaxed">
-                                    Talk to our team about document management, AI automation, or compliance challenges.
-                                </p>
-                                <Link href="/contact" className="flex items-center justify-center gap-2 bg-white text-primary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-gray-100 transition-colors">
-                                    Contact Us <ArrowForward sx={{ fontSize: 16 }} />
+                                {/* Back */}
+                                <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-primary transition-colors group p-4 rounded-xl border border-gray-200 bg-white hover:bg-primary/5 shadow-sm w-full justify-center">
+                                    <ArrowBack sx={{ fontSize: 18 }} className="group-hover:-translate-x-1 transition-transform" />
+                                    Back to all articles
                                 </Link>
                             </div>
-
-                            {/* Back */}
-                            <Link href="/blog" className="flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors group">
-                                <ArrowBack sx={{ fontSize: 16 }} className="group-hover:-translate-x-1 transition-transform" />
-                                Back to all articles
-                            </Link>
                         </aside>
                     </div>
                 </div>

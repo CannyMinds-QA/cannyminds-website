@@ -144,7 +144,7 @@ export default function AboutNew() {
               className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto"
             >
               CannyMinds is a trusted provider of information management and digitization solutions,
-              helping organizations securely manage, preserve, and transform their critical records
+              helping organizations securely manage, preserve, and <Link href="/blog/digital-transformation-documentation" className="text-primary hover:underline font-medium">transform their critical records</Link>
               across their lifecycle. We specialize in Enterprise Content Management (ECM) and Physical Record Management, Onsite & Offsite
               Digitization for regulated industries.
             </motion.p>
