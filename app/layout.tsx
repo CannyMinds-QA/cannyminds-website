@@ -36,8 +36,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#3170b5" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <link rel="alternate" hrefLang="en" href="https://www.cannymindstech.com/" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.cannymindstech.com/" />
         {/* Preconnect: establish early connections to third-party origins */}
         <link rel="preconnect" href="https://va.tawk.to" />
         <link rel="dns-prefetch" href="https://va.tawk.to" />

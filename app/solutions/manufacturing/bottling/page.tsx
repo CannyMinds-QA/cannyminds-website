@@ -31,7 +31,7 @@ import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Bottling Manufacturing | Traceability & Compliance",
-    description: "End-to-end digital transformation for bottling plants. Automate batch records (BMR), ensure FSSAI/FDA compliance, and achieve 100% traceability from raw material to finished goods.",
+    description: "End-to-end digital transformation for bottling plants. Automate batch records, ensure compliance, and achieve full supply chain traceability.",
     keywords: [
         "bottling manufacturing software",
         "electronic batch manufacturing records",

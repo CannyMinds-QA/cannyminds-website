@@ -35,8 +35,8 @@ import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
-    title: "Shop Floor Automation | Manufacturing Production Recording",
-    description: "Transform manual paper-based hourly production recording into automated digital workflows. Eliminate paper handling, enable accurate tracking, faster approvals, and audit-ready reports.",
+    title: "Shop Floor Automation Software",
+    description: "Transform paper-based production records into automated workflows. Eliminate paper, enable tracking, faster approvals, and robust audits.",
     keywords: [
         "shop floor automation",
         "manufacturing production recording",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     ],
     alternates: generateAlternates('/solutions/manufacturing/shop-floor-automation'),
     openGraph: {
-        title: "Shop Floor Automation | Manufacturing Production Recording",
+        title: "Shop Floor Automation Software",
         description: "From manual paper entry to automated digital production reports. Transform your manufacturing floor operations.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/shop-floor-automation",

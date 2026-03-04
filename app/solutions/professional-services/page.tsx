@@ -18,7 +18,7 @@ import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Professional Services Solutions | Legal & Audit Firms ",
-    description: "Secure document management and compliance solutions for Law Firms, Audit Practices, and Consultancies. Ensure client confidentiality and regulatory alignment.",
+    description: "Secure document management and compliance solutions for Law Firms, Audit Practices, and Consultancies. Ensure confidentiality and regulatory alignment.",
     keywords: [
         "legal document management",
         "audit firm software",

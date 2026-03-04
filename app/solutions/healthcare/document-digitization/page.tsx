@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: "Medical Document Digitization | CannyMinds",
-        description: "Scan, OCR, and migrate paper medical records into a searchable digital system. Convert decades of paper archives.",
+        description: "Scan, OCR, and migrate paper medical records into a searchable digital system. Convert years of archives securely.",
         images: ['https://www.cannymindstech.com/og-image.jpg'],
     },
 };

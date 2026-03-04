@@ -23,8 +23,8 @@ import {
 import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
-    title: "Document Control & SOP Management | Manufacturing Solutions ",
-    description: "Centralized engineering drawing management, SOP control, and work instruction automation for manufacturing. Ensure version control, compliance, and traceability.",
+    title: "Document Control & SOP Management",
+    description: "Centralized engineering drawing management, SOP control, and work instruction automation. Ensure version control, compliance, and traceability.",
     keywords: [
         "engineering document management",
         "CAD file management",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
     alternates: generateAlternates('/solutions/manufacturing/document-control'),
     openGraph: {
-        title: "Document Control & SOP Management | Manufacturing Solutions ",
+        title: "Document Control & SOP Management",
         description: "Transform engineering documentation with centralized control, automated approvals, and complete traceability.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/document-control",
@@ -86,14 +86,14 @@ const jsonLd = {
                 "name": "CannyECM Document Control",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Cross-platform (On-Premise Deployment)",
-      "offers": {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Enterprise Installation & Customization Service",
-          "description": "Full setup, configuration, and deployment of this software on client infrastructure."
-        }
-      }
+                "offers": {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Enterprise Installation & Customization Service",
+                        "description": "Full setup, configuration, and deployment of this software on client infrastructure."
+                    }
+                }
             },
             "datePublished": new Date().toISOString().split('T')[0],
             "dateModified": new Date().toISOString().split('T')[0]

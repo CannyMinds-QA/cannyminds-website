@@ -415,7 +415,7 @@ export default async function BlogPostPage({
                                             />
                                         </div>
                                     )}
-                                    {section.id === 'improves-collaboration' && (
+                                    {section.id === 'real-world-applications' && (
                                         <div className="mb-12 rounded-xl overflow-hidden border border-gray-200">
                                             <Image
                                                 src="/images/Blogs/digital-transformation-documentation/documentation-improves-collaboration.png"

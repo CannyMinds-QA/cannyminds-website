@@ -119,14 +119,14 @@ const jsonLd = {
       "operatingSystem": "Cross-platform (On-Premise Deployment)",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "ratingCount": "67",
-        "bestRating": "5",
-        "worstRating": "1"
+        "ratingValue": 4.7,
+        "ratingCount": 67,
+        "bestRating": 5,
+        "worstRating": 1
       },
       "offers": {
         "@type": "Offer",
-        "price": "0",
+        "price": 0,
         "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
         "itemOffered": {

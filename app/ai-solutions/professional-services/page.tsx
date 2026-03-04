@@ -3,11 +3,11 @@ import ProfessionalServicesPage from './ProfessionalServicesClient'
 import { baseUrl, generateAlternates } from '@/lib/enhanced-seo'
 
 export const metadata: Metadata = {
-    title: 'AI for Professional Services | Legal & Consulting Automation',
+    title: 'AI for Professional Services',
     description: 'Streamline contract review, automate reports, and improve knowledge management for legal and consulting firms.',
     alternates: generateAlternates('/ai-solutions/professional-services'),
     openGraph: {
-        title: 'AI for Professional Services | Legal & Consulting Automation',
+        title: 'AI for Professional Services',
         description: 'Streamline contract review, automate reports, and improve knowledge management in legal and consulting firms with Generative AI.',
         url: 'https://www.cannymindstech.com/ai-solutions/professional-services',
         siteName: 'CannyMinds',

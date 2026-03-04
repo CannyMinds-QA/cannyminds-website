@@ -95,14 +95,14 @@ const jsonLd = {
             },
             "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "42",
-                "bestRating": "5",
-                "worstRating": "1"
+                "ratingValue": 4.8,
+                "ratingCount": 42,
+                "bestRating": 5,
+                "worstRating": 1
             },
             "offers": {
                 "@type": "Offer",
-                "price": "0",
+                "price": 0,
                 "priceCurrency": "INR",
                 "availability": "https://schema.org/InStock",
                 "itemOffered": {

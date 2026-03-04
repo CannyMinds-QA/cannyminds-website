@@ -3,11 +3,11 @@ import ManufacturingSolutionsPage from './ManufacturingClient'
 import { baseUrl, generateAlternates } from '@/lib/enhanced-seo'
 
 export const metadata: Metadata = {
-    title: 'AI in Manufacturing & Automotive | Smart Factory Solutions',
+    title: 'AI in Manufacturing & Automotive',
     description: 'Transform manufacturing with AI-powered predictive maintenance, quality control, and safety monitoring. ISO & IATF compliant solutions.',
     alternates: generateAlternates('/ai-solutions/manufacturing'),
     openGraph: {
-        title: 'AI in Manufacturing & Automotive | Smart Factory Solutions',
+        title: 'AI in Manufacturing & Automotive',
         description: 'Transform manufacturing with AI-powered predictive maintenance, quality control, and safety monitoring.',
         url: 'https://www.cannymindstech.com/ai-solutions/manufacturing',
         siteName: 'CannyMinds',

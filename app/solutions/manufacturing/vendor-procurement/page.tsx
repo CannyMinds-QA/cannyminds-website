@@ -23,7 +23,7 @@ import {
 import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
-    title: "Vendor & Procurement Document Management | Mfg",
+    title: "Vendor Document Management",
     description: "Centralized vendor document repository and contract lifecycle management with approval workflows and easy retrieval for manufacturing procurement teams.",
     keywords: [
         "vendor document management",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
     alternates: generateAlternates('/solutions/manufacturing/vendor-procurement'),
     openGraph: {
-        title: "Vendor & Procurement Document Management | Mfg",
+        title: "Vendor Document Management",
         description: "Streamline vendor documentation and contract management with centralized control and automated workflows.",
         type: 'website',
         url: "https://www.cannymindstech.com/solutions/manufacturing/vendor-procurement",
@@ -86,14 +86,14 @@ const jsonLd = {
                 "name": "CannyECM Vendor Management",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Cross-platform (On-Premise Deployment)",
-      "offers": {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Enterprise Installation & Customization Service",
-          "description": "Full setup, configuration, and deployment of this software on client infrastructure."
-        }
-      }
+                "offers": {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Enterprise Installation & Customization Service",
+                        "description": "Full setup, configuration, and deployment of this software on client infrastructure."
+                    }
+                }
             },
             "datePublished": new Date().toISOString().split('T')[0],
             "dateModified": new Date().toISOString().split('T')[0]

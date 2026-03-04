@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: "HIPAA Compliance & Audit Readiness | CannyMinds",
-        description: "Complete audit trails, role-based access, automatic retention, and secure deletion — CannyECM keeps hospitals audit-ready.",
+        description: "Secure, role-based document management with automatic retention. Keeps your healthcare facility permanently audit-ready and HIPAA compliant.",
         images: ['https://www.cannymindstech.com/og-image.jpg'],
     },
 };

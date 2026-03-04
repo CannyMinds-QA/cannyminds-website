@@ -24,7 +24,7 @@ import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Audit Management Software | CPA & Audit Firms ",
-    description: "Streamline audit engagements with secure working papers, evidence management, and automated review workflows. Compliant with ICAI & International Standards.",
+    description: "Streamline audit engagements with secure working papers, evidence management, and automated review workflows for ICAI compliance.",
     keywords: [
         "audit documentation software",
         "audit working papers management",

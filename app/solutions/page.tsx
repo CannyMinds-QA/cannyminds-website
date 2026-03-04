@@ -4,7 +4,7 @@ import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: 'Industry Solutions | CannyMinds',
-    description: 'Explore tailored software solutions for Pharmaceutical, Manufacturing, Healthcare, Finance, and more. ISO-certified compliance and automation.',
+    description: 'Explore tailored software solutions for Pharmaceutical, Manufacturing, Healthcare, Finance, and more. ISO-certified compliance.',
     keywords: [
         'industry solutions',
         'pharmaceutical software',

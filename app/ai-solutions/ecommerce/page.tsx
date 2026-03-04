@@ -3,11 +3,11 @@ import EcommerceSolutionsPage from './EcommerceClient'
 import { baseUrl, generateAlternates } from '@/lib/enhanced-seo'
 
 export const metadata: Metadata = {
-    title: 'AI for E-Commerce & Retail | Personalization & Automation',
+    title: 'AI for E-Commerce & Retail',
     description: 'Boost sales with AI-driven product recommendations, automated content generation, and customer support. PCI DSS compliant.',
     alternates: generateAlternates('/ai-solutions/ecommerce'),
     openGraph: {
-        title: 'AI for E-Commerce & Retail | Personalization & Automation',
+        title: 'AI for E-Commerce & Retail',
         description: 'Boost sales with AI-driven product recommendations, automated content generation, and customer support with Generative AI.',
         url: 'https://www.cannymindstech.com/ai-solutions/ecommerce',
         siteName: 'CannyMinds',

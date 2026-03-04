@@ -22,7 +22,7 @@ import { baseUrl, generateBreadcrumbSchema, generateAlternates } from '@/lib/enh
 
 export const metadata: Metadata = {
     title: "Manufacturing Solutions | Industry 4.0 Automation",
-    description: "Comprehensive manufacturing solutions including shop floor automation, document control, quality management, engineering change management, and equipment maintenance.",
+    description: "Automate manufacturing operations: shop floor control, quality management, BMR, engineering changes, and equipment maintenance.",
     keywords: [
         "manufacturing automation",
         "shop floor automation",

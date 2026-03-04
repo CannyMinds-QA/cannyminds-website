@@ -19,7 +19,7 @@ import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: "Finance & Insurance Solutions | Digital Transformation ",
-    description: "Secure, compliant, and automated document management solutions for Banking, Financial Services, and Insurance (BFSI). Streamline loan processing, claims, and regulatory reporting.",
+    description: 'Explore tailored software solutions for banking, insurance, and NBFCs. Drive automation, compliance, and core financial operations seamlessly.',
     keywords: [
         "banking document management software",
         "insurance claims automation",
@@ -46,7 +46,7 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Finance & Insurance Solutions ",
-    "description": "Digital transformation solutions for the financial sector including Banking, Insurance, and Compliance management.",
+    "description": 'Explore tailored software solutions for banking, insurance, and NBFCs. Drive automation, compliance, and core financial operations seamlessly.',
     "publisher": {
         "@type": "Organization",
         "name": "CannyMinds Technology Solutions",
