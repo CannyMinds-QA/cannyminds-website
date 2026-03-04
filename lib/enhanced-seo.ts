@@ -96,11 +96,8 @@ export const enhancedSiteConfig = {
 };
 
 // specific logic to determine the base URL
-export const baseUrl = process.env.NEXT_PUBLIC_APP_URL
-  ? process.env.NEXT_PUBLIC_APP_URL
-  : process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : enhancedSiteConfig.url;
+// Always use production domain for canonical URLs in metadata
+export const baseUrl = process.env.NEXT_PUBLIC_APP_URL || enhancedSiteConfig.url;
 
 export const enhancedMetadata: Metadata = {
   metadataBase: new URL(baseUrl),
