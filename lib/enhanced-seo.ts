@@ -611,6 +611,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
 
 export function generateFAQSchema(faqs: FAQItem[]) {
   return {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",

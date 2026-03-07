@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateBreadcrumbSchema, generateFAQSchema, generateAlternates } from '@/lib/enhanced-seo';
+import { generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -18,7 +18,7 @@ import {
   ArrowForward as ArrowIcon,
   InsertChart as ChartIcon,
 } from '@mui/icons-material';
-import FAQ from "@/components/sections/FAQ";
+import ProductFAQ from "@/components/sections/ProductFAQ";
 
 // SEO Metadata
 export const metadata: Metadata = {
@@ -71,20 +71,6 @@ const jsonLd = {
       { name: "Home", item: "/" },
       { name: "Products", item: "/product" },
       { name: "CannyTrack", item: "/product/tracking-system" },
-    ]),
-    generateFAQSchema([
-      {
-        question: "What is CannyTrack?",
-        answer: "CannyTrack is a workforce productivity monitoring solution that provides visibility into remote employee activities with consent-based tracking, activity monitoring, screenshots, app/URL tracking, and data loss prevention."
-      },
-      {
-        question: "Is CannyTrack consent-based?",
-        answer: "Yes. CannyTrack operates on a consent-based model with transparent employee notification. Employees have dashboard access to view their own tracking data."
-      },
-      {
-        question: "Does CannyTrack work offline?",
-        answer: "Yes. CannyTrack stores data locally during connectivity outages and syncs automatically when connection is restored, preserving data integrity."
-      }
     ]),
     {
       "@type": "Article",
@@ -764,59 +750,32 @@ export default function CannyTrackProductPage() {
           </section>
 
           {/* FAQ Section */}
-          <FAQ
-            id="faq"
-            className="mb-20"
-            title="Frequently Asked Questions"
+          <ProductFAQ
             items={[
               {
-                question: "What is CannyTrack?",
-                answer: "CannyTrack is a workforce productivity monitoring solution that provides visibility into remote employee activities with consent-based tracking, activity monitoring, screenshots, app/URL tracking, and data loss prevention.",
+                question: "How does CannyTrack ensure employee privacy while monitoring workforce productivity?",
+                answer: "CannyTrack is strictly consent-based. It allows organizations to configure monitoring rules (such as blurring sensitive information in screenshots or restricting monitoring to specific working hours) to balance productivity tracking with employee privacy."
               },
               {
-                question: "Is CannyTrack consent-based?",
-                answer: "Yes. CannyTrack operates on a consent-based model with transparent employee notification. Employees are informed about what's monitored, why it's monitored, and have dashboard access to view their own tracking data. No stealth or hidden monitoring.",
+                question: "Can CannyTrack categorize productive versus unproductive applications automatically?",
+                answer: "Yes, administrators can map specific applications and websites to \"Productive,\" \"Neutral,\" or \"Unproductive\" categories. The system automatically calculates productivity scores based on active time spent in these categorized apps."
               },
               {
-                question: "Can employees see their own tracking data?",
-                answer: "Absolutely. Employees have full dashboard access to view their activity logs, screenshots, productivity metrics, and application usage. This transparency builds trust and allows self-assessment.",
+                question: "What are the primary indicators of remote workforce burnout?",
+                answer: "Identifying burnout involves tracking high, sustained levels of active work hours beyond regular schedules, an absence of idle breaks, and sudden drops in application output compared to historical baselines. Productivity monitoring can flag these leading indicators early."
               },
               {
-                question: "Does CannyTrack capture screenshots?",
-                answer: "Yes, with configurable frequency (every 5-30 minutes). Screenshots can be blurred to hide sensitive data like passwords, financial information, or personal content. Organizations can customize screenshot settings based on their privacy policies.",
+                question: "Why do highly regulated industries prefer on-premise monitoring software over cloud-SaaS?",
+                answer: "Organizations like banks, defense contractors, and healthcare providers face strict data sovereignty requirements (like GDPR or HIPAA). On-premise deployments ensure that sensitive screen recordings and employee activity data never traverse external vendor networks."
               },
               {
-                question: "How does data loss prevention work?",
-                answer: "CannyTrack monitors critical data movement activities including file uploads/downloads, email attachments, USB transfers, cloud storage access, and print jobs. Administrators receive real-time alerts for suspicious activities and can review audit trails for compliance.",
+                question: "What specific activities trigger the Data Loss Prevention (DLP) alerts?",
+                answer: "The DLP module monitors and flags unauthorized attempts to move data, including large file uploads to personal cloud storage (e.g., Google Drive, Dropbox), USB drive transfers, and sending attachments via personal webmail."
               },
               {
-                question: "Does CannyTrack work offline?",
-                answer: "Yes. The desktop agent stores tracking data locally during connectivity outages and automatically syncs to the cloud when the connection is restored. This ensures no data loss and preserves tracking integrity.",
-              },
-              {
-                question: "Can I track time spent on specific applications and websites?",
-                answer: "Yes. CannyTrack logs all application usage and website visits with time spent. Applications and URLs are automatically categorized as productive or unproductive. Customize categories based on your organization's workflow.",
-              },
-              {
-                question: "Is CannyTrack GDPR compliant?",
-                answer: "Yes. CannyTrack is designed for GDPR Article 88 compliance (workplace monitoring). We implement consent mechanisms, data minimization, purpose limitation, employee access rights, and data retention controls as required by GDPR.",
-              },
-              {
-                question: "How do I prevent tracking personal activities?",
-                answer: "Administrators can configure exclusion lists for personal applications (social media, banking apps) and websites. Employees can also request additions to the exclusion list. CannyTrack focuses on work-related activity only.",
-              },
-              {
-                question: "Can CannyTrack be used for client billing?",
-                answer: "Absolutely. CannyTrack provides precise time tracking with screenshot evidence for billable hours. Ideal for agencies, consulting firms, and outsourcing companies that need accurate client billing and project time allocation.",
-              },
-              {
-                question: "What platforms does CannyTrack support?",
-                answer: "CannyTrack desktop agents are available for Windows, macOS, and Linux. The web-based management dashboard works on all modern browsers. Mobile app support (iOS/Android) is under development.",
-              },
-              {
-                question: "How long is tracking data retained?",
-                answer: "Data retention is configurable based on your compliance and storage requirements. Default retention is 90 days for screenshots and 1 year for activity logs. Organizations can customize retention policies and enable auto-deletion after specified periods.",
-              },
+                question: "How does CannyTrack calculate the overall productivity score for a team?",
+                answer: "The productivity score aggregates total active hours, time spent in applications categorized as \"Productive,\" and idle time ratios. This provides supervisors with an objective baseline to compare team efficiency across different locations or departments."
+              }
             ]}
           />
 

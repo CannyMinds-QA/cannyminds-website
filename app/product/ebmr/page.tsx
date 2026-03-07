@@ -28,6 +28,7 @@ import {
 } from "@mui/icons-material";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import BookDownloadCard from "@/components/pharmaceutical/BookDownloadCard";
+import ProductFAQ from "@/components/sections/ProductFAQ";
 import { baseUrl, generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
@@ -489,6 +490,48 @@ export default function CannyEBMRPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* FAQ */}
+                <ProductFAQ
+                    items={[
+                        {
+                            question: "How does Canny eBMR replace paper-based master batch records (MBR) in pharmaceutical manufacturing?",
+                            answer: "Canny eBMR digitizes the entire Master Batch Record creation process through a secure, version-controlled authoring environment, ensuring only approved recipes are executed on the shop floor, eliminating paper routing and transcription errors."
+                        },
+                        {
+                            question: "What are the most common causes of warning letters regarding 21 CFR Part 11?",
+                            answer: "FDA warning letters frequently cite shared user accounts, missing or alterable audit trails (like editing a spreadsheet), and inadequate access controls that allow operators to change test parameters without supervisor authorization."
+                        },
+                        {
+                            question: "How does the system handle real-time deviations during manufacturing?",
+                            answer: "If an operator enters an out-of-specification (OOS) value, the eBMR system immediately flags the deviation, prevents progression to the next step without authorized intervention, and forces the initiation of a CAPA (Corrective and Preventive Action) workflow."
+                        },
+                        {
+                            question: "Why do pharmaceutical manufacturers struggle to reconcile physical batch yields accurately?",
+                            answer: "Manual yield reconciliation requires aggregating handwritten data across multiple phases, operator logbooks, and scale printouts. This fragmentation leads to arithmetic errors and missing accountability, resulting in delayed batch release times and failed audits."
+                        },
+                        {
+                            question: "Is Canny eBMR supplied with Computer System Validation (CSV) documentation?",
+                            answer: "Yes, we provide comprehensive CSV documentation packages following GAMP 5 principles, including Validation Master Plans (VMP), User Requirement Specifications (URS), IQ/OQ/PQ protocols, and Traceability Matrices to accelerate your compliance validation."
+                        },
+                        {
+                            question: "Can the eBMR system automatically calculate process yields and perform limit checks?",
+                            answer: "Absolutely. The system dynamically executes complex calculations (like theoretical vs. actual yield) in real-time. If an entered value falls outside predefined critical limits, it enforces an immediate deviation workflow and electronic signature capture."
+                        },
+                        {
+                            question: "Can Canny eBMR integrate seamlessly with existing LIMS (Laboratory Information Management System)?",
+                            answer: "Yes, Canny eBMR features bi-directional REST APIs that integrate directly with standard LIMS platforms. This allows the eBMR system to automatically pull QA test results and release statuses directly into the batch record without manual data entry."
+                        },
+                        {
+                            question: "How does the system manage calibration and maintenance limits for production equipment?",
+                            answer: "During execution, the eBMR verifies the equipment IDs against the central calibration database. If an instrument is past its calibration due date or flagged for maintenance, the system physically prevents the operator from using that equipment for the batch."
+                        },
+                        {
+                            question: "What happens if a tablet gets disconnected from the network during shop floor execution?",
+                            answer: "The eBMR application caches the current active step locally. Operators can complete the immediate critical action uninterrupted. Once the network connection is restored, the signed data and timestamps sync securely back to the central server without data loss."
+                        }
+                    ]}
+                />
 
                 {/* CTA Section */}
                 <section className="py-12 px-6 lg:px-12 bg-purple-600">

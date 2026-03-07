@@ -22,7 +22,7 @@ import {
   Verified as VerifiedIcon,
   RateReview as ReviewIcon,
 } from '@mui/icons-material';
-import FAQ from "@/components/sections/FAQ";
+import ProductFAQ from "@/components/sections/ProductFAQ";
 
 // SEO Metadata
 export const metadata: Metadata = {
@@ -103,43 +103,6 @@ const jsonLd = {
         }
       }
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is CannyScan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CannyScan is a professional document digitization solution that provides image enhancement, OCR extraction, barcode reading, quality control workflows, and comprehensive reporting for converting paper documents into searchable digital assets."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What features does CannyScan offer for image enhancement?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CannyScan provides image cleansing with auto crop, punch hole removal, edge deduction, automatic document separation with blank page detection, auto file name creation, and image compression for optimized storage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does CannyScan support OCR and barcode extraction?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. CannyScan includes barcode extraction, OCR (Optical Character Recognition) extraction, and data validation capabilities to convert scanned documents into searchable, indexed digital files."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does CannyScan handle quality control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CannyScan offers manual and automatic verification of information and documents, review and comments functionality, and approve-reject workflows to ensure scanning quality meets organizational standards."
-          }
-        }
-      ]
-    }
   ]
 };
 
@@ -754,39 +717,28 @@ export default function CannyScanProductPage() {
           </section>
 
           {/* FAQ */}
-          <FAQ
-            id="faq"
-            className="mb-20"
-            title="Frequently Asked Questions"
+          <ProductFAQ
             items={[
               {
-                question: "What is CannyScan?",
-                answer: "CannyScan is a professional document digitization solution that provides image enhancement, OCR extraction, barcode reading, quality control workflows, and comprehensive reporting for converting paper documents into searchable digital assets."
+                question: "How does CannyScan handle high-volume batch scanning with Optical Character Recognition (OCR)?",
+                answer: "CannyScan utilizes high-speed batch processing capabilities coupled with advanced OCR technology to rapidly ingest thousands of physical pages and convert them into fully searchable, indexed digital PDFs."
               },
               {
-                question: "What image enhancement features does CannyScan offer?",
-                answer: "CannyScan provides image cleansing with auto crop, punch hole removal, and edge deduction. It also includes automatic document separation with blank page detection, auto file name creation, and image compression for optimized storage."
+                question: "What is OCR accuracy and why does it drop on old or degraded physical documents?",
+                answer: "OCR accuracy depends on image clarity. Older, faded, or torn documents lack contrast, confusing the OCR engine. Advanced digitisation tools use pre-processing filters like auto-deskew and despeckle to restore the image before extraction, drastically improving accuracy."
               },
               {
-                question: "Does CannyScan support OCR and barcode extraction?",
-                answer: "Yes. CannyScan includes barcode extraction, OCR (Optical Character Recognition) extraction, and data validation capabilities to convert scanned documents into searchable, indexed digital files."
+                question: "What quality control measures does CannyScan employ for poor-quality or damaged physical documents?",
+                answer: "CannyScan includes image enhancement features like auto-deskew, despeckle, and contrast adjustment to maximize legibility. Quality control workflows flag low-confidence OCR results for manual human review before final ingestion."
               },
               {
-                question: "How does CannyScan handle quality control?",
-                answer: "CannyScan offers both manual and automatic verification of scanned information and documents. It includes review and comments functionality, and a structured approve-reject workflow to ensure scanning quality meets organizational standards."
+                question: "What are the legal requirements for replacing physical invoices with scanned digital copies?",
+                answer: "Most tax authorities require that the digitized copy be an exact, unaltered replica of the original, highly legible, and stored in a tamper-evident format like searchable PDF/A, accompanied by an audit trail of the scanning process."
               },
               {
-                question: "What reporting capabilities does CannyScan provide?",
-                answer: "CannyScan provides reports on total records scanned, records exported vs. not exported, and comprehensive audit reports for compliance and tracking purposes."
-              },
-              {
-                question: "Can CannyScan integrate with CannyECM?",
-                answer: "Yes. CannyScan integrates seamlessly with CannyECM Enterprise Content Management system. Digitized documents can be directly uploaded to CannyECM with proper metadata, indexing, and folder organization for immediate use."
-              },
-              {
-                question: "What happens if a scanned document fails quality check?",
-                answer: "Documents that fail quality check are flagged for re-scanning. The rejection workflow allows reviewers to add comments explaining the issue, and documents are returned to the scanning stage for correction."
-              },
+                question: "Does CannyScan require specific, proprietary scanner hardware to operate?",
+                answer: "No, CannyScan is hardware-agnostic. It works seamlessly with any TWAIN, ISIS, or WIA-compliant scanner, from high-speed production scanners (Kodak, Fujitsu, Canon) to standard flatbed devices."
+              }
             ]}
           />
 

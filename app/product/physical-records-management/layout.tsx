@@ -144,67 +144,6 @@ const jsonLd = {
                 "Bulk Excel upload",
                 "Multi-location warehouse support"
             ]
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What is CannyRMS?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "CannyRMS is an enterprise physical records management system that helps organizations track, manage, and secure physical documents stored in warehouses. It uses barcode scanning, approval workflows, and complete audit trails to ensure documents are always accounted for."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How does the 8-step workflow work?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "CannyRMS uses an 8-step workflow: 1) System Setup, 2) Inward Upload, 3) Search, 4) Request, 5) Approval, 6) Verification, 7) Handover, 8) Refiling. Each step is tracked with timestamps and user information for complete auditability."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What industries use physical records management software?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Physical records management is used in banking (loan documents, KYC files), pharmaceuticals (batch records, regulatory files), legal firms (case files, contracts), healthcare (patient records), government agencies, and manufacturing companies for compliance and operational efficiency."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can CannyRMS integrate with other systems?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. CannyRMS integrates with CannyECM (digital content management), CannyScan (document scanning), and other enterprise systems via REST APIs. It can also connect to existing ERP and HR systems."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Is CannyRMS compliant with regulatory requirements?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, CannyRMS provides complete audit trails, role-based access control, approval workflows, and immutable logs that support regulatory compliance including FDA 21 CFR Part 11, ISO 15489 (Records Management), and data protection regulations."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How many records can CannyRMS handle?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "CannyRMS is designed for enterprise scale. A single installation can manage 100,000+ cartons and millions of individual documents across multiple warehouse locations with no performance degradation."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Does CannyRMS support barcode scanning?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. CannyRMS generates barcode labels for locations (racks, shelves) and documents. During pickup and refiling, staff scan barcodes to instantly verify they have the correct document, reducing errors and ensuring accuracy."
-                    }
-                }
-            ]
         }
     ]
 };

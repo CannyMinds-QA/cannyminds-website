@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateBreadcrumbSchema, generateFAQSchema, generateAlternates } from '@/lib/enhanced-seo';
+import { generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -18,7 +18,7 @@ import {
   ArrowForward as ArrowIcon,
   Description as DocumentIcon,
 } from '@mui/icons-material';
-import FAQ from "@/components/sections/FAQ";
+import ProductFAQ from "@/components/sections/ProductFAQ";
 
 // SEO Metadata
 export const metadata: Metadata = {
@@ -129,20 +129,6 @@ const jsonLd = {
         }
       },
     },
-    generateFAQSchema([
-      {
-        question: "What is CannyHR?",
-        answer: "CannyHR is a comprehensive Hire-to-Retire HR and payroll management platform that automates employee lifecycle management, payroll processing, time tracking, leave management, and performance reviews with mobile access."
-      },
-      {
-        question: "Does CannyHR support biometric devices?",
-        answer: "Yes. CannyHR integrates with 350+ biometric devices for accurate attendance tracking and check-in/check-out functionality."
-      },
-      {
-        question: "Is CannyHR available on mobile?",
-        answer: "Yes. CannyHR provides native mobile applications for iOS and Android, enabling employees to access payslips, apply for leave, mark attendance, and manage their profiles on the go."
-      }
-    ]),
   ]
 };
 
@@ -778,6 +764,38 @@ export default function CannyHRProductPage() {
           </section>
 
           {/* FAQ Section */}
+          <ProductFAQ
+            items={[
+              {
+                question: "How does CannyHR handle complex shift allowances and overtime calculations for manufacturing?",
+                answer: "CannyHR features a customizable rules engine that automatically calculates shifts, overtime rates, and allowances based on biometric punch-ins and predefined company policies, eliminating manual payroll errors."
+              },
+              {
+                question: "Does CannyHR support multi-location attendance tracking with biometric device integration?",
+                answer: "Absolutely. CannyHR integrates directly with IP-based biometric devices across multiple physical locations, centralizing attendance data in real-time for seamless payroll processing."
+              },
+              {
+                question: "What are the most common payroll compliance penalties organizations face in India?",
+                answer: "The most common penalties arise from incorrect calculations or delayed deposits of PF (Provident Fund), ESI, Professional Tax, and TDS. Using an automated, localized HRMS ensures these statutory deductions are exact and remitted prior to deadlines."
+              },
+              {
+                question: "Why do mid-sized manufacturers struggle with manual attendance processing?",
+                answer: "Manual processing using spreadsheets cannot accurately handle dynamic shift rotations, unapproved overtime, late mark penalties, or proxy punching. This leads to massive time-theft and requires a robust HRMS tied to biometric hardware to resolve."
+              },
+              {
+                question: "How does CannyHR handle statutory compliance for taxation and labor laws?",
+                answer: "The payroll engine is regularly updated to reflect the latest statutory requirements, including PF, ESI, PT, and TDS calculations. It generates compliance-ready reports and challans automatically, reducing the risk of regulatory penalties."
+              },
+              {
+                question: "Is the CannyHR self-service portal accessible on mobile devices for field employees?",
+                answer: "Absolutely. The Employee Self-Service (ESS) portal is fully responsive and optimized for mobile browsers, allowing field staff to mark attendance via geolocation, submit expense claims with receipt photos, and apply for leave on the go."
+              },
+              {
+                question: "How does the system handle multi-currency payroll for international employees?",
+                answer: "CannyHR supports multi-currency configurations and automated exchange rate scaling, allowing global organizations to process localized payroll, handle expatriate taxes, and generate international compliance reporting from a single centralized platform."
+              }
+            ]}
+          />
 
           {/* Related Products */}
           <section id="related" className="mb-20">

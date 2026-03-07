@@ -1,7 +1,7 @@
 "use client";
 
 import SocialShare from "@/components/ui/SocialShare";
-import FAQ from "@/components/sections/FAQ";
+import ProductFAQ from "@/components/sections/ProductFAQ";
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -990,63 +990,27 @@ export default function CannyRMSPage() {
           </div>
         </section>
 
-        <FAQ
-          id="faq"
-          className="scroll-mt-28"
-          title="Frequently Asked Questions"
-          description="Everything you need to know about CannyRMS physical records management."
+        <ProductFAQ
           items={[
             {
-              question: "What is CannyRMS?",
-              answer: "CannyRMS is a Physical Records Management System that creates a 'Digital Twin' for your physical files. It uses barcode tracking and warehouse management to provide real-time visibility into offsite document storage."
+              question: "How does CannyMinds ensure the physical security of stored records?",
+              answer: "Our physical records facilities feature 24/7 CCTV surveillance, biometric access controls, advanced fire suppression systems, and strict environmental controls to protect sensitive documents from unauthorized access and degradation."
             },
             {
-              question: "How does barcode tracking work?",
-              answer: "Each physical file and storage location is assigned a unique barcode. When files are moved, checked out, or returned, staff scan the barcode to update the system. This creates a complete audit trail of every movement."
+              question: "What happens when a specific physical file needs to be retrieved urgently?",
+              answer: "Clients can request file retrieval through our secure online portal. Utilizing barcode tracking, our team quickly locates the physical box and file. We offer physical delivery or \"Scan-on-Demand\" where the document is digitized and sent securely within hours."
             },
             {
-              question: "What is Dynamic Barcode Range?",
-              answer: "Dynamic Barcode Range allows you to generate barcode sequences on-the-fly based on configurable rules. Instead of pre-printing fixed barcode sheets, you can define a starting number, prefix, and range size. The system automatically assigns the next available barcode when a new file is registered, ensuring uniqueness and eliminating manual errors."
+              question: "Why do large paper-driven firms experience severe \"chain of custody\" failures?",
+              answer: "Without enforced barcode tracking, companies rely on emails or verbal requests to transfer files. When a file is misplaced, there is zero verifiable proof of who possessed it last, breaking the chain of custody and incurring severe legal exposure."
             },
             {
-              question: "What is Dynamic Reference?",
-              answer: "Dynamic Reference is a flexible metadata field that links physical records to external identifiers. For example, you can associate a file with a loan number, batch ID, case number, or employee ID. This allows cross-referencing between CannyRMS and your existing business systems, making searches and audits faster."
+              question: "Can CannyRMS manage records across multiple physical warehouse locations?",
+              answer: "Yes, the system supports a centralized, multi-site architecture. You can map out several distinct warehouses, defining buildings, floors, racks, and shelves for each, providing a unified search interface across your entire physical footprint."
             },
             {
-              question: "What is Geolocation Tracking in CannyRMS?",
-              answer: "Every action in CannyRMS is logged with the user's IP address and geographic location. This includes login attempts, file access, retrievals, approvals, and modifications. Geolocation tracking enables forensic analysis during security audits and helps identify unauthorized access from unexpected locations."
-            },
-            {
-              question: "Does CannyRMS send email notifications?",
-              answer: "Yes. CannyRMS sends automated email notifications for request submissions, manager approvals/rejections, overdue file alerts, and upcoming due date reminders. This reduces manual follow-ups and ensures timely action on pending tasks."
-            },
-            {
-              question: "Can I modify record metadata after upload?",
-              answer: "Yes, through Data Modification Requests. Users can request changes to existing record metadata (like correcting a file number or category). These requests require manager approval, and every modification is logged in the audit trail with before/after values."
-            },
-            {
-              question: "Is CannyRMS compliant with FDA 21 CFR Part 11?",
-              answer: "Yes. CannyRMS includes electronic signatures, immutable audit trails, and user authentication controls required for FDA 21 CFR Part 11 compliance, making it suitable for pharmaceutical and life sciences organizations."
-            },
-            {
-              question: "What is Delegate Handover?",
-              answer: "Delegate Handover allows a requester to assign another person to collect documents on their behalf. For example, a manager can request files but assign their assistant as the delegate. The system tracks both the original requester and the actual recipient, maintaining complete chain of custody."
-            },
-            {
-              question: "How does the 3-level barcode system work?",
-              answer: "CannyRMS uses a hierarchical barcode structure: Carton (storage box) → File (folder within carton) → Document (individual paper within file). Each level has pre-allocated barcode ranges with automatic overlap detection to prevent duplicates. This enables tracking at any granularity level."
-            },
-            {
-              question: "Can CannyRMS integrate with existing systems?",
-              answer: "Yes. CannyRMS integrates seamlessly with CannyECM (content management), CannyScan (digitization), and third-party ERP systems via REST APIs."
-            },
-            {
-              question: "How quickly can I find a file?",
-              answer: "With CannyRMS, you can locate any file in under 30 seconds. Search by document number, barcode, category, or any custom metadata field and get the exact rack/shelf/box location."
-            },
-            {
-              question: "What industries use CannyRMS?",
-              answer: "CannyRMS is used by banks (for loan files and KYC documents), pharmaceutical companies (for batch records and validation logs), legal firms (for case files and evidence), and government agencies (for archival records)."
+              question: "What are the consequences of failing to destroy physical records after their retention period ends?",
+              answer: "Retaining documents longer than their legally mandated lifecycle exposes organizations to unnecessary discovery risks during litigation. If the opposing counsel subpoenas documents you were legally allowed to destroy years ago, you must still produce them."
             }
           ]}
         />

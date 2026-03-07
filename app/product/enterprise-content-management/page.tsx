@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateBreadcrumbSchema, generateFAQSchema, generateAlternates } from '@/lib/enhanced-seo';
+import { generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
@@ -21,8 +21,7 @@ import {
   ArrowForward as ArrowIcon,
   Cancel as CancelIcon,
 } from '@mui/icons-material';
-import FAQ from "@/components/sections/FAQ";
-
+import ProductFAQ from "@/components/sections/ProductFAQ";
 // SEO Metadata
 export const metadata: Metadata = {
   title: "Enterprise Content Management System | CannyECM",
@@ -136,20 +135,6 @@ const jsonLd = {
         }
       },
     },
-    generateFAQSchema([
-      {
-        question: "What is CannyECM?",
-        answer: "CannyECM is an enterprise content management software that helps organizations digitize, organize, and manage documents with OCR technology, workflow automation, and secure cloud/on-premise storage."
-      },
-      {
-        question: "What are the system requirements for CannyECM?",
-        answer: "For cloud deployment, you only need a modern web browser (Chrome, Firefox, Safari, Edge). For on-premise, you need Windows Server 2016+/Linux, 16GB RAM minimum, SQL Server/PostgreSQL database, and .NET Core runtime."
-      },
-      {
-        question: "Does CannyECM support mobile access?",
-        answer: "Yes. CannyECM is fully responsive and accessible via mobile browsers on iOS and Android devices. Native mobile apps are planned for future releases."
-      }
-    ]),
   ]
 };
 
@@ -1157,52 +1142,41 @@ export default function CannyECMProductPage() {
             </div>
           </section>
 
-          {/* FAQ */}
-          <FAQ
-            id="faq"
-            className="mb-20"
-            title="Frequently Asked Questions"
+          {/* Product Specific FAQ */}
+          <ProductFAQ
             items={[
               {
-                question: "What is CannyECM?",
-                answer: "CannyECM is an enterprise content management software that helps organizations digitize, organize, and manage documents with OCR technology, workflow automation, and secure cloud/on-premise storage."
+                question: "How does CannyECM ensure 21 CFR Part 11 and ISO 15489 compliant audit trails?",
+                answer: "CannyECM automatically logs every user action, including document views, edits, and downloads, in an immutable audit trail. This ensures complete traceability for regulatory bodies, meeting both FDA 21 CFR Part 11 and ISO 15489:2016 standards."
               },
               {
-                question: "How does CannyECM OCR work?",
-                answer: "CannyECM uses advanced OCR powered by Elasticsearch to convert scanned documents into searchable text with up to 99% accuracy, enabling full-text search across all document content."
+                question: "Can CannyECM integrate with existing ERP systems like SAP or Oracle?",
+                answer: "Yes, CannyECM provides robust API endpoints that allow seamless integration with major ERPs like SAP, Oracle, and Microsoft Dynamics, enabling automated document linking to financial and operational records."
               },
               {
-                question: "Is CannyECM secure?",
-                answer: "Yes. CannyECM implements military-grade AES-256 encryption, role-based access control, detailed audit trails, and compliance with ISO 27001, GDPR, HIPAA, and SOC 2 standards."
+                question: "What are the risks of using basic shared drives instead of a dedicated Enterprise Content Management system?",
+                answer: "Basic shared drives (like network folders) lack granular audit trails, automated retention policies, and robust version control. This exposes organizations to compliance violations, accidental data deletion, and severe security vulnerabilities compared to a structured ECM."
               },
               {
-                question: "What deployment options are available?",
-                answer: "CannyECM offers Cloud (SaaS), On-Premise, and Hybrid deployment models to match your compliance and infrastructure requirements."
+                question: "How do automated retention and disposal schedules protect organizations legally?",
+                answer: "Automatically enforcing document lifecycles ensures you do not prematurely delete required legal records, avoiding fines. Conversely, it ensures you securely destroy data past its legal retention period, drastically reducing liability during legal discovery."
               },
               {
-                question: "What file formats does CannyECM support?",
-                answer: "CannyECM supports PDF, JPG, JPEG, PNG, and TIFF files. The OCR engine works best with PDF and high-quality scanned images."
+                question: "Can CannyECM handle large-scale document migrations from legacy systems?",
+                answer: "Yes. CannyECM provides bulk import tools and dedicated migration APIs capable of ingesting millions of records, preserving original folder structures, metadata relationships, and version histories from legacy systems like Documentum or SharePoint."
               },
               {
-                question: "Can CannyECM handle workflow automation?",
-                answer: "Yes. CannyECM includes a drag-and-drop workflow builder for custom approval processes, automated notifications, and multi-level approvals no coding required."
+                question: "How does the automated workflow engine improve document approval processes?",
+                answer: "Our drag-and-drop workflow builder allows organizations to design multi-step approval routing, conditional logic, and parallel reviews. It eliminates bottlenecks by automatically pushing documents to the next approver and escalating overdue tasks."
               },
               {
-                question: "How long does implementation take?",
-                answer: "Cloud deployment takes 1-2 weeks including configuration and training. On-premise deployment takes 2-4 weeks for infrastructure setup and customization."
+                question: "How does CannyECM handle version control when multiple users edit the same document?",
+                answer: "CannyECM uses strict check-in/check-out locks and maintains a complete, immutable version history. Older versions can be instantly previewed or rolled back, and the audit trail tracks exactly who made each specific change."
               },
               {
-                question: "Is there a free trial?",
-                answer: "Yes. CannyECM offers a 30-day free trial with no credit card required, giving you full access to all features including OCR, workflows, and cloud storage."
-              },
-              {
-                question: "Can I integrate CannyECM with other systems?",
-                answer: "Yes. CannyECM provides API integration for ERP systems, CRM platforms, accounting software, and custom applications. LDAP/Active Directory integration is also supported."
-              },
-              {
-                question: "Does CannyECM support mobile access?",
-                answer: "Yes. CannyECM is fully responsive and accessible via mobile browsers on iOS and Android devices for viewing, searching, and sharing documents."
-              },
+                question: "Does CannyECM support full-text search across scanned PDFs and images?",
+                answer: "Yes, utilizing embedded enterprise OCR, CannyECM indexes the full text of uploaded PDFs and images, enabling users to search for specific words or phrases contained within the document content itself, not just the metadata."
+              }
             ]}
           />
 
