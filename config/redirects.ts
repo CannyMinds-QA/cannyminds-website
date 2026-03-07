@@ -177,7 +177,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/businessprocess',
-            destination: '/bpm',
+            destination: '/solutions/professional-services',
             permanent: true,
         },
         {
@@ -379,17 +379,17 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/why-business-process-automation-is-a-must-for-every-company',
-            destination: '/bpm',
+            destination: '/solutions/professional-services',
             permanent: true,
         },
         {
             source: '/Why_Business_Process_Automation_is_a_Must_for_Every_Company',
-            destination: '/bpm',
+            destination: '/solutions/professional-services',
             permanent: true,
         },
         {
             source: '/Guide_Implementing_Workflow_Automation',
-            destination: '/bpm',
+            destination: '/solutions/professional-services',
             permanent: true,
         },
         {
@@ -474,7 +474,7 @@ export const redirects: NextConfig['redirects'] = async () => {
         },
         {
             source: '/guide-implementing-workflow-automation',
-            destination: '/bpm',
+            destination: '/solutions/professional-services',
             permanent: true,
         },
         {
@@ -523,6 +523,43 @@ export const redirects: NextConfig['redirects'] = async () => {
         {
             source: '/bpm',
             destination: '/solutions/professional-services',
+            permanent: true,
+        },
+
+        // Missing redirects - Added 2026-03-05
+        {
+            source: '/Edublog.html',
+            destination: '/blog',
+            permanent: true,
+        },
+        {
+            source: '/Edublog',
+            destination: '/blog',
+            permanent: true,
+        },
+        {
+            source: '/privacypolicy.html',
+            destination: '/privacy-policy',
+            permanent: true,
+        },
+        {
+            source: '/privacypolicy',
+            destination: '/privacy-policy',
+            permanent: true,
+        },
+        {
+            source: '/solutions/document-management',
+            destination: '/product/enterprise-content-management',
+            permanent: true,
+        },
+        {
+            source: '/Education_Management_Software',
+            destination: '/solutions',
+            permanent: true,
+        },
+        {
+            source: '/digitization_of_physical_records',
+            destination: '/product/scanning-solution',
             permanent: true,
         },
     ];
