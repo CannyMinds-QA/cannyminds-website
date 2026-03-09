@@ -5,6 +5,19 @@ const nextConfig: NextConfig = {
   redirects,
   compress: true,
   poweredByHeader: false,
+
+  // Remove console.log in production
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+
+  // Optimize package imports
+  experimental: {
+    optimizePackageImports: ['@mui/icons-material', 'framer-motion'],
+  },
+
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -20,8 +33,18 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        // Long-term cache for static assets
+        // Long-term cache for static assets (1 year)
         source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // Cache for static JS/CSS (1 year)
+        source: '/_next/static/:path*',
         headers: [
           {
             key: 'Cache-Control',

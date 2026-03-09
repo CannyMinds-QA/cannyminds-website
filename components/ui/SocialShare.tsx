@@ -139,6 +139,7 @@ export default function SocialShare({ title, description, url }: SocialShareProp
               <button
                 onClick={handleCopyLink}
                 className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors text-sm font-medium"
+                aria-label={copied ? "Link copied" : "Copy link to clipboard"}
               >
                 {copied ? (
                   <>

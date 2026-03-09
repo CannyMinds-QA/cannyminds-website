@@ -338,13 +338,15 @@ export default function Navigation() {
               animate={{ opacity: 1, x: 0 }}
               className="group cursor-pointer"
             >
-              <div className="relative w-32 h-12 sm:w-40 sm:h-14 group-hover:scale-105 transition-transform">
+              <div className="group-hover:scale-105 transition-transform">
                 <Image
                   src="/logo.png"
                   alt="CannyMinds Technology Solutions"
-                  fill
-                  className="object-contain object-left"
+                  width={160}
+                  height={56}
+                  className="object-contain object-left w-32 h-12 sm:w-40 sm:h-14"
                   priority
+                  sizes="(max-width: 640px) 128px, 160px"
                 />
               </div>
             </motion.div>

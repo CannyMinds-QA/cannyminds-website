@@ -120,6 +120,7 @@ export default function Testimonials() {
                             whileTap={{ scale: 0.9 }}
                             onClick={prevSlide}
                             className="absolute left-[-80px] top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center text-gray-900 hover:text-primary-800 hover:border-primary-800 transition-all z-30"
+                            aria-label="Previous testimonial"
                         >
                             <ChevronLeft sx={{ fontSize: 28 }} />
                         </motion.button>
@@ -129,6 +130,7 @@ export default function Testimonials() {
                             whileTap={{ scale: 0.9 }}
                             onClick={nextSlide}
                             className="absolute right-[-80px] top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center text-gray-900 hover:text-primary-800 hover:border-primary-800 transition-all z-30"
+                            aria-label="Next testimonial"
                         >
                             <ChevronRight sx={{ fontSize: 28 }} />
                         </motion.button>
@@ -195,6 +197,8 @@ export default function Testimonials() {
                                     }}
                                     className={`transition-all duration-500 rounded-full h-2.5 ${i === activeSlide ? "w-10 md:w-16 bg-primary-900 shadow-md shadow-primary/30" : "w-2.5 bg-gray-200 hover:bg-gray-300"
                                         }`}
+                                    aria-label={`Go to slide ${i + 1}`}
+                                    aria-current={i === activeSlide ? 'true' : 'false'}
                                 />
                             ))}
                         </div>
@@ -205,6 +209,7 @@ export default function Testimonials() {
                                 whileTap={{ scale: 0.9 }}
                                 onClick={prevSlide}
                                 className="w-10 h-10 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-900"
+                                aria-label="Previous testimonial"
                             >
                                 <ChevronLeft sx={{ fontSize: 18 }} />
                             </motion.button>
@@ -212,6 +217,7 @@ export default function Testimonials() {
                                 whileTap={{ scale: 0.9 }}
                                 onClick={nextSlide}
                                 className="w-10 h-10 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-900"
+                                aria-label="Next testimonial"
                             >
                                 <ChevronRight sx={{ fontSize: 18 }} />
                             </motion.button>
