@@ -7,6 +7,7 @@ import Footer from "@/components/ui/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import TawkProvider from "@/components/ui/TawkProvider";
 import Clarity from "@/components/analytics/Clarity";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { enhancedMetadata as seoMetadata } from "@/lib/enhanced-seo";
 
 const geistSans = Geist({
@@ -113,6 +114,7 @@ export default function RootLayout({
         <TawkProvider />
         <WhatsAppButton />
         <Clarity />
+        <SpeedInsights />
       </body>
     </html>
   );
