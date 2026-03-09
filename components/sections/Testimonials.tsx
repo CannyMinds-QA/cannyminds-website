@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { m as motion, AnimatePresence, Variants } from "framer-motion";
 import { FormatQuote, Star, ChevronLeft, ChevronRight } from "@mui/icons-material";
 
 const testimonials = [

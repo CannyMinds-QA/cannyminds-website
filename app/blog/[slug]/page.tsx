@@ -165,7 +165,8 @@ export default async function BlogPostPage({
             name: post.author.name,
             description: post.author.bio,
             url: post.author.linkedIn || 'https://www.cannymindstech.com/about',
-            jobTitle: post.author.role
+            jobTitle: post.author.role,
+            knowsAbout: post.author.credentials
         },
         publisher: {
             '@type': 'Organization',
@@ -507,33 +508,17 @@ export default async function BlogPostPage({
                                                 {post.author.bio}
                                             </p>
 
-                                            {/* Credentials & Social */}
-                                            <div className="flex flex-col sm:flex-row gap-6 sm:items-center">
-                                                <div className="space-y-2">
-                                                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Credentials</div>
-                                                    {post.author.credentials.map((credential, idx) => (
-                                                        <div key={idx} className="flex items-start gap-2 text-xs md:text-sm text-gray-600">
-                                                            <CheckCircle sx={{ fontSize: 16 }} className="text-green-500 mt-0.5 flex-shrink-0" />
-                                                            <span>{credential}</span>
-                                                        </div>
-                                                    ))}
-                                                </div>
+                                            {/* Social */}
+                                            {(post.author.linkedIn || post.author.twitter) && (
+                                                <div className="flex gap-3 pt-2">
+                                                    {post.author.linkedIn && (
+                                                        <a href={post.author.linkedIn} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 text-[#0a66c2] rounded-full transition-colors">
+                                                            <LinkedIn />
+                                                        </a>
+                                                    )}
 
-                                                {(post.author.linkedIn || post.author.twitter) && (
-                                                    <div className="flex gap-3 sm:ml-auto pt-4 sm:pt-0 sm:border-l sm:border-gray-200 sm:pl-6">
-                                                        {post.author.linkedIn && (
-                                                            <a href={post.author.linkedIn} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 text-[#0a66c2] rounded-full transition-colors">
-                                                                <LinkedIn />
-                                                            </a>
-                                                        )}
-                                                        {post.author.twitter && (
-                                                            <a href={post.author.twitter} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1DA1F2]/10 hover:bg-[#1DA1F2]/20 text-[#1DA1F2] rounded-full transition-colors">
-                                                                <Twitter />
-                                                            </a>
-                                                        )}
-                                                    </div>
-                                                )}
-                                            </div>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

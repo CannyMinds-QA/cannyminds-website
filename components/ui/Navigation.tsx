@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m as motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -55,6 +55,7 @@ export default function Navigation() {
 
   const { scrollY } = useScroll();
 
+  // Optimize: Use simpler transforms to reduce calculation overhead
   const backgroundColor = useTransform(
     scrollY,
     [0, 50],

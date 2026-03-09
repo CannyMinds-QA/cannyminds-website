@@ -1,7 +1,7 @@
 "use client";
 
 import { LinkedIn, X, Facebook, Instagram, YouTube, LocationOn, Phone } from "@mui/icons-material";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 

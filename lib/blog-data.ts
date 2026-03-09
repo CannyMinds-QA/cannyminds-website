@@ -58,7 +58,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'digital-transformation-documentation',
         title: 'Digital Transformation Starts With Documentation',
         excerpt: 'Companies spend millions on AI and automation, then watch the projects collapse within 18 months. The cause is almost never the technology. It is always the documentation that was never fixed before the software arrived.',
-        content: `We have seen this across every industry we work in: <a href="/solutions/pharmaceutical" class="text-primary hover:underline font-medium">pharmaceuticals</a>, <a href="/solutions/finance" class="text-primary hover:underline font-medium">finance</a>, <a href="/solutions/manufacturing" class="text-primary hover:underline font-medium">manufacturing</a>, <a href="/solutions/healthcare" class="text-primary hover:underline font-medium">healthcare</a>. A company announces a digital transformation initiative, spends eight to twelve months deploying new software, and the system sits underutilized two years later. The post-mortem always says the same thing: adoption was low, data was messy, workflows were inconsistent.
+        content: `We have seen this across every industry we work in: <a href="/solutions/pharmaceutical" class="text-primary hover:underline font-medium">pharmaceuticals</a>, <a href="/solutions/finance" class="text-primary hover:underline font-medium">finance</a>, <a href="/solutions/manufacturing" class="text-primary hover:underline font-medium">manufacturing</a>, <a href="/solutions/healthcare" class="text-primary hover:underline font-medium">healthcare</a>. A company announces a digital transformation initiative, spends eight to twelve months deploying new software, and the system sits underutilized two years later. (Studies show that <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/how-to-restart-your-stalled-digital-transformation" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">more than 70% of these initiatives fail</a>). The post-mortem always says the same thing: adoption was low, data was messy, workflows were inconsistent.
 
 None of that is a technology problem. All of it is a documentation problem.
 
@@ -69,7 +69,7 @@ This is not an opinion. It is the pattern we see on every project that stalls.`,
             {
                 id: 'single-source-of-truth',
                 heading: 'Kill Data Silos: Establish a Single Source of Truth',
-                content: `The average employee spends 1.8 hours per day searching for information they cannot find. That is not wasted time in the abstract; it is a direct cost of fragmented document storage. Contracts sitting in someone's local C: drive. SOPs emailed between shifts with no version control. Invoices scanned and dropped into a shared folder with 11 different naming conventions.
+                content: `The average employee spends <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">1.8 hours per day searching for information</a> they cannot find. That is not wasted time in the abstract; it is a direct cost of fragmented document storage. Contracts sitting in someone's local C: drive. SOPs emailed between shifts with no version control. Invoices scanned and dropped into a shared folder with 11 different naming conventions.
 
 A centralized <a href="/product/enterprise-content-management" class="text-primary hover:underline font-medium">document management system</a> does not just organize files. It makes the organization itself function differently. When a procurement officer can pull a vendor contract in 20 seconds instead of calling someone and waiting two days, decisions start moving at a different speed.
 
@@ -87,7 +87,7 @@ The same issue kills <a href="/product/hr-management" class="text-primary hover:
             {
                 id: 'compliance-security',
                 heading: 'Auditors Do Not Accept "We Could Not Find That File"',
-                content: `A pharmaceutical company under FDA inspection cannot say they probably followed the right procedure but cannot locate the batch record to confirm. A financial institution under RBI audit cannot present documents that are three versions out of date because someone overwrote the original.
+                content: `A pharmaceutical company under <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">FDA inspection</a> cannot say they probably followed the right procedure but cannot locate the batch record to confirm. A financial institution under <a href="https://rbi.org.in/Scripts/NotificationUser.aspx?Id=12189&Mode=0" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">RBI audit</a> cannot present documents that are three versions out of date because someone overwrote the original.
 
 <a href="/solutions/pharmaceutical/regulatory-compliance" class="text-primary hover:underline font-medium">Regulatory compliance</a> is a documentation retrieval problem disguised as a legal obligation. The obligation is real. The enforcement mechanism is the audit trail. If your document system cannot produce a timestamped, version-locked, access-logged record of every change to a critical file, you are one audit away from a significant penalty.
 
@@ -123,11 +123,11 @@ None of these are technology success stories. They are documentation architectur
                 'Led 500+ Digital Transformation Projects',
                 'Specialized in Healthcare, Finance & Manufacturing'
             ],
-            linkedIn: 'https://in.linkedin.com/company/cannyminds-technology-solutions',
+            linkedIn: 'https://in.linkedin.com/in/christopher-arulandu-ba8b011a1',
             twitter: 'https://x.com/cannyminds'
         },
         publishedAt: '2026-02-27T09:00:00+05:30',
-        updatedAt: '2026-03-05T09:00:00+05:30',
+        updatedAt: '2026-03-09T16:00:00+05:30',
         readingTimeMin: 7,
         coverImage: '/images/Blogs/digital-transformation-documentation/digital-transformation-documentation-hero.png',
         featured: true,

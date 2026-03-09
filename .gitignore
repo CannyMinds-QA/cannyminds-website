@@ -50,3 +50,5 @@ next-env.d.ts
 
 # AI Content Guides
 AI_DETECTION_GUIDE.md
+searchqualityevaluatorguidelines.pdf
+search-rater/

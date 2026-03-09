@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowForward as ArrowIcon, Email as EmailIcon, Phone as PhoneIcon } from "@mui/icons-material";
 import RevealOnScroll from "../ui/RevealOnScroll";

@@ -9,6 +9,7 @@ import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import TawkProvider from "@/components/ui/TawkProvider";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { enhancedMetadata as seoMetadata } from "@/lib/enhanced-seo";
+import { LazyMotion, domAnimation } from "framer-motion";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://va.tawk.to" />
         <link rel="preconnect" href="https://embed.tawk.to" />
         <link rel="dns-prefetch" href="https://embed.tawk.to" />
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+        <link rel="preconnect" href="https://analytics.ahrefs.com" />
+        <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
         <meta name="ahrefs-site-verification" content="99e32a8d5cf6c0e56b76bd14a0ba19104d7bc3a634f23bfb63da66d0abdaf6e2" />
 
         {/* Organization Schema - Site-wide (Google Official Guidelines) */}
@@ -104,14 +109,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <SmoothScroll>
-          <Navigation />
-          {children}
-          <Footer />
-        </SmoothScroll>
-        <TawkProvider />
-        <WhatsAppButton />
-        <SpeedInsights />
+        <LazyMotion features={domAnimation}>
+          <SmoothScroll>
+            <Navigation />
+            {children}
+            <Footer />
+          </SmoothScroll>
+          <TawkProvider />
+          <WhatsAppButton />
+          <SpeedInsights />
+        </LazyMotion>
 
         {/* Microsoft Clarity Analytics */}
         <Script

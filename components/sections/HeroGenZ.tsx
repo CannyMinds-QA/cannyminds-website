@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowForward as ArrowIcon } from "@mui/icons-material";
 import dynamic from "next/dynamic";

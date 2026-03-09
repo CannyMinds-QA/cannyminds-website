@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Image from "next/image";
 import RevealOnScroll from "../ui/RevealOnScroll";
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
