@@ -6,6 +6,7 @@ import Navigation from "@/components/ui/Navigation";
 import Footer from "@/components/ui/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import TawkProvider from "@/components/ui/TawkProvider";
+import Clarity from "@/components/analytics/Clarity";
 import { enhancedMetadata as seoMetadata } from "@/lib/enhanced-seo";
 
 const geistSans = Geist({
@@ -111,7 +112,7 @@ export default function RootLayout({
         </SmoothScroll>
         <TawkProvider />
         <WhatsAppButton />
-
+        <Clarity />
       </body>
     </html>
   );
