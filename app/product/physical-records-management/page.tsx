@@ -81,24 +81,24 @@ export default function CannyRMSPage() {
               <div className="space-y-6">
 
                 {/* Trust Badges */}
-                <div className="flex items-center gap-2 flex-wrap">
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 rounded-lg border border-blue-200">
-                    <Shield className="text-blue-600" sx={{ fontSize: 16 }} />
-                    <div className="flex flex-col">
-                      <span className="text-xs font-bold text-blue-900">ISO 27001:2013</span>
-                      <span className="text-[9px] text-blue-600">Information Security</span>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <div className="inline-flex items-center gap-2 px-3 py-2 bg-white rounded-lg border border-gray-200 shadow-sm">
+                    <Shield className="text-blue-600" sx={{ fontSize: 18 }} />
+                    <div>
+                      <div className="text-xs font-bold text-gray-900">ISO 27001:2013</div>
+                      <div className="text-[10px] text-gray-500">Information Security</div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-green-50 rounded-lg border border-green-200">
-                    <Verified className="text-green-600" sx={{ fontSize: 16 }} />
-                    <div className="flex flex-col">
-                      <span className="text-xs font-bold text-green-900">ISO 9001:2015</span>
-                      <span className="text-[9px] text-green-600">Quality Management</span>
+                  <div className="inline-flex items-center gap-2 px-3 py-2 bg-white rounded-lg border border-gray-200 shadow-sm">
+                    <Verified className="text-green-600" sx={{ fontSize: 18 }} />
+                    <div>
+                      <div className="text-xs font-bold text-gray-900">ISO 9001:2015</div>
+                      <div className="text-[10px] text-gray-500">Quality Management</div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 rounded-lg border border-gray-200">
-                    <Star className="text-amber-500" sx={{ fontSize: 16 }} />
-                    <span className="text-xs font-semibold text-gray-700">20+ Years | 100+ Clients</span>
+                  <div className="inline-flex items-center gap-2 px-3 py-2 bg-white rounded-lg border border-gray-200 shadow-sm">
+                    <Star className="text-amber-500" sx={{ fontSize: 18 }} />
+                    <span className="text-xs font-bold text-gray-900">20+ Years | 100+ Clients</span>
                   </div>
                 </div>
 
@@ -152,7 +152,7 @@ export default function CannyRMSPage() {
                 {/* Testimonial - Real Client */}
                 <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded-r-lg">
                   <p className="text-sm text-gray-800 leading-relaxed mb-3">
-                    "CannyMinds successfully digitized approximately <strong className="text-green-800">1 crore documents</strong> and implemented an integrated Enterprise Content Management and <strong className="text-green-800">Physical Record Management solution</strong> for our organization. Their expertise, structured execution, and advanced software capabilities significantly improved our document control, compliance, and operational efficiency."
+                    "CannyMinds successfully digitized approximately <strong className="text-green-800">1 crore documents</strong> and implemented an integrated <Link href="/product/enterprise-content-management" className="text-green-800 hover:underline font-semibold">Enterprise Content Management</Link> and <strong className="text-green-800">Physical Record Management solution</strong> for our organization. Their expertise, structured execution, and advanced software capabilities significantly improved our document control, compliance, and operational efficiency."
                   </p>
                   <div className="flex items-center gap-3 pt-2 border-t border-green-200">
                     <div>
@@ -163,26 +163,17 @@ export default function CannyRMSPage() {
                 </div>
 
                 {/* Author Attribution - E-E-A-T */}
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
+                <div className="flex items-center gap-2 pt-4 border-t border-gray-200 text-xs text-gray-600">
                   <Image
                     src="/images/about/Maheshkumar-Director.png"
                     alt="Maheshkumar"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12 rounded-full object-cover"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 rounded-full object-cover"
                   />
-                  <div className="flex flex-col">
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-semibold text-gray-900">By <a href="https://in.linkedin.com/in/mahesh-kumar-0a02249" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Maheshkumar</a></span>
-                      <span className="text-xs text-gray-400">•</span>
-                      <span className="text-xs text-gray-500">VP - Operations (B.E., MBA)</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
-                      <span>25+ Years Experience</span>
-                      <span>•</span>
-                      <span>Updated March 2026</span>
-                    </div>
-                  </div>
+                  <span>By <a href="https://in.linkedin.com/in/mahesh-kumar-0a02249" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Maheshkumar</a></span>
+                  <span className="text-gray-400">•</span>
+                  <span>Updated 10 March 2026</span>
                 </div>
 
               </div>
@@ -190,15 +181,16 @@ export default function CannyRMSPage() {
               {/* Right Column - Product Demo */}
               <div className="relative">
                 <div className="relative bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
-                  <SecureImage
-                    src="/videos/rms/cannyrms-demo.gif"
-                    alt="CannyRMS Dashboard - Barcode tracking and file search interface"
-                    width={1200}
-                    height={675}
-                    priority
-                    className="w-full h-auto"
-                    unoptimized
-                  />
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ width: '100%', height: 'auto' }}
+                    aria-label="CannyRMS Dashboard - Barcode tracking and file search interface"
+                  >
+                    <source src="/videos/rms/cannyrms-demo.webm" type="video/webm" />
+                  </video>
                 </div>
               </div>
 
@@ -258,6 +250,29 @@ export default function CannyRMSPage() {
                   </a>
                 ))}
               </nav>
+            </div>
+          </div>
+        </section>
+
+        {/* Overview - Primary Keyword Section */}
+        <section id="overview" className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">
+              Enterprise Physical Records Management Solution
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed text-center">
+                CannyRMS delivers comprehensive <strong className="text-gray-900">physical records management</strong> with
+                advanced <strong className="text-gray-900">barcode tracking</strong>, complete <strong className="text-gray-900">audit trails</strong>,
+                and <Link href="/ai-solutions/nbfc" className="text-primary hover:underline font-semibold">automated compliance workflows</Link> for regulated industries.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-center">
+                From <Link href="/solutions/pharmaceutical" className="text-primary hover:underline font-semibold">pharmaceutical</Link> batch records to <Link href="/solutions/professional-services" className="text-primary hover:underline font-semibold">legal</Link> evidence files, our system ensures
+                100% document location accuracy, instant retrieval, and audit-ready documentation
+                for <a href="https://www.fda.gov" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">FDA</a>,{" "}
+                <a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">RBI</a>, and{" "}
+                <a href="https://gdpr.eu" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">GDPR</a> inspections.
+              </p>
             </div>
           </div>
         </section>
@@ -690,27 +705,27 @@ export default function CannyRMSPage() {
               {[
                 {
                   phase: "1",
-                  title: "System Setup",
+                  title: "Physical Records System Setup & Barcode Configuration",
                   description: "Set it and forget it. Configure your users, locations, and barcodes once, and you're ready to roll. It's the foundation for everything else.",
                   features: ["3-level barcode hierarchy", "User roles & granular permissions", "Warehouse/rack/shelf location setup", "Dynamic Barcode Range with overlap detection", "Barcode label printing (batch support)", "Custom categories & metadata fields"],
-                  example: "A pharmaceutical company creates user groups (QA Approvers, Warehouse Staff), configures Building A with 50 racks, allocates barcode ranges for cartons (C001-C999), files (F0001-F9999), and documents (D00001-D99999).",
+                  example: <>A <Link href="/solutions/pharmaceutical" className="text-blue-700 hover:underline font-semibold">pharmaceutical</Link> company creates user groups (QA Approvers, Warehouse Staff), configures Building A with 50 racks, allocates barcode ranges for cartons (C001-C999), files (F0001-F9999), and documents (D00001-D99999).</>,
                   color: "blue",
                   image: "/images/rms/cannyrms-dashboard.png",
                   caption: "CannyRMS Admin Panel"
                 },
                 {
                   phase: "2",
-                  title: "Inward Upload",
+                  title: "Document Inward Upload & Barcode Assignment",
                   description: "Got 50,000 records? Don't type them in. Just drag-and-drop your Excel sheet, and we'll flag the duplicates for you automatically.",
                   features: ["Template-based bulk upload", "Automatic validation", "Capacity tracking", "Unique barcode assignment", "Dynamic Reference"],
-                  example: "A bank uploads 50,000 loan files via Excel. CannyRMS validates data, checks for duplicates, and assigns each record to a location.",
+                  example: <>A <Link href="/solutions/finance" className="text-green-700 hover:underline font-semibold">bank</Link> uploads 50,000 loan files via Excel. CannyRMS validates data, checks for duplicates, and assigns each record to a location.</>,
                   color: "green",
                   image: "/images/rms/cannyrms-upload-inward.png",
                   caption: "Bulk Inward - Excel Upload"
                 },
                 {
                   phase: "3",
-                  title: "Quick Search",
+                  title: "Quick File Search & Location Retrieval",
                   description: "Find it. Fast. Search by document number, barcode, or location and get the full movement history in seconds.",
                   features: ["Multi-criteria search", "Real-time status (IN/OUT)", "Complete movement history with geolocation", "Location verification", "Dynamic Reference lookup"],
                   example: "An auditor searches by loan number (Dynamic Reference) and instantly sees: Location (Building B, Rack 23), Status (IN storage), and full access history with IP addresses and timestamps.",
@@ -720,17 +735,17 @@ export default function CannyRMSPage() {
                 },
                 {
                   phase: "4",
-                  title: "Retrieval Request",
+                  title: "Document Retrieval Request & Approval Workflow",
                   description: "Need a file? Raise a formal request with a justification. The system handles the delegate assignment and return timeline for you.",
                   features: ["Structured request forms", "Original vs copy selection", "Delegate assignment option", "Return date specification", "Extension requests with approval", "Email notification triggers"],
-                  example: "Legal team requests original contracts for court: Category 'Legal', Access Type 'Original', Duration '30 days', Delegate 'Paralegal John', Reason 'Court Case #789'. System sends email to manager for approval.",
+                  example: <><Link href="/solutions/professional-services" className="text-orange-700 hover:underline font-semibold">Legal</Link> team requests original contracts for court: Category 'Legal', Access Type 'Original', Duration '30 days', Delegate 'Paralegal John', Reason 'Court Case #789'. System sends email to manager for approval.</>,
                   color: "orange",
                   image: "/images/rms/cannyrms-retrieval-request.png",
                   caption: "Retrieval Request Form"
                 },
                 {
                   phase: "5",
-                  title: "Manager Approval",
+                  title: "Manager Approval & Notification Workflow",
                   description: "No loose ends. All requests hit the manager's inbox for approval, complete with full context and delegate info.",
                   features: ["Complete request visibility", "Approve/reject with comments", "Bulk approval processing", "Instant email notifications", "Mobile-friendly approval"],
                   example: "Department head receives email alert for pending request. Reviews justification, sees delegate assignment, and approves with note 'Approved for billing reconciliation'. Requester receives approval notification instantly.",
@@ -740,7 +755,7 @@ export default function CannyRMSPage() {
                 },
                 {
                   phase: "6",
-                  title: "Verification",
+                  title: "Document Verification & Condition Check",
                   description: "Before handing anything over, warehouse staff verify condition and availability. Every check is logged with geolocation.",
                   features: ["Final document check", "Condition verification", "Availability confirmation", "Issue flagging with photos", "Geolocation & IP logging"],
                   example: "Staff confirms document is in stated location (Building A, Rack 23, Shelf 2), notes 'No damage', captures photo if needed, and marks as verified. System logs staff ID, IP address, and location.",
@@ -750,7 +765,7 @@ export default function CannyRMSPage() {
                 },
                 {
                   phase: "7",
-                  title: "Handover",
+                  title: "Secure Document Handover with Digital Signatures",
                   description: "Release files securely with pick lists and digital signatures. The moment it leaves, the return-date clock starts ticking.",
                   features: ["Pick list generation", "Barcode verification", "Delegate handover (collect on behalf)", "Digital signature capture", "Return date tracking", "Geolocation logging"],
                   example: "Manager requests file but assigns assistant as delegate. Warehouse prints pick list, scans barcode, captures assistant's signature, and logs both requester and actual recipient for chain of custody.",
@@ -760,7 +775,7 @@ export default function CannyRMSPage() {
                 },
                 {
                   phase: "8",
-                  title: "Refiling",
+                  title: "Document Refiling & Audit Trail Logging",
                   description: "Scanned back in, verified, and back to its rack. If a file is overdue, we'll send automated alerts until it's returned.",
                   features: ["Return verification with barcode scan", "Condition check & damage reporting", "Overdue alerts & email reminders", "Original location guidance", "Status update to IN", "Geolocation & IP logging"],
                   example: "User returns contract 2 days before due date. Staff scans barcode, checks condition, confirms return in system. System logs IP address, updates status to IN, and sends confirmation email. Overdue files trigger automatic reminders.",
@@ -825,6 +840,93 @@ export default function CannyRMSPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </section>
+
+          {/* Advanced Barcode Tracking System */}
+          <section id="barcode-tracking" className="mb-32 scroll-mt-28">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">
+              Advanced Barcode Tracking System
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+              Achieve 100% file location accuracy with our 3-level barcode hierarchy. Track every document movement
+              from carton to file to individual document with real-time visibility across all warehouse locations.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
+                <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                  <Category className="text-primary" sx={{ fontSize: 32 }} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">3-Level Hierarchy</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Carton → File → Document tracking with unique barcode IDs. Prevents duplicates and ensures
+                  precise location identification.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="text-primary mt-0.5" sx={{ fontSize: 16 }} />
+                    <span>Carton-level tracking (C001-C999)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="text-primary mt-0.5" sx={{ fontSize: 16 }} />
+                    <span>File-level tracking (F0001-F9999)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="text-primary mt-0.5" sx={{ fontSize: 16 }} />
+                    <span>Document-level tracking (D00001-D99999)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
+                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                  <LocationOn className="text-green-600" sx={{ fontSize: 32 }} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Real-Time Location Visibility</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Instant file location visibility across multiple warehouses, buildings, racks, and shelves.
+                  Know exactly where every document is at all times.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="text-green-600 mt-0.5" sx={{ fontSize: 16 }} />
+                    <span>Multi-warehouse support</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="text-green-600 mt-0.5" sx={{ fontSize: 16 }} />
+                    <span>Building/Floor/Rack/Shelf mapping</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="text-green-600 mt-0.5" sx={{ fontSize: 16 }} />
+                    <span>Live status updates (IN/OUT)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all">
+                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                  <QrCode className="text-blue-600" sx={{ fontSize: 32 }} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Scan & Track Every Movement</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Every movement logged with barcode scanning, timestamps, user ID, IP address, and geolocation
+                  for complete audit trail compliance.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="text-blue-600 mt-0.5" sx={{ fontSize: 16 }} />
+                    <span>Barcode scan verification</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="text-blue-600 mt-0.5" sx={{ fontSize: 16 }} />
+                    <span>Automatic movement logging</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="text-blue-600 mt-0.5" sx={{ fontSize: 16 }} />
+                    <span>Complete audit trail history</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -1047,7 +1149,7 @@ export default function CannyRMSPage() {
                         <p className="font-bold text-gray-900 mb-2">Zero Audit Findings (100%)</p>
                         <p className="text-sm text-gray-600 leading-relaxed">
                           Based on client-reported audit outcomes from FDA, RBI, MHRA, and internal audits.
-                          Sample size: 500+ inspections across pharma, banking, and legal sectors (2020-2025).
+                          Sample size: 500+ inspections across <Link href="/solutions/pharmaceutical" className="text-primary hover:underline font-semibold">pharma</Link>, <Link href="/solutions/finance" className="text-primary hover:underline font-semibold">banking</Link>, and <Link href="/solutions/professional-services" className="text-primary hover:underline font-semibold">legal</Link> sectors (2020-2025).
                           Clients using CannyRMS reported zero findings related to physical records management.
                         </p>
                       </div>
@@ -1107,32 +1209,14 @@ export default function CannyRMSPage() {
                       aria-label="Maheshkumar's LinkedIn Profile"
                     >
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                       </svg>
                     </a>
                   </div>
                   <p className="text-primary font-semibold mb-3">VP - Operations | B.E., MBA</p>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Maheshkumar is the Vice President of Operations at CannyMinds Technology Solutions, bringing over 25 years of hands-on experience in enterprise document management, compliance technology, and business process automation. He has led the successful deployment of physical and digital records management systems for clients across banking, pharmaceuticals, manufacturing, and legal sectors, ensuring 100% audit readiness and regulatory compliance.
+                  <p className="text-gray-700 leading-relaxed">
+                    Maheshkumar is the Vice President of Operations at CannyMinds Technology Solutions, bringing over 25 years of hands-on experience in <Link href="/product/enterprise-content-management" className="text-primary hover:underline font-semibold">enterprise document management</Link>, compliance technology, and <Link href="/ai-solutions/professional-services" className="text-primary hover:underline font-semibold">business process automation</Link>. He has led the successful deployment of physical and digital records management systems for clients across <Link href="/solutions/finance" className="text-primary hover:underline font-semibold">banking</Link>, <Link href="/solutions/pharmaceutical" className="text-primary hover:underline font-semibold">pharmaceuticals</Link>, <Link href="/solutions/manufacturing" className="text-primary hover:underline font-semibold">manufacturing</Link>, and <Link href="/solutions/professional-services" className="text-primary hover:underline font-semibold">legal</Link> sectors, ensuring 100% audit readiness and regulatory compliance.
                   </p>
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wide">Credentials & Expertise:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        'VP - Operations, CannyMinds Technology Solutions',
-                        'B.E. (Bachelor of Engineering), MBA',
-                        '25+ Years in Document Management & Compliance',
-                        'Expert in Physical Records Management Systems',
-                        'Specialized in FDA, RBI, GDPR Compliance',
-                        'Led 200+ Successful RMS Implementations'
-                      ].map((credential, idx) => (
-                        <span key={idx} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-xs font-medium border border-green-100">
-                          <CheckCircle sx={{ fontSize: 14 }} />
-                          {credential}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -1237,7 +1321,7 @@ export default function CannyRMSPage() {
               Explore Our Complete Business Solutions Suite
             </h2>
             <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              CannyRMS works seamlessly with our other enterprise solutions. Build a complete digital transformation ecosystem for your organization.
+              CannyRMS works seamlessly with our other enterprise solutions. Build a complete <Link href="/blog/digital-transformation-documentation" className="text-primary hover:underline font-semibold">digital transformation</Link> ecosystem for your organization.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -1253,7 +1337,7 @@ export default function CannyRMSPage() {
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">
-                  Comprehensive digital document management with workflow automation, OCR, and FDA 21 CFR Part 11 compliance.
+                  Comprehensive digital document management with <Link href="/ai-solutions/pharmaceutical" className="text-primary hover:underline font-semibold">workflow automation</Link>, OCR, and FDA 21 CFR Part 11 compliance.
                 </p>
                 <Link href="/product/enterprise-content-management" className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
                   Learn about CannyECM <ArrowForward sx={{ fontSize: 16 }} />
