@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { generateAlternates } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Physical Records Management System | CannyRMS 2026",
-    description: "Physical records management system with 8-step workflow, barcode tracking, and complete audit trails. Enterprise solution to manage 100,000+ physical records with compliance-ready features. 30-day free trial.",
+    title: "Physical Records Management System (RMS) 2026",
+    description: "Enterprise physical records management system featuring barcode tracking, automated workflows, and secure audit trails for 100% compliance readiness.",
     keywords: [
         "physical records management system",
         "physical records management",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     ],
     authors: [{ name: "CannyMinds Technology Solutions" }],
     openGraph: {
-        title: "Physical Records Management System | CannyRMS 2026",
-        description: "Physical records management system with 8-step workflow, barcode scanning, and approval workflows. Manage 100,000+ physical records with enterprise-grade compliance features.",
+        title: "Physical Records Management System (RMS) 2026",
+        description: "Enterprise physical records management system featuring barcode tracking, automated workflows, and secure audit trails for 100% compliance readiness.",
         type: "article",
         url: "https://www.cannymindstech.com/product/physical-records-management",
         siteName: "CannyMinds Technology Solutions",
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Physical Records Management System | CannyRMS",
-        description: "Physical records management system with barcode tracking, workflow automation, and compliance-ready audit trails for enterprises.",
+        title: "Physical Records Management System (RMS) 2026",
+        description: "Enterprise physical records management system featuring barcode tracking, automated workflows, and secure audit trails for 100% compliance readiness.",
         images: ["/images/rms/cannyrms-dashboard.png"],
     },
     alternates: generateAlternates("/product/physical-records-management"),
