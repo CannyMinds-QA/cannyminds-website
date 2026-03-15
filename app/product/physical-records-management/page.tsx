@@ -96,10 +96,6 @@ export default function CannyRMSPage() {
                       <div className="text-[10px] text-gray-500">Quality Management</div>
                     </div>
                   </div>
-                  <div className="inline-flex items-center gap-2 px-3 py-2 bg-white rounded-lg border border-gray-200 shadow-sm">
-                    <Star className="text-amber-500" sx={{ fontSize: 18 }} />
-                    <span className="text-xs font-bold text-gray-900">20+ Years | 100+ Clients</span>
-                  </div>
                 </div>
 
                 {/* Headline */}
@@ -149,15 +145,23 @@ export default function CannyRMSPage() {
                   </div>
                 </div>
 
-                {/* Testimonial - Real Client */}
-                <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded-r-lg">
-                  <p className="text-sm text-gray-800 leading-relaxed mb-3">
-                    "CannyMinds successfully digitized approximately <strong className="text-green-800">1 crore documents</strong> and implemented an integrated <Link href="/product/enterprise-content-management" className="text-green-800 hover:underline font-semibold">Enterprise Content Management</Link> and <strong className="text-green-800">Physical Record Management solution</strong> for our organization. Their expertise, structured execution, and advanced software capabilities significantly improved our document control, compliance, and operational efficiency."
+                {/* Testimonial - Premium UI */}
+                <div className="relative bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg rounded-2xl p-6 mt-4 hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star key={star} className="text-amber-400" sx={{ fontSize: 16 }} />
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-700 leading-relaxed mb-4 italic">
+                    "CannyMinds successfully digitized approximately <strong className="text-gray-900 font-medium">1 crore documents</strong> and implemented an integrated <Link href="/product/enterprise-content-management" className="text-primary hover:underline font-medium">Enterprise Content Management</Link> and <strong className="text-gray-900 font-medium">Physical Record Management solution</strong> for our organization. Their expertise, structured execution, and advanced software capabilities significantly improved our document control, compliance, and operational efficiency."
                   </p>
-                  <div className="flex items-center gap-3 pt-2 border-t border-green-200">
+                  <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-sm shadow-md">
+                      SK
+                    </div>
                     <div>
-                      <p className="text-xs font-bold text-gray-800">Dr. Saravana Kumar</p>
-                      <p className="text-[10px] text-gray-600">Steril-Gene Life Sciences (P) Ltd.</p>
+                      <p className="text-sm font-bold text-gray-900">Dr. Saravana Kumar</p>
+                      <p className="text-[11px] text-gray-500 font-medium uppercase tracking-wide">Steril-Gene Life Sciences (P) Ltd.</p>
                     </div>
                   </div>
                 </div>
