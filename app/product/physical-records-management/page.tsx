@@ -1,11 +1,125 @@
-"use client";
-
+import type { Metadata } from "next";
+import { generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
 import SocialShare from "@/components/ui/SocialShare";
 import ProductFAQ from "@/components/sections/ProductFAQ";
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
-import { motion } from "framer-motion";
+
+// SEO Metadata
+export const metadata: Metadata = {
+  title: "Physical Records Management System | CannyRMS",
+  description: "Enterprise physical records management system with barcode tracking, 21 CFR Part 11 compliant audit trails, and 30-second document retrieval.",
+  keywords: [
+    "physical records management",
+    "physical document management",
+    "best records management software",
+    "physical records management system",
+    "paper based document management system",
+    "paper document storage systems",
+    "physical document inventory management",
+    "best physical document storage system",
+    "physical document verification",
+    "document tracking system",
+    "CannyRMS",
+    "FDA compliant records management",
+    "barcode document tracking",
+    "enterprise records management",
+    "secure document storage",
+    "GDPR compliant records",
+    "pharma records management",
+    "legal document tracking"
+  ],
+  authors: [{ name: "Maheshkumar" }],
+  openGraph: {
+    title: "Physical Records Management System | CannyRMS",
+    description: "Enterprise physical records management system with barcode tracking, 21 CFR Part 11 compliant audit trails, and 30-second document retrieval.",
+    type: "website",
+    siteName: 'CannyMinds',
+    locale: 'en_US',
+    url: "https://www.cannymindstech.com/product/physical-records-management",
+    images: [
+      {
+        url: "https://www.cannymindstech.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CannyRMS Physical Records Management",
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Physical Records Management System | CannyRMS",
+    description: "Enterprise physical records management system with barcode tracking, 21 CFR Part 11 compliant audit trails, and 30-second document retrieval.",
+    images: ['https://www.cannymindstech.com/og-image.jpg'],
+  },
+  alternates: generateAlternates('/product/physical-records-management'),
+  robots: { index: true, follow: true },
+};
+
+// JSON-LD Schema
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    generateBreadcrumbSchema([
+      { name: "Home", item: "/" },
+      { name: "Products", item: "/product" },
+      { name: "CannyRMS - Physical Records Management", item: "/product/physical-records-management" },
+    ]),
+    {
+      "@type": "Article",
+      "headline": "Physical Records Management System - CannyRMS",
+      "description": "Comprehensive guide to enterprise physical records management systems. Learn how CannyRMS delivers 30-second document retrieval, barcode tracking, and FDA compliant audit trails.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.cannymindstech.com/images/products/cannyrms/cannyrms1.png",
+        "width": 1200,
+        "height": 630
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Maheshkumar",
+        "jobTitle": "Director of Operations & Compliance Expert",
+        "url": "https://www.cannymindstech.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CannyMinds Technology Solutions",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.cannymindstech.com/logo.png"
+        },
+        "url": "https://www.cannymindstech.com"
+      },
+      "datePublished": "2026-03-10",
+      "dateModified": new Date().toISOString(),
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.cannymindstech.com/product/physical-records-management"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "CannyRMS",
+      "applicationCategory": "BusinessApplication",
+      "description": "Enterprise physical records management system with barcode tracking and audit trails",
+      "operatingSystem": "Cross-platform (Cloud & On-Premise Deployment)",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "ratingCount": 42,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+    },
+  ]
+};
 import {
   ArrowForward,
   CheckCircle,
@@ -57,6 +171,7 @@ import {
 export default function CannyRMSPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="min-h-screen bg-white">
         {/* Breadcrumb */}
@@ -130,7 +245,7 @@ export default function CannyRMSPage() {
                 </div>
 
                 {/* Key Benefits */}
-                <div className="flex items-center gap-4 text-sm pt-2">
+                <div className="flex items-center gap-4 text-sm pt-2 mb-4">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="text-red-600" sx={{ fontSize: 18 }} />
                     <span className="font-medium text-gray-700">Prevent Penalties</span>
@@ -143,6 +258,15 @@ export default function CannyRMSPage() {
                     <CheckCircle className="text-blue-600" sx={{ fontSize: 18 }} />
                     <span className="font-medium text-gray-700">30s Retrieval</span>
                   </div>
+                </div>
+
+                {/* Social Share */}
+                <div className="flex items-center gap-3">
+                  <SocialShare 
+                    title="CannyRMS - Physical Records Management System" 
+                    description="Enterprise physical records management system with barcode tracking, FDA 21 CFR Part 11 compliant audit trails, and 30-second document retrieval."
+                  />
+                  <span className="text-xs text-gray-500">Share this product</span>
                 </div>
 
                 {/* Testimonial - Premium UI */}
