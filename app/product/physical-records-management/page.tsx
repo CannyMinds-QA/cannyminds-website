@@ -1209,7 +1209,6 @@ export default function CannyRMSPage() {
                   width={600}
                   height={600}
                   className="w-1/2 h-auto object-contain select-none"
-                  onContextMenu={(e) => e.preventDefault()}
                 />
               </div>
             </div>
