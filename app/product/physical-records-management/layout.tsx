@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { generateAlternates } from "@/lib/enhanced-seo";
 
 export const metadata: Metadata = {
-    title: "Physical Records Management System (RMS) 2026",
+    title: "Physical Records Management System | CannyRMS 2026",
     description: "Enterprise physical records management system featuring barcode tracking, automated workflows, and secure audit trails for 100% compliance readiness.",
     keywords: [
         "physical records management system",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     ],
     authors: [{ name: "CannyMinds Technology Solutions" }],
     openGraph: {
-        title: "Physical Records Management System (RMS) 2026",
+        title: "Physical Records Management System | CannyRMS 2026",
         description: "Enterprise physical records management system featuring barcode tracking, automated workflows, and secure audit trails for 100% compliance readiness.",
         type: "article",
         url: "https://www.cannymindstech.com/product/physical-records-management",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Physical Records Management System (RMS) 2026",
+        title: "Physical Records Management System | CannyRMS 2026",
         description: "Enterprise physical records management system featuring barcode tracking, automated workflows, and secure audit trails for 100% compliance readiness.",
         images: ["/images/rms/cannyrms-dashboard.png"],
     },
@@ -126,11 +126,10 @@ const jsonLd = {
             "description": "Enterprise physical records management software for tracking cartons, files, and documents with barcode scanning, approval workflows, and complete audit trails.",
             "offers": {
                 "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Enterprise Installation & Customization Service",
-                    "description": "Full setup, configuration, and deployment of this software on client infrastructure."
-                }
+                "price": "0",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.cannymindstech.com/contact"
             },
             "featureList": [
                 "Barcode-based document tracking",

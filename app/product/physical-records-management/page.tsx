@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
+import { generateAlternates } from '@/lib/enhanced-seo';
 import SocialShare from "@/components/ui/SocialShare";
 import ProductFAQ from "@/components/sections/ProductFAQ";
 import Link from "next/link";
@@ -57,69 +57,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-// JSON-LD Schema
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    generateBreadcrumbSchema([
-      { name: "Home", item: "/" },
-      { name: "Products", item: "/product" },
-      { name: "CannyRMS - Physical Records Management", item: "/product/physical-records-management" },
-    ]),
-    {
-      "@type": "Article",
-      "headline": "Physical Records Management System - CannyRMS",
-      "description": "Comprehensive guide to enterprise physical records management systems. Learn how CannyRMS delivers 30-second document retrieval, barcode tracking, and FDA compliant audit trails.",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://www.cannymindstech.com/images/products/cannyrms/cannyrms1.png",
-        "width": 1200,
-        "height": 630
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Maheshkumar",
-        "jobTitle": "Director of Operations & Compliance Expert",
-        "url": "https://www.cannymindstech.com/about"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "CannyMinds Technology Solutions",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.cannymindstech.com/logo.png"
-        },
-        "url": "https://www.cannymindstech.com"
-      },
-      "datePublished": "2026-03-10",
-      "dateModified": new Date().toISOString(),
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.cannymindstech.com/product/physical-records-management"
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "CannyRMS",
-      "applicationCategory": "BusinessApplication",
-      "description": "Enterprise physical records management system with barcode tracking and audit trails",
-      "operatingSystem": "Cross-platform (Cloud & On-Premise Deployment)",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.8,
-        "ratingCount": 42,
-        "bestRating": 5,
-        "worstRating": 1
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": 0,
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-    },
-  ]
-};
 import {
   ArrowForward,
   CheckCircle,
@@ -171,8 +108,6 @@ import {
 export default function CannyRMSPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
       <div className="min-h-screen bg-white">
         {/* Breadcrumb */}
         <nav className="bg-gray-50 border-b border-gray-200 py-4 mt-20">
