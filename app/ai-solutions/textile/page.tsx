@@ -32,6 +32,12 @@ const jsonLd = {
             "name": "AI for Textile & Apparel | CannyMinds",
             "description": "Optimize supply chains, predict trends, and automate quality inspection in textile manufacturing.",
             "url": `${baseUrl}/ai-solutions/textile`,
+            "author": {
+                "@type": "Person",
+                "name": "Udhayakumar Murunga",
+                "jobTitle": "Chief Executive Officer",
+                "url": "https://www.linkedin.com/in/udayakumar-murugan-732b3864/?originalSubdomain=in"
+            },
             "publisher": {
                 "@type": "Organization",
                 "name": "CannyMinds Technology Solutions",
@@ -40,7 +46,7 @@ const jsonLd = {
                     "url": `${baseUrl}/logo.png`
                 }
             },
-            "datePublished": new Date().toISOString().split('T')[0],
+            "datePublished": "2026-02-12",
             "dateModified": new Date().toISOString().split('T')[0]
         },
         {

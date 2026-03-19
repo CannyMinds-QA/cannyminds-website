@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -14,7 +15,10 @@ import {
     VerifiedUser,
     Business,
     Group,
-    Support
+    Support,
+    CalendarToday,
+    Update,
+    AccessTime
 } from "@mui/icons-material";
 
 // Animation Variants
@@ -34,6 +38,22 @@ const staggerContainer = {
 };
 
 export default function TextileSolutionsPage() {
+    const [isGeminiModalOpen, setIsGeminiModalOpen] = useState(false);
+    const [isPromptCopied, setIsPromptCopied] = useState(false);
+
+    const basePrompt = "Act as an expert supply chain and manufacturing AI consultant. Please read the CannyMinds AI Solutions for the Textile & Apparel industry at https://www.cannymindstech.com/ai-solutions/textile. Provide a high-level, professional summary outlining the primary use cases, core business benefits, and specifically why their approach to Generative AI and Computer Vision is critical for modernizing textile manufacturing.";
+    const encodedPrompt = encodeURIComponent(basePrompt);
+
+    const handleCopyAndOpenGemini = () => {
+        navigator.clipboard.writeText(basePrompt);
+        setIsPromptCopied(true);
+        setTimeout(() => {
+            window.open("https://gemini.google.com/app", "_blank", "noopener,noreferrer");
+            setIsGeminiModalOpen(false);
+            setIsPromptCopied(false);
+        }, 1500);
+    };
+
     const tocItems = [
         { id: "use-cases-grid", title: "Overview" },
         ...textileContent.useCases.map((uc) => ({ id: uc.id, title: uc.title })),
@@ -88,6 +108,74 @@ export default function TextileSolutionsPage() {
                                         Talk to Expert
                                     </Link>
                                 </div>
+
+                                {/* TRUSTED BY STRIP */}
+                                <div className="mt-12 flex flex-col gap-4">
+                                    <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">{textileContent.trustSignals.trustedByText}</p>
+                                    <div className="flex flex-wrap gap-4">
+                                        {textileContent.trustSignals.certifications.map((cert, i) => (
+                                            <div key={i} className="flex items-center gap-2 bg-white/60 border border-gray-200 px-4 py-2 rounded-lg text-sm text-gray-700 shadow-sm font-semibold">
+                                                <CheckCircle sx={{ fontSize: 18 }} className="text-green-600" />
+                                                {cert}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* AI SUMMARIZATION */}
+                                <div className="mt-12 flex flex-wrap items-center gap-3">
+                                    <span className="text-sm font-medium text-gray-500 flex items-center gap-1.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sparkles"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" /></svg>
+                                        Summarize this page:
+                                    </span>
+                                    <div className="flex items-center gap-2">
+                                        <a href={`https://chatgpt.com/?q=${encodedPrompt}`} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-emerald-700 hover:text-emerald-800 transition-colors bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-full border border-emerald-200">ChatGPT</a>
+                                        <a href={`https://claude.ai/new?q=${encodedPrompt}`} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-amber-700 hover:text-amber-800 transition-colors bg-amber-50 hover:bg-amber-100 px-3 py-1.5 rounded-full border border-amber-200">Claude</a>
+                                        <button
+                                            title="Open Gemini Prompt Modal"
+                                            className="text-xs font-semibold text-blue-700 hover:text-blue-800 transition-colors bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-full border border-blue-200"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                setIsGeminiModalOpen(true);
+                                            }}
+                                        >
+                                            Gemini
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* AUTHOR & DATE BANNER (E-E-A-T) */}
+                                <div className="mt-8 pt-6 border-t border-gray-200 flex flex-wrap items-center gap-x-4 xl:gap-x-6 gap-y-4 lg:pr-6">
+                                    <div className="flex items-center gap-3 pr-2 xl:pr-4 sm:border-r border-gray-200 shrink-0">
+                                        <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 relative">
+                                            <Image
+                                                src="/images/about/Udayakumar-Murugan-Director.png"
+                                                alt="Udhayakumar Murunga"
+                                                fill
+                                                className="object-cover"
+                                                sizes="48px"
+                                            />
+                                        </div>
+                                        <div>
+                                            <a href="https://www.linkedin.com/in/udayakumar-murugan-732b3864/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" className="font-bold text-gray-900 text-sm xl:text-base hover:text-blue-600 transition-colors block leading-tight">Udhayakumar Murunga</a>
+                                            <div className="text-xs xl:text-sm text-gray-500 mt-0.5">Chief Executive Officer</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-wrap items-center gap-x-4 xl:gap-x-6 gap-y-2">
+                                        <div className="flex items-center gap-1.5 text-xs xl:text-sm text-gray-500 font-medium">
+                                            <CalendarToday sx={{ fontSize: 16 }} className="xl:!text-[18px]" />
+                                            12 February 2026
+                                        </div>
+                                        <div className="flex items-center gap-1.5 text-xs xl:text-sm text-gray-500 font-medium">
+                                            <Update sx={{ fontSize: 16 }} className="xl:!text-[18px]" />
+                                            Updated 19 March 2026
+                                        </div>
+                                        <div className="flex items-center gap-1.5 text-xs xl:text-sm text-gray-500 font-medium">
+                                            <AccessTime sx={{ fontSize: 16 }} className="xl:!text-[18px]" />
+                                            5 min read
+                                        </div>
+                                    </div>
+                                </div>
                             </motion.div>
 
                             {/* Hero Image */}
@@ -97,14 +185,15 @@ export default function TextileSolutionsPage() {
                                 transition={{ duration: 0.6, delay: 0.2 }}
                                 className="relative"
                             >
-                                <div className="aspect-video rounded-2xl overflow-hidden border-2 border-indigo-200 bg-white shadow-lg">
+                                <div className="aspect-video">
                                     <Image
-                                        src="/images/ai-Solution/Gen AI for Textile & Apparel Industry/Gen AI for Textile & Apparel Industry.png"
-                                        alt="Gen AI for Textile & Apparel Industry"
+                                        src="/images/ai-Solution/gen-ai-for-textile-apparel-industry/gen-ai-for-textile-apparel-industry.png"
+                                        alt="gen-ai-for-textile-apparel-industry"
                                         width={800}
                                         height={450}
                                         className="w-full h-full object-cover"
                                         priority
+                                        unoptimized
                                     />
                                 </div>
                                 {/* Decorative Elements */}
@@ -184,7 +273,7 @@ export default function TextileSolutionsPage() {
                                             className={`scroll-mt-24 p-8 rounded-2xl border ${isEven ? 'bg-white border-gray-100 shadow-sm' : 'bg-gray-50 border-gray-100'
                                                 }`}
                                         >
-                                            <div className="grid lg:grid-cols-1 gap-12 items-start">
+                                            <div>
                                                 <motion.div
                                                     initial="hidden"
                                                     whileInView="visible"
@@ -210,6 +299,25 @@ export default function TextileSolutionsPage() {
                                                     <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
                                                         {useCase.solution}
                                                     </p>
+
+                                                    {useCase.image && (
+                                                        <motion.div
+                                                            initial={{ opacity: 0, y: 20 }}
+                                                            whileInView={{ opacity: 1, y: 0 }}
+                                                            viewport={{ once: true }}
+                                                            transition={{ duration: 0.6 }}
+                                                            className="mb-8 flex justify-center"
+                                                        >
+                                                            <Image
+                                                                src={useCase.image}
+                                                                alt={useCase.imageAlt || useCase.title}
+                                                                width={800}
+                                                                height={600}
+                                                                className="w-full max-w-xl h-auto object-cover"
+                                                                unoptimized
+                                                            />
+                                                        </motion.div>
+                                                    )}
 
                                                     <div className="grid sm:grid-cols-2 gap-6 bg-blue-50/50 p-6 rounded-xl border border-blue-100 mb-8">
                                                         <div>
@@ -311,6 +419,19 @@ export default function TextileSolutionsPage() {
                     </div>
                 </div>
 
+                {/* WHY TRUST US / EXPERTISE */}
+                <section className="py-20 bg-gray-50 border-t border-gray-100">
+                    <div className="container mx-auto px-6 lg:px-12 text-center max-w-3xl">
+                        <div className="w-16 h-16 bg-white shadow-sm border border-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <VerifiedUser className="text-blue-600" sx={{ fontSize: 32 }} />
+                        </div>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Trust CannyMinds?</h2>
+                        <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                            {textileContent.expertiseContext}
+                        </p>
+                    </div>
+                </section>
+
                 {/* CTA FOOTER */}
                 <section className="py-24 bg-blue-600">
                     <div className="container mx-auto px-6 lg:px-12 text-center">
@@ -332,6 +453,69 @@ export default function TextileSolutionsPage() {
                 </section>
 
             </main>
+
+            {/* Gemini Prompt Modal Dialog */}
+            {isGeminiModalOpen && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                        className="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 sm:p-8 border border-gray-100 overflow-hidden relative"
+                    >
+                        <button
+                            onClick={() => setIsGeminiModalOpen(false)}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"
+                            aria-label="Close"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                        </button>
+
+                        <div className="flex items-center gap-4 mb-5">
+                            <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 shrink-0 border border-blue-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" /></svg>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900">Summarize with Gemini</h3>
+                                <p className="text-sm text-gray-500 mt-0.5">Google Gemini requires manual prompt pasting.</p>
+                            </div>
+                        </div>
+
+                        <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                            To ensure security, Gemini restricts auto-filling prompts from external links. Please copy the optimized prompt below and paste it into the chat once Gemini opens.
+                        </p>
+
+                        <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6 relative group">
+                            <p className="text-sm font-medium text-slate-800 break-words font-mono leading-relaxed">
+                                {basePrompt}
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-3 justify-end mt-2">
+                            <button
+                                onClick={() => setIsGeminiModalOpen(false)}
+                                className="px-5 py-2.5 rounded-xl font-medium text-gray-700 bg-white border border-gray-200 hover:bg-gray-50 hover:text-gray-900 transition-colors w-full sm:w-auto"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={handleCopyAndOpenGemini}
+                                disabled={isPromptCopied}
+                                className="px-6 py-2.5 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-all flex items-center justify-center gap-2 shadow-sm w-full sm:w-auto disabled:opacity-90 disabled:cursor-not-allowed"
+                            >
+                                {isPromptCopied ? (
+                                    <>
+                                        <CheckCircle sx={{ fontSize: 18 }} />
+                                        Copied! Opening tab...
+                                    </>
+                                ) : (
+                                    "Copy Prompt & Open Gemini"
+                                )}
+                            </button>
+                        </div>
+                    </motion.div>
+                </div>
+            )}
         </>
     );
 }
