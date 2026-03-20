@@ -52,3 +52,6 @@ next-env.d.ts
 AI_DETECTION_GUIDE.md
 searchqualityevaluatorguidelines.pdf
 search-rater/
+
+# Audit reports
+/audits/
