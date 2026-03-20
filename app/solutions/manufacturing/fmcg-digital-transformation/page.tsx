@@ -78,8 +78,8 @@ const jsonLd = {
                     "url": `${baseUrl}/logo.png`
                 }
             },
-            "datePublished": new Date().toISOString().split('T')[0],
-            "dateModified": new Date().toISOString().split('T')[0]
+            "datePublished": "2025-01-01",
+            "dateModified": "2025-01-01"
         },
         generateBreadcrumbSchema([
             { name: "Home", item: "/" },
@@ -525,7 +525,7 @@ export default function FMCGTransformationPage() {
                             <p className="text-gray-600 mt-2">
                                 Our solutions are architected by a team with over 15 years of experience in industrial automation, regulatory compliance, and digital transformation for the FMCG and pharmaceutical sectors.
                             </p>
-                            <p className="text-xs text-gray-400 mt-2">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                            <p className="text-xs text-gray-400 mt-2">Last Updated: March 4, 2026</p>
                         </div>
                     </div>
                 </section>

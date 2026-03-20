@@ -112,8 +112,8 @@ const jsonLd = {
                     "description": "Full setup, configuration, and deployment of this software on client infrastructure."
                 }
             },
-            "datePublished": new Date().toISOString().split('T')[0],
-            "dateModified": new Date().toISOString().split('T')[0]
+            "datePublished": "2025-01-01",
+            "dateModified": "2025-01-01"
         }
     ]
 };

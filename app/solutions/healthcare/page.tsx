@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
 };
 
-const lastUpdated: string = new Date().toISOString().split("T")[0]!;
+const lastUpdated: string = "2025-01-01";
 
 const jsonLd = {
     "@context": "https://schema.org",

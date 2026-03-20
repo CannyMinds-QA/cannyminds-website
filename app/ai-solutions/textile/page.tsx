@@ -47,7 +47,7 @@ const jsonLd = {
                 }
             },
             "datePublished": "2026-02-12",
-            "dateModified": new Date().toISOString().split('T')[0]
+            "dateModified": "2025-01-01"
         },
         {
             "@type": "BreadcrumbList",

@@ -104,7 +104,7 @@ const jsonLd = {
         "url": "https://www.cannymindstech.com"
       },
       "datePublished": "2026-01-15",
-      "dateModified": new Date().toISOString(),
+      "dateModified": "2025-01-01",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.cannymindstech.com/solutions/document-management"
@@ -1134,7 +1134,7 @@ export default function CannyECMProductPage() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-200">
                     <p className="text-xs text-gray-500 italic">
-                      Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                      Last updated: March 7, 2026
                     </p>
                   </div>
                 </div>

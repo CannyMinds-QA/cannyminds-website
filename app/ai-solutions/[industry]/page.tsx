@@ -3,6 +3,13 @@ import { notFound } from 'next/navigation';
 import IndustryClient from './IndustryClient';
 import { baseUrl } from '@/lib/enhanced-seo';
 
+// Industries handled only by this catch-all route (others have dedicated page.tsx files)
+const CATCH_ALL_INDUSTRIES = ['legal', 'retail', 'supply-chain'] as const;
+
+export function generateStaticParams() {
+    return CATCH_ALL_INDUSTRIES.map((industry) => ({ industry }));
+}
+
 // Helper to format title case
 const toTitleCase = (str: string) => {
     return str.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -54,6 +61,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function IndustryPage({ params }: Props) {
     const { industry } = await params;
 
+    if (!CATCH_ALL_INDUSTRIES.includes(industry as typeof CATCH_ALL_INDUSTRIES[number])) {
+        notFound();
+    }
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@graph": [
@@ -70,8 +81,8 @@ export default async function IndustryPage({ params }: Props) {
                         "url": `${baseUrl}/logo.png`
                     }
                 },
-                "datePublished": new Date().toISOString().split('T')[0],
-                "dateModified": new Date().toISOString().split('T')[0]
+                "datePublished": "2025-01-01",
+                "dateModified": "2025-01-01"
             },
             {
                 "@type": "BreadcrumbList",

@@ -329,6 +329,15 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[] }> = [
   {
     route: '/ai-solutions/professional-services',
   },
+  {
+    route: '/ai-solutions/legal',
+  },
+  {
+    route: '/ai-solutions/retail',
+  },
+  {
+    route: '/ai-solutions/supply-chain',
+  },
 
   // ============== ABOUT ==============
   {

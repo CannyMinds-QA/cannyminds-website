@@ -93,8 +93,8 @@ const jsonLd = {
                 "@type": "Organization",
                 "name": "CannyMinds Technology Solutions"
             },
-            "datePublished": new Date().toISOString().split('T')[0],
-            "dateModified": new Date().toISOString().split('T')[0]
+            "datePublished": "2025-01-01",
+            "dateModified": "2025-01-01"
         },
         {
             "@type": "BreadcrumbList",
