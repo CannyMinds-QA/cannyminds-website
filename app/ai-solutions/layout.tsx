@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.cannymindstech.com/ai-solutions",
+    languages: {
+      'en': "https://www.cannymindstech.com/ai-solutions",
+      'x-default': "https://www.cannymindstech.com/ai-solutions",
+    },
   },
 };
 
