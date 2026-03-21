@@ -6,7 +6,7 @@ export default function TawkProvider() {
     return (
         <Script
             id="tawk-to-integration"
-            strategy="lazyOnload"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
                 __html: `
           var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
