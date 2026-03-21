@@ -89,7 +89,9 @@ const config: Config = {
 				'slide-in-right': 'slideInRight 0.8s ease-out forwards',
 				'scale-in': 'scaleIn 0.6s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
-				'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+				'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'cookie-slide-up': 'cookieSlideUp 0.4s ease-out forwards',
+				'cookie-fade-in': 'cookieFadeIn 0.3s ease-out forwards',
 			},
 			keyframes: {
 				fadeInUp: {
@@ -147,7 +149,15 @@ const config: Config = {
 					'50%': {
 						transform: 'translateY(-20px)'
 					}
-				}
+				},
+				cookieSlideUp: {
+					'0%': { transform: 'translateY(40px) scale(0.97)', opacity: '0' },
+					'100%': { transform: 'translateY(0) scale(1)', opacity: '1' },
+				},
+				cookieFadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
