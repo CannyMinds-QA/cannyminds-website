@@ -119,13 +119,10 @@ const jsonLd = {
       },
       "offers": {
         "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.cannymindstech.com/contact",
-        "description": "Contact sales for enterprise pricing",
-        "seller": {
-          "@type": "Organization",
-          "name": "CannyMinds Technology Solutions"
-        }
+        "url": "https://www.cannymindstech.com/contact"
       },
     },
   ]

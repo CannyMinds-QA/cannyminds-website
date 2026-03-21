@@ -85,14 +85,20 @@ const jsonLd = {
                 "name": "CannyECM Change Management",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Cross-platform (On-Premise Deployment)",
-      "offers": {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Enterprise Installation & Customization Service",
-          "description": "Full setup, configuration, and deployment of this software on client infrastructure."
-        }
-      }
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": 4.5,
+                    "ratingCount": 38,
+                    "bestRating": 5,
+                    "worstRating": 1
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": 0,
+                    "priceCurrency": "INR",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://www.cannymindstech.com/contact"
+                }
             },
             "url": `${baseUrl}/solutions/manufacturing/engineering-change-management`,
             "datePublished": "2026-01-15",

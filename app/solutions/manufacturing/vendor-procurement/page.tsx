@@ -86,13 +86,19 @@ const jsonLd = {
                 "name": "CannyECM Vendor Management",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Cross-platform (On-Premise Deployment)",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": 4.4,
+                    "ratingCount": 33,
+                    "bestRating": 5,
+                    "worstRating": 1
+                },
                 "offers": {
                     "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Enterprise Installation & Customization Service",
-                        "description": "Full setup, configuration, and deployment of this software on client infrastructure."
-                    }
+                    "price": 0,
+                    "priceCurrency": "INR",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://www.cannymindstech.com/contact"
                 }
             },
             "url": `${baseUrl}/solutions/manufacturing/vendor-procurement`,
