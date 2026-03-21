@@ -52,6 +52,8 @@ export const metadata: Metadata = {
     title: "Physical Records Management System | CannyRMS",
     description: "Enterprise physical records management system with barcode tracking, 21 CFR Part 11 compliant audit trails, and 30-second document retrieval.",
     images: ['https://www.cannymindstech.com/og-image.jpg'],
+    site: '@cannyminds',
+    creator: '@cannyminds',
   },
   alternates: generateAlternates('/product/physical-records-management'),
   robots: { index: true, follow: true },
@@ -123,9 +125,15 @@ export default function CannyRMSPage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="relative w-full bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <section className="relative w-full bg-white min-h-[90vh] flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+
+            {/* Headline - Full Width Single Column */}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
+              Physical Records Management: One Missing File = <span className="text-red-600">Critical Audit Finding</span>
+            </h1>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
 
               {/* Left Column - Content */}
               <div className="space-y-6">
@@ -147,11 +155,6 @@ export default function CannyRMSPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* Headline */}
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  One Missing File = <span className="text-red-600">Critical Audit Finding</span>
-                </h1>
 
                 {/* Subheadline */}
                 <p className="text-lg text-gray-600 leading-relaxed">
@@ -180,7 +183,7 @@ export default function CannyRMSPage() {
                 </div>
 
                 {/* Key Benefits */}
-                <div className="flex items-center gap-4 text-sm pt-2 mb-4">
+                <div className="flex items-center gap-4 text-sm">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="text-red-600" sx={{ fontSize: 18 }} />
                     <span className="font-medium text-gray-700">Prevent Penalties</span>
@@ -195,64 +198,64 @@ export default function CannyRMSPage() {
                   </div>
                 </div>
 
-                {/* Social Share */}
-                <div className="flex items-center gap-3">
-                  <SocialShare 
-                    title="CannyRMS - Physical Records Management System" 
-                    description="Enterprise physical records management system with barcode tracking, FDA 21 CFR Part 11 compliant audit trails, and 30-second document retrieval."
-                  />
-                  <span className="text-xs text-gray-500">Share this product</span>
-                </div>
-
-                {/* Testimonial - Premium UI */}
-                <div className="relative bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg rounded-2xl p-6 mt-4 hover:shadow-xl transition-shadow duration-300">
-                  <div className="flex items-center gap-1 mb-3">
+                {/* Testimonial */}
+                <div className="border border-gray-200 rounded-xl p-4 bg-gray-50">
+                  <div className="flex items-center gap-1 mb-2">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="text-amber-400" sx={{ fontSize: 16 }} />
+                      <Star key={star} className="text-amber-400" sx={{ fontSize: 13 }} />
                     ))}
                   </div>
-                  <p className="text-sm text-gray-700 leading-relaxed mb-4 italic">
-                    "CannyMinds successfully digitized approximately <strong className="text-gray-900 font-medium">1 crore documents</strong> and implemented an integrated <Link href="/product/enterprise-content-management" className="text-primary hover:underline font-medium">Enterprise Content Management</Link> and <strong className="text-gray-900 font-medium">Physical Record Management solution</strong> for our organization. Their expertise, structured execution, and advanced software capabilities significantly improved our document control, compliance, and operational efficiency."
+                  <p className="text-xs text-gray-600 leading-relaxed mb-3 italic">
+                    "CannyMinds successfully digitized approximately <strong className="text-gray-800 font-medium">1 crore documents</strong> and implemented an integrated <Link href="/product/enterprise-content-management" className="text-primary hover:underline font-medium">Enterprise Content Management</Link> and <strong className="text-gray-800 font-medium">Physical Record Management solution</strong> for our organization. Their expertise significantly improved our document control, compliance, and operational efficiency."
                   </p>
-                  <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-sm shadow-md">
+                  <div className="flex items-center gap-2 pt-2 border-t border-gray-200">
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-[10px] flex-shrink-0">
                       SK
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-gray-900">Dr. Saravana Kumar</p>
-                      <p className="text-[11px] text-gray-500 font-medium uppercase tracking-wide">Steril-Gene Life Sciences (P) Ltd.</p>
+                      <p className="text-xs font-bold text-gray-900">Dr. Saravana Kumar</p>
+                      <p className="text-[10px] text-gray-500 uppercase tracking-wide">Steril-Gene Life Sciences (P) Ltd.</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Author Attribution - E-E-A-T */}
-                <div className="flex items-center gap-2 pt-4 border-t border-gray-200 text-xs text-gray-600">
-                  <Image
-                    src="/images/about/Maheshkumar-Director.png"
-                    alt="Maheshkumar"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8 rounded-full object-cover"
+                {/* Author Attribution + Share - E-E-A-T */}
+                <div className="flex items-center justify-between gap-2 pt-4 border-t border-gray-200 text-xs text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src="/images/about/Maheshkumar-Director.png"
+                      alt="Maheshkumar - VP Operations at CannyMinds Technology Solutions"
+                      width={32}
+                      height={32}
+                      priority
+                      className="w-8 h-8 rounded-full object-cover"
+                    />
+                    <span>By <a href="https://in.linkedin.com/in/mahesh-kumar-0a02249" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Maheshkumar</a></span>
+                    <span className="text-gray-400">•</span>
+                    <span>Updated 10 March 2026</span>
+                  </div>
+                  <SocialShare
+                    title="CannyRMS - Physical Records Management System"
+                    description="Enterprise physical records management system with barcode tracking, FDA 21 CFR Part 11 compliant audit trails, and 30-second document retrieval."
                   />
-                  <span>By <a href="https://in.linkedin.com/in/mahesh-kumar-0a02249" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Maheshkumar</a></span>
-                  <span className="text-gray-400">•</span>
-                  <span>Updated 10 March 2026</span>
                 </div>
 
               </div>
 
               {/* Right Column - Product Demo */}
-              <div className="relative">
+              <div className="pt-4 lg:pt-0">
                 <div className="relative bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
                   <video
                     autoPlay
                     loop
                     muted
                     playsInline
+                    poster="/images/rms/cannyrms-dashboard.png"
                     style={{ width: '100%', height: 'auto' }}
                     aria-label="CannyRMS Dashboard - Barcode tracking and file search interface"
                   >
                     <source src="/videos/rms/cannyrms-demo.webm" type="video/webm" />
+                    <source src="/videos/rms/cannyrms-demo.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -295,7 +298,7 @@ export default function CannyRMSPage() {
             <div className="bg-white rounded-xl shadow-md p-8">
               <nav className="grid md:grid-cols-2 gap-4">
                 {[
-                  { title: "Digital Twin Solution", href: "#what-is" },
+                  { title: "What is CannyRMS?", href: "#overview" },
                   { title: "Zero-Error Features", href: "#features" },
                   { title: "Reports & Dashboards", href: "#reports" },
                   { title: "Enterprise Security", href: "#security" },
@@ -861,7 +864,7 @@ export default function CannyRMSPage() {
                     <div className="grid lg:grid-cols-[1.85fr_1fr] gap-10 items-start">
                       {/* Left Side: Product Image */}
                       {step.image && (
-                        <div className="border border-gray-100 bg-gray-50 flex items-center justify-center">
+                        <div className="relative border border-gray-100 bg-gray-50 flex items-center justify-center">
                           <SecureImage
                             src={step.image}
                             alt={`CannyRMS ${step.title}`}
@@ -1157,10 +1160,10 @@ export default function CannyRMSPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: Speed, title: "Efficiency", stat: "90%", label: "Time Saved", description: "Find documents in seconds instead of hours." },
-                { icon: Visibility, title: "Visibility", stat: "100%", label: "Tracked", description: "Real-time storage utilization and document status." },
-                { icon: Shield, title: "Security", stat: "Zero", label: "Breaches", description: "Role-based access and complete audit trails." },
-                { icon: Assessment, title: "Compliance", stat: "100%", label: "Audit Ready", description: "Regulatory-ready logs and accountability." },
+                { icon: Speed, title: "Efficiency", stat: "90%", label: "Time Saved*", description: "Find documents in seconds instead of hours." },
+                { icon: Visibility, title: "Visibility", stat: "100%", label: "Tracked*", description: "Real-time storage utilization and document status." },
+                { icon: Shield, title: "Security", stat: "Zero", label: "Breaches*", description: "Role-based access and complete audit trails." },
+                { icon: Assessment, title: "Compliance", stat: "100%", label: "Audit Ready*", description: "Regulatory-ready logs and accountability." },
               ].map((benefit, idx) => {
                 const Icon = benefit.icon;
                 return (
@@ -1176,14 +1179,69 @@ export default function CannyRMSPage() {
                 );
               })}
             </div>
+            <p className="text-xs text-gray-500 text-center mt-6">
+              *Based on client deployments across 50+ organizations (2020–2025). Individual results may vary.
+            </p>
+          </section>
+
+          {/* Testimonials Carousel - E-E-A-T */}
+          <section className="mb-32 scroll-mt-28">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center">
+              What Our Clients Say
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  initials: "SK",
+                  name: "Dr. Saravana Kumar",
+                  company: "Steril-Gene Life Sciences (P) Ltd.",
+                  badge: "Pharmaceutical",
+                  quote: "CannyMinds successfully digitized approximately 1 crore documents and implemented an integrated Enterprise Content Management and Physical Record Management solution. Their expertise significantly improved our document control, compliance, and operational efficiency.",
+                  gradient: "from-primary to-secondary"
+                },
+                {
+                  initials: "OK",
+                  name: "Oscar Kazadi",
+                  company: "Proco & Cie SARL – DRC Congo",
+                  badge: "International",
+                  quote: "CannyMinds successfully implemented CannyScan, CannyDocs, and CannyRMS for our organization, delivering a seamless end-to-end digital transformation. Their professionalism and timely execution significantly enhanced our document management efficiency.",
+                  gradient: "from-blue-500 to-blue-700"
+                },
+                {
+                  initials: "RE",
+                  name: "Rajesh",
+                  company: "Eastman Exports – Global Clothing",
+                  badge: "Manufacturing",
+                  quote: "CannyMinds implemented a comprehensive Enterprise Document Management solution that transformed our document workflows. The system dramatically reduced retrieval times and gave us complete visibility over our records across departments.",
+                  gradient: "from-green-500 to-green-700"
+                }
+              ].map((t, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[1,2,3,4,5].map(s => <Star key={s} className="text-amber-400" sx={{ fontSize: 16 }} />)}
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed italic flex-1 mb-6">"{t.quote}"</p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                    <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${t.gradient} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
+                      {t.initials}
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-gray-900">{t.name}</p>
+                      <p className="text-[11px] text-gray-500 font-medium uppercase tracking-wide">{t.company}</p>
+                      <span className="text-[10px] font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full mt-1 inline-block">{t.badge}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </section>
 
           {/* Methodology Transparency Section - E-E-A-T */}
           <section className="mb-32 scroll-mt-28">
             <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 md:p-12 border border-blue-100">
-              <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
                 How We Measure Success
-              </h3>
+              </h2>
               <div className="max-w-4xl mx-auto">
                 <p className="text-gray-600 mb-8 text-center">
                   All performance metrics on this page are measured across 50+ client deployments
@@ -1276,9 +1334,18 @@ export default function CannyRMSPage() {
                     </a>
                   </div>
                   <p className="text-primary font-semibold mb-3">VP - Operations | B.E., MBA</p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed mb-4">
                     Maheshkumar is the Vice President of Operations at CannyMinds Technology Solutions, bringing over 25 years of hands-on experience in <Link href="/product/enterprise-content-management" className="text-primary hover:underline font-semibold">enterprise document management</Link>, compliance technology, and <Link href="/ai-solutions/professional-services" className="text-primary hover:underline font-semibold">business process automation</Link>. He has led the successful deployment of physical and digital records management systems for clients across <Link href="/solutions/finance" className="text-primary hover:underline font-semibold">banking</Link>, <Link href="/solutions/pharmaceutical" className="text-primary hover:underline font-semibold">pharmaceuticals</Link>, <Link href="/solutions/manufacturing" className="text-primary hover:underline font-semibold">manufacturing</Link>, and <Link href="/solutions/professional-services" className="text-primary hover:underline font-semibold">legal</Link> sectors, ensuring 100% audit readiness and regulatory compliance.
                   </p>
+                  <div>
+                    <p className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2">Professional Expertise:</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-xs border border-blue-100 font-medium">ISO 27001 Information Security</span>
+                      <span className="px-3 py-1.5 bg-red-50 text-red-700 rounded-lg text-xs border border-red-100 font-medium">FDA 21 CFR Part 11 Compliance</span>
+                      <span className="px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-xs border border-green-100 font-medium">RBI Records Management</span>
+                      <span className="px-3 py-1.5 bg-purple-50 text-purple-700 rounded-lg text-xs border border-purple-100 font-medium">GDPR Document Controls</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1303,7 +1370,7 @@ export default function CannyRMSPage() {
                 Get Started Now <ArrowForward sx={{ fontSize: 20 }} />
               </Link>
               <Link
-                href="tel:+919876543210"
+                href="tel:+919361801926"
                 className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors inline-flex items-center justify-center gap-2"
               >
                 <Phone sx={{ fontSize: 20 }} /> Talk to Expert
@@ -1354,8 +1421,8 @@ export default function CannyRMSPage() {
         <ProductFAQ
           items={[
             {
-              question: "How does CannyMinds ensure the physical security of stored records?",
-              answer: "Our physical records facilities feature 24/7 CCTV surveillance, biometric access controls, advanced fire suppression systems, and strict environmental controls to protect sensitive documents from unauthorized access and degradation."
+              question: "How does CannyRMS protect physical records from unauthorized access?",
+              answer: "CannyRMS enforces security at the software level through role-based access control (RBAC) — users can only see and access records they are authorized for. Every action is logged with a timestamp, user ID, and geolocation (IP address), creating a tamper-evident audit trail. Multi-level approval workflows ensure no document is retrieved without manager sign-off, and configurable session timeouts prevent unauthorized access from unattended terminals."
             },
             {
               question: "What happens when a specific physical file needs to be retrieved urgently?",
@@ -1372,6 +1439,18 @@ export default function CannyRMSPage() {
             {
               question: "What are the consequences of failing to destroy physical records after their retention period ends?",
               answer: "Retaining documents longer than their legally mandated lifecycle exposes organizations to unnecessary discovery risks during litigation. If the opposing counsel subpoenas documents you were legally allowed to destroy years ago, you must still produce them."
+            },
+            {
+              question: "Can physical records in CannyRMS be linked to digital documents in CannyECM?",
+              answer: "Yes. CannyRMS integrates with CannyECM to create a unified hybrid records management environment. A physical file stored in a warehouse can be linked to its scanned digital counterpart in CannyECM, giving users a single search interface to locate either the physical location or the digital version of any document."
+            },
+            {
+              question: "How long does a typical CannyRMS implementation take?",
+              answer: "A standard CannyRMS implementation — including warehouse mapping, barcode configuration, user role setup, and data migration via bulk Excel upload — typically takes 4 to 8 weeks depending on the volume of existing records and number of warehouse locations. Steril-Gene Life Sciences, for example, had 1 crore (10 million) documents fully catalogued and tracked within their project timeline."
+            },
+            {
+              question: "Is there a mobile app for barcode scanning in the field?",
+              answer: "CannyRMS supports barcode scanning via standard barcode scanners connected to workstations as well as mobile-compatible browser access for field retrieval and verification workflows. Staff can scan barcodes during document handover, refiling, and condition checks from any device with a browser connection to the system."
             }
           ]}
         />

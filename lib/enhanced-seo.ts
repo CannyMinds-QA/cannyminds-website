@@ -161,7 +161,6 @@ export const enhancedMetadata: Metadata = {
 
   verification: {
     google: "fQ2boW5cw6cIVfgTxwovUdz1xrLT0xrySKRUjxU9cKg",
-    yandex: "your-yandex-verification-code",
   },
 
   // Additional metadata

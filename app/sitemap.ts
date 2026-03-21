@@ -40,7 +40,7 @@ function getPageLastModified(route: string): Date {
  * Ordered list of all pages with their images
  * Order: Home → Products → Solutions → AI Solutions → About → Contact → Privacy → Terms
  */
-const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[] }> = [
+const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[]; videos?: MetadataRoute.Sitemap[number]['videos'] }> = [
   // ============== HOME ==============
   {
     route: '/',
@@ -97,6 +97,16 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[] }> = [
       '/images/rms/cannyrms-refiling.png',
       '/images/rms/cannyrms-handover.png',
       '/images/rms/cannyrms-quick-search.png',
+    ],
+    videos: [
+      {
+        title: 'CannyRMS Physical Records Management System Demo',
+        thumbnail_loc: `${BASE_URL}/images/rms/cannyrms-dashboard.png`,
+        description: 'Watch how CannyRMS enables barcode-based physical records tracking, instant 30-second document retrieval, and audit-ready workflows for FDA, RBI, and GDPR compliance in regulated industries.',
+        content_loc: `${BASE_URL}/videos/rms/cannyrms-demo.mp4`,
+        family_friendly: 'yes',
+        live: 'no',
+      },
     ],
   },
   {
@@ -387,7 +397,7 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[] }> = [
  * lastmod reflects actual file modification time, not build time
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = PAGES_WITH_IMAGES.map(({ route, images }) => {
+  const staticPages = PAGES_WITH_IMAGES.map(({ route, images, videos }) => {
     const entry: MetadataRoute.Sitemap[number] = {
       url: `${BASE_URL}${route}`,
       lastModified: getPageLastModified(route),
@@ -396,6 +406,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Add images if available
     if (images && images.length > 0) {
       entry.images = images.map(img => `${BASE_URL}${img}`)
+    }
+
+    // Add videos if available
+    if (videos && videos.length > 0) {
+      entry.videos = videos
     }
 
     return entry

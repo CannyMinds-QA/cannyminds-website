@@ -1,65 +1,3 @@
-import type { Metadata } from "next";
-import { generateAlternates } from "@/lib/enhanced-seo";
-
-export const metadata: Metadata = {
-    title: "Physical Records Management System | CannyRMS 2026",
-    description: "Enterprise physical records management system featuring barcode tracking, automated workflows, and secure audit trails for 100% compliance readiness.",
-    keywords: [
-        "physical records management system",
-        "physical records management",
-        "physical record management",
-        "records management system",
-        "physical document management",
-        "records management software",
-        "CannyRMS",
-        "document tracking system",
-        "barcode records management",
-        "file tracking software",
-        "warehouse records management",
-        "document retrieval system",
-        "records audit trail",
-        "compliance records management",
-        "physical file management",
-        "carton tracking system",
-        "records lifecycle management",
-        "document storage management",
-        "records handover system",
-        "file refiling software",
-        "enterprise records management",
-        "physical document tracking",
-        "records approval workflow",
-        "bank loan document management",
-        "pharmaceutical batch records",
-        "legal file tracking",
-    ],
-    authors: [{ name: "CannyMinds Technology Solutions" }],
-    openGraph: {
-        title: "Physical Records Management System | CannyRMS 2026",
-        description: "Enterprise physical records management system featuring barcode tracking, automated workflows, and secure audit trails for 100% compliance readiness.",
-        type: "article",
-        url: "https://www.cannymindstech.com/product/physical-records-management",
-        siteName: "CannyMinds Technology Solutions",
-        images: [
-            {
-                url: "/images/rms/cannyrms-dashboard.png",
-                width: 1200,
-                height: 630,
-                alt: "CannyRMS Physical Records Management System Dashboard",
-            },
-        ],
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Physical Records Management System | CannyRMS 2026",
-        description: "Enterprise physical records management system featuring barcode tracking, automated workflows, and secure audit trails for 100% compliance readiness.",
-        images: ["/images/rms/cannyrms-dashboard.png"],
-    },
-    alternates: generateAlternates("/product/physical-records-management"),
-    robots: {
-        index: true,
-        follow: true,
-    },
-};
 
 // JSON-LD Structured Data - matching ECM formula
 const jsonLd = {
@@ -78,7 +16,7 @@ const jsonLd = {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Products",
-                    "item": "https://www.cannymindstech.com/#products"
+                    "item": "https://www.cannymindstech.com/product"
                 },
                 {
                     "@type": "ListItem",
@@ -98,9 +36,10 @@ const jsonLd = {
                 "height": 630
             },
             "author": {
-                "@type": "Organization",
-                "name": "CannyMinds Technology Solutions",
-                "url": "https://www.cannymindstech.com"
+                "@type": "Person",
+                "name": "Maheshkumar",
+                "jobTitle": "VP - Operations",
+                "url": "https://in.linkedin.com/in/mahesh-kumar-0a02249"
             },
             "publisher": {
                 "@type": "Organization",
@@ -112,7 +51,7 @@ const jsonLd = {
                 "url": "https://www.cannymindstech.com"
             },
             "datePublished": "2026-01-15",
-            "dateModified": "2026-02-04",
+            "dateModified": "2026-03-10",
             "mainEntityOfPage": {
                 "@type": "WebPage",
                 "@id": "https://www.cannymindstech.com/product/physical-records-management"
@@ -126,10 +65,12 @@ const jsonLd = {
             "description": "Enterprise physical records management software for tracking cartons, files, and documents with barcode scanning, approval workflows, and complete audit trails.",
             "offers": {
                 "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "INR",
                 "availability": "https://schema.org/InStock",
-                "url": "https://www.cannymindstech.com/contact"
+                "url": "https://www.cannymindstech.com/contact",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "CannyMinds Technology Solutions"
+                }
             },
             "featureList": [
                 "Barcode-based document tracking",
@@ -143,6 +84,31 @@ const jsonLd = {
                 "Bulk Excel upload",
                 "Multi-location warehouse support"
             ]
+        },
+        {
+            "@type": "Product",
+            "name": "CannyRMS - Physical Records Management System",
+            "description": "Enterprise physical records management software for tracking cartons, files, and documents with barcode scanning, approval workflows, and complete audit trails.",
+            "brand": {
+                "@type": "Brand",
+                "name": "CannyMinds Technology Solutions"
+            },
+            "manufacturer": {
+                "@type": "Organization",
+                "name": "CannyMinds Technology Solutions",
+                "url": "https://www.cannymindstech.com"
+            },
+            "image": "https://www.cannymindstech.com/images/rms/cannyrms-dashboard.png",
+            "url": "https://www.cannymindstech.com/product/physical-records-management",
+            "offers": {
+                "@type": "Offer",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.cannymindstech.com/contact",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "CannyMinds Technology Solutions"
+                }
+            }
         }
     ]
 };
