@@ -349,18 +349,6 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[]; videos?: Meta
     route: '/ai-solutions/professional-services',
     images: ['/images/ai-Solution/Gen%20AI%20for%20Legal%2C%20Accounting%20%26%20HR/Gen%20AI%20for%20Legal%2C%20Accounting%20%26%20HR.png'],
   },
-  {
-    route: '/ai-solutions/legal',
-    images: ['/images/ai-Solution/legal-document.png'],
-  },
-  {
-    route: '/ai-solutions/retail',
-    images: ['/images/ai-Solution/Gen%20AI%20for%20E-Commerce%20%26%20Retail/Gen%20AI%20for%20E-Commerce%20%26%20Retail.png'],
-  },
-  {
-    route: '/ai-solutions/supply-chain',
-    images: ['/images/ai-Solution/AI-employees.png'],
-  },
 
   // ============== ABOUT ==============
   {

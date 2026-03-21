@@ -96,8 +96,9 @@ const jsonLd = {
         }
       }
             },
-            "datePublished": "2025-01-01",
-            "dateModified": "2025-01-01"
+            "url": `${baseUrl}/solutions/manufacturing/equipment-maintenance`,
+            "datePublished": "2026-01-15",
+            "dateModified": "2026-03-10"
         },
         {
             "@type": "BreadcrumbList",

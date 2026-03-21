@@ -98,10 +98,10 @@ const jsonLd = {
         "url": "https://www.cannymindstech.com"
       },
       "datePublished": "2026-01-15",
-      "dateModified": "2025-01-01",
+      "dateModified": "2026-03-10",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://www.cannymindstech.com/solutions/tracking-system"
+        "@id": "https://www.cannymindstech.com/product/tracking-system"
       }
     },
     {
@@ -119,13 +119,12 @@ const jsonLd = {
       },
       "offers": {
         "@type": "Offer",
-        "price": 0,
-        "priceCurrency": "INR",
         "availability": "https://schema.org/InStock",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Enterprise Installation & Customization Service",
-          "description": "Full setup, configuration, and deployment of this software on client infrastructure."
+        "url": "https://www.cannymindstech.com/contact",
+        "description": "Contact sales for enterprise pricing",
+        "seller": {
+          "@type": "Organization",
+          "name": "CannyMinds Technology Solutions"
         }
       }
     }

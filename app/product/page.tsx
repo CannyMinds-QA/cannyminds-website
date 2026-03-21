@@ -62,64 +62,76 @@ const jsonLd = {
                 "@type": "ItemList",
                 "itemListElement": [
                     {
-                        "@type": "SoftwareApplication",
+                        "@type": "ListItem",
                         "position": 1,
-                        "name": "CannyECM",
-                        "applicationCategory": "BusinessApplication",
-                        "operatingSystem": "Cross-platform (On-Premise Deployment)",
-                        "description": "Smart Content Management Software",
-                        "url": `${baseUrl}/product/enterprise-content-management`,
-                        "offers": { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise Installation Service" } }
+                        "item": {
+                            "@type": "SoftwareApplication",
+                            "name": "CannyECM",
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "Cross-platform (On-Premise Deployment)",
+                            "description": "Smart Content Management Software",
+                            "url": `${baseUrl}/product/enterprise-content-management`
+                        }
                     },
                     {
-                        "@type": "SoftwareApplication",
+                        "@type": "ListItem",
                         "position": 2,
-                        "name": "CannyRMS",
-                        "applicationCategory": "BusinessApplication",
-                        "operatingSystem": "Cross-platform (On-Premise Deployment)",
-                        "description": "Physical Records Management System",
-                        "url": `${baseUrl}/product/physical-records-management`,
-                        "offers": { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise Installation Service" } }
+                        "item": {
+                            "@type": "SoftwareApplication",
+                            "name": "CannyRMS",
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "Cross-platform (On-Premise Deployment)",
+                            "description": "Physical Records Management System",
+                            "url": `${baseUrl}/product/physical-records-management`
+                        }
                     },
                     {
-                        "@type": "SoftwareApplication",
+                        "@type": "ListItem",
                         "position": 3,
-                        "name": "CannyScan",
-                        "applicationCategory": "BusinessApplication",
-                        "operatingSystem": "Cross-platform (On-Premise Deployment)",
-                        "description": "Document Digitization & Scanning Solution",
-                        "url": `${baseUrl}/product/scanning-solution`,
-                        "offers": { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise Installation Service" } }
+                        "item": {
+                            "@type": "SoftwareApplication",
+                            "name": "CannyScan",
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "Cross-platform (On-Premise Deployment)",
+                            "description": "Document Digitization & Scanning Solution",
+                            "url": `${baseUrl}/product/scanning-solution`
+                        }
                     },
                     {
-                        "@type": "SoftwareApplication",
+                        "@type": "ListItem",
                         "position": 4,
-                        "name": "CannyTrack",
-                        "applicationCategory": "BusinessApplication",
-                        "operatingSystem": "Cross-platform (On-Premise Deployment)",
-                        "description": "Employee Productivity Monitoring Software",
-                        "url": `${baseUrl}/product/tracking-system`,
-                        "offers": { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise Installation Service" } }
+                        "item": {
+                            "@type": "SoftwareApplication",
+                            "name": "CannyTrack",
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "Cross-platform (On-Premise Deployment)",
+                            "description": "Employee Productivity Monitoring Software",
+                            "url": `${baseUrl}/product/tracking-system`
+                        }
                     },
                     {
-                        "@type": "SoftwareApplication",
+                        "@type": "ListItem",
                         "position": 5,
-                        "name": "CannyHR",
-                        "applicationCategory": "BusinessApplication",
-                        "operatingSystem": "Cross-platform (On-Premise Deployment)",
-                        "description": "HR & Payroll Management System",
-                        "url": `${baseUrl}/product/hr-management`,
-                        "offers": { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise Installation Service" } }
+                        "item": {
+                            "@type": "SoftwareApplication",
+                            "name": "CannyHR",
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "Cross-platform (On-Premise Deployment)",
+                            "description": "HR & Payroll Management System",
+                            "url": `${baseUrl}/product/hr-management`
+                        }
                     },
                     {
-                        "@type": "SoftwareApplication",
+                        "@type": "ListItem",
                         "position": 6,
-                        "name": "CannyECM e-BMR",
-                        "applicationCategory": "BusinessApplication",
-                        "operatingSystem": "Cross-platform (On-Premise Deployment)",
-                        "description": "Electronic Batch Manufacturing Record",
-                        "url": `${baseUrl}/product/ebmr`,
-                        "offers": { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise Installation Service" } }
+                        "item": {
+                            "@type": "SoftwareApplication",
+                            "name": "CannyECM e-BMR",
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "Cross-platform (On-Premise Deployment)",
+                            "description": "Electronic Batch Manufacturing Record",
+                            "url": `${baseUrl}/product/ebmr`
+                        }
                     }
                 ]
             }

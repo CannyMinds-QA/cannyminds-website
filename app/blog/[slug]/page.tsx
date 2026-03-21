@@ -219,21 +219,7 @@ export default async function BlogPostPage({
         });
     }
 
-    let faqJsonLd = null;
-    if (faqsData.length > 0) {
-        faqJsonLd = {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqsData.map(faq => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": faq.answer
-                }
-            }))
-        };
-    }
+    // FAQPage schema removed — restricted to government/healthcare authority sites since Aug 2023
 
     // Filter out FAQ sections from the generic map to avoid duplicate display
     const regularSections = post.sections ? post.sections.filter(s => !s.heading.toLowerCase().includes('faq')) : [];
@@ -250,12 +236,6 @@ export default async function BlogPostPage({
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
-            {faqJsonLd && (
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-                />
-            )}
             <main className="min-h-screen bg-white pt-16 sm:pt-20">
 
                 {/* ── Breadcrumb ── */}

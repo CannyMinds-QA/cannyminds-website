@@ -225,7 +225,7 @@ export const enhancedJsonLd = {
           "@type": "ContactPoint",
           telephone: "+91-9361801926",
           contactType: "customer service",
-          contactOption: "https://schema.org/TollFree",
+          contactOption: "TollFree",
           areaServed: ["IN", "Asia"],
           availableLanguage: ["English", "Hindi", "Tamil"],
           hoursAvailable: {
@@ -504,46 +504,6 @@ export const enhancedJsonLd = {
       parentOrganization: {
         "@id": `${enhancedSiteConfig.url}/#organization`,
       },
-    },
-
-    // FAQ Schema for common questions
-    {
-      "@type": "FAQPage",
-      "@id": `${enhancedSiteConfig.url}/#faq`,
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What services does CannyMinds offer?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "CannyMinds offers comprehensive IT solutions including digital transformation, AI automation, custom software development, cloud services, digital marketing, business process automation, and enterprise software products like CannyECM, CannyHR, CannyScan, and CannyTrack.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Is CannyMinds ISO certified?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, CannyMinds holds multiple certifications including ISO 9001:2015 (Quality Management System), ISO 15489:2016 (Records Management), ISO 22716:2007 (GMP Cosmetics), and FDA 21 CFR Part 11 Compliance, ensuring world-class quality, security, and compliance standards.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Where is CannyMinds located?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "CannyMinds has global offices in India (Chennai), USA (McKinney, Texas), and Nigeria (Lagos), serving clients worldwide with 24/7 support.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is CannyECM?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "CannyECM is a smart content management software that enables professional document organization, version control, quick search, and instant retrieval through secure web browsers with cloud storage capabilities.",
-          },
-        },
-      ],
     },
 
     // Breadcrumb Schema - homepage breadcrumb showing main navigation paths

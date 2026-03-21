@@ -42,9 +42,6 @@ CannyMinds Technology Solutions is an ISO-certified IT solutions company founded
 - [Real Estate AI](https://www.cannymindstech.com/ai-solutions/real-estate): Gen AI for real estate & construction — contract automation, blueprint analysis, document management.
 - [Marketing AI](https://www.cannymindstech.com/ai-solutions/marketing): Gen AI for marketing & creative — content generation, campaign automation, brand asset management.
 - [Professional Services AI](https://www.cannymindstech.com/ai-solutions/professional-services): Gen AI for legal, accounting & HR — contract review, financial reporting, HR document automation.
-- [Legal AI](https://www.cannymindstech.com/ai-solutions/legal): AI-powered legal document management, contract lifecycle automation, e-discovery.
-- [Retail AI](https://www.cannymindstech.com/ai-solutions/retail): AI for retail operations — inventory intelligence, customer analytics, automated listings.
-- [Supply Chain AI](https://www.cannymindstech.com/ai-solutions/supply-chain): AI for supply chain — vendor management, procurement automation, logistics document processing.
 
 ## Offices
 
