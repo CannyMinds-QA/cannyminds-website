@@ -103,7 +103,7 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[]; videos?: Meta
         title: 'CannyRMS Physical Records Management System Demo',
         thumbnail_loc: `${BASE_URL}/images/rms/cannyrms-dashboard.png`,
         description: 'Watch how CannyRMS enables barcode-based physical records tracking, instant 30-second document retrieval, and audit-ready workflows for FDA, RBI, and GDPR compliance in regulated industries.',
-        content_loc: `${BASE_URL}/videos/rms/cannyrms-demo.mp4`,
+        content_loc: `${BASE_URL}/videos/rms/cannyrms-demo.webm`,
         family_friendly: 'yes',
         live: 'no',
       },
@@ -311,42 +311,55 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[]; videos?: Meta
   },
   {
     route: '/ai-solutions/healthcare',
+    images: ['/images/ai-Solution/healthcare/Gen%20AI%20for%20Healthcare%20%26%20Hospitals.png'],
   },
   {
     route: '/ai-solutions/pharmaceutical',
+    images: ['/images/ai-Solution/Gen%20AI%20for%20Pharmaceutical%20Manufacturing/Gen%20AI%20for%20Pharmaceutical%20Manufacturing.png'],
   },
   {
     route: '/ai-solutions/insurance',
+    images: ['/images/ai-Solution/Gen%20AI%20for%20Insurance%20Operations/Gen%20AI%20for%20Insurance%20Operations.png'],
   },
   {
     route: '/ai-solutions/nbfc',
+    images: ['/images/ai-Solution/Gen%20AI%20for%20Lending%20finance/Gen%20AI%20for%20Lending%20%26%20NBFC%20Operations.png'],
   },
   {
     route: '/ai-solutions/manufacturing',
+    images: ['/images/ai-Solution/Gen%20AI%20for%20Manufacturing%20%26%20Automotive/Gen%20AI%20for%20Manufacturing%20%26%20Automotive.png'],
   },
   {
     route: '/ai-solutions/textile',
+    images: ['/images/ai-Solution/gen-ai-for-textile-apparel-industry/gen-ai-for-textile-apparel-industry.png'],
   },
   {
     route: '/ai-solutions/ecommerce',
+    images: ['/images/ai-Solution/Gen%20AI%20for%20E-Commerce%20%26%20Retail/Gen%20AI%20for%20E-Commerce%20%26%20Retail.png'],
   },
   {
     route: '/ai-solutions/real-estate',
+    images: ['/images/ai-Solution/Gen%20AI%20for%20Real%20Estate%20%26%20Construction/Gen%20AI%20for%20Real%20Estate%20%26%20Construction.png'],
   },
   {
     route: '/ai-solutions/marketing',
+    images: ['/images/ai-Solution/Gen%20AI%20for%20Marketing%20%26%20Creative/Gen%20AI%20for%20Marketing%20%26%20Creative.png'],
   },
   {
     route: '/ai-solutions/professional-services',
+    images: ['/images/ai-Solution/Gen%20AI%20for%20Legal%2C%20Accounting%20%26%20HR/Gen%20AI%20for%20Legal%2C%20Accounting%20%26%20HR.png'],
   },
   {
     route: '/ai-solutions/legal',
+    images: ['/images/ai-Solution/legal-document.png'],
   },
   {
     route: '/ai-solutions/retail',
+    images: ['/images/ai-Solution/Gen%20AI%20for%20E-Commerce%20%26%20Retail/Gen%20AI%20for%20E-Commerce%20%26%20Retail.png'],
   },
   {
     route: '/ai-solutions/supply-chain',
+    images: ['/images/ai-Solution/AI-employees.png'],
   },
 
   // ============== ABOUT ==============

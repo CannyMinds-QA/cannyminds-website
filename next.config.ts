@@ -24,10 +24,7 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 2592000, // 30 days – eliminates redundant re-fetches
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
+      { protocol: 'https', hostname: '*.tawk.to' },
     ],
   },
   async headers() {
@@ -72,12 +69,29 @@ const nextConfig: NextConfig = {
             value: 'SAMEORIGIN',
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' https://embed.tawk.to https://va.tawk.to https://www.clarity.ms https://analytics.ahrefs.com https://va.vercel-insights.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: https: blob:",
+              "font-src 'self'",
+              "connect-src 'self' https://va.tawk.to wss://ws.tawk.to https://www.clarity.ms https://va.vercel-insights.com https://vitals.vercel-insights.com",
+              "frame-src 'self' https://tawk.to",
+              "media-src 'self'",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+              "upgrade-insecure-requests",
+            ].join('; '),
           },
         ],
       },

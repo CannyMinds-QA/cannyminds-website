@@ -1,5 +1,3 @@
-"use client";
-
 import Image, { ImageProps } from "next/image";
 
 export default function SecureImage(props: ImageProps) {
@@ -9,7 +7,6 @@ export default function SecureImage(props: ImageProps) {
         <Image
             {...rest}
             draggable={false}
-            onContextMenu={(e) => e.preventDefault()}
             className={`${className || ""} select-none`}
         />
     );

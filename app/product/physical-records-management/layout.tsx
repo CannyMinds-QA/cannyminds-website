@@ -21,7 +21,8 @@ const jsonLd = {
                 {
                     "@type": "ListItem",
                     "position": 3,
-                    "name": "Physical Records Management"
+                    "name": "Physical Records Management",
+                    "item": "https://www.cannymindstech.com/product/physical-records-management"
                 }
             ]
         },
@@ -104,6 +105,7 @@ const jsonLd = {
                 "@type": "Offer",
                 "availability": "https://schema.org/InStock",
                 "url": "https://www.cannymindstech.com/contact",
+                "description": "Contact sales for enterprise pricing",
                 "seller": {
                     "@type": "Organization",
                     "name": "CannyMinds Technology Solutions"
@@ -120,6 +122,13 @@ export default function RMSLayout({
 }) {
     return (
         <>
+            {/* Preload LCP hero video poster for faster paint */}
+            <link
+                rel="preload"
+                href="/images/rms/cannyrms-dashboard.png"
+                as="image"
+                type="image/png"
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

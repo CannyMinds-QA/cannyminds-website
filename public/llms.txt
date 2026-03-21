@@ -4,7 +4,7 @@
 
 ## About
 
-CannyMinds Technology Solutions is an ISO-certified IT solutions company founded in 2020. We specialize in enterprise content management, HR & payroll systems, document digitization, workforce productivity monitoring, and AI-powered automation. We serve clients globally from offices in India, USA, and Nigeria.
+CannyMinds Technology Solutions is an ISO-certified IT solutions company founded in 2020. We specialize in enterprise content management, HR & payroll systems, document digitization, physical records management, workforce productivity monitoring, and AI-powered automation. We serve clients globally from offices in India, USA, and Nigeria.
 
 ## Certifications
 
@@ -19,7 +19,7 @@ CannyMinds Technology Solutions is an ISO-certified IT solutions company founded
 - [CannyHR](https://www.cannymindstech.com/product/hr-management): HR and payroll management system with attendance tracking, leave management, and statutory compliance.
 - [CannyScan](https://www.cannymindstech.com/product/scanning-solution): Document scanning and digitization solution for converting physical records to searchable digital formats.
 - [CannyTrack](https://www.cannymindstech.com/product/tracking-system): Consent-based employee productivity monitoring with activity tracking, screenshots, and data loss prevention.
-- [Physical Records Management](https://www.cannymindstech.com/product/physical-records-management): End-to-end physical records storage, tracking, retrieval, and destruction services.
+- [CannyRMS - Physical Records Management](https://www.cannymindstech.com/product/physical-records-management): End-to-end physical records management system with barcode tracking, 8-step retrieval workflow, manager approvals, and complete audit trails. Compliant with FDA 21 CFR Part 11, RBI, and GDPR. Average file retrieval under 30 seconds.
 - [Canny eBMR](https://www.cannymindstech.com/product/ebmr): Electronic batch manufacturing records for pharmaceutical production compliance.
 
 ## Industry Solutions
@@ -32,14 +32,19 @@ CannyMinds Technology Solutions is an ISO-certified IT solutions company founded
 
 ## AI Solutions
 
-- [Manufacturing AI](https://www.cannymindstech.com/ai-solutions/manufacturing)
-- [Professional Services AI](https://www.cannymindstech.com/ai-solutions/professional-services)
-- [NBFC & Finance AI](https://www.cannymindstech.com/ai-solutions/nbfc)
-- [Healthcare AI](https://www.cannymindstech.com/ai-solutions/healthcare)
-- [Pharmaceutical AI](https://www.cannymindstech.com/ai-solutions/pharmaceutical)
-- [Real Estate AI](https://www.cannymindstech.com/ai-solutions/real-estate)
-- [E-commerce AI](https://www.cannymindstech.com/ai-solutions/ecommerce)
-- [Marketing AI](https://www.cannymindstech.com/ai-solutions/marketing)
+- [Healthcare AI](https://www.cannymindstech.com/ai-solutions/healthcare): Gen AI for hospitals — clinical documentation, patient record automation, discharge summaries.
+- [Pharmaceutical AI](https://www.cannymindstech.com/ai-solutions/pharmaceutical): Gen AI for pharma manufacturing — batch record automation, regulatory document generation.
+- [Insurance AI](https://www.cannymindstech.com/ai-solutions/insurance): Gen AI for insurance operations — claims processing, policy document automation, fraud detection.
+- [NBFC & Finance AI](https://www.cannymindstech.com/ai-solutions/nbfc): Gen AI for lending & NBFC operations — loan processing, compliance reporting, KYC automation.
+- [Manufacturing AI](https://www.cannymindstech.com/ai-solutions/manufacturing): Gen AI for manufacturing & automotive — shop floor intelligence, predictive maintenance, SOP generation.
+- [Textile AI](https://www.cannymindstech.com/ai-solutions/textile): Gen AI for textile & apparel — design generation, trend intelligence, defect detection, merchandising automation.
+- [E-commerce AI](https://www.cannymindstech.com/ai-solutions/ecommerce): Gen AI for e-commerce & retail — product listing automation, customer support, catalog management.
+- [Real Estate AI](https://www.cannymindstech.com/ai-solutions/real-estate): Gen AI for real estate & construction — contract automation, blueprint analysis, document management.
+- [Marketing AI](https://www.cannymindstech.com/ai-solutions/marketing): Gen AI for marketing & creative — content generation, campaign automation, brand asset management.
+- [Professional Services AI](https://www.cannymindstech.com/ai-solutions/professional-services): Gen AI for legal, accounting & HR — contract review, financial reporting, HR document automation.
+- [Legal AI](https://www.cannymindstech.com/ai-solutions/legal): AI-powered legal document management, contract lifecycle automation, e-discovery.
+- [Retail AI](https://www.cannymindstech.com/ai-solutions/retail): AI for retail operations — inventory intelligence, customer analytics, automated listings.
+- [Supply Chain AI](https://www.cannymindstech.com/ai-solutions/supply-chain): AI for supply chain — vendor management, procurement automation, logistics document processing.
 
 ## Offices
 

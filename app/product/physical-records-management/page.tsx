@@ -117,7 +117,7 @@ export default function CannyRMSPage() {
             <ol className="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto">
               <li><Link href="/" className="text-primary hover:text-primary/80 whitespace-nowrap">Home</Link></li>
               <li className="text-gray-400">/</li>
-              <li><Link href="/#products" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
+              <li><Link href="/product" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-600 font-medium truncate">Physical Records Management</li>
             </ol>
@@ -125,8 +125,8 @@ export default function CannyRMSPage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="relative w-full bg-white min-h-[90vh] flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        <section className="relative w-full bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14 w-full">
 
             {/* Headline - Full Width Single Column */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
@@ -227,7 +227,6 @@ export default function CannyRMSPage() {
                       alt="Maheshkumar - VP Operations at CannyMinds Technology Solutions"
                       width={32}
                       height={32}
-                      priority
                       className="w-8 h-8 rounded-full object-cover"
                     />
                     <span>By <a href="https://in.linkedin.com/in/mahesh-kumar-0a02249" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Maheshkumar</a></span>
@@ -244,14 +243,14 @@ export default function CannyRMSPage() {
 
               {/* Right Column - Product Demo */}
               <div className="pt-4 lg:pt-0">
-                <div className="relative bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
+                <div className="relative bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden aspect-video">
                   <video
                     autoPlay
                     loop
                     muted
                     playsInline
                     poster="/images/rms/cannyrms-dashboard.png"
-                    style={{ width: '100%', height: 'auto' }}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     aria-label="CannyRMS Dashboard - Barcode tracking and file search interface"
                   >
                     <source src="/videos/rms/cannyrms-demo.webm" type="video/webm" />

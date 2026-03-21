@@ -28,6 +28,12 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/', '/_next/', '/static/'],
       },
+      // Allow AI crawlers explicitly for citation and AI search visibility
+      { userAgent: 'GPTBot', allow: '/' },
+      { userAgent: 'ChatGPT-User', allow: '/' },
+      { userAgent: 'ClaudeBot', allow: '/' },
+      { userAgent: 'PerplexityBot', allow: '/' },
+      { userAgent: 'Applebot-Extended', allow: '/' },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   }
