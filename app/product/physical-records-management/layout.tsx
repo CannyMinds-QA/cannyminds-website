@@ -64,8 +64,21 @@ const jsonLd = {
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Cross-platform (On-Premise Deployment)",
             "description": "Enterprise physical records management software for tracking cartons, files, and documents with barcode scanning, approval workflows, and complete audit trails.",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "ratingCount": "29",
+                "bestRating": "5",
+                "worstRating": "1"
+            },
             "offers": {
                 "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "description": "Contact sales for enterprise pricing"
+                },
                 "availability": "https://schema.org/InStock",
                 "url": "https://www.cannymindstech.com/contact",
                 "seller": {

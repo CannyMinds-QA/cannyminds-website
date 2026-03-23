@@ -48,9 +48,9 @@ const products = [
     },
     {
         name: "CannyRMS",
-        title: "Retail Management System",
-        description: "Complete retail operations platform. Manage inventory, POS, and multi-location stores.",
-        longDescription: "Unify your retail operations across all channels. Manage inventory in real-time, streamline point-of-sale transactions, and get detailed sales analytics to optimize store performance.",
+        title: "Physical Records Management System",
+        description: "Complete physical records management platform. Manage inventory, POS, and multi-location stores.",
+        longDescription: "Unify your physical records management across all channels. Manage inventory in real-time, streamline point-of-sale transactions, and get detailed sales analytics to optimize store performance.",
         icon: InventoryIcon,
         color: "text-indigo-600",
         bg: "bg-indigo-50",
