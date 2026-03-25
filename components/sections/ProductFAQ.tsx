@@ -78,12 +78,6 @@ export default function ProductFAQ({
 
     return (
         <>
-            {/* Search Engine Injection */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
-
             <section id={id} className={`py-12 sm:py-16 md:py-24 bg-white ${className}`}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-12">
                     <motion.div

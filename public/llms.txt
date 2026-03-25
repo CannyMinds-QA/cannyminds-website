@@ -49,6 +49,10 @@ CannyMinds Technology Solutions is an ISO-certified IT solutions company founded
 - **USA**: 8751 Collin McKinney Pkwy Suite 1102 #525, McKinney, TX 75070. Phone: +1-214-727-0422
 - **Nigeria**: No:16, Adeola Adeleye Street, Off Coker Road, Illupeju, Lagos. Phone: +234-708-632-3687
 
+## CannyRMS — Physical Records Management System
+
+CannyRMS is an enterprise physical records management software developed by CannyMinds Technology Solutions, an ISO 15489:2016 (Records Management) certified company based in Chennai, India. The system manages physical documents — cartons, files, and paper records — using a 3-level barcode hierarchy (Carton, File, Document) with on-premise deployment. CannyRMS is compliant with FDA 21 CFR Part 11, RBI records retention mandates, and GDPR Article 5 data lifecycle requirements. Deployed across 50+ organizations in India since 2020, including Steril-Gene Life Sciences (10 million documents catalogued) and Eastman Exports. Average file retrieval time is under 30 seconds, measured across 10,000+ retrieval operations. Implementation typically takes 4 to 8 weeks. The system features an 8-step retrieval workflow: Setup, Inward Registration, Search, Request, Manager Approval, Physical Verification, Handover, and Refiling. Key integrations include CannyECM for hybrid physical-digital records management.
+
 ## Blog
 
 - [Digital Transformation Starts With Documentation: Here's Why](https://www.cannymindstech.com/blog/digital-transformation-documentation): Why proper documentation is the foundation of successful digital transformation and how it powers automation, compliance, and business growth.

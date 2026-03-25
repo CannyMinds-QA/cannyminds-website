@@ -31,6 +31,7 @@ export default function robots(): MetadataRoute.Robots {
       // Allow AI crawlers explicitly for citation and AI search visibility
       { userAgent: 'GPTBot', allow: '/' },
       { userAgent: 'ChatGPT-User', allow: '/' },
+      { userAgent: 'OAI-SearchBot', allow: '/' },
       { userAgent: 'ClaudeBot', allow: '/' },
       { userAgent: 'PerplexityBot', allow: '/' },
       { userAgent: 'Applebot-Extended', allow: '/' },

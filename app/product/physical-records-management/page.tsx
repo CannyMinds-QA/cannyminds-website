@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "pharma records management",
     "legal document tracking"
   ],
-  authors: [{ name: "Maheshkumar" }],
+  authors: [{ name: "Maheshkumar", url: "https://in.linkedin.com/in/mahesh-kumar-0a02249" }],
   openGraph: {
     title: "Physical Records Management System | CannyRMS",
     description: "Enterprise physical records management system with barcode tracking, 21 CFR Part 11 compliant audit trails, and 30-second document retrieval.",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     url: "https://www.cannymindstech.com/product/physical-records-management",
     images: [
       {
-        url: "https://www.cannymindstech.com/og-image.jpg",
+        url: "https://www.cannymindstech.com/images/rms/cannyrms-dashboard.png",
         width: 1200,
         height: 630,
         alt: "CannyRMS Physical Records Management",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Physical Records Management System | CannyRMS",
     description: "Enterprise physical records management system with barcode tracking, 21 CFR Part 11 compliant audit trails, and 30-second document retrieval.",
-    images: ['https://www.cannymindstech.com/og-image.jpg'],
+    images: ['https://www.cannymindstech.com/images/rms/cannyrms-dashboard.png'],
     site: '@cannyminds',
     creator: '@cannyminds',
   },
@@ -254,7 +254,6 @@ export default function CannyRMSPage() {
                     aria-label="CannyRMS Dashboard - Barcode tracking and file search interface"
                   >
                     <source src="/videos/rms/cannyrms-demo.webm" type="video/webm" />
-                    <source src="/videos/rms/cannyrms-demo.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -298,11 +297,14 @@ export default function CannyRMSPage() {
               <nav className="grid md:grid-cols-2 gap-4">
                 {[
                   { title: "What is CannyRMS?", href: "#overview" },
+                  { title: "Industry Challenges", href: "#challenges" },
+                  { title: "Which Industries Need It?", href: "#sector-spotlights" },
+                  { title: "Audit Readiness Simulator", href: "#audit-simulator" },
+                  { title: "8-Step Document Lifecycle", href: "#lifecycle" },
                   { title: "Zero-Error Features", href: "#features" },
                   { title: "Reports & Dashboards", href: "#reports" },
-                  { title: "Enterprise Security", href: "#security" },
+                  { title: "How CannyRMS Secures Records?", href: "#security" },
                   { title: "Key Benefits", href: "#benefits" },
-
                   { title: "Get Started", href: "#get-started" },
                 ].map((item, idx) => (
                   <a
@@ -323,7 +325,7 @@ export default function CannyRMSPage() {
         <section id="overview" className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">
-              Enterprise Physical Records Management Solution
+              What is a Physical Records Management System?
             </h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed text-center">
@@ -343,7 +345,7 @@ export default function CannyRMSPage() {
         </section>
 
         {/* Main Content */}
-        <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
           {/* Nightmare Scenarios - The "Why" */}
           <section id="challenges" className="mb-32 scroll-mt-28">
@@ -447,7 +449,7 @@ export default function CannyRMSPage() {
           <section id="sector-spotlights" className="mb-32 scroll-mt-28">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
-                Industry-Specific Compliance Controls
+                Which Industries Need Physical Records Management Software?
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Generic solutions fail in specialized audits. CannyRMS is purpose-built for the unique regulatory pressures of your industry.
@@ -911,7 +913,7 @@ export default function CannyRMSPage() {
           {/* Advanced Barcode Tracking System */}
           <section id="barcode-tracking" className="mb-32 scroll-mt-28">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">
-              Advanced Barcode Tracking System
+              How Does Barcode Tracking Work in CannyRMS?
             </h2>
             <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
               Achieve 100% file location accuracy with our 3-level barcode hierarchy. Track every document movement
@@ -998,7 +1000,7 @@ export default function CannyRMSPage() {
           {/* Core Features - Benefits First */}
           <section id="features" className="mb-32 scroll-mt-28">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center">
-              Features Built for Zero-Error Compliance
+              What Features Ensure Zero-Error Records Compliance?
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -1103,7 +1105,7 @@ export default function CannyRMSPage() {
             {/* Title and Description - Full Width */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
-                Enterprise Security
+                How Does CannyRMS Secure Physical Document Access?
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed max-w-4xl">
                 CannyRMS implements enterprise-grade security with granular role-based access control.
@@ -1301,7 +1303,7 @@ export default function CannyRMSPage() {
             </div>
           </section>
 
-        </article>
+        </section>
 
         {/* Author Profile Section - E-E-A-T */}
         <section className="py-16 bg-gray-50 border-t border-gray-200">
