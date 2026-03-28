@@ -4,9 +4,12 @@ import { baseUrl, generateAlternates } from '@/lib/enhanced-seo';
 
 export const metadata: Metadata = {
     title: 'All Products | Enterprise Software by CannyMinds',
-    description: 'Explore our complete suite of enterprise software products including CannyECM, CannyRMS, CannyScan, CannyTrack, and CannyHR. Built for scalability and compliance.',
+    description: 'Explore our complete suite of enterprise software products including CannyPQMS, CannyECM, CannyRMS, CannyScan, CannyTrack, and CannyHR. Built for scalability and compliance.',
     keywords: [
         'enterprise software',
+        'CannyPQMS',
+        'pharmaceutical quality management system',
+        'pharma QMS software',
         'CannyECM',
         'CannyRMS',
         'CannyScan',
@@ -66,6 +69,18 @@ const jsonLd = {
                         "position": 1,
                         "item": {
                             "@type": "SoftwareApplication",
+                            "name": "CannyPQMS",
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "On-Premise (Windows Server / Linux)",
+                            "description": "Pharmaceutical Quality Management System with 18 GxP-critical modules",
+                            "url": `${baseUrl}/product/cannypqms`
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "item": {
+                            "@type": "SoftwareApplication",
                             "name": "CannyECM",
                             "applicationCategory": "BusinessApplication",
                             "operatingSystem": "Cross-platform (On-Premise Deployment)",
@@ -75,7 +90,7 @@ const jsonLd = {
                     },
                     {
                         "@type": "ListItem",
-                        "position": 2,
+                        "position": 3,
                         "item": {
                             "@type": "SoftwareApplication",
                             "name": "CannyRMS",
@@ -87,7 +102,7 @@ const jsonLd = {
                     },
                     {
                         "@type": "ListItem",
-                        "position": 3,
+                        "position": 4,
                         "item": {
                             "@type": "SoftwareApplication",
                             "name": "CannyScan",
@@ -99,7 +114,7 @@ const jsonLd = {
                     },
                     {
                         "@type": "ListItem",
-                        "position": 4,
+                        "position": 5,
                         "item": {
                             "@type": "SoftwareApplication",
                             "name": "CannyTrack",
@@ -111,7 +126,7 @@ const jsonLd = {
                     },
                     {
                         "@type": "ListItem",
-                        "position": 5,
+                        "position": 6,
                         "item": {
                             "@type": "SoftwareApplication",
                             "name": "CannyHR",
@@ -123,7 +138,7 @@ const jsonLd = {
                     },
                     {
                         "@type": "ListItem",
-                        "position": 6,
+                        "position": 7,
                         "item": {
                             "@type": "SoftwareApplication",
                             "name": "CannyECM e-BMR",

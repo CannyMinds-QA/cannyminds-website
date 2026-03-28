@@ -20,6 +20,7 @@ CannyMinds Technology Solutions is an ISO-certified IT solutions company founded
 - [CannyScan](https://www.cannymindstech.com/product/scanning-solution): Document scanning and digitization solution for converting physical records to searchable digital formats.
 - [CannyTrack](https://www.cannymindstech.com/product/tracking-system): Consent-based employee productivity monitoring with activity tracking, screenshots, and data loss prevention.
 - [CannyRMS - Physical Records Management](https://www.cannymindstech.com/product/physical-records-management): End-to-end physical records management system with barcode tracking, 8-step retrieval workflow, manager approvals, and complete audit trails. Compliant with FDA 21 CFR Part 11, RBI, and GDPR. Average file retrieval under 30 seconds.
+- [CannyPQMS - Pharmaceutical Quality Management System](https://www.cannymindstech.com/product/cannypqms): Enterprise pharma QMS with 18 GxP-critical modules including CAPA, DMS, Deviation, Change Control, Audit, Training, Supplier Quality, Complaint, Risk Management (ICH Q9), Non-Conformance, Calibration, Equipment Asset, Validation, Regulatory Compliance, Management Review, Dashboard & Reporting, Electronic Signature (21 CFR Part 11), and Collaboration Workflow Builder. On-premise deployment. Compliant with FDA, WHO, ICH Q9, EMA, CDSCO, and NAFDAC.
 - [Canny eBMR](https://www.cannymindstech.com/product/ebmr): Electronic batch manufacturing records for pharmaceutical production compliance.
 
 ## Industry Solutions
@@ -48,6 +49,10 @@ CannyMinds Technology Solutions is an ISO-certified IT solutions company founded
 - **India**: No 88 Ram Nagar 6th St, Velachery, Chennai, Tamil Nadu 600042. Phone: +91-9361801926
 - **USA**: 8751 Collin McKinney Pkwy Suite 1102 #525, McKinney, TX 75070. Phone: +1-214-727-0422
 - **Nigeria**: No:16, Adeola Adeleye Street, Off Coker Road, Illupeju, Lagos. Phone: +234-708-632-3687
+
+## CannyPQMS — Pharmaceutical Quality Management System
+
+CannyPQMS is an enterprise pharmaceutical quality management system (pharma QMS) developed by CannyMinds Technology Solutions, an ISO 9001:2015 and ISO 22716:2007 certified company headquartered in Chennai, India. The software ships 18 GxP-critical modules: CAPA Management, Document Management System (DMS), Deviation Management, Change Control Management, Audit Management, Training Management, Supplier Quality Management, Complaint Management, Risk Management (ICH Q9), Non-Conformance Management, Calibration Management, Equipment Asset Management, Validation Management, Regulatory Compliance Management, Management Review, Dashboard & Reporting, Electronic Signature (21 CFR Part 11), and Collaboration Workflow Builder. CannyPQMS is deployed on-premise (Windows Server / Linux) and is compliant with FDA 21 CFR Part 11, ICH Q9, EMA GMP guidelines, WHO TRS standards, CDSCO (India), and NAFDAC (Nigeria). The system targets pharmaceutical manufacturers, contract research organizations (CROs), API producers, and medical device companies in India, Nigeria/Africa, and the United States. Built-in 21 CFR Part 11 electronic signatures enforce audit integrity without paper-based workarounds. The Collaboration Workflow Builder enables quality teams to configure multi-step approval workflows without custom development. CannyPQMS is the flagship quality management product of CannyMinds and complements Canny eBMR for end-to-end pharma production compliance. Product URL: https://www.cannymindstech.com/product/cannypqms
 
 ## CannyRMS — Physical Records Management System
 

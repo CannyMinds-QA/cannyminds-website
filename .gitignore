@@ -44,6 +44,7 @@ next-env.d.ts
 /Client logo/
 /Content for ECM, Scan and RMS/
 /public/clients/
+/content
 
 # Claude Code
 .claude/
@@ -55,3 +56,7 @@ search-rater/
 
 # Audit reports
 /audits/
+
+# Local planning & research folders
+/future plan/
+/keywords /

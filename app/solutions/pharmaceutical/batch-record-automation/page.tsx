@@ -545,6 +545,27 @@ export default function BatchRecordAutomationPage() {
                     </div>
                 </section>
 
+                {/* CannyPQMS Product Link */}
+                <section className="py-10 px-6 lg:px-12 bg-teal-50">
+                    <div className="container mx-auto max-w-4xl">
+                        <h2 className="text-xl font-bold text-gray-800 mb-4 text-center">Looking for a Complete Pharma QMS?</h2>
+                        <Link
+                            href="/product/cannypqms"
+                            className="block bg-white border border-teal-200 rounded-xl p-6 hover:shadow-lg hover:border-teal-400 transition-all group"
+                        >
+                            <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-teal-600">
+                                CannyPQMS: Pharmaceutical Quality Management Software
+                            </h3>
+                            <p className="text-gray-600 mb-4">
+                                Enterprise pharma QMS with 18 modules including CAPA, DMS, Deviation, Audit, e-Sign and more. FDA 21 CFR Part 11, ICH Q9, WHO, and CDSCO compliant.
+                            </p>
+                            <span className="text-teal-600 font-medium inline-flex items-center gap-1">
+                                Explore CannyPQMS <ArrowForward sx={{ fontSize: 16 }} />
+                            </span>
+                        </Link>
+                    </div>
+                </section>
+
                 {/* CTA Section */}
                 <section className="py-12 px-6 lg:px-12 bg-primary">
                     <div className="container mx-auto text-center text-white">

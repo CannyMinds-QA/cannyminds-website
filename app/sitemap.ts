@@ -115,6 +115,28 @@ const PAGES_WITH_IMAGES: Array<{ route: string; images?: string[]; videos?: Meta
       '/images/solutions/Pharma/batch-record-automation/pharma-eBMR.png',
     ],
   },
+  {
+    route: '/product/cannypqms',
+    images: [
+      '/images/pharma-qms/cannypqms-quality-management-kpi-dashboard.png',
+      '/images/pharma-qms/cannypqms-document-management-system-dashboard.png',
+      '/images/pharma-qms/cannypqms-change-control-management-workflow.png',
+      '/images/pharma-qms/cannypqms-deviation-management-investigation.png',
+      '/images/pharma-qms/cannypqms-capa-management-workflow.png',
+      '/images/pharma-qms/cannypqms-audit-management-scheduling-dashboard.png',
+      '/images/pharma-qms/cannypqms-training-management-compliance.png',
+      '/images/pharma-qms/cannypqms-supplier-quality-management-qualification.png',
+      '/images/pharma-qms/cannypqms-complaint-management-handling-process.png',
+      '/images/pharma-qms/cannypqms-risk-management-fishbone-analysis.png',
+      '/images/pharma-qms/cannypqms-non-conformance-management-workflow.png',
+      '/images/pharma-qms/cannypqms-calibration-management-schedule.png',
+      '/images/pharma-qms/cannypqms-equipment-asset-management-lifecycle.png',
+      '/images/pharma-qms/cannypqms-validation-management-iq-oq-pq.png',
+      '/images/pharma-qms/cannypqms-regulatory-compliance-inspection-readiness.png',
+      '/images/pharma-qms/cannypqms-management-review-quality-dashboard.png',
+      '/images/pharma-qms/cannypqms-electronic-signature-21-cfr-part-11.png',
+    ],
+  },
 
   // ============== SOLUTIONS - HEALTHCARE ==============
   {
