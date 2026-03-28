@@ -5,6 +5,7 @@ import ProductFAQ from "@/components/sections/ProductFAQ";
 import Link from "next/link";
 import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
+import AISummarizeSection from "./AISummarizeSection";
 
 import {
   ArrowForward,
@@ -240,7 +241,7 @@ export default function CannyPQMSPage() {
                       </a>
                     </span>
                     <span className="text-gray-400">•</span>
-                    <span>Updated March 2026</span>
+                    <span>Updated March 29, 2026</span>
                   </div>
                   <SocialShare
                     title="CannyPQMS:Pharmaceutical Quality Management System"
@@ -750,6 +751,22 @@ export default function CannyPQMSPage() {
               </div>
             </div>
 
+            {/* Inline CTA — after Module 6 */}
+            <div className="py-8">
+              <div className="bg-teal-600 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <p className="text-white font-bold text-lg">Want to see these modules live?</p>
+                  <p className="text-teal-100 text-sm mt-1">Get a 30-minute walkthrough with a pharma QMS specialist. No slides — live system only.</p>
+                </div>
+                <Link
+                  href="/contact"
+                  className="flex-shrink-0 px-6 py-3 bg-white text-teal-700 font-bold rounded-lg hover:bg-teal-50 transition-colors inline-flex items-center gap-2 whitespace-nowrap"
+                >
+                  Request a Demo <ArrowForward sx={{ fontSize: 18 }} />
+                </Link>
+              </div>
+            </div>
+
             {/* Module 7: Supplier */}
             <div id="module-7" className="py-10 border-b border-gray-100 last:border-0">
               <div className="flex flex-col lg:flex-row gap-10 items-start">
@@ -993,6 +1010,22 @@ export default function CannyPQMSPage() {
                     <SecureImage src="/images/pharma-qms/cannypqms-equipment-asset-management-lifecycle.png" alt="CannyPQMS Equipment Asset Management - Qualification status and maintenance history" width={600} height={400} className="w-full h-auto" />
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Inline CTA — after Module 12 */}
+            <div className="py-8">
+              <div className="bg-gray-900 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <p className="text-white font-bold text-lg">Evaluating pharma QMS software?</p>
+                  <p className="text-gray-400 text-sm mt-1">Talk to our team about your facility size, regulatory markets, and which modules matter most for your inspection readiness.</p>
+                </div>
+                <Link
+                  href="/contact"
+                  className="flex-shrink-0 px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-teal-400 transition-colors inline-flex items-center gap-2 whitespace-nowrap"
+                >
+                  Talk to an Expert <ArrowForward sx={{ fontSize: 18 }} />
+                </Link>
               </div>
             </div>
 
@@ -1343,52 +1376,55 @@ export default function CannyPQMSPage() {
             <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10 leading-relaxed">
               FDA 21 CFR Part 11 establishes the technical and procedural criteria under which the FDA considers electronic records and electronic signatures to be trustworthy, reliable, and equivalent to paper records. Meeting Part 11 requires both technical system controls and procedural safeguards. The following table maps each applicable Part 11 requirement to the specific CannyPQMS implementation.
             </p>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="text-left px-4 py-3 font-bold text-gray-900 border-b border-gray-200 w-1/2">21 CFR Part 11 Requirement</th>
-                    <th className="text-left px-4 py-3 font-bold text-gray-900 border-b border-gray-200 w-1/2">CannyPQMS Implementation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    {
-                      req: "11.10(a):Validation of systems to ensure accuracy, reliability, consistent intended performance, and the ability to discern invalid or altered records",
-                      impl: "Validation Management module manages IQ/OQ/PQ for CannyPQMS itself; full CSV conducted under GAMP 5 methodology"
-                    },
-                    {
-                      req: "11.10(b):The ability to generate accurate and complete copies of records in both human readable and electronic form for inspection, review, and copying by the agency",
-                      impl: "All records exportable as PDF with complete metadata, generation timestamp, and user identity captured"
-                    },
-                    {
-                      req: "11.10(e):Use of secure, computer-generated, time-stamped audit trails",
-                      impl: "Every record action logged with user ID, date/time to the second, IP address, action type, and before/after data state"
-                    },
-                    {
-                      req: "11.10(g):Use of authority checks to ensure that only authorised individuals can use the system, electronically sign a record, access the operation or computer system input or output device",
-                      impl: "Role-based access control; users can only perform functions within their configured role; every role and permission change logged"
-                    },
-                    {
-                      req: "11.50:Signature manifestations on electronic records",
-                      impl: "e-Signature displays printed name of signatory, date and time of signing, and the meaning of the signature act on every signed record"
-                    },
-                    {
-                      req: "11.100:General requirements for electronic signatures:each electronic signature shall be unique to one individual and shall not be reused by, or reassigned to, anyone else",
-                      impl: "Each user has a unique, non-reassignable user ID; system enforces uniqueness and prevents credential sharing"
-                    },
-                    {
-                      req: "11.200:Electronic signature components and controls:electronic signatures shall employ at least two distinct identification components such as an identification code and password",
-                      impl: "Two-component authentication (unique user ID plus password) required before any electronic signature can be applied; failed authentication attempts logged and accounts locked after configurable failed attempt threshold"
-                    },
-                  ].map((row, idx) => (
-                    <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                      <td className="px-4 py-4 text-gray-700 border-b border-gray-100 align-top font-medium">{row.req}</td>
-                      <td className="px-4 py-4 text-gray-600 border-b border-gray-100 align-top">{row.impl}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="space-y-3">
+              {[
+                {
+                  code: "§11.10(a)",
+                  req: "Validation of systems to ensure accuracy, reliability, consistent intended performance, and the ability to discern invalid or altered records",
+                  impl: "Validation Management module manages IQ/OQ/PQ for CannyPQMS itself. Full CSV conducted under GAMP 5 methodology."
+                },
+                {
+                  code: "§11.10(b)",
+                  req: "The ability to generate accurate and complete copies of records in both human readable and electronic form for inspection, review, and copying by the agency",
+                  impl: "All records exportable as PDF with complete metadata, generation timestamp, and user identity captured."
+                },
+                {
+                  code: "§11.10(e)",
+                  req: "Use of secure, computer-generated, time-stamped audit trails",
+                  impl: "Every record action logged with user ID, date/time to the second, IP address, action type, and before/after data state."
+                },
+                {
+                  code: "§11.10(g)",
+                  req: "Use of authority checks to ensure that only authorised individuals can use the system, electronically sign a record, access the operation or computer system input or output device",
+                  impl: "Role-based access control. Users can only perform functions within their configured role. Every role and permission change is logged."
+                },
+                {
+                  code: "§11.50",
+                  req: "Signature manifestations on electronic records",
+                  impl: "e-Signature displays printed name of signatory, date and time of signing, and the meaning of the signature act on every signed record."
+                },
+                {
+                  code: "§11.100",
+                  req: "Each electronic signature shall be unique to one individual and shall not be reused by, or reassigned to, anyone else",
+                  impl: "Each user has a unique, non-reassignable user ID. System enforces uniqueness and prevents credential sharing."
+                },
+                {
+                  code: "§11.200",
+                  req: "Electronic signatures shall employ at least two distinct identification components such as an identification code and password",
+                  impl: "Two-component authentication (unique user ID plus password) required before any e-signature can be applied. Failed attempts are logged and accounts locked after a configurable threshold."
+                },
+              ].map((row, idx) => (
+                <div key={idx} className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-gray-200 rounded-xl overflow-hidden bg-white hover:border-teal-300 transition-colors">
+                  <div className="p-5 border-b lg:border-b-0 lg:border-r border-gray-200 bg-gray-50">
+                    <span className="inline-block text-xs font-bold text-teal-700 bg-teal-50 border border-teal-200 px-2 py-0.5 rounded mb-2">{row.code}</span>
+                    <p className="text-sm text-gray-800 font-medium leading-relaxed">{row.req}</p>
+                  </div>
+                  <div className="p-5 flex items-start gap-3">
+                    <CheckCircle className="text-green-500 flex-shrink-0 mt-0.5" sx={{ fontSize: 18 }} />
+                    <p className="text-sm text-gray-700 leading-relaxed">{row.impl}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -1505,6 +1541,9 @@ export default function CannyPQMSPage() {
           description="Detailed answers to technical and operational questions about CannyPQMS pharma QMS software, FDA 21 CFR Part 11 compliance, and GxP implementation."
           id="pqms-faq"
         />
+
+        {/* AI Summarize Section */}
+        <AISummarizeSection />
 
         {/* Author Bio Section */}
         <section className="py-16 bg-gray-50 border-t border-gray-200">

@@ -58,7 +58,7 @@ const jsonLd = {
                 "url": "https://www.cannymindstech.com"
             },
             "datePublished": "2026-01-15",
-            "dateModified": "2026-03-28",
+            "dateModified": "2026-03-29",
             "mainEntity": {
                 "@id": "https://www.cannymindstech.com/product/cannypqms#software"
             }
@@ -81,6 +81,8 @@ const jsonLd = {
             },
             "offers": {
                 "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
                 "description": "Contact sales for enterprise pricing",
                 "priceSpecification": {
                     "@type": "UnitPriceSpecification",
