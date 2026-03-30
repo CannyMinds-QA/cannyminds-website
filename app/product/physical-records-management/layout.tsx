@@ -126,6 +126,8 @@ const jsonLd = {
             },
             "offers": {
                 "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
                 "priceSpecification": {
                     "@type": "UnitPriceSpecification",
                     "priceType": "https://schema.org/InvoicePrice",

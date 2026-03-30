@@ -82,7 +82,7 @@ const jsonLd = {
             "offers": {
                 "@type": "Offer",
                 "price": "0",
-                "priceCurrency": "USD",
+                "priceCurrency": "INR",
                 "description": "Contact sales for enterprise pricing",
                 "priceSpecification": {
                     "@type": "UnitPriceSpecification",
@@ -115,51 +115,6 @@ const jsonLd = {
                 "Electronic Signature (21 CFR Part 11)",
                 "Collaboration Workflow Builder"
             ]
-        },
-        {
-            "@type": "Product",
-            "@id": "https://www.cannymindstech.com/product/cannypqms#product",
-            "name": "CannyPQMS - Pharmaceutical Quality Management System",
-            "category": "Pharmaceutical Quality Management Software",
-            "description": "Enterprise pharmaceutical quality management system with 18 GxP-critical modules including CAPA management, document control, deviation tracking, audit management, and 21 CFR Part 11 electronic signatures.",
-            "brand": {
-                "@type": "Brand",
-                "name": "CannyMinds Technology Solutions"
-            },
-            "manufacturer": {
-                "@type": "Organization",
-                "name": "CannyMinds Technology Solutions",
-                "url": "https://www.cannymindstech.com"
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://www.cannymindstech.com/images/pharma-qms/cannypqms-quality-management-kpi-dashboard.png"
-            },
-            "url": "https://www.cannymindstech.com/product/cannypqms",
-            "sameAs": "https://www.cannymindstech.com/product/cannypqms#software",
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": 4.8,
-                "ratingCount": 12,
-                "bestRating": 5,
-                "worstRating": 1
-            },
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD",
-                "description": "Contact sales for enterprise pricing",
-                "priceSpecification": {
-                    "@type": "UnitPriceSpecification",
-                    "priceType": "https://schema.org/InvoicePrice"
-                },
-                "availability": "https://schema.org/InStock",
-                "url": "https://www.cannymindstech.com/contact",
-                "seller": {
-                    "@type": "Organization",
-                    "name": "CannyMinds Technology Solutions"
-                }
-            }
         }
     ]
 };
