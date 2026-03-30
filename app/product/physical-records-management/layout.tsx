@@ -101,45 +101,6 @@ const jsonLd = {
                 "Bulk Excel upload",
                 "Multi-location warehouse support"
             ]
-        },
-        {
-            "@type": "Product",
-            "name": "CannyRMS - Physical Records Management System",
-            "description": "Enterprise physical records management software for tracking cartons, files, and documents with barcode scanning, approval workflows, and complete audit trails.",
-            "brand": {
-                "@type": "Brand",
-                "name": "CannyMinds Technology Solutions"
-            },
-            "manufacturer": {
-                "@type": "Organization",
-                "name": "CannyMinds Technology Solutions",
-                "url": "https://www.cannymindstech.com"
-            },
-            "image": "https://www.cannymindstech.com/images/rms/cannyrms-dashboard.png",
-            "url": "https://www.cannymindstech.com/product/physical-records-management",
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.7",
-                "ratingCount": "29",
-                "bestRating": "5",
-                "worstRating": "1"
-            },
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "INR",
-                "priceSpecification": {
-                    "@type": "UnitPriceSpecification",
-                    "priceType": "https://schema.org/InvoicePrice",
-                    "description": "Contact sales for enterprise pricing"
-                },
-                "availability": "https://schema.org/InStock",
-                "url": "https://www.cannymindstech.com/contact",
-                "seller": {
-                    "@type": "Organization",
-                    "name": "CannyMinds Technology Solutions"
-                }
-            }
         }
     ]
 };
