@@ -146,6 +146,8 @@ const jsonLd = {
             },
             "offers": {
                 "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
                 "description": "Contact sales for enterprise pricing",
                 "priceSpecification": {
                     "@type": "UnitPriceSpecification",
