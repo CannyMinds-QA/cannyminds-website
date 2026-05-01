@@ -486,7 +486,7 @@ export default function AboutPage() {
                   <ArrowIcon sx={{ fontSize: 20 }} />
                 </Link>
                 <Link
-                  href="/#products"
+                  href="/product"
                   className="bg-primary-700 text-white border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-900 transition-all inline-flex items-center justify-center gap-2"
                 >
                   Explore Our Solutions

@@ -95,7 +95,14 @@ const jsonLd = {
           "@type": "ImageObject",
           "url": "https://www.cannymindstech.com/logo.png"
         },
-        "url": "https://www.cannymindstech.com"
+        "url": "https://www.cannymindstech.com",
+        "sameAs": [
+          "https://in.linkedin.com/company/cannyminds-technology-solutions",
+          "https://x.com/cannyminds",
+          "https://www.facebook.com/p/CannyMinds-Technology-Solutions-100063646614219/",
+          "https://www.youtube.com/channel/UCs6j4JpOxqSsULlTss3cSxg",
+          "https://www.instagram.com/cannyminds_technology/"
+        ]
       },
       "datePublished": "2026-01-15",
       "dateModified": "2026-03-10",
@@ -142,7 +149,7 @@ export default function CannyHRProductPage() {
             <ol className="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto">
               <li><Link href="/" className="text-primary hover:text-primary/80 whitespace-nowrap">Home</Link></li>
               <li className="text-gray-400">/</li>
-              <li><Link href="/#products" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
+              <li><Link href="/product" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-600 font-medium truncate">CannyHR - HR & Payroll Management Software</li>
             </ol>
@@ -852,14 +859,14 @@ export default function CannyHRProductPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg inline-flex items-center justify-center gap-2"
                 >
                   Request Free Demo
                   <ArrowIcon sx={{ fontSize: 20 }} />
                 </Link>
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="bg-green-700 text-white border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-green-800 transition-all inline-flex items-center justify-center gap-2"
                 >
                   Contact Sales Team

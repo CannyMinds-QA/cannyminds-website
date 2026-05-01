@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { generateBreadcrumbSchema, generateAlternates } from '@/lib/enhanced-seo';
+import { generateAlternates } from '@/lib/enhanced-seo';
 import Link from "next/link";
-import Image from "next/image";
 import SecureImage from "@/components/ui/SecureImage";
 import SocialShare from "@/components/ui/SocialShare";
 import {
@@ -12,9 +11,7 @@ import {
   Search as SearchIcon,
   CloudUpload as CloudIcon,
   Share as ShareIcon,
-  Assignment as WorkflowIcon,
   Storage as StorageIcon,
-  TrendingUp as TrendingUpIcon,
   Computer as ComputerIcon,
   Public as PublicIcon,
   Business as BusinessIcon,
@@ -25,7 +22,7 @@ import ProductFAQ from "@/components/sections/ProductFAQ";
 // SEO Metadata
 export const metadata: Metadata = {
   title: "Enterprise Content Management System | CannyECM",
-  description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise deployment. Manage 50,000+ documents with advanced ECM features. 30-day free trial.",
+  description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise/hybrid deployment. 30-day free trial.",
   keywords: [
     "enterprise content management system",
     "enterprise content management",
@@ -42,103 +39,60 @@ export const metadata: Metadata = {
     "paperless office solution",
     "secure document storage"
   ],
-  authors: [{ name: "Christopher" }],
+  authors: [{ name: "Christopher", url: "https://www.cannymindstech.com/about" }],
   openGraph: {
     title: "Enterprise Content Management System | CannyECM",
-    description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise deployment. Manage 50,000+ documents with advanced ECM features.",
-    type: "website",
-    siteName: 'CannyMinds',
-    locale: 'en_US',
+    description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise/hybrid deployment. 30-day free trial.",
+    type: "article",
+    siteName: "CannyMinds",
+    locale: "en_US",
     url: "https://www.cannymindstech.com/product/enterprise-content-management",
     images: [
       {
-        url: "https://www.cannymindstech.com/og-image.jpg",
+        url: "https://www.cannymindstech.com/images/products/cannyecm/cannyecm1.png",
         width: 1200,
-        height: 630,
-        alt: "CannyECM Content Management Software",
+        height: 800,
+        alt: "CannyECM Dashboard — Enterprise Content Management Software",
       },
     ],
+    publishedTime: "2026-01-15T00:00:00.000Z",
+    modifiedTime: "2026-04-24T00:00:00.000Z",
+    authors: ["https://www.cannymindstech.com/about"],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: "Enterprise Content Management System | CannyECM",
-    description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise deployment. Manage 50,000+ documents.",
-    images: ['https://www.cannymindstech.com/og-image.jpg'],
+    description: "Enterprise content management system with 99% OCR accuracy, workflow automation, and cloud/on-premise/hybrid deployment. 30-day free trial.",
+    images: [
+      {
+        url: "https://www.cannymindstech.com/images/products/cannyecm/cannyecm1.png",
+        alt: "CannyECM Dashboard — Enterprise Content Management Software",
+      },
+    ],
+    site: "@cannyminds",
+    creator: "@cannyminds",
   },
-  alternates: generateAlternates('/product/enterprise-content-management'),
-  robots: { index: true, follow: true },
+  alternates: generateAlternates("/product/enterprise-content-management"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
 };
 
-// JSON-LD Schema
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    generateBreadcrumbSchema([
-      { name: "Home", item: "/" },
-      { name: "Products", item: "/product" },
-      { name: "CannyECM - Content Management Software", item: "/product/enterprise-content-management" },
-    ]),
-    {
-      "@type": "Article",
-      "headline": "Enterprise Content Management System - CannyECM",
-      "description": "Comprehensive guide to enterprise content management systems. Learn how CannyECM delivers advanced ECM features with OCR, workflow automation, and flexible deployment options.",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://www.cannymindstech.com/images/CannyECM-dashboard.jpg",
-        "width": 1200,
-        "height": 630
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Christopher",
-        "jobTitle": "Head of Technical Department & Investor",
-        "url": "https://www.cannymindstech.com/about"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "CannyMinds Technology Solutions",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.cannymindstech.com/logo.png"
-        },
-        "url": "https://www.cannymindstech.com"
-      },
-      "datePublished": "2026-01-15",
-      "dateModified": "2026-03-10",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.cannymindstech.com/product/enterprise-content-management"
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "CannyECM",
-      "applicationCategory": "BusinessApplication",
-      "description": "Enterprise content management system with OCR and workflow automation",
-      "operatingSystem": "Cross-platform (On-Premise Deployment)",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.7,
-        "ratingCount": 67,
-        "bestRating": 5,
-        "worstRating": 1
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": 0,
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.cannymindstech.com/contact"
-      },
-    },
-  ]
-};
+// JSON-LD structured data (BreadcrumbList, WebPage, SoftwareApplication,
+// FAQPage, HowTo) is emitted from ./layout.tsx — co-located with the LCP
+// image preload and matching the CannyPQMS / CannyRMS rich-snippet pattern.
 
 export default function CannyECMProductPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
       <main className="min-h-screen bg-white">
 
         {/* Breadcrumb */}
@@ -147,7 +101,7 @@ export default function CannyECMProductPage() {
             <ol className="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto">
               <li><Link href="/" className="text-primary hover:text-primary/80 whitespace-nowrap">Home</Link></li>
               <li className="text-gray-400">/</li>
-              <li><Link href="/#products" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
+              <li><Link href="/product" className="text-primary hover:text-primary/80 whitespace-nowrap">Products</Link></li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-600 font-medium truncate">Enterprise Content Management</li>
             </ol>
@@ -212,9 +166,11 @@ export default function CannyECMProductPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
                 <SecureImage
                   src="/images/products/cannyecm/cannyecm1.png"
-                  alt="CannyECM Dashboard Screenshot showing document management interface with search, folders, and workflow features"
+                  alt="CannyECM Dashboard showing document management interface with search, folders, and workflow features"
                   width={1200}
                   height={800}
+                  sizes="(max-width: 1024px) 100vw, 600px"
+                  priority
                   className="w-full h-auto"
                 />
               </div>
@@ -251,6 +207,7 @@ export default function CannyECMProductPage() {
             <div className="bg-white rounded-xl shadow-md p-8">
               <nav className="grid md:grid-cols-2 gap-4">
                 {[
+                  { title: "What is Enterprise Content Management?", href: "#what-is-ecm" },
                   { title: "What is CannyECM?", href: "#what-is" },
                   { title: "Key Features & Capabilities", href: "#features" },
                   { title: "Benefits for Your Organization", href: "#benefits" },
@@ -260,6 +217,8 @@ export default function CannyECMProductPage() {
                   { title: "Technical Specifications", href: "#technical-specs" },
                   { title: "Integration Capabilities", href: "#integrations" },
                   { title: "Why Choose CannyECM", href: "#comparison" },
+                  { title: "vs Other ECM Platforms", href: "#competitor-comparison" },
+                  { title: "Capability Matrix", href: "#capability-matrix" },
                   { title: "Implementation Process", href: "#implementation" },
                   { title: "Security & Compliance", href: "#security" },
                   { title: "Frequently Asked Questions", href: "#faq" },
@@ -281,6 +240,84 @@ export default function CannyECMProductPage() {
         {/* Main Content */}
         <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
+          {/* What is ECM (generic awareness section — captures top-funnel queries) */}
+          <section id="what-is-ecm" className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
+              What is Enterprise Content Management?
+            </h2>
+
+            <div className="prose prose-lg max-w-none">
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <strong>Enterprise content management (ECM)</strong> — often called <strong>document management software</strong> or
+                a <strong>document management system (DMS)</strong> — is the discipline and software category for capturing,
+                organizing, securing, and retrieving the documents an organization runs on: invoices, contracts, HR records,
+                quality certificates, patient files, loan applications, and any other unstructured content. An ECM system
+                replaces paper filing and shared network folders with a centralized, searchable, audit-logged repository so
+                every team works from one source of truth, with permission controls and retention rules enforced automatically.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                Modern document management software combines <strong>document management</strong> (versioning, metadata, search),
+                <strong> workflow automation</strong> (multi-step approvals, conditional routing), <strong>records management</strong>
+                (retention, disposition, legal hold), and <strong>compliance controls</strong> (audit trails, role-based access,
+                encryption) in a single platform that deploys in the cloud, on-premise, or as a hybrid. Buyers evaluating
+                document management software typically prioritize five things: built-in OCR accuracy, deployment flexibility,
+                workflow capabilities, compliance certifications, and integration depth with their existing ERP and CRM systems.
+              </p>
+            </div>
+
+            {/* Core ECM components — captures "ECM components" + "ECM technologies" queries */}
+            <div className="mt-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-3">
+                Core Components of an Enterprise Content Management System
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-3xl text-sm">
+                Every ECM platform is built from the same six functional layers. CannyECM ships all six in one product.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse bg-white shadow-lg rounded-xl overflow-hidden">
+                  <thead>
+                    <tr className="bg-gradient-to-r from-primary to-secondary text-white">
+                      <th scope="col" className="py-4 px-6 text-left font-bold">Component</th>
+                      <th scope="col" className="py-4 px-6 text-left font-bold">What it does</th>
+                      <th scope="col" className="py-4 px-6 text-left font-bold">Underlying technology</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { component: "Capture & Ingestion", purpose: "Turn paper and digital files into searchable records", tech: "OCR, scanner integration, drag-and-drop upload, network drive / S3 sync" },
+                      { component: "Document Management", purpose: "Organize, version, and retrieve files at any scale", tech: "Cabinet/folder hierarchy, automatic versioning, metadata schemas" },
+                      { component: "Search & Discovery", purpose: "Find any document in seconds across millions of files", tech: "Full-text indexing on Elasticsearch, metadata + tag filters, AND/OR booleans" },
+                      { component: "Workflow & Process", purpose: "Route documents for review, approval, or sign-off automatically", tech: "Visual workflow builder, conditional logic, deadline reminders, electronic signatures" },
+                      { component: "Records Management", purpose: "Apply retention rules, legal hold, and disposition", tech: "Retention policies on metadata, automated lifecycle, audit-proof deletion" },
+                      { component: "Security & Compliance", purpose: "Control access, log every action, prove compliance", tech: "RBAC, AES-256 encryption, TLS 1.3, immutable audit trail, SSO/SAML/OAuth" },
+                    ].map((row, idx) => (
+                      <tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                        <td className="py-3 px-6 font-bold text-secondary text-sm border-t border-gray-200 align-top">{row.component}</td>
+                        <td className="py-3 px-6 text-sm text-gray-700 border-t border-gray-200 align-top">{row.purpose}</td>
+                        <td className="py-3 px-6 text-sm text-gray-600 border-t border-gray-200 align-top">{row.tech}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* ECM vs DMS — captures DMS terminology + disambiguation query */}
+            <div className="mt-10 bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg">
+              <h3 className="text-xl md:text-2xl font-bold text-secondary mb-3">
+                Document Management System (DMS) vs Enterprise Content Management (ECM): What&apos;s the Difference?
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                A <strong>document management system</strong> handles file storage, versioning, and retrieval — the document
+                lifecycle. <strong>Enterprise content management</strong> is broader: it includes everything a DMS does, plus
+                workflow automation, records management, compliance controls, and integration with the rest of your business
+                applications. CannyECM is sold as ECM but functions as both. If you need just storage and search, the DMS
+                portion of CannyECM covers that on its own; if you need approvals, retention, and audit-grade compliance, the
+                full ECM stack is included in the same product without a separate license.
+              </p>
+            </div>
+          </section>
+
           {/* What is CannyECM */}
           <section id="what-is" className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8">
@@ -290,15 +327,20 @@ export default function CannyECMProductPage() {
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
                 <strong>CannyECM</strong> is a comprehensive enterprise content management system (ECM) designed to eliminate paper-based
-                workflows and digitize your entire document ecosystem. Whether you&apos;re managing invoices, contracts, <Link href="/product/hr-management" className="text-primary hover:underline">HR records</Link>, or
-                compliance documentation, CannyECM provides a centralized platform to <strong>organize, search, retrieve, and share</strong> professional
-                documents with military-grade security.
+                workflows and digitize your entire document ecosystem. Built for modern businesses, CannyECM operates seamlessly on any
+                browser and offers flexible deployment — <strong>cloud, on-premise, or hybrid</strong> — for organizations managing
+                invoices, contracts, <Link href="/product/hr-management" className="text-primary hover:underline">HR records</Link>, and
+                compliance documentation. The platform combines <strong>OCR technology powered by Elasticsearch</strong> with up to 99% accuracy,
+                full-text search across PDFs, Microsoft Office files, images, and CAD drawings, a visual workflow builder with multi-step
+                approvals and automatic reminders, role-based access control at file, folder, and cabinet level, and AES-256 encryption
+                at rest with TLS 1.3 in transit. CannyECM is compliant with GDPR, HIPAA, ISO 27001:2013,
+                SOC 2 Type II, SOX, and PCI DSS, and integrates with SAP, Oracle, Microsoft Dynamics, Salesforce, Microsoft 365,
+                Google Workspace, SharePoint, Slack, and Microsoft Teams to provide a centralized way to <strong>organize, search,
+                retrieve, and share</strong> documents with enterprise-grade security.
               </p>
 
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                Built for modern businesses, CannyECM operates seamlessly on any browser and offers flexible deployment options <strong>cloud,
-                  on-premise, or hybrid</strong>. With advanced <strong>OCR technology powered by Elasticsearch</strong>, full-text search capabilities,
-                and intuitive workflow automation, CannyECM transforms how organizations handle content management challenges. Learn more about <Link href="/blog/digital-transformation-documentation" className="text-primary hover:underline font-medium">why documentation is the foundation of successful digital transformation</Link>.
+              <p className="text-gray-700 text-base leading-relaxed mb-6">
+                Learn more about <Link href="/blog/digital-transformation-documentation" className="text-primary hover:underline font-medium">why documentation is the foundation of successful digital transformation</Link>.
               </p>
 
               <div className="bg-primary-50 border-l-4 border-primary p-6 rounded-r-lg">
@@ -613,6 +655,42 @@ export default function CannyECMProductPage() {
               </div>
 
             </div>
+
+            {/* Deployment comparison table — structured summary of the 3 options above (AI-citable) */}
+            <div className="mt-12 overflow-x-auto">
+              <h3 className="text-xl md:text-2xl font-bold text-secondary mb-4 text-center">
+                Deployment Options Compared
+              </h3>
+              <table className="w-full border-collapse bg-white shadow-lg rounded-xl overflow-hidden">
+                <thead>
+                  <tr className="bg-gradient-to-r from-primary to-secondary text-white">
+                    <th scope="col" className="py-4 px-6 text-left font-bold">Attribute</th>
+                    <th scope="col" className="py-4 px-6 text-center font-bold">Cloud (SaaS)</th>
+                    <th scope="col" className="py-4 px-6 text-center font-bold">On-Premise</th>
+                    <th scope="col" className="py-4 px-6 text-center font-bold">Hybrid</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { attribute: "Hosting", cloud: "Fully hosted", onprem: "Your infrastructure", hybrid: "Cloud storage + on-premise app access" },
+                    { attribute: "Infrastructure investment", cloud: "Zero", onprem: "Required", hybrid: "Partial" },
+                    { attribute: "Updates", cloud: "Automatic", onprem: "Customer-managed", hybrid: "Configurable" },
+                    { attribute: "Backups & monitoring", cloud: "24/7 included", onprem: "Customer-managed", hybrid: "Configurable" },
+                    { attribute: "Deployment speed", cloud: "Instant", onprem: "Traditional install", hybrid: "Configurable" },
+                    { attribute: "Cost model", cloud: "Subscription", onprem: "No recurring cloud fees", hybrid: "Mixed" },
+                    { attribute: "Data residency", cloud: "US, EU, Asia-Pacific, Middle East", onprem: "Full data sovereignty", hybrid: "Configurable" },
+                    { attribute: "Best for", cloud: "SMBs, Startups, Distributed Teams", onprem: "Government, Healthcare, Finance", hybrid: "Enterprises, Multi-Location Businesses" },
+                  ].map((row, idx) => (
+                    <tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                      <td className="py-4 px-6 font-semibold text-secondary border-t border-gray-200">{row.attribute}</td>
+                      <td className="py-4 px-6 text-center text-sm text-gray-700 border-t border-gray-200">{row.cloud}</td>
+                      <td className="py-4 px-6 text-center text-sm text-gray-700 border-t border-gray-200">{row.onprem}</td>
+                      <td className="py-4 px-6 text-center text-sm text-gray-700 border-t border-gray-200">{row.hybrid}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </section>
 
 
@@ -629,7 +707,7 @@ export default function CannyECMProductPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
                   <SecurityIcon sx={{ fontSize: 32 }} />
                 </div>
-                <h3 className="text-2xl font-bold text-secondary mb-4">Healthcare & Medical</h3>
+                <h3 className="text-2xl font-bold text-secondary mb-4">Healthcare Document Management Software</h3>
                 <p className="text-gray-700 mb-6">
                   Manage patient records, medical histories, insurance claims, and lab results with HIPAA-compliant security. <Link href="/solutions/healthcare" className="text-primary hover:underline">Learn more about healthcare solutions</Link>.
                 </p>
@@ -646,7 +724,7 @@ export default function CannyECMProductPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
                   <DocumentIcon sx={{ fontSize: 32 }} />
                 </div>
-                <h3 className="text-2xl font-bold text-secondary mb-4">Legal & Law Firms</h3>
+                <h3 className="text-2xl font-bold text-secondary mb-4">Document Management Software for Law Firms</h3>
                 <p className="text-gray-700 mb-6">
                   Organize case files, contracts, legal briefs, and client communications with matter-based filing. Explore our <Link href="/solutions/professional-services/legal" className="text-primary hover:underline">legal document management solutions</Link>.
                 </p>
@@ -663,7 +741,7 @@ export default function CannyECMProductPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
                   <SecurityIcon sx={{ fontSize: 32 }} />
                 </div>
-                <h3 className="text-2xl font-bold text-secondary mb-4">Finance & Banking</h3>
+                <h3 className="text-2xl font-bold text-secondary mb-4">Finance & Banking Document Management</h3>
                 <p className="text-gray-700 mb-6">
                   Handle loan applications, KYC documents, compliance reports with SOX and regulatory compliance. See our <Link href="/solutions/finance" className="text-primary hover:underline">Finance solutions</Link>.
                 </p>
@@ -680,7 +758,7 @@ export default function CannyECMProductPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
                   <StorageIcon sx={{ fontSize: 32 }} />
                 </div>
-                <h3 className="text-2xl font-bold text-secondary mb-4">Manufacturing</h3>
+                <h3 className="text-2xl font-bold text-secondary mb-4">Manufacturing Document Control Software</h3>
                 <p className="text-gray-700 mb-6">
                   Manage quality certificates, supplier contracts, and shipping documents across global operations. Digitize your <Link href="/solutions/manufacturing/shop-floor-automation" className="text-primary hover:underline">shop floor</Link> paperwork and explore <Link href="/solutions/manufacturing" className="text-primary hover:underline">manufacturing solutions</Link> including <Link href="/solutions/manufacturing/document-control" className="text-primary hover:underline">document control</Link> and <Link href="/solutions/manufacturing/quality-management" className="text-primary hover:underline">quality management</Link>.
                 </p>
@@ -691,6 +769,58 @@ export default function CannyECMProductPage() {
                   <div className="flex items-start gap-2"><CheckIcon sx={{ fontSize: 16, color: '#25d366' }} className="mt-0.5 flex-shrink-0" /><span className="text-sm text-gray-600">Multi-location access</span></div>
                 </div>
               </div>
+            </div>
+
+            {/* Industry-by-capability matrix — structured summary of the 4 cards above (AI-citable) */}
+            <div className="mt-12 overflow-x-auto">
+              <h3 className="text-xl md:text-2xl font-bold text-secondary mb-4 text-center">
+                Industry Use Cases at a Glance
+              </h3>
+              <table className="w-full border-collapse bg-white shadow-lg rounded-xl overflow-hidden">
+                <thead>
+                  <tr className="bg-gradient-to-r from-primary to-secondary text-white">
+                    <th scope="col" className="py-4 px-6 text-left font-bold">Industry</th>
+                    <th scope="col" className="py-4 px-6 text-left font-bold">Document Types</th>
+                    <th scope="col" className="py-4 px-6 text-left font-bold">Key Compliance</th>
+                    <th scope="col" className="py-4 px-6 text-left font-bold">Featured Capability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    {
+                      industry: "Healthcare & Medical",
+                      docs: "Patient records, medical histories, insurance claims, lab results",
+                      compliance: "HIPAA",
+                      capability: "Electronic Health Records (EHR), patient portal access",
+                    },
+                    {
+                      industry: "Legal & Law Firms",
+                      docs: "Case files, contracts, legal briefs, client communications",
+                      compliance: "Conflict checking, version control",
+                      capability: "Matter-centric organization, client portals",
+                    },
+                    {
+                      industry: "Finance & Banking",
+                      docs: "Loan applications, KYC documents, compliance reports",
+                      compliance: "SOX, KYC/AML",
+                      capability: "Loan processing workflows, audit trails",
+                    },
+                    {
+                      industry: "Manufacturing",
+                      docs: "Quality certificates, supplier contracts, shipping documents",
+                      compliance: "ISO quality integration",
+                      capability: "Certificate tracking, multi-location access",
+                    },
+                  ].map((row, idx) => (
+                    <tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                      <td className="py-4 px-6 font-semibold text-secondary border-t border-gray-200">{row.industry}</td>
+                      <td className="py-4 px-6 text-sm text-gray-700 border-t border-gray-200">{row.docs}</td>
+                      <td className="py-4 px-6 text-sm text-gray-700 border-t border-gray-200">{row.compliance}</td>
+                      <td className="py-4 px-6 text-sm text-gray-700 border-t border-gray-200">{row.capability}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </section>
 
@@ -704,7 +834,7 @@ export default function CannyECMProductPage() {
                 Schedule a personalized demo tailored to your industry&apos;s specific document management needs.
               </p>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-white text-secondary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg"
               >
                 Schedule Demo
@@ -767,28 +897,42 @@ export default function CannyECMProductPage() {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-xl p-8">
+              <div className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-xl p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-secondary mb-6">System Requirements</h3>
-                <div className="space-y-4">
-                  <div>
-                    <p className="font-semibold text-secondary mb-2">Cloud Deployment:</p>
-                    <ul className="space-y-1 text-gray-700 text-sm ml-4">
-                      <li>• Modern web browser (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)</li>
-                      <li>• Internet connection (minimum 5 Mbps recommended)</li>
-                      <li>• No software installation required</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-secondary mb-2">On-Premise Deployment:</p>
-                    <ul className="space-y-1 text-gray-700 text-sm ml-4">
-                      <li>• Windows Server 2016+ or Linux (Ubuntu 18.04+, RHEL 7+)</li>
-                      <li>• 16GB RAM minimum (32GB recommended)</li>
-                      <li>• 100GB SSD storage (scales with document volume)</li>
-                      <li>• SQL Server 2016+ or PostgreSQL 12+</li>
-                      <li>• .NET Core 6.0 runtime</li>
-                      <li>• Elasticsearch 7.x for search functionality</li>
-                    </ul>
-                  </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse text-left">
+                    <thead>
+                      <tr className="border-b-2 border-gray-300">
+                        <th scope="col" className="py-2 pr-2 text-xs font-bold uppercase tracking-wider text-secondary">Deployment</th>
+                        <th scope="col" className="py-2 px-2 text-xs font-bold uppercase tracking-wider text-secondary">Component</th>
+                        <th scope="col" className="py-2 pl-2 text-xs font-bold uppercase tracking-wider text-secondary">Requirement</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        { deployment: "Cloud", component: "Browser", requirement: "Chrome 90+, Firefox 88+, Safari 14+, Edge 90+" },
+                        { deployment: "Cloud", component: "Network", requirement: "Internet connection, minimum 5 Mbps recommended" },
+                        { deployment: "Cloud", component: "Software", requirement: "None — no installation required" },
+                        { deployment: "On-Premise", component: "Operating System", requirement: "Windows Server 2016+ or Linux (Ubuntu 18.04+, RHEL 7+)" },
+                        { deployment: "On-Premise", component: "RAM", requirement: "16 GB minimum (32 GB recommended)" },
+                        { deployment: "On-Premise", component: "Storage", requirement: "100 GB SSD (scales with document volume)" },
+                        { deployment: "On-Premise", component: "Database", requirement: "SQL Server 2016+ or PostgreSQL 12+" },
+                        { deployment: "On-Premise", component: "Runtime", requirement: ".NET Core 6.0" },
+                        { deployment: "On-Premise", component: "Search Engine", requirement: "Elasticsearch 7.x" },
+                      ].map((row, idx, arr) => {
+                        const showDeployment = idx === 0 || arr[idx - 1].deployment !== row.deployment;
+                        return (
+                          <tr key={idx} className="border-b border-gray-200 last:border-0 align-top">
+                            <td className="py-3 pr-2 text-sm font-bold text-secondary">
+                              {showDeployment ? row.deployment : ""}
+                            </td>
+                            <td className="py-3 px-2 text-sm font-medium text-gray-800">{row.component}</td>
+                            <td className="py-3 pl-2 text-sm text-gray-600">{row.requirement}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
                 </div>
               </div>
 
@@ -938,6 +1082,127 @@ export default function CannyECMProductPage() {
             </div>
           </section>
 
+          {/* Competitor Comparison */}
+          <section id="competitor-comparison" className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 text-center">
+              CannyECM vs Other Enterprise Content Management Platforms
+            </h2>
+            <p className="text-center text-gray-600 mb-6 max-w-3xl mx-auto text-sm">
+              Architectural comparison of CannyECM against widely-used ECM and document management platforms across deployment options and built-in versus add-on capabilities.
+            </p>
+            <p className="text-center text-gray-700 mb-10 max-w-3xl mx-auto">
+              Teams typically evaluate CannyECM as a <strong>SharePoint alternative</strong> when they need built-in OCR and a
+              visual workflow builder without separate licenses for Syntex or Power Automate, or as an <strong>M-Files /
+              OpenText alternative</strong> when they want flexible cloud-and-on-premise deployment without enterprise-tier
+              pricing complexity. Organizations migrating off Box typically need on-premise or hybrid deployment for compliance
+              reasons that Box cannot meet.
+            </p>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse bg-white shadow-lg rounded-xl overflow-hidden text-sm">
+                <thead>
+                  <tr className="bg-gradient-to-r from-primary to-secondary text-white">
+                    <th scope="col" className="py-4 px-4 text-left font-bold">Capability</th>
+                    <th scope="col" className="py-4 px-4 text-center font-bold">CannyECM</th>
+                    <th scope="col" className="py-4 px-4 text-center font-bold">Microsoft SharePoint</th>
+                    <th scope="col" className="py-4 px-4 text-center font-bold">M-Files</th>
+                    <th scope="col" className="py-4 px-4 text-center font-bold">OpenText Documentum</th>
+                    <th scope="col" className="py-4 px-4 text-center font-bold">Box</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { capability: "Cloud (SaaS) deployment", a: "Yes", b: "Yes (Microsoft 365)", c: "Yes", d: "Yes", e: "Yes" },
+                    { capability: "On-premise deployment", a: "Yes", b: "Yes (SharePoint Server)", c: "Yes", d: "Yes", e: "No (cloud only)" },
+                    { capability: "Hybrid deployment", a: "Yes", b: "Yes", c: "Yes", d: "Yes", e: "No" },
+                    { capability: "Native OCR (no add-on)", a: "Yes (Elasticsearch)", b: "Add-on (Syntex)", c: "Yes", d: "Yes", e: "Add-on (Box AI)" },
+                    { capability: "Native workflow builder", a: "Yes (visual)", b: "Power Automate (separate)", c: "Yes", d: "Yes", e: "Yes (Box Relay)" },
+                    { capability: "Office in-browser editing", a: "Yes", b: "Native", c: "Yes", d: "Limited", e: "Yes" },
+                    { capability: "CAD (DWG) format support", a: "Yes", b: "Limited", c: "Yes", d: "Yes", e: "Limited" },
+                  ].map((row, idx) => (
+                    <tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                      <td className="py-3 px-4 font-semibold text-secondary border-t border-gray-200">{row.capability}</td>
+                      <td className="py-3 px-4 text-center text-gray-700 border-t border-gray-200 font-medium">{row.a}</td>
+                      <td className="py-3 px-4 text-center text-gray-600 border-t border-gray-200">{row.b}</td>
+                      <td className="py-3 px-4 text-center text-gray-600 border-t border-gray-200">{row.c}</td>
+                      <td className="py-3 px-4 text-center text-gray-600 border-t border-gray-200">{row.d}</td>
+                      <td className="py-3 px-4 text-center text-gray-600 border-t border-gray-200">{row.e}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-gray-500 mt-4 max-w-3xl mx-auto">
+              Comparison reflects publicly-documented architectural capabilities of the named products. Vendor capabilities evolve;
+              verify current feature availability with each vendor before purchase decisions. &ldquo;Native&rdquo; means built-in to the
+              base product without a separate license.
+            </p>
+          </section>
+
+          {/* Capability Matrix */}
+          <section id="capability-matrix" className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 text-center">
+              Complete CannyECM Capability Matrix
+            </h2>
+            <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto text-sm">
+              Every capability that ships with CannyECM, grouped by category. Use this as your evaluation checklist.
+            </p>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse bg-white shadow-lg rounded-xl overflow-hidden">
+                <thead>
+                  <tr className="bg-gradient-to-r from-primary to-secondary text-white">
+                    <th scope="col" className="py-4 px-6 text-left font-bold">Category</th>
+                    <th scope="col" className="py-4 px-6 text-left font-bold">Capability</th>
+                    <th scope="col" className="py-4 px-6 text-left font-bold">Detail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { category: "Authentication", capability: "Single Sign-On (SSO)", detail: "Azure AD, Google Workspace, OAuth 2.0, SAML 2.0" },
+                    { category: "Authentication", capability: "Directory integration", detail: "LDAP, Active Directory" },
+                    { category: "Authentication", capability: "Multi-factor authentication", detail: "TOTP, hardware keys, configurable enforcement" },
+                    { category: "Authentication", capability: "Access policies", detail: "IP restrictions, session timeout, password expiry/reset rules" },
+                    { category: "Access Control", capability: "Role-based permissions (RBAC)", detail: "File, folder, and cabinet level with custom role templates" },
+                    { category: "Access Control", capability: "Guest access", detail: "Time-limited credentials with reduced scope" },
+                    { category: "Access Control", capability: "Permission audit", detail: "Track every permission change with timestamp and user" },
+                    { category: "Search", capability: "Full-text OCR search", detail: "Up to 99% accuracy, powered by Elasticsearch" },
+                    { category: "Search", capability: "Advanced filters", detail: "Metadata, tags, file type, date range, AND/OR boolean filters" },
+                    { category: "Storage", capability: "Supported formats", detail: "PDF, Microsoft Office, images (JPG/PNG/GIF/BMP/TIFF), audio/video, CAD (DWG), CSV/text" },
+                    { category: "Storage", capability: "Folder hierarchy", detail: "Unlimited nesting — cabinet → folder → document" },
+                    { category: "Storage", capability: "External sync", detail: "Network drives, Amazon S3, manual or automatic sync" },
+                    { category: "Editing", capability: "In-browser Office editing", detail: "Word, Excel, PowerPoint with concurrent multi-user editing" },
+                    { category: "Editing", capability: "Annotations", detail: "Sticky notes, stamps, watermarks, digital signatures, zoom/rotate" },
+                    { category: "Workflow", capability: "Visual workflow builder", detail: "Drag-and-drop diagram with conditions and parallel reviews" },
+                    { category: "Workflow", capability: "Multi-step approvals", detail: "Deadline reminders, automatic escalation on overdue tasks" },
+                    { category: "Version Control", capability: "Automatic versioning", detail: "Saved on every edit; full immutable history" },
+                    { category: "Version Control", capability: "Rollback & comparison", detail: "One-click restore, version diff, duplicate-upload detection" },
+                    { category: "Audit", capability: "Action logs", detail: "User, timestamp, IP address, device for every view/edit/download" },
+                    { category: "Audit", capability: "Audit reports", detail: "PDF export with hash verification for tamper-proof evidence" },
+                    { category: "Compliance", capability: "Standards", detail: "GDPR, HIPAA, ISO 27001:2013, SOC 2 Type II, SOX, PCI DSS" },
+                    { category: "Compliance", capability: "Encryption", detail: "AES-256 at rest, TLS 1.3 in transit" },
+                    { category: "Integration", capability: "API surface", detail: "REST, SOAP, webhooks, CSV/Excel import, direct database access" },
+                    { category: "Integration", capability: "Enterprise systems", detail: "SAP ERP, Oracle E-Business Suite, Microsoft Dynamics, NetSuite, Workday" },
+                    { category: "Integration", capability: "Productivity suites", detail: "Microsoft 365, Google Workspace, SharePoint, Slack, Microsoft Teams" },
+                    { category: "Administration", capability: "User management", detail: "Bulk import/export, clone settings, reassign on offboarding" },
+                    { category: "Administration", capability: "System monitoring", detail: "Health status, background queues (encryption, OCR, email, downloads)" },
+                  ].map((row, idx, arr) => {
+                    const showCategory = idx === 0 || arr[idx - 1].category !== row.category;
+                    return (
+                      <tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                        <td className="py-3 px-6 font-bold text-secondary border-t border-gray-200 align-top">
+                          {showCategory ? row.category : ""}
+                        </td>
+                        <td className="py-3 px-6 font-medium text-gray-800 text-sm border-t border-gray-200 align-top">{row.capability}</td>
+                        <td className="py-3 px-6 text-sm text-gray-600 border-t border-gray-200 align-top">{row.detail}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
           {/* Implementation Process */}
           <section id="implementation" className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center">
@@ -1042,53 +1307,146 @@ export default function CannyECMProductPage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-xl p-8">
+              <div className="bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-xl p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-secondary mb-6">Compliance Standards</h3>
-                <div className="space-y-4">
-                  {[
-                    {
-                      standard: "ISO 27001:2013",
-                      description: "Information security management system certification"
-                    },
-                    {
-                      standard: "GDPR Compliant",
-                      description: "Full compliance with EU General Data Protection Regulation"
-                    },
-                    {
-                      standard: "HIPAA Compliant",
-                      description: "Protected Health Information (PHI) handling for healthcare organizations"
-                    },
-                    {
-                      standard: "SOC 2 Type II",
-                      description: "Security, availability, and confidentiality controls audited"
-                    },
-                    {
-                      standard: "SOX Compliance",
-                      description: "Sarbanes-Oxley financial document retention and audit trails"
-                    },
-                    {
-                      standard: "PCI DSS",
-                      description: "Payment Card Industry Data Security Standard for financial documents"
-                    },
-                  ].map((item, idx) => (
-                    <div key={idx} className="pb-4 border-b border-gray-200 last:border-0">
-                      <div className="flex items-center gap-2 mb-2">
-                        <CheckIcon sx={{ fontSize: 18, color: '#25d366' }} />
-                        <h4 className="font-bold text-secondary">{item.standard}</h4>
-                      </div>
-                      <p className="text-sm text-gray-600 ml-7">{item.description}</p>
-                    </div>
-                  ))}
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse text-left">
+                    <thead>
+                      <tr className="border-b-2 border-green-300">
+                        <th scope="col" className="py-2 pr-2 text-xs font-bold uppercase tracking-wider text-secondary">Standard</th>
+                        <th scope="col" className="py-2 px-2 text-xs font-bold uppercase tracking-wider text-secondary">Region</th>
+                        <th scope="col" className="py-2 px-2 text-xs font-bold uppercase tracking-wider text-secondary">Covers</th>
+                        <th scope="col" className="py-2 pl-2 text-xs font-bold uppercase tracking-wider text-secondary">Source</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        {
+                          standard: "ISO 27001:2013",
+                          region: "International",
+                          description: "Information security management system",
+                          source: "https://www.iso.org/isoiec-27001-information-security.html",
+                          sourceLabel: "iso.org"
+                        },
+                        {
+                          standard: "GDPR",
+                          region: "EU",
+                          description: "Personal data protection regulation",
+                          source: "https://commission.europa.eu/law/law-topic/data-protection_en",
+                          sourceLabel: "European Commission"
+                        },
+                        {
+                          standard: "HIPAA",
+                          region: "USA",
+                          description: "Protected Health Information (PHI) handling",
+                          source: "https://www.hhs.gov/hipaa/",
+                          sourceLabel: "hhs.gov"
+                        },
+                        {
+                          standard: "SOC 2 Type II",
+                          region: "USA / global",
+                          description: "Security, availability & confidentiality controls",
+                          source: "https://www.aicpa-cima.com/",
+                          sourceLabel: "AICPA"
+                        },
+                        {
+                          standard: "SOX",
+                          region: "USA",
+                          description: "Sarbanes-Oxley financial retention & audit trails",
+                          source: "https://www.sec.gov/",
+                          sourceLabel: "sec.gov"
+                        },
+                        {
+                          standard: "PCI DSS",
+                          region: "Global (payments)",
+                          description: "Payment Card Industry Data Security Standard",
+                          source: "https://www.pcisecuritystandards.org/",
+                          sourceLabel: "PCI SSC"
+                        },
+                      ].map((item, idx) => (
+                        <tr key={idx} className="border-b border-gray-200 last:border-0 align-top">
+                          <td className="py-3 pr-2">
+                            <div className="flex items-start gap-1.5">
+                              <CheckIcon sx={{ fontSize: 16, color: '#25d366' }} className="mt-0.5 flex-shrink-0" />
+                              <span className="font-bold text-secondary text-sm">{item.standard}</span>
+                            </div>
+                          </td>
+                          <td className="py-3 px-2 text-xs text-gray-700">{item.region}</td>
+                          <td className="py-3 px-2 text-xs text-gray-600">{item.description}</td>
+                          <td className="py-3 pl-2 text-xs">
+                            <a
+                              href={item.source}
+                              target="_blank"
+                              rel="noopener noreferrer nofollow"
+                              className="text-primary hover:underline whitespace-nowrap"
+                            >
+                              {item.sourceLabel} ↗
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg">
+            <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-10">
               <p className="font-semibold text-secondary mb-2">Data Residency & Sovereignty</p>
               <p className="text-gray-700">
                 For organizations with strict data residency requirements, CannyECM offers region-specific cloud hosting
                 (US, EU, Asia-Pacific, Middle East) or on-premise deployment for complete data sovereignty. All data remains
                 within your chosen jurisdiction, ensuring compliance with local data protection laws.
+              </p>
+            </div>
+
+            {/* Roles & Permissions Matrix */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-3 text-center">
+                Roles &amp; Permissions Matrix
+              </h3>
+              <p className="text-center text-gray-600 mb-6 max-w-3xl mx-auto text-sm">
+                Default permission template across the four built-in role types. Permissions are configurable per role at
+                file, folder, and cabinet level via custom role templates.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse bg-white shadow-lg rounded-xl overflow-hidden text-sm">
+                  <thead>
+                    <tr className="bg-gradient-to-r from-primary to-secondary text-white">
+                      <th scope="col" className="py-4 px-4 text-left font-bold">Permission</th>
+                      <th scope="col" className="py-4 px-4 text-center font-bold">Administrator</th>
+                      <th scope="col" className="py-4 px-4 text-center font-bold">Manager</th>
+                      <th scope="col" className="py-4 px-4 text-center font-bold">User</th>
+                      <th scope="col" className="py-4 px-4 text-center font-bold">Guest</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { permission: "View documents", admin: "All", manager: "Team scope", user: "Permitted folders", guest: "Shared only" },
+                      { permission: "Edit documents", admin: "All", manager: "Team scope", user: "Own / shared", guest: "—" },
+                      { permission: "Upload documents", admin: "Yes", manager: "Yes", user: "Yes", guest: "—" },
+                      { permission: "Delete documents", admin: "Yes", manager: "Per policy", user: "Own / per policy", guest: "—" },
+                      { permission: "Share documents", admin: "Yes", manager: "Yes", user: "Yes (per policy)", guest: "—" },
+                      { permission: "Approve workflows", admin: "Yes", manager: "Team scope", user: "—", guest: "—" },
+                      { permission: "View audit reports", admin: "Full", manager: "Team scope", user: "Own actions", guest: "—" },
+                      { permission: "Manage users", admin: "Yes", manager: "Team scope", user: "—", guest: "—" },
+                      { permission: "Configure system", admin: "Yes", manager: "—", user: "—", guest: "—" },
+                      { permission: "Time-limited access", admin: "—", manager: "—", user: "—", guest: "Yes (expiry-bound)" },
+                    ].map((row, idx) => (
+                      <tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                        <td className="py-3 px-4 font-semibold text-secondary border-t border-gray-200">{row.permission}</td>
+                        <td className="py-3 px-4 text-center text-gray-700 border-t border-gray-200">{row.admin}</td>
+                        <td className="py-3 px-4 text-center text-gray-700 border-t border-gray-200">{row.manager}</td>
+                        <td className="py-3 px-4 text-center text-gray-700 border-t border-gray-200">{row.user}</td>
+                        <td className="py-3 px-4 text-center text-gray-700 border-t border-gray-200">{row.guest}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-500 mt-4 max-w-3xl mx-auto text-center">
+                Default template shown. Administrators can clone and adjust roles, set permissions per file/folder/cabinet,
+                and reassign documents when an employee leaves.
               </p>
             </div>
           </section>
@@ -1100,8 +1458,9 @@ export default function CannyECMProductPage() {
                 <div className="w-24 h-24 relative flex-shrink-0 shadow-lg rounded-full overflow-hidden border-2 border-primary/20 bg-gray-100">
                   <SecureImage
                     src="/images/about/Christopher-Director.png"
-                    alt="Christopher - Head of Technical Department"
+                    alt="Christopher, Head of Technical Department and Investor at CannyMinds Technology Solutions"
                     fill
+                    sizes="96px"
                     className="object-cover"
                   />
                 </div>
@@ -1130,7 +1489,7 @@ export default function CannyECMProductPage() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-200">
                     <p className="text-xs text-gray-500 italic">
-                      Last updated: March 7, 2026
+                      Last updated: April 24, 2026
                     </p>
                   </div>
                 </div>
@@ -1253,14 +1612,14 @@ export default function CannyECMProductPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg inline-flex items-center gap-2"
               >
                 Start 30-Day Free Trial
                 <CheckIcon sx={{ fontSize: 20 }} />
               </Link>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all"
               >
                 Request Demo

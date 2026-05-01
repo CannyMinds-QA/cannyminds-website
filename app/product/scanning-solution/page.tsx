@@ -120,7 +120,7 @@ export default function CannyScanProductPage() {
             <ol className="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto">
               <li><Link href="/" className="text-purple-600 hover:text-purple-800 whitespace-nowrap">Home</Link></li>
               <li className="text-gray-400">/</li>
-              <li><Link href="/#products" className="text-purple-600 hover:text-purple-800 whitespace-nowrap">Products</Link></li>
+              <li><Link href="/product" className="text-purple-600 hover:text-purple-800 whitespace-nowrap">Products</Link></li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-600 font-medium truncate">CannyScan - Document Digitization</li>
             </ol>
@@ -816,14 +816,14 @@ export default function CannyScanProductPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg inline-flex items-center gap-2"
               >
                 Request Demo
                 <ArrowIcon sx={{ fontSize: 20 }} />
               </Link>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all"
               >
                 Contact Sales

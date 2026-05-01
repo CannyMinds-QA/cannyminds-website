@@ -55,7 +55,14 @@ const jsonLd = {
                     "width": 200,
                     "height": 60
                 },
-                "url": "https://www.cannymindstech.com"
+                "url": "https://www.cannymindstech.com",
+                "sameAs": [
+                    "https://in.linkedin.com/company/cannyminds-technology-solutions",
+                    "https://x.com/cannyminds",
+                    "https://www.facebook.com/p/CannyMinds-Technology-Solutions-100063646614219/",
+                    "https://www.youtube.com/channel/UCs6j4JpOxqSsULlTss3cSxg",
+                    "https://www.instagram.com/cannyminds_technology/"
+                ]
             },
             "datePublished": "2026-01-15",
             "dateModified": "2026-03-29",
@@ -92,7 +99,15 @@ const jsonLd = {
                 "url": "https://www.cannymindstech.com/contact",
                 "seller": {
                     "@type": "Organization",
-                    "name": "CannyMinds Technology Solutions"
+                    "name": "CannyMinds Technology Solutions",
+                    "url": "https://www.cannymindstech.com",
+                    "sameAs": [
+                        "https://in.linkedin.com/company/cannyminds-technology-solutions",
+                        "https://x.com/cannyminds",
+                        "https://www.facebook.com/p/CannyMinds-Technology-Solutions-100063646614219/",
+                        "https://www.youtube.com/channel/UCs6j4JpOxqSsULlTss3cSxg",
+                        "https://www.instagram.com/cannyminds_technology/"
+                    ]
                 }
             },
             "featureList": [

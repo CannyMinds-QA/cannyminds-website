@@ -92,7 +92,15 @@ const jsonLd = {
                 "logo": {
                     "@type": "ImageObject",
                     "url": `${baseUrl}/logo.png`
-                }
+                },
+                "url": baseUrl,
+                "sameAs": [
+                    "https://in.linkedin.com/company/cannyminds-technology-solutions",
+                    "https://x.com/cannyminds",
+                    "https://www.facebook.com/p/CannyMinds-Technology-Solutions-100063646614219/",
+                    "https://www.youtube.com/channel/UCs6j4JpOxqSsULlTss3cSxg",
+                    "https://www.instagram.com/cannyminds_technology/"
+                ]
             },
             "aggregateRating": {
                 "@type": "AggregateRating",
@@ -217,7 +225,7 @@ export default function CannyEBMRPage() {
                                 Home
                             </Link>
                             <ChevronRight sx={{ fontSize: 16 }} className="text-gray-400" />
-                            <Link href="/#products" className="hover:text-primary">
+                            <Link href="/product" className="hover:text-primary">
                                 Products
                             </Link>
                             <ChevronRight sx={{ fontSize: 16 }} className="text-gray-400" />

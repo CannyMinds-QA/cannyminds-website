@@ -80,11 +80,11 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://*.tawk.to https://www.clarity.ms https://analytics.ahrefs.com https://va.vercel-insights.com https://va.vercel-scripts.com",
+              "script-src 'self' 'unsafe-inline' https://*.tawk.to https://*.clarity.ms https://analytics.ahrefs.com https://va.vercel-insights.com https://va.vercel-scripts.com",
               "style-src 'self' 'unsafe-inline' https://*.tawk.to",
               "img-src 'self' data: https: blob:",
               "font-src 'self' https://*.tawk.to",
-              "connect-src 'self' https://*.tawk.to wss://*.tawk.to https://www.clarity.ms https://va.vercel-insights.com https://vitals.vercel-insights.com",
+              "connect-src 'self' https://*.tawk.to wss://*.tawk.to https://*.clarity.ms https://analytics.ahrefs.com https://va.vercel-insights.com https://vitals.vercel-insights.com",
               "frame-src 'self' https://*.tawk.to",
               "media-src 'self' https://*.tawk.to",
               "object-src 'none'",
