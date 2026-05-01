@@ -362,7 +362,7 @@ export default async function BlogPostPage({
                                                 href={`#${section.id}`}
                                                 className="block px-4 py-2 text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-all group"
                                             >
-                                                <span className="font-medium">{index + 1}. {section.heading}</span>
+                                                <span className="font-medium">{section.heading}</span>
                                             </a>
                                         ))}
                                     </nav>
@@ -374,9 +374,6 @@ export default async function BlogPostPage({
                                 <div key={section.id}>
                                     <section id={section.id} className="mb-12 scroll-mt-20">
                                         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                            <span className="flex items-center justify-center w-10 h-10 bg-primary/10 text-primary rounded-xl font-bold text-lg">
-                                                {index + 1}
-                                            </span>
                                             {section.heading}
                                         </h2>
                                         <div className="text-gray-700 leading-relaxed space-y-4" dangerouslySetInnerHTML={{ __html: renderContent(section.content) }} />
@@ -550,7 +547,7 @@ export default async function BlogPostPage({
                                                     href={`#${section.id}`}
                                                     className="block px-3 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition-all"
                                                 >
-                                                    {index + 1}. {section.heading}
+                                                    {section.heading}
                                                 </a>
                                             ))}
                                         </nav>
