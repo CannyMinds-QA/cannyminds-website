@@ -65,6 +65,7 @@ CannyRMS is an enterprise physical records management software developed by Cann
 ## Blog
 
 - [Digital Transformation Starts With Documentation: Here's Why](https://www.cannymindstech.com/blog/digital-transformation-documentation): Why proper documentation is the foundation of successful digital transformation and how it powers automation, compliance, and business growth.
+- [Why Does ECM Really Matter for Your Business?](https://www.cannymindstech.com/blog/why-ecm-matters-for-business-growth): Discover why Enterprise Content Management (ECM) software is the foundation of modern business growth — covering time savings, workflow automation, security, compliance, and real-world ECM examples.
 
 ## Contact
 

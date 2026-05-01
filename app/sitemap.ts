@@ -454,14 +454,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       postImages.push(`${BASE_URL}${post.coverImage}`)
     }
 
-    // Add section-specific images based on section IDs
-    // These are the images shown after specific sections
-    if (post.slug === 'digital-transformation-documentation') {
-      postImages.push(
-        `${BASE_URL}/images/Blogs/digital-transformation-documentation/documentation-powers-automation.png`,
-        `${BASE_URL}/images/Blogs/digital-transformation-documentation/documentation-improves-collaboration.png`
-      )
-    }
+    // Add section images dynamically from section data
+    post.sections?.forEach(section => {
+      if (section.image) {
+        postImages.push(`${BASE_URL}${section.image}`)
+      }
+    })
 
     // Add author image
     if (post.author.image) {

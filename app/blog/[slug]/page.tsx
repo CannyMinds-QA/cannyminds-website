@@ -33,7 +33,8 @@ export async function generateMetadata({
     const post = getPostBySlug(slug);
     if (!post) return {};
 
-    const ogImage = post.seo.ogImage ? `https://www.cannymindstech.com${post.seo.ogImage}` : `${baseUrl}/og-image.jpg`;
+    const rawOgImage = post.coverImage ?? post.seo.ogImage;
+    const ogImage = rawOgImage ? `https://www.cannymindstech.com${rawOgImage}` : `${baseUrl}/og-image.jpg`;
 
     return {
         title: post.seo.metaTitle,
@@ -381,26 +382,12 @@ export default async function BlogPostPage({
                                         <div className="text-gray-700 leading-relaxed space-y-4" dangerouslySetInnerHTML={{ __html: renderContent(section.content) }} />
                                     </section>
 
-                                    {/* Section Images */}
-                                    {section.id === 'powers-automation' && (
+                                    {/* Section Image */}
+                                    {section.image && (
                                         <div className="mb-12 rounded-xl overflow-hidden border border-gray-200">
                                             <Image
-                                                src="/images/Blogs/digital-transformation-documentation/documentation-powers-automation.png"
-                                                alt="How documentation powers automation in digital transformation - workflow diagram showing automated document processing, approvals, and employee onboarding"
-                                                width={1200}
-                                                height={675}
-                                                loading="lazy"
-                                                quality={85}
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(100vw - 320px), 900px"
-                                                className="w-full h-auto aspect-[16/9] object-cover"
-                                            />
-                                        </div>
-                                    )}
-                                    {section.id === 'real-world-applications' && (
-                                        <div className="mb-12 rounded-xl overflow-hidden border border-gray-200">
-                                            <Image
-                                                src="/images/Blogs/digital-transformation-documentation/documentation-improves-collaboration.png"
-                                                alt="Documentation improves team collaboration - remote teams working together with centralized document management system for better project execution"
+                                                src={section.image}
+                                                alt={section.imageAlt ?? section.heading}
                                                 width={1200}
                                                 height={675}
                                                 loading="lazy"
