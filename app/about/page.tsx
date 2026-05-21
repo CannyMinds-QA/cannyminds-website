@@ -98,7 +98,7 @@ export default function AboutPage() {
   const leaders = [
     {
       name: "Udayakumar Murugan",
-      title: "Chief Executive Officer",
+      title: "Head of Enterprise Solutions",
       education: "B.E., (Electrical) from PSG",
       experienceYears: "20+ Years",
       companies: [
